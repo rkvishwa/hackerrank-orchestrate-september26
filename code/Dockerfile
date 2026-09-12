@@ -17,6 +17,7 @@ COPY src ./src
 COPY main.py .
 COPY evaluation ./evaluation
 COPY scripts ./scripts
+COPY tests ./tests
 
 RUN pip install -e .
 
