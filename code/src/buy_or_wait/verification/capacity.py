@@ -7,7 +7,9 @@ from datetime import timedelta
 from decimal import Decimal, ROUND_FLOOR
 
 
-def baseline_capacity(profile, request, flows, horizon_days):
+def baseline_capacity(profile, request, flows, horizon_days, *, unresolved=False):
+    if unresolved:
+        return Decimal("0"), None
     deltas = [Decimal("0") for _ in range(horizon_days)]
     for flow in flows:
         index = (flow.flow_date - request.request_date).days

@@ -1,0 +1,78 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_26",
+  "source_id": "message_18",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "pending_credit",
+        "amount": "30780000",
+        "percentage": null,
+        "currency": "IDR",
+        "effective_date": null,
+        "date_quote": null,
+        "timing": "unknown",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "InvoiceFlow",
+        "quote": "Klien menyetujui pembayaran faktur sebesar IDR 30780000."
+      },
+      {
+        "kind": "settlement",
+        "amount": "30780000",
+        "percentage": null,
+        "currency": "IDR",
+        "effective_date": "2025-08-15",
+        "date_quote": "2025-08-15",
+        "timing": "on_date",
+        "scope": "unknown",
+        "certainty": "pending",
+        "subject": "InvoiceFlow",
+        "quote": "Penyelesaian diperkirakan pada 2025-08-15."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 698,
+    "output_tokens": 158
+  },
+  "accepted": [
+    {
+      "kind": "pending_credit",
+      "amount": "30780000",
+      "percentage": null,
+      "currency": "IDR",
+      "effective_date": null,
+      "date_quote": null,
+      "timing": "unknown",
+      "scope": "unknown",
+      "certainty": "confirmed",
+      "subject": null,
+      "quote": "Klien menyetujui pembayaran faktur sebesar IDR 30780000."
+    }
+  ],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "settlement",
+        "amount": "30780000",
+        "percentage": null,
+        "currency": "IDR",
+        "effective_date": "2025-08-15",
+        "date_quote": "2025-08-15",
+        "timing": "on_date",
+        "scope": "unknown",
+        "certainty": "pending",
+        "subject": "InvoiceFlow",
+        "quote": "Penyelesaian diperkirakan pada 2025-08-15."
+      },
+      "reason": "quotation is not in source"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "d6100e7efba39b72b252eecf65562a9f6fffe02c1b9e9573311b55f3b565ca20"
+}

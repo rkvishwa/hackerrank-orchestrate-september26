@@ -1,0 +1,51 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_66",
+  "source_id": "message_49",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "pending_credit",
+        "amount": "116000",
+        "percentage": null,
+        "currency": "INR",
+        "effective_date": "2026-04-15",
+        "date_quote": "2026-04-15",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "PayPilot",
+        "quote": "The client approved an invoice payment of INR 116000. Settlement is expected on 2026-04-15."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 682,
+    "output_tokens": 97
+  },
+  "accepted": [],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "pending_credit",
+        "amount": "116000",
+        "percentage": null,
+        "currency": "INR",
+        "effective_date": "2026-04-15",
+        "date_quote": "2026-04-15",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "PayPilot",
+        "quote": "The client approved an invoice payment of INR 116000. Settlement is expected on 2026-04-15."
+      },
+      "reason": "quotation is not in source"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "cbf7234f8430cc9e7e55aee6b0d882d94bbe58848eeb712b747584a5e875d047"
+}

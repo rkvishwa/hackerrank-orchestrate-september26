@@ -1,0 +1,67 @@
+{
+  "before_local_diagnostics": {
+    "samples": {
+      "matches": {
+        "amount_safe_to_pay": 3,
+        "affordability_status": 18,
+        "recommended_payment_method": 19,
+        "payment_plan": 20,
+        "earliest_date_for_full_payment": 16,
+        "spending_changes_needed": 18
+      },
+      "amount_diagnostics": {
+        "mean_absolute_error_fraction_of_request": "0.04523646535525167501324599552",
+        "overestimates": 8,
+        "underestimates": 14,
+        "exact_matches": 3,
+        "note": "Supplementary error magnitude, not a replacement for exact matches or the unknown official scoring formula."
+      }
+    },
+    "historical_backtest": {
+      "predicted_date_category_buckets": 8459,
+      "observed_date_category_buckets": 8860,
+      "matched_date_category_buckets": 8432,
+      "unknown_amount_buckets": 12,
+      "matched_debit_buckets": 7963,
+      "debit_estimate_covers_observation": 6169,
+      "folds": 550,
+      "users": 275,
+      "timing_precision": 0.9968081333490957,
+      "timing_recall": 0.9516930022573363,
+      "matched_amount_mean_absolute_relative_error": "0.1230646380186232053261528648"
+    }
+  },
+  "after_cadence_fix": {
+    "samples": {
+      "matches": {
+        "amount_safe_to_pay": 3,
+        "affordability_status": 18,
+        "recommended_payment_method": 19,
+        "payment_plan": 20,
+        "earliest_date_for_full_payment": 15,
+        "spending_changes_needed": 17
+      },
+      "amount_diagnostics": {
+        "mean_absolute_error_fraction_of_request": "0.04429265293759466086171501956",
+        "overestimates": 7,
+        "underestimates": 15,
+        "exact_matches": 3,
+        "note": "Supplementary error magnitude, not a replacement for exact matches or the unknown official scoring formula."
+      }
+    },
+    "historical_backtest": {
+      "predicted_date_category_buckets": 8624,
+      "observed_date_category_buckets": 8860,
+      "matched_date_category_buckets": 8598,
+      "unknown_amount_buckets": 12,
+      "matched_debit_buckets": 8129,
+      "debit_estimate_covers_observation": 6288,
+      "folds": 550,
+      "users": 275,
+      "timing_precision": 0.9969851576994434,
+      "timing_recall": 0.9704288939051918,
+      "matched_amount_mean_absolute_relative_error": "0.1247031099300280409599357383"
+    }
+  },
+  "after_explanation_fix": "Same six sample metrics; missing-commitment explanation now reaches output."
+}

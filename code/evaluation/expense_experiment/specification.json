@@ -1,0 +1,22 @@
+{
+  "models": [
+    "occurrence_q75",
+    "calendar_window_q75"
+  ],
+  "window_days": 30,
+  "windows": 3,
+  "minimum_occurrences_per_window": 2,
+  "quantile": "0.75 nearest rank",
+  "rounding": "upward to cent",
+  "categories": [
+    "groceries",
+    "transport",
+    "dining"
+  ],
+  "fallback": "existing estimator for sparse, constant or incomplete series",
+  "split": "SHA-256(expense-horizon-v1: + user_id) mod 10; 0..2 validation, others development; sample users audit only",
+  "historical_gate": "No worsening at any horizon in cumulative amount error, total/prefix underprediction, net-cash overstatement or underpredicted fold count; at least one accuracy improvement",
+  "sample_gate": "No count regression in any of the six fields against current local control and lower amount error",
+  "release_gate": "Existing 3ba63a8 release gate is additionally required; experiment never deploys",
+  "dataset_sha256": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94"
+}

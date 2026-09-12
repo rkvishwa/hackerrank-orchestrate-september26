@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date, timedelta
 from decimal import Decimal
 
@@ -45,17 +45,26 @@ class ForecastEngine:
         self.policy = self.settings.recurrence
         self._series_cache: dict[tuple[str, str, str], list[RecurringSeries]] = {}
         self._flow_cache: dict[tuple, list[CashFlow]] = {}
+        self._income_cache = {}
+
+    def income_associations(self, user_id, as_of, evidence):
+        from buy_or_wait.finance.income import associate_income
+        key = (user_id, as_of, repr(evidence))
+        if key not in self._income_cache:
+            self._income_cache[key] = associate_income(
+                [effective_event(e, evidence) for e in self.dataset.events_by_user.get(user_id, [])],
+                as_of, evidence)
+        return self._income_cache[key]
 
     def _series_for_user(self, user_id: str, as_of: date, evidence: EvidenceContext) -> list[RecurringSeries]:
         evidence_key = repr(evidence)
         key = (user_id, as_of.isoformat(), evidence_key)
         if key not in self._series_cache:
-            historical = [
-                effective_event(e, evidence)
-                for e in self.dataset.events_by_user.get(user_id, [])
-                if (e.settlement_date < as_of and e.status == "settled") or (
-                    e.status == "scheduled" and e.category == "salary" and "confirmed" in e.description.lower())
-            ]
+            effective = [effective_event(e, evidence)
+                         for e in self.dataset.events_by_user.get(user_id, [])]
+            historical = [e for e in effective
+                if (e.settlement_date < as_of and e.status in {"settled", "cancelled"}) or (
+                    e.status == "scheduled" and e.category == "salary" and "confirmed" in e.description.lower())]
             self._series_cache[key] = detect_recurring_series(historical, as_of, self.policy, evidence)
         return self._series_cache[key]
 
@@ -82,7 +91,7 @@ class ForecastEngine:
         if cache_key in self._flow_cache:
             return self._flow_cache[cache_key]
         if amount_overrides:
-            evidence = EvidenceContext(
+            evidence = replace(evidence,
                 amount_overrides={**evidence.amount_overrides, **amount_overrides},
                 event_patches=evidence.event_patches,
                 suppressed_event_ids=evidence.suppressed_event_ids,
@@ -108,6 +117,7 @@ class ForecastEngine:
 
         flows: list[CashFlow] = []
         known_projection_keys: set[tuple[date, str, str, str]] = set()
+        associations = self.income_associations(request.user_id, request.request_date, evidence)
 
         for event in events:
             if not event.include_in_forecast:
@@ -133,9 +143,24 @@ class ForecastEngine:
                 )
             )
             series_key = event.series_key
+            association = associations.get(event.event_id)
+            if association:
+                # Ambiguous confirmations are handled as an occurrence overlap,
+                # not by pretending their generic label identifies employment.
+                if not association.matched_series_key:
+                    continue
+                series_key = association.matched_series_key
             known_projection_keys.add(
                 (event.settlement_date, event.direction, event.category, series_key)
             )
+
+        for explicit in evidence.confirmed_flows:
+            day = explicit["date"]
+            if day < request.request_date or day > horizon_end:
+                continue
+            amount = self.converter.convert(explicit["amount"], explicit["currency"], profile.home_currency, day)
+            flows.append(CashFlow(day, amount, explicit["direction"], explicit["category"],
+                                  explicit["direction"] == "debit", False, "evidence:" + explicit["source"]))
 
         for series in self._series_for_user(request.user_id, request.request_date, evidence):
             if series.template_event_id in stopped_events:
@@ -166,16 +191,11 @@ class ForecastEngine:
                 if dedupe_key in known_projection_keys:
                     continue
                 if series.category == "salary" and series.direction == "credit":
-                    matching = [e for e in events if e.category == "salary" and e.direction == "credit"
-                                and e.settlement_date == projected_date and "confirmed" in
-                                self.dataset.events_by_id[e.event_id].description.lower()]
-                    eligible = [s for s in self._series_for_user(request.user_id, request.request_date, evidence)
-                                if s.direction == "credit" and s.category == "salary"
-                                and s.anchor_day == original_projection_date.day]
-                    matching_amount = [s for s in eligible if any(
-                        self.dataset.events_by_id[e.event_id].currency == s.currency and
-                        self.dataset.events_by_id[e.event_id].amount == s.amount for e in matching)]
-                    if matching and (len(eligible) == 1 or (matching_amount and matching_amount[0] == series)):
+                    overlapping = [associations[e.event_id] for e in events
+                                   if e.event_id in associations and e.include_in_forecast
+                                   and e.settlement_date == projected_date
+                                   and series.series_key in associations[e.event_id].candidate_series_keys]
+                    if overlapping:
                         continue
                 # An explicit amended occurrence replaces its original recurrence date.
                 template = self.dataset.events_by_id[series.template_event_id]
@@ -193,7 +213,8 @@ class ForecastEngine:
                     continue
                 if series.category == "rent":
                     for patch in evidence.rent_patches:
-                        if projected_date >= patch.effective_from:
+                        if (projected_date >= patch.effective_from and
+                                (patch.target_series_keys is None or series.series_key in patch.target_series_keys)):
                             amount_native = (amount_native * patch.multiplier).quantize(Decimal("0.01"))
                 amount = self.converter.convert(
                     amount_native, series.currency, profile.home_currency, projected_date
@@ -226,6 +247,8 @@ class ForecastEngine:
         evidence: EvidenceContext | None = None,
         debit_before_credit: bool = False,
     ) -> SimulationResult:
+        if evidence and evidence.unresolved_mandatory_debits:
+            return SimulationResult(safe=False, min_balance=profile.current_available_balance)
         flows = self.build_cashflows(profile, request, amount_overrides, spending_changes, evidence)
         by_date: dict[date, list[tuple[str, CashFlow | PaymentLeg]]] = defaultdict(list)
         for flow in flows:

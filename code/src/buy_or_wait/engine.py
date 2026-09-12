@@ -140,6 +140,12 @@ class DecisionEngine:
                 "notes": evidence_ctx.notes,
             },
         )
+        if evidence_ctx.unresolved_mandatory_debits:
+            result.decision_explanation = ("No positive payment can be certified: a confirmed new mandatory commitment "
+                "has no supplied amount or usable payment date (" + ", ".join(sorted(evidence_ctx.unresolved_mandatory_debits))
+                + "). Obtain those details before committing funds; the missing expense was not assumed to be zero.")
+        from buy_or_wait.verification.case_audit import case_audit
+        result.trace["case"] = case_audit(self, request, evidence_ctx, candidates, selected)
         errors = self.verifier.verify_request_row(request, result, profile, options, selected, evidence_ctx)
         if errors:
             raise ValueError(f"{request.request_id}: verification failed: {'; '.join(errors)}")

@@ -1,36 +1,17 @@
-# Financial repair candidate — deployment blocked
+# Current local result: expense alternative rejected
 
-The candidate fixes four general financial behaviors: income amendments are scoped to their income stream, occurrence cancellations preserve ongoing commitments, reductions can reach the permitted minimum without silently stopping an expense, and all fluctuating expenses use the stated conservative estimator. Synthetic regression tests reproduce the original defects. An independent cumulative-balance calculation checks capacity and its first safe date.
+The latest cumulative expense experiment is documented in [expense_experiment/README.md](expense_experiment/README.md). It evaluates all 275 users over 30, 60 and 90 days and runs all 250 evaluation requests under both models. The alternative improves sample status/method/date counts and normalized amount error to 4.1415%, but increases historical underprediction risk and was not promoted. The production default and root output remain byte-identical to the prior local control: 3/25 exact amounts, 4.4293% normalized amount error, and the original release gate still blocked.
 
-These fixes do not establish the undocumented forecast behind the public examples. The stricter expense estimator increases some projected obligations and changes several recommendations. The accepted release gate rejects this candidate, so the running release must remain on `3ba63a8`.
+The complete suite now has 108 passing tests and one unchanged failing sample gate. Both full-dataset runs have zero contract errors and zero model calls. Source datasets and the remote deployment remain unchanged. The normal code.zip run uses the control estimator; the rejected experimental output is labeled separately inside its report directory.
 
-| Public sample metric | Baseline | Candidate |
-| --- | ---: | ---: |
-| Exact safe amount | 3/25 | 3/25 |
-| Status | 20/25 | 18/25 |
-| Payment method | 21/25 | 19/25 |
-| Payment plan | 21/25 | 20/25 |
-| Earliest full-payment date | 17/25 | 15/25 |
-| Spending changes | 17/25 | 17/25 |
-| Mean absolute amount error / requested amount | 3.5504% | 3.4961% |
+## Previous local iteration
 
-The modest amount-error improvement does not override the four regressed match counts. `test_sample_release_gate` deliberately fails on those regressions; it must not be marked xfail, skipped, or weakened. All other tests should pass. Candidate artifacts are review artifacts, not an approved replacement for the current service.
+The independent forecast investigation and current results are documented in [forecast_diagnostics.md](forecast_diagnostics.md). The original reconstruction, evidence extraction, user isolation and request tracing remain in place. The new correction preserves a complete regular spending cadence when merchants alternate, and the missing-commitment warning now reaches the output row.
 
-## Remaining differences
+Exact amounts remain 3/25. Relative to the previous local iteration, normalized amount error improves from 4.5236% to 4.4293%, while earliest-date matches fall from 16 to 15 and spending-change matches fall from 18 to 17. Relative to the original release, the candidate remains worse on status, method, plan, date and normalized amount error. It is not a validated release improvement.
 
-`evaluation_report.md` lists all 22 requests with differences and the limiting cash flow. `evaluation_report.json` contains every expected/predicted field, dated ledger, observed expense amounts, estimator, and independent capacity cross-check. The classifications remain `unresolved_reference_difference`; replaying an example under our own forecast is not evidence that the example itself is wrong.
+All 250 evaluation rows pass output contracts. There are 275 request traces and 25,342 accounted financial events. The full suite has 101 passing tests and one failed sample release gate; it was not weakened or skipped. Historical backtesting covers 550 windows across all 275 users. Independent raw-record ledgers agree with the engine for request_13, request_04 and request_25, but do not explain the public reference's different forecast assumptions.
 
-In particular, the candidate loses agreement for requests 12 and 23 after reserving the upper-quartile variable expenses. Requests 7 and 17 obtain later capacity dates. Request 11's current payroll message confirms a different amount from the historical base-salary rows; the prediction follows that supplied evidence rather than substituting the example's July date. No sample answers or organizer-only records enter predictions.
+Eight unquantified childcare commitments remain: request_119, request_127, request_14, request_147, request_155, request_219, request_83 and request_87. Only request_14 is a public sample; this does not explain the other 21 sample mismatches. Image_14 retains an explicitly unresolved handwritten transcription disagreement; it is settled and nonrecurring. Other reviewed image corrections and date-conditioned telecom amounts remain unchanged.
 
-## Reproduction
-
-From the repository root:
-
-```text
-python -B -m pytest code/tests -q -p no:cacheprovider
-python -B code/main.py --deterministic --emit-usage-report
-python -B code/evaluation/main.py --baseline-report code/evaluation/reference_baseline.json --candidate-report code/evaluation/evaluation_report.json
-python -B code/scripts/package_submission.py
-```
-
-The suite and release-check commands are expected to exit nonzero until the accuracy gate is met. A full-dataset run and contract replay can succeed while this deployment gate remains blocked.
+No remote operations were performed. output.csv and code.zip are local candidate artifacts; the existing deployment remains unchanged. Full current sample differences, evidence, estimates and binding calculations are in [sample_differences.md](sample_differences.md). Final-run model usage is zero; prior extraction usage and cost are reported separately in [usage_report.md](usage_report.md).

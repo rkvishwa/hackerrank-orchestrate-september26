@@ -8,7 +8,7 @@ Run from the repository root in PowerShell or a Linux shell:
 
 ```text
 python -m pip install -r code/requirements.txt
-python code/main.py --deterministic --emit-usage-report
+python code/main.py --dataset-dir dataset --output output.csv --report-dir code/evaluation --evidence-cache-dir code/evaluation/evidence_cache --deterministic
 python code/evaluation/main.py --output output.csv --dataset-dir dataset
 python code/evaluation/main.py --score-samples --dataset-dir dataset
 python code/scripts/package_submission.py
@@ -30,9 +30,9 @@ Relative arguments resolve from the working directory. Defaults resolve from the
 
 Messages and images are untrusted financial evidence. The engine ignores future messages, scopes facts to their linked user/event, reserves pending debits, excludes speculative unsettled credits and non-cash investments, and applies explicit amendments before forecasting.
 
-Independent subscriptions and bills retain separate series. Rotating grocery, transport and dining merchants are aggregated within their category. Regularity requires multiple distinct dates and consistent intervals. Variable outgoings use the upper quartile of the latest 12 observations. Irregular recurring income uses a lower observed amount; missed pay cycles, final payroll and termination evidence prevent unsupported continuation. These are explicit forecasting assumptions, not hidden-label rules.
+Independent subscriptions and bills retain separate series. Routine grocery, transport and dining merchants can share a series. Documentary invoices, airline tickets and wallet transactions retain distinct identities. Repeated descriptions establish the routine cadence; a new description must fit that cadence and not be an exceptional basket. Regularity requires multiple distinct dates and consistent intervals. Variable outgoings use the upper quartile of the latest 12 observed cycles. Irregular recurring income uses a lower observed amount; missed pay cycles, final payroll and termination evidence prevent unsupported continuation. These are explicit forecasting assumptions, not hidden-label rules.
 
-Dates have no intraday timestamps. Confirmed credits are available on their settlement date before outgoing payments on that date. Every subsequent expense and plan payment must retain the minimum balance. Forecasts end 90 days after the request; all recommended payments must also meet the requested deadline.
+Dates have no intraday timestamps. Confirmed credits are available on their settlement date before outgoing payments on that date. Every subsequent expense and plan payment must retain the minimum balance. Forecasts cover 90 calendar dates ending on request date + 89 days; all recommended payments must also meet the requested deadline.
 
 Image extraction requires the actual PNG. The included reviewed transcriptions were visually checked against the supplied images, contain only financial fields, and are bound to the complete dataset hash, image bytes, event context and extraction version. They are evidence caches, not request predictions. A changed document or event invalidates the cache. In deterministic mode, unresolved mandatory amounts fail the run without overwriting the prior output. Development transcription tokens are unavailable and are not counted as final-run provider usage.
 
@@ -64,6 +64,13 @@ Set Azure credentials through environment variables or the ignored `code/.env`, 
 
 ## Tests
 
+When `code/.env` contains Docker paths, set explicit local paths before tests in PowerShell:
+
+```powershell
+$env:DATASET_DIR = (Resolve-Path dataset).Path
+$env:EVIDENCE_CACHE_DIR = (Resolve-Path code/evaluation/evidence_cache).Path
+```
+
 ```text
 python -B -m pytest code/tests -q -p no:cacheprovider
 ```
@@ -94,6 +101,57 @@ If a run is interrupted during publication, packaging detects a mismatched bundl
 
 Dataset, source and public-sample text hashes normalize CRLF to LF so identical Git checkouts work on Windows and Linux. Image and generated artifact hashes always cover exact bytes.
 
-The forecast covers 90 calendar dates including the request date, ending 89 days later. Salary resumption and revised payday messages affect supported payroll series. Generic next-salary confirmations replace one matching payroll occurrence and do not create an additional employer; a lone confirmed future payment without supporting history is counted once. An issued rent balance from image evidence is not increased again by a general lease amendment. Pending platform earnings are excluded when the provider says they are unconfirmed or unavailable.
+The forecast covers 90 calendar dates including the request date, ending 89 days later. Salary resumption and revised payday messages affect supported payroll series. Income association is shared by evidence targeting, recurrence and occurrence replacement. Lifecycle links and named employers take precedence over generic descriptions; equal amounts alone do not identify an employer. An unnamed confirmation is counted once. When several employments remain possible, overlapping projected occurrences are excluded conservatively and independently identified income is retained. Such ambiguity cannot establish new recurrence or amend multiple employers. An issued rent balance from image evidence is not increased again by a general lease amendment. Pending platform earnings are excluded when the provider says they are unconfirmed or unavailable.
 
 The public audit retains exact comparisons across all six fields. Each mismatch includes the complete balance ledger, the cash flow that limits payment capacity, historical ranges behind recurring estimates, and replay of the sample's proposed safe amount. A supplementary mean absolute error divided by requested amount helps measure error size across currencies; it is not the official score. Future variable expenses require assumptions, and the examples do not provide their internal forecasts, so residual discrepancies remain explicitly unresolved.
+
+## Prepare evidence once, then test locally
+
+```text
+python code/main.py --dataset-dir dataset --report-dir code/evaluation --evidence-cache-dir code/evaluation/evidence_cache --prepare-evidence
+python code/main.py --dataset-dir dataset --output output.csv --report-dir code/evaluation --evidence-cache-dir code/evaluation/evidence_cache --deterministic
+python code/scripts/package_submission.py --dataset-dir dataset --evidence-cache-dir code/evaluation/evidence_cache
+```
+
+Preparation uses the configured Azure model, at most four concurrent requests, bounded retries, and source-bound caches. Every message is considered, including unlinked messages. Image extraction preserves totals, payment state and date-dependent amounts. Strict schema responses still undergo quotation, number, date and ownership validation. Model responses never select affordability or calculate balances. Extraction usage is reported separately from the output-producing cached replay.
+
+The current dataset has one request for each of 275 distinct users. Every case is independent. Historical settled transactions are already represented in the opening balance and are not subtracted again. A `linked_event_id` alone does not erase a real debit, credit or repayment.
+
+Each run writes `evaluation/traces/<request_id>.json` for 250 evaluation requests and 25 samples. Traces include original/effective history, evidence interpretations and rejections, recurring membership, baseline and selected-plan ledgers, offer eligibility, candidate ranking and unresolved commitments. The report hashes every trace; packaging checks these hashes.
+
+A supplied pending/scheduled event with no recoverable amount remains an error. A message announcing an additional mandatory commitment without enough details produces a conservative `not_recommended` result with zero certified capacity and an explicit uncertainty explanation. Such cases block the release gate; zero means no positive payment was certified, not that the unknown liability was assumed to cost zero. Missing reference calculations and missing input facts are reported separately from demonstrated code defects.
+
+## Independent forecast diagnostics
+
+```text
+python -B code/scripts/diagnose_forecasts.py --dataset-dir dataset --report-dir code/evaluation --evidence-cache-dir code/evaluation/evidence_cache
+```
+
+This command makes no API calls. It reconstructs three reviewed cases directly from the CSV records using the membership and schedules in `evaluation/reviewed_cases.json`. It calculates amounts from historical observations and replays all 90 days without importing the production recurrence, evidence or capacity implementation. Every historical record must belong to a reviewed series or have an explicit exclusion. Public answers enter only the subsequent comparison. These reviewed cases are evaluation fixtures; prediction never reads their specifications.
+
+The same command tests recurrence across two historical 30-day windows for each user, training only on earlier settled records. It reports date/category/currency precision and recall separately from error on matched amounts. Future messages, images, salary confirmations and sample answers cannot influence this backtest. The dataset supplies final transaction states, so this validates patterns in settled history rather than reconstructing historical bank snapshots.
+
+A complete regular spending pattern takes precedence over the frequency of repeated merchant names. Alternating a favourite restaurant with other merchants must not halve the frequency of dining expenses. The exceptional-basket filter and latest-12 upper-quartile estimator still apply. Current measured results and unresolved assumptions are in `evaluation/forecast_diagnostics.md`; the original release gate remains authoritative.
+
+## Cumulative expense experiment
+
+```text
+python -B code/scripts/experiment_expenses.py --dataset-dir dataset --report-dir code/evaluation/expense_experiment --evidence-cache-dir code/evaluation/evidence_cache
+```
+
+This evaluation command compares the default estimator with a fixed calendar-window alternative. It evaluates cumulative cash flows and drawdowns over 30, 60 and 90 days, reserves validation users, keeps public sample users outside model selection, and includes unmatched observed transactions. Missing amounts or unavailable dated FX make a fold unscorable. Historical balances are not invented. Both models also run all 250 evaluation requests with frozen evidence and no model calls.
+
+The alternative is experimental and does not change the normal CLI or API forecast. It reduced average errors but increased historical underprediction, so the promotion gate rejected it. Its output is explicitly named `experimental_output.csv` inside the experiment report directory. See `evaluation/expense_experiment/README.md` for results and the distinction between experimental and submission outputs.
+
+## Defect comparison and candidate artifacts
+
+The cancellation and employer-association corrections, per-fix results, and remaining differences are documented in `evaluation/defect_iteration/README.md`. Amendments are applied before cash-state filtering. A cancelled internal occurrence can explain a cadence gap only between at least two paid observations; its amount, flexibility and date cannot become the paid anchor. Traces separately record cancellation calendar evidence, income associations and explicit cash inclusion/exclusion reasons. Accounting checks reject duplicate recurring membership and missing or duplicated explicit obligations.
+
+The comparison adapter requires separately obtained, reviewed PR #8 source at commit `7c4cc0aa4698be2c558619b577e902bc5f326176`. It verifies file hashes and runs the external functions in a temporary offline worker without credentials or sample answers. External source is not included in this package and is never imported by prediction code.
+
+```text
+python -B code/scripts/compare_pr8.py --pr-source <reviewed-pr8-code-directory> --dataset-dir dataset --report-dir code/evaluation/defect_iteration --evidence-cache-dir code/evaluation/evidence_cache
+python -B code/scripts/validate_defects.py --control artifacts/defect-control-20260912T230232Z --candidate artifacts/defect-candidate-20260912 --report-dir code/evaluation/defect_iteration
+```
+
+Keep candidate artifacts separate until all release gates pass. The current defect iteration did not improve sample scores and must not replace the control submission or remote deployment. Its full run, package and 275 request traces live under `artifacts/defect-candidate-20260912/` in the development checkout. Frozen controls and external comparison source are development inputs and are not required for a normal packaged run.

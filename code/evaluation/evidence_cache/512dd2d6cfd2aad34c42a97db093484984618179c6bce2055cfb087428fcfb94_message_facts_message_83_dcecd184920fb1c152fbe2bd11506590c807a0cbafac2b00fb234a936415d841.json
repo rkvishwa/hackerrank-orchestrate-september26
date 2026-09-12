@@ -1,0 +1,51 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_110",
+  "source_id": "message_83",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "pending_credit",
+        "amount": "16720",
+        "percentage": null,
+        "currency": "ZAR",
+        "effective_date": "2025-08-15",
+        "date_quote": "2025-08-15",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "WorkPort",
+        "quote": "The client approved an invoice payment of ZAR 16720. Settlement is expected on 2025-08-15."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 687,
+    "output_tokens": 98
+  },
+  "accepted": [],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "pending_credit",
+        "amount": "16720",
+        "percentage": null,
+        "currency": "ZAR",
+        "effective_date": "2025-08-15",
+        "date_quote": "2025-08-15",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "WorkPort",
+        "quote": "The client approved an invoice payment of ZAR 16720. Settlement is expected on 2025-08-15."
+      },
+      "reason": "quotation is not in source"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "dcecd184920fb1c152fbe2bd11506590c807a0cbafac2b00fb234a936415d841"
+}

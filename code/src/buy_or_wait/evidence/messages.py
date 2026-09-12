@@ -88,6 +88,11 @@ class MessageResolver:
         return ctx
 
     def _resolve_message(self, message: MessageRow, request_date: date) -> EvidenceContext:
+        from buy_or_wait.evidence.structured import FactExtractor
+        from buy_or_wait.evidence.interpret import interpret_message
+        prepared = FactExtractor(self.dataset, self.settings).message(message)
+        if prepared is not None:
+            return interpret_message(self.dataset, self.settings, message, request_date, prepared)
         ctx = self._extract_message_context(message, request_date)
         if not ctx.income_patches:
             return ctx
@@ -100,36 +105,18 @@ class MessageResolver:
         keys = {s.series_key for s in recurring}
         if not keys:
             keys = {series_identity(e) for e in events if e.settlement_date < request_date}
-        assignments = {e.event_id: {series_identity(e)} for e in events}
-        for event in events:
-            if event.status != "scheduled" or event.settlement_date < request_date:
-                continue
-            identity = series_identity(event)
-            if identity not in keys and event.description.lower() == "next confirmed salary":
-                matches = {s.series_key for s in recurring if s.currency == event.currency
-                           and s.amount == event.amount and s.anchor_day == event.settlement_date.day}
-                if not matches:
-                    matches = {key for key in keys if key.split("|")[2] == event.currency}
-                if len(matches) == 1:
-                    assignments[event.event_id] = matches
-                    continue
-            keys.add(identity)
-        linked = self.dataset.events_by_id.get(message.related_event_id)
-        targets = set()
-        if message.related_event_id:
-            if linked and linked.user_id == message.user_id and linked.direction == "credit" and linked.category == "salary":
-                targets = assignments.get(linked.event_id, {series_identity(linked)})
-        else:
-            currencies = {p.currency for p in ctx.income_patches if p.currency}
-            if len(currencies) == 1:
-                keys = {key for key in keys if key.split("|")[2] in currencies}
-            named = {series_identity(e) for e in events
-                     if e.description.lower() in _financial_text(message.message_text).lower()
-                     and series_identity(e) in keys}
-            targets = named if len(named) == 1 else keys
-        ambiguous = len(targets & keys) > 1 or (not targets and not message.related_event_id)
-        target_events = tuple(sorted(eid for eid, assigned in assignments.items() if assigned & targets))
-        ctx.income_patches = [replace(p, target_series_keys=tuple(sorted(targets)),
+        from buy_or_wait.finance.income import (associate_income, select_income_targets,
+                                               income_scope_event_ids)
+        associations = associate_income(events, request_date)
+        currencies = {p.currency for p in ctx.income_patches if p.currency}
+        targets = select_income_targets(events, associations, keys,
+            linked_event_id=message.related_event_id,
+            currency=next(iter(currencies)) if len(currencies) == 1 else None,
+            quote=_financial_text(message.message_text))
+        ambiguous = len(targets) != 1
+        target_events = income_scope_event_ids(events, associations, targets,
+                                               linked_event_id=message.related_event_id)
+        ctx.income_patches = [replace(p, target_series_keys=tuple(sorted(targets)) if not ambiguous else (),
                                      target_event_ids=target_events,
                                      ambiguous_target=ambiguous) for p in ctx.income_patches]
         if ambiguous:

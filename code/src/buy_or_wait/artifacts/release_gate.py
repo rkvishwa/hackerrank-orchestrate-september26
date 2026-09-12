@@ -7,6 +7,9 @@ def assess_release(baseline, candidate):
     reasons = []
     if candidate.get("contract_errors"):
         reasons.append("candidate has contract violations")
+    incomplete = candidate.get("evidence_completeness", {}).get("requests_with_unquantified_commitments", [])
+    if incomplete:
+        reasons.append(f"{len(incomplete)} requests have unquantified mandatory commitments")
     if not candidate.get("full_dataset") or candidate.get("requests") != baseline.get("requests"):
         reasons.append("candidate is not a matching full-dataset run")
     for key in ("dataset_sha256", "sample_dataset_sha256"):

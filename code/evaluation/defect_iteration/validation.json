@@ -1,0 +1,375 @@
+{
+  "against_local_control": {
+    "baseline_amount_error": "0.04429265293759466086171501956",
+    "candidate_amount_error": "0.04429265293759466086171501956",
+    "eligible": false,
+    "matches": {
+      "affordability_status": {
+        "baseline": 18,
+        "candidate": 18,
+        "delta": 0
+      },
+      "amount_safe_to_pay": {
+        "baseline": 3,
+        "candidate": 3,
+        "delta": 0
+      },
+      "earliest_date_for_full_payment": {
+        "baseline": 15,
+        "candidate": 15,
+        "delta": 0
+      },
+      "payment_plan": {
+        "baseline": 20,
+        "candidate": 20,
+        "delta": 0
+      },
+      "recommended_payment_method": {
+        "baseline": 19,
+        "candidate": 19,
+        "delta": 0
+      },
+      "spending_changes_needed": {
+        "baseline": 17,
+        "candidate": 17,
+        "delta": 0
+      }
+    },
+    "reasons": [
+      "8 requests have unquantified mandatory commitments",
+      "no sample match count or normalized amount error improved"
+    ]
+  },
+  "against_original_release": {
+    "baseline_amount_error": "0.03550394232532874293715357850",
+    "candidate_amount_error": "0.04429265293759466086171501956",
+    "eligible": false,
+    "matches": {
+      "affordability_status": {
+        "baseline": 20,
+        "candidate": 18,
+        "delta": -2
+      },
+      "amount_safe_to_pay": {
+        "baseline": 3,
+        "candidate": 3,
+        "delta": 0
+      },
+      "earliest_date_for_full_payment": {
+        "baseline": 17,
+        "candidate": 15,
+        "delta": -2
+      },
+      "payment_plan": {
+        "baseline": 21,
+        "candidate": 20,
+        "delta": -1
+      },
+      "recommended_payment_method": {
+        "baseline": 21,
+        "candidate": 19,
+        "delta": -2
+      },
+      "spending_changes_needed": {
+        "baseline": 17,
+        "candidate": 17,
+        "delta": 0
+      }
+    },
+    "reasons": [
+      "8 requests have unquantified mandatory commitments",
+      "affordability_status regressed: 20 -> 18",
+      "recommended_payment_method regressed: 21 -> 19",
+      "payment_plan regressed: 21 -> 20",
+      "earliest_date_for_full_payment regressed: 17 -> 15",
+      "no sample match count or normalized amount error improved"
+    ]
+  },
+  "candidate_output_identical_to_control": false,
+  "candidate_rows": 250,
+  "contract_errors": [],
+  "frozen_input_mismatches": [],
+  "historical": {
+    "changed_folds": [],
+    "gates": {
+      "development": {
+        "eligible": false,
+        "reasons": [
+          "30d: insufficient changed, scorable forecasts",
+          "60d: insufficient changed, scorable forecasts",
+          "90d: insufficient changed, scorable forecasts",
+          "No cumulative expense accuracy improvement"
+        ]
+      },
+      "validation": {
+        "eligible": false,
+        "reasons": [
+          "30d: insufficient changed, scorable forecasts",
+          "60d: insufficient changed, scorable forecasts",
+          "90d: insufficient changed, scorable forecasts",
+          "No cumulative expense accuracy improvement"
+        ]
+      }
+    },
+    "limitations": "Historical settled cash movements, including unmatched one-offs; relative cash begins at zero. No invented historical available balance or forecast FX rates. Unknown amounts make a fold unscorable. Only pre-cutoff observations train each model; no messages or future confirmations. Public sample users are excluded from selection; validation users use a fixed SHA-256 partition. Windows of different lengths overlap and are not independent observations. Final snapshot states limit validity.",
+    "paired_summary": {
+      "development": {
+        "30": {
+          "folds": 171,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05313652253412297444341499374",
+              "mean_maximum_net_overstatement_fraction": "0.1176907026904909783574619750",
+              "mean_maximum_prefix_underprediction_fraction": "0.006917115725622563077190249319",
+              "mean_minimum_cash_overstatement_fraction": "0.008693678450470356402848571055",
+              "mean_outflow_underprediction_fraction": "0.003207720838063352664788139779",
+              "underpredicted_folds": 18,
+              "worst_prefix_underprediction_fraction": "0.1109216454044040250936802661"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05313652253412297444341499374",
+              "mean_maximum_net_overstatement_fraction": "0.1176907026904909783574619750",
+              "mean_maximum_prefix_underprediction_fraction": "0.006917115725622563077190249319",
+              "mean_minimum_cash_overstatement_fraction": "0.008693678450470356402848571055",
+              "mean_outflow_underprediction_fraction": "0.003207720838063352664788139779",
+              "underpredicted_folds": 18,
+              "worst_prefix_underprediction_fraction": "0.1109216454044040250936802661"
+            }
+          },
+          "paired_scorable_folds": 163,
+          "unscorable_folds": 8
+        },
+        "60": {
+          "folds": 171,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.04920292218096574756336738529",
+              "mean_maximum_net_overstatement_fraction": "0.06645856907800886469090267687",
+              "mean_maximum_prefix_underprediction_fraction": "0.003238591389608465773396193326",
+              "mean_minimum_cash_overstatement_fraction": "0.001286509985848522797294828464",
+              "mean_outflow_underprediction_fraction": "0.0009963283396053139285739601411",
+              "underpredicted_folds": 12,
+              "worst_prefix_underprediction_fraction": "0.04466781910920460123354034616"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.04920292218096574756336738529",
+              "mean_maximum_net_overstatement_fraction": "0.06645856907800886469090267687",
+              "mean_maximum_prefix_underprediction_fraction": "0.003238591389608465773396193326",
+              "mean_minimum_cash_overstatement_fraction": "0.001286509985848522797294828464",
+              "mean_outflow_underprediction_fraction": "0.0009963283396053139285739601411",
+              "underpredicted_folds": 12,
+              "worst_prefix_underprediction_fraction": "0.04466781910920460123354034616"
+            }
+          },
+          "paired_scorable_folds": 163,
+          "unscorable_folds": 8
+        },
+        "90": {
+          "folds": 171,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05026148922756564274204298012",
+              "mean_maximum_net_overstatement_fraction": "0.06990235835110476599898093209",
+              "mean_maximum_prefix_underprediction_fraction": "0.002401997423622319954629391865",
+              "mean_minimum_cash_overstatement_fraction": "0.02082095649213278298482243344",
+              "mean_outflow_underprediction_fraction": "0.001032140507978812706941445524",
+              "underpredicted_folds": 9,
+              "worst_prefix_underprediction_fraction": "0.04542198261155633519431445344"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05026148922756564274204298012",
+              "mean_maximum_net_overstatement_fraction": "0.06990235835110476599898093209",
+              "mean_maximum_prefix_underprediction_fraction": "0.002401997423622319954629391865",
+              "mean_minimum_cash_overstatement_fraction": "0.02082095649213278298482243344",
+              "mean_outflow_underprediction_fraction": "0.001032140507978812706941445524",
+              "underpredicted_folds": 9,
+              "worst_prefix_underprediction_fraction": "0.04542198261155633519431445344"
+            }
+          },
+          "paired_scorable_folds": 163,
+          "unscorable_folds": 8
+        }
+      },
+      "public_audit": {
+        "30": {
+          "folds": 25,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05623248204718411436136222232",
+              "mean_maximum_net_overstatement_fraction": "0.1578382189961727739653212424",
+              "mean_maximum_prefix_underprediction_fraction": "0.008574037130135724750372537318",
+              "mean_minimum_cash_overstatement_fraction": "0.00993745418377025615940547665",
+              "mean_outflow_underprediction_fraction": "0.006426750881668529673764864505",
+              "underpredicted_folds": 2,
+              "worst_prefix_underprediction_fraction": "0.1248556398819739518899353814"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05623248204718411436136222232",
+              "mean_maximum_net_overstatement_fraction": "0.1578382189961727739653212424",
+              "mean_maximum_prefix_underprediction_fraction": "0.008574037130135724750372537318",
+              "mean_minimum_cash_overstatement_fraction": "0.00993745418377025615940547665",
+              "mean_outflow_underprediction_fraction": "0.006426750881668529673764864505",
+              "underpredicted_folds": 2,
+              "worst_prefix_underprediction_fraction": "0.1248556398819739518899353814"
+            }
+          },
+          "paired_scorable_folds": 22,
+          "unscorable_folds": 3
+        },
+        "60": {
+          "folds": 25,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05137656531157543954094097868",
+              "mean_maximum_net_overstatement_fraction": "0.07854151796813165913330309614",
+              "mean_maximum_prefix_underprediction_fraction": "0.003300848807245195724197180513",
+              "mean_minimum_cash_overstatement_fraction": "0.001321886247362878491340108905",
+              "mean_outflow_underprediction_fraction": "0.002556461046255139131860186033",
+              "underpredicted_folds": 2,
+              "worst_prefix_underprediction_fraction": "0.05612514222831330204794460990"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05137656531157543954094097868",
+              "mean_maximum_net_overstatement_fraction": "0.07854151796813165913330309614",
+              "mean_maximum_prefix_underprediction_fraction": "0.003300848807245195724197180513",
+              "mean_minimum_cash_overstatement_fraction": "0.001321886247362878491340108905",
+              "mean_outflow_underprediction_fraction": "0.002556461046255139131860186033",
+              "underpredicted_folds": 2,
+              "worst_prefix_underprediction_fraction": "0.05612514222831330204794460990"
+            }
+          },
+          "paired_scorable_folds": 22,
+          "unscorable_folds": 3
+        },
+        "90": {
+          "folds": 25,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05358787832561553007891526077",
+              "mean_maximum_net_overstatement_fraction": "0.08491856416357006613790708427",
+              "mean_maximum_prefix_underprediction_fraction": "0.001975901444042188822906417815",
+              "mean_minimum_cash_overstatement_fraction": "0.03107756484991954192382562658",
+              "mean_outflow_underprediction_fraction": "0.001155849078775413136434441675",
+              "underpredicted_folds": 1,
+              "worst_prefix_underprediction_fraction": "0.02708960042748814550051650793"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05358787832561553007891526077",
+              "mean_maximum_net_overstatement_fraction": "0.08491856416357006613790708427",
+              "mean_maximum_prefix_underprediction_fraction": "0.001975901444042188822906417815",
+              "mean_minimum_cash_overstatement_fraction": "0.03107756484991954192382562658",
+              "mean_outflow_underprediction_fraction": "0.001155849078775413136434441675",
+              "underpredicted_folds": 1,
+              "worst_prefix_underprediction_fraction": "0.02708960042748814550051650793"
+            }
+          },
+          "paired_scorable_folds": 22,
+          "unscorable_folds": 3
+        }
+      },
+      "validation": {
+        "30": {
+          "folds": 79,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05092420905016844632530986486",
+              "mean_maximum_net_overstatement_fraction": "0.09099356312417995752460741694",
+              "mean_maximum_prefix_underprediction_fraction": "0.007763378959732065785879355473",
+              "mean_minimum_cash_overstatement_fraction": "0.004604224677368278234214713504",
+              "mean_outflow_underprediction_fraction": "0.002481320369880840472913735038",
+              "underpredicted_folds": 5,
+              "worst_prefix_underprediction_fraction": "0.1293077353779916811928735873"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05092420905016844632530986486",
+              "mean_maximum_net_overstatement_fraction": "0.09099356312417995752460741694",
+              "mean_maximum_prefix_underprediction_fraction": "0.007763378959732065785879355473",
+              "mean_minimum_cash_overstatement_fraction": "0.004604224677368278234214713504",
+              "mean_outflow_underprediction_fraction": "0.002481320369880840472913735038",
+              "underpredicted_folds": 5,
+              "worst_prefix_underprediction_fraction": "0.1293077353779916811928735873"
+            }
+          },
+          "paired_scorable_folds": 78,
+          "unscorable_folds": 1
+        },
+        "60": {
+          "folds": 79,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.04880897536837730042529427926",
+              "mean_maximum_net_overstatement_fraction": "0.05945634256953088092883687394",
+              "mean_maximum_prefix_underprediction_fraction": "0.004325919792801760943995178459",
+              "mean_minimum_cash_overstatement_fraction": "0.0006671824975801454411271835438",
+              "mean_outflow_underprediction_fraction": "0.0018541863898820289857853337",
+              "underpredicted_folds": 5,
+              "worst_prefix_underprediction_fraction": "0.06563081625028905756893111103"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.04880897536837730042529427926",
+              "mean_maximum_net_overstatement_fraction": "0.05945634256953088092883687394",
+              "mean_maximum_prefix_underprediction_fraction": "0.004325919792801760943995178459",
+              "mean_minimum_cash_overstatement_fraction": "0.0006671824975801454411271835438",
+              "mean_outflow_underprediction_fraction": "0.0018541863898820289857853337",
+              "underpredicted_folds": 5,
+              "worst_prefix_underprediction_fraction": "0.06563081625028905756893111103"
+            }
+          },
+          "paired_scorable_folds": 78,
+          "unscorable_folds": 1
+        },
+        "90": {
+          "folds": 79,
+          "folds_with_changed_estimates": 0,
+          "models": {
+            "candidate": {
+              "mean_absolute_outflow_error_fraction": "0.05106120750855873650532045426",
+              "mean_maximum_net_overstatement_fraction": "0.06620247115379306077052676999",
+              "mean_maximum_prefix_underprediction_fraction": "0.001853829060025274053767602103",
+              "mean_minimum_cash_overstatement_fraction": "0.02514508733538539646608649503",
+              "mean_outflow_underprediction_fraction": "0.0008974497507984955569739540286",
+              "underpredicted_folds": 3,
+              "worst_prefix_underprediction_fraction": "0.05991887771556429003177149224"
+            },
+            "control": {
+              "mean_absolute_outflow_error_fraction": "0.05106120750855873650532045426",
+              "mean_maximum_net_overstatement_fraction": "0.06620247115379306077052676999",
+              "mean_maximum_prefix_underprediction_fraction": "0.001853829060025274053767602103",
+              "mean_minimum_cash_overstatement_fraction": "0.02514508733538539646608649503",
+              "mean_outflow_underprediction_fraction": "0.0008974497507984955569739540286",
+              "underpredicted_folds": 3,
+              "worst_prefix_underprediction_fraction": "0.05991887771556429003177149224"
+            }
+          },
+          "paired_scorable_folds": 78,
+          "unscorable_folds": 1
+        }
+      }
+    },
+    "timing_folds": 550,
+    "timing_results_identical": true,
+    "timing_summary": {
+      "debit_estimate_covers_observation": 6288,
+      "folds": 550,
+      "matched_amount_mean_absolute_relative_error": "0.1247031099300280409599357383",
+      "matched_date_category_buckets": 8598,
+      "matched_debit_buckets": 8129,
+      "observed_date_category_buckets": 8860,
+      "predicted_date_category_buckets": 8624,
+      "timing_precision": 0.9969851576994434,
+      "timing_recall": 0.9704288939051918,
+      "unknown_amount_buckets": 12,
+      "users": 275
+    },
+    "total_folds": 825
+  },
+  "promotion_eligible": false
+}

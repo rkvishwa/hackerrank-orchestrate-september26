@@ -30,6 +30,8 @@ class AzureEvidenceClient:
             azure_endpoint=self.settings.azure_openai_endpoint,
             api_key=self.settings.azure_openai_api_key,
             api_version=self.settings.azure_openai_api_version,
+            timeout=45,
+            max_retries=2,
         )
 
     def extract_image_amount(

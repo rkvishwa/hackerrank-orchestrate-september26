@@ -1,0 +1,51 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_178",
+  "source_id": "message_141",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "pending_credit",
+        "amount": "2376",
+        "percentage": null,
+        "currency": "EUR",
+        "effective_date": "2024-12-15",
+        "date_quote": "2024-12-15",
+        "timing": "on_date",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "FreelanceHub",
+        "quote": "The client approved an invoice payment of EUR 2376. Settlement is expected on 2024-12-15."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 682,
+    "output_tokens": 96
+  },
+  "accepted": [],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "pending_credit",
+        "amount": "2376",
+        "percentage": null,
+        "currency": "EUR",
+        "effective_date": "2024-12-15",
+        "date_quote": "2024-12-15",
+        "timing": "on_date",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "FreelanceHub",
+        "quote": "The client approved an invoice payment of EUR 2376. Settlement is expected on 2024-12-15."
+      },
+      "reason": "quotation is not in source"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "d8898a8734743b453fb14eebec91afc94bcb17c1a1e89e5379980459d0e92ece"
+}

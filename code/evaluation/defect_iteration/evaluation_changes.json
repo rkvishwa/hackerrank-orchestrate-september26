@@ -1,0 +1,248 @@
+[
+  {
+    "accuracy": "unknown; no evaluation labels available",
+    "candidate": {
+      "affordability_status": "not_affordable",
+      "amount_safe_to_pay": "0",
+      "decision_explanation": "Do not make this payment by 2024-05-24. No eligible plan meets that deadline while protecting the ZAR 29700 minimum. Baseline safe payment today is ZAR 0. No safe full-payment date was found within 90 days.",
+      "earliest_date_for_full_payment": "",
+      "payment_plan": "none",
+      "recommended_payment_method": "not_recommended",
+      "request_id": "request_97",
+      "spending_changes_needed": "none"
+    },
+    "classification": "ambiguous_employment_confirmation",
+    "control": {
+      "affordability_status": "affordable_with_plan",
+      "amount_safe_to_pay": "1248.43",
+      "decision_explanation": "Use 3 installments of ZAR 8,145.28, starting 2024-03-19. This leaves at least ZAR 29700 available.",
+      "earliest_date_for_full_payment": "2024-04-15",
+      "payment_plan": "2024-03-19:8145.28|2024-04-19:8145.28|2024-05-20:8145.28",
+      "recommended_payment_method": "installments",
+      "request_id": "request_97",
+      "spending_changes_needed": "none"
+    },
+    "evidence": [],
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|ZAR|new employer payroll",
+          "credit|salary|ZAR|previous employer payroll"
+        ],
+        "event_id": "event_9039",
+        "matched_series_key": null,
+        "reason": "ambiguous confirmation; no employment amendment or new recurrence",
+        "source_event_ids": [
+          "event_8982",
+          "event_8987",
+          "event_8992",
+          "event_8997",
+          "event_9002"
+        ]
+      }
+    ],
+    "request_id": "request_97"
+  },
+  {
+    "accuracy": "unknown; no evaluation labels available",
+    "candidate": {
+      "affordability_status": "not_affordable",
+      "amount_safe_to_pay": "0",
+      "decision_explanation": "Do not make this payment by 2024-08-20. No eligible plan meets that deadline while protecting the EUR 1600 minimum. Baseline safe payment today is EUR 0. No safe full-payment date was found within 90 days.",
+      "earliest_date_for_full_payment": "",
+      "payment_plan": "none",
+      "recommended_payment_method": "not_recommended",
+      "request_id": "request_124",
+      "spending_changes_needed": "none"
+    },
+    "classification": "ambiguous_employment_confirmation",
+    "control": {
+      "affordability_status": "affordable_with_plan",
+      "amount_safe_to_pay": "1374.84",
+      "decision_explanation": "Use 3 installments of EUR 1,076.12, starting 2024-06-11. This leaves at least EUR 1600 available.",
+      "earliest_date_for_full_payment": "2024-08-15",
+      "payment_plan": "2024-06-11:1076.12|2024-07-12:1076.12|2024-08-12:1076.12",
+      "recommended_payment_method": "installments",
+      "request_id": "request_124",
+      "spending_changes_needed": "reduce_to:event_11480:38|stop:event_11448"
+    },
+    "evidence": [],
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|EUR|new employer payroll",
+          "credit|salary|EUR|previous employer payroll"
+        ],
+        "event_id": "event_11482",
+        "matched_series_key": null,
+        "reason": "ambiguous confirmation; no employment amendment or new recurrence",
+        "source_event_ids": [
+          "event_11424",
+          "event_11429",
+          "event_11434",
+          "event_11439",
+          "event_11444"
+        ]
+      }
+    ],
+    "request_id": "request_124"
+  },
+  {
+    "accuracy": "unknown; no evaluation labels available",
+    "candidate": {
+      "affordability_status": "affordable_later",
+      "amount_safe_to_pay": "2370.23",
+      "decision_explanation": "Pay ZAR 12584 in full on 2025-07-15. Paying earlier would take the balance below the ZAR 11300 minimum.",
+      "earliest_date_for_full_payment": "2025-07-15",
+      "payment_plan": "2025-07-15:12584",
+      "recommended_payment_method": "wait",
+      "request_id": "request_143",
+      "spending_changes_needed": "none"
+    },
+    "classification": "scoped_non_payroll_evidence",
+    "control": {
+      "affordability_status": "not_affordable",
+      "amount_safe_to_pay": "0",
+      "decision_explanation": "Do not make this payment by 2025-07-15. No eligible plan meets that deadline while protecting the ZAR 11300 minimum. Baseline safe payment today is ZAR 0. No safe full-payment date was found within 90 days.",
+      "earliest_date_for_full_payment": "",
+      "payment_plan": "none",
+      "recommended_payment_method": "not_recommended",
+      "request_id": "request_143",
+      "spending_changes_needed": "none"
+    },
+    "evidence": [
+      {
+        "fact": {
+          "amount": null,
+          "certainty": "confirmed",
+          "currency": null,
+          "date_quote": null,
+          "effective_date": null,
+          "kind": "one_time_income",
+          "percentage": null,
+          "quote": "The prize proceeds have reached your account after withholding.",
+          "scope": "occurrence",
+          "subject": "ClaimDesk",
+          "timing": "unknown"
+        },
+        "income_candidate_series": [],
+        "income_target_ambiguous": false,
+        "observed_at": "2025-05-04T09:30:00Z",
+        "resolution": "one-time income is not recurring salary; retain actual settled cash state",
+        "source_id": "message_110",
+        "user_id": "user_143"
+      },
+      {
+        "fact": {
+          "amount": null,
+          "certainty": "confirmed",
+          "currency": null,
+          "date_quote": null,
+          "effective_date": null,
+          "kind": "income_end",
+          "percentage": null,
+          "quote": "The claim is now closed and there are no further scheduled payments.",
+          "scope": "unknown",
+          "subject": "ClaimDesk",
+          "timing": "unknown"
+        },
+        "income_candidate_series": [],
+        "income_target_ambiguous": false,
+        "observed_at": "2025-05-04T09:30:00Z",
+        "resolution": "income target/date unresolved; no invented income",
+        "source_id": "message_110",
+        "user_id": "user_143"
+      }
+    ],
+    "income_associations": [],
+    "request_id": "request_143"
+  },
+  {
+    "accuracy": "unknown; no evaluation labels available",
+    "candidate": {
+      "affordability_status": "not_affordable",
+      "amount_safe_to_pay": "548.90",
+      "decision_explanation": "Do not make this payment by 2024-07-05. No eligible plan meets that deadline while protecting the EUR 500 minimum. Baseline safe payment today is EUR 548.90. No safe full-payment date was found within 90 days.",
+      "earliest_date_for_full_payment": "",
+      "payment_plan": "none",
+      "recommended_payment_method": "not_recommended",
+      "request_id": "request_196",
+      "spending_changes_needed": "none"
+    },
+    "classification": "ambiguous_employment_confirmation",
+    "control": {
+      "affordability_status": "affordable_now",
+      "amount_safe_to_pay": "762.30",
+      "decision_explanation": "Pay EUR 762.30 on 2024-06-03. This leaves at least EUR 500 available over the next 90 days.",
+      "earliest_date_for_full_payment": "2024-06-03",
+      "payment_plan": "2024-06-03:762.3",
+      "recommended_payment_method": "full_payment",
+      "request_id": "request_196",
+      "spending_changes_needed": "none"
+    },
+    "evidence": [],
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|EUR|new employer payroll",
+          "credit|salary|EUR|previous employer payroll"
+        ],
+        "event_id": "event_18095",
+        "matched_series_key": null,
+        "reason": "ambiguous confirmation; no employment amendment or new recurrence",
+        "source_event_ids": [
+          "event_18038",
+          "event_18043",
+          "event_18048",
+          "event_18053",
+          "event_18058"
+        ]
+      }
+    ],
+    "request_id": "request_196"
+  },
+  {
+    "accuracy": "unknown; no evaluation labels available",
+    "candidate": {
+      "affordability_status": "not_affordable",
+      "amount_safe_to_pay": "313.24",
+      "decision_explanation": "Do not make this payment by 2024-10-20. No eligible plan meets that deadline while protecting the EUR 800 minimum. Baseline safe payment today is EUR 313.24. No safe full-payment date was found within 90 days.",
+      "earliest_date_for_full_payment": "",
+      "payment_plan": "none",
+      "recommended_payment_method": "not_recommended",
+      "request_id": "request_223",
+      "spending_changes_needed": "none"
+    },
+    "classification": "ambiguous_employment_confirmation",
+    "control": {
+      "affordability_status": "affordable_now",
+      "amount_safe_to_pay": "898.70",
+      "decision_explanation": "Pay EUR 898.70 on 2024-09-07. This leaves at least EUR 800 available over the next 90 days.",
+      "earliest_date_for_full_payment": "2024-09-07",
+      "payment_plan": "2024-09-07:898.7",
+      "recommended_payment_method": "full_payment",
+      "request_id": "request_223",
+      "spending_changes_needed": "none"
+    },
+    "evidence": [],
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|EUR|new employer payroll",
+          "credit|salary|EUR|previous employer payroll"
+        ],
+        "event_id": "event_20512",
+        "matched_series_key": null,
+        "reason": "ambiguous confirmation; no employment amendment or new recurrence",
+        "source_event_ids": [
+          "event_20454",
+          "event_20459",
+          "event_20464",
+          "event_20469",
+          "event_20474"
+        ]
+      }
+    ],
+    "request_id": "request_223"
+  }
+]

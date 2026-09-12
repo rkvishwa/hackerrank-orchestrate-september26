@@ -1,0 +1,63 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_35",
+  "source_id": "image_07",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "amounts": [
+      {
+        "value": "8122.00",
+        "currency": "INR",
+        "role": "invoice_total",
+        "label": "SubTotal",
+        "valid_through": null,
+        "valid_after": null
+      },
+      {
+        "value": "203.05",
+        "currency": "INR",
+        "role": "line_item",
+        "label": "SGST 2.50%",
+        "valid_through": null,
+        "valid_after": null
+      },
+      {
+        "value": "203.05",
+        "currency": "INR",
+        "role": "line_item",
+        "label": "CGST 2.50%",
+        "valid_through": null,
+        "valid_after": null
+      },
+      {
+        "value": "8528.10",
+        "currency": "INR",
+        "role": "invoice_total",
+        "label": "Total",
+        "valid_through": null,
+        "valid_after": null
+      },
+      {
+        "value": "8528",
+        "currency": "INR",
+        "role": "total_paid",
+        "label": "Grand Total",
+        "valid_through": null,
+        "valid_after": null
+      }
+    ],
+    "payment_state": "paid",
+    "payment_state_quote": "PAID",
+    "settlement_date": "2025-10-29",
+    "settlement_date_quote": "29-10-2025",
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 1112,
+    "output_tokens": 217
+  },
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "85acac38f09df6b82257c998a100bceb26649f52b7936fc26de40aa31a31ea5f"
+}

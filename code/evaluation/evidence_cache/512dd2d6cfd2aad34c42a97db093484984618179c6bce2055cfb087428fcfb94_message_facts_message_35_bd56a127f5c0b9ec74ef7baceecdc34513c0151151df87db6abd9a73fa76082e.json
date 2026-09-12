@@ -1,0 +1,65 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_48",
+  "source_id": "message_35",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "settlement",
+        "amount": "unknown",
+        "percentage": null,
+        "currency": "INR",
+        "effective_date": "2026-07-24",
+        "date_quote": "24 July 2026",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "property maintenance payment",
+        "quote": "Your property maintenance payment was received on 24 July 2026."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 653,
+    "output_tokens": 86
+  },
+  "accepted": [
+    {
+      "kind": "settlement",
+      "amount": null,
+      "percentage": null,
+      "currency": "INR",
+      "effective_date": "2026-07-24",
+      "date_quote": "24 July 2026",
+      "timing": "on_date",
+      "scope": "occurrence",
+      "certainty": "confirmed",
+      "subject": "property maintenance payment",
+      "quote": "Your property maintenance payment was received on 24 July 2026."
+    }
+  ],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "settlement",
+        "amount": "unknown",
+        "percentage": null,
+        "currency": "INR",
+        "effective_date": "2026-07-24",
+        "date_quote": "24 July 2026",
+        "timing": "on_date",
+        "scope": "occurrence",
+        "certainty": "confirmed",
+        "subject": "property maintenance payment",
+        "quote": "Your property maintenance payment was received on 24 July 2026."
+      },
+      "reason": "unsupported amount"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "bd56a127f5c0b9ec74ef7baceecdc34513c0151151df87db6abd9a73fa76082e"
+}

@@ -23,6 +23,8 @@ def main() -> int:
     parser.add_argument("--deterministic", action="store_true", help="Disable Azure LLM calls")
     parser.add_argument("--emit-usage-report", action="store_true", help="Write evaluation/usage_report.md")
     parser.add_argument("--report-dir", type=Path, default=None, help="Directory for matching usage and evaluation reports")
+    parser.add_argument("--evidence-cache-dir", type=Path, default=None, help="Validated evidence cache")
+    parser.add_argument("--prepare-evidence", action="store_true", help="Extract all messages/images without running predictions")
     args = parser.parse_args()
 
     settings = Settings()
@@ -32,10 +34,17 @@ def main() -> int:
         settings.output_path = args.output
     if args.report_dir:
         settings.report_dir = args.report_dir
+    if args.evidence_cache_dir:
+        settings.evidence_cache_dir = args.evidence_cache_dir
     if args.deterministic:
         settings.deterministic_mode = True
         settings.llm_enabled = False
 
+    if args.prepare_evidence:
+        from buy_or_wait.ingest.loader import load_dataset
+        from buy_or_wait.evidence.prepare import prepare_evidence
+        prepare_evidence(load_dataset(settings.resolved_dataset_dir), settings)
+        return 0
     results, output_path = run_pipeline(settings)
     print(f"Wrote {len(results)} predictions to {output_path}")
 

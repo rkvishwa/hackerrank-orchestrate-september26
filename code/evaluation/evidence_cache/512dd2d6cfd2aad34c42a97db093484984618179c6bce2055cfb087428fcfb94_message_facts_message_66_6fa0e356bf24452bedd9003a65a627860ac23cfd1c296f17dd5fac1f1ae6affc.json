@@ -1,0 +1,74 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_87",
+  "source_id": "message_66",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "income_resume",
+        "amount": "251000",
+        "percentage": null,
+        "currency": "INR",
+        "effective_date": "2026-01-15",
+        "date_quote": "2026-01-15",
+        "timing": "on_date",
+        "scope": "series",
+        "certainty": "confirmed",
+        "subject": "HarborWorks",
+        "quote": "Regular salary of INR 251000 resumes on 2026-01-15."
+      },
+      {
+        "kind": "expense_start",
+        "amount": null,
+        "percentage": null,
+        "currency": null,
+        "effective_date": null,
+        "date_quote": "in the same month",
+        "timing": "unknown",
+        "scope": "series",
+        "certainty": "confirmed",
+        "subject": "childcare",
+        "quote": "A new recurring childcare payment begins in the same month."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 673,
+    "output_tokens": 152
+  },
+  "accepted": [
+    {
+      "kind": "income_resume",
+      "amount": "251000",
+      "percentage": null,
+      "currency": "INR",
+      "effective_date": "2026-01-15",
+      "date_quote": "2026-01-15",
+      "timing": "on_date",
+      "scope": "series",
+      "certainty": "confirmed",
+      "subject": null,
+      "quote": "Regular salary of INR 251000 resumes on 2026-01-15."
+    },
+    {
+      "kind": "expense_start",
+      "amount": null,
+      "percentage": null,
+      "currency": null,
+      "effective_date": null,
+      "date_quote": "in the same month",
+      "timing": "unknown",
+      "scope": "series",
+      "certainty": "confirmed",
+      "subject": "childcare",
+      "quote": "A new recurring childcare payment begins in the same month."
+    }
+  ],
+  "rejected": [],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "6fa0e356bf24452bedd9003a65a627860ac23cfd1c296f17dd5fac1f1ae6affc"
+}

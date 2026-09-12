@@ -17,6 +17,9 @@ class ConflictResolver:
             rent_patches=list(evidence.rent_patches),
             notes=list(evidence.notes),
             unresolved_mandatory_debits=set(evidence.unresolved_mandatory_debits),
+            fact_audit=list(evidence.fact_audit),
+            nonrecurring_event_ids=set(evidence.nonrecurring_event_ids),
+            confirmed_flows=list(evidence.confirmed_flows),
         )
 
         events = self.dataset.events_by_user.get(user_id, [])

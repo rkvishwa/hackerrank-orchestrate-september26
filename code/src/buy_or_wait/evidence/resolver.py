@@ -20,20 +20,51 @@ class EvidenceResolver:
         self.cache = EvidenceCache(self.cache_dir, self.dataset.version_hash)
         self.messages = MessageResolver(dataset, self.settings)
         self.conflicts = ConflictResolver(dataset)
+        self._resolved = {}
 
     def resolve(self, request: RequestRow) -> EvidenceContext:
+        key = (request.user_id, request.request_id, request.request_date)
+        if key in self._resolved:
+            return self._resolved[key]
         ctx = EvidenceContext()
         user_events = self.dataset.events_by_user.get(request.user_id, [])
 
         for event in user_events:
-            if event.amount is not None:
-                continue
-            image = self.dataset.images_by_event.get(event.event_id)
-            if not image:
+            images = self.dataset.image_records_by_event.get(event.event_id, [])
+            if not images and self.dataset.images_by_event.get(event.event_id):
+                images = [self.dataset.images_by_event[event.event_id]]
+            images = [i for i in images if i.user_id == request.user_id
+                      and (not i.request_id or i.request_id == request.request_id)]
+            if not images:
+                if event.amount is not None:
+                    continue
                 if event.direction == "debit" and event.status in {"pending", "scheduled"}:
                     ctx.unresolved_mandatory_debits.add(event.event_id)
                 continue
-            extracted = self._extract_image_amount(event, image.image_id)
+            from buy_or_wait.evidence.structured import FactExtractor, select_document_amount
+            amounts = []
+            for image in images:
+                prepared = FactExtractor(self.dataset, self.settings).image(image)
+                reviewed = self.cache.read("image", image.image_id, image_source_hash(
+                    self.dataset.media_dir / f"{image.image_id}.png", event)) if (self.dataset.media_dir / f"{image.image_id}.png").exists() else None
+                selected = select_document_amount(prepared, event) if prepared else None
+                if selected:
+                    amount, selection = selected
+                    resolution = "document role and settlement-date conditions"
+                    if reviewed and reviewed.get("source") == "reviewed_image" and Decimal(str(reviewed["amount"])) != amount:
+                        resolution = "vision disagrees with source-bound reviewed image; retained reviewed amount"
+                        amount = Decimal(str(reviewed["amount"]))
+                    amounts.append(amount)
+                    ctx.fact_audit.append({"source_id": image.image_id, "user_id": request.user_id,
+                        "event_id": event.event_id, "extraction": prepared["extraction"],
+                        "selection": selection, "selected_amount": str(amount), "resolution": resolution})
+                elif event.amount is None:
+                    old = self._extract_image_amount(event, image.image_id)
+                    if old:
+                        amounts.append(old.amount)
+            if len(set(amounts)) > 1:
+                raise ValueError(f"Conflicting image evidence requires review: {event.event_id}")
+            extracted = ExtractedAmount(amounts[0], event.currency) if amounts else None
             if extracted is None:
                 if event.direction == "debit" and event.status in {"pending", "scheduled"}:
                     ctx.unresolved_mandatory_debits.add(event.event_id)
@@ -52,7 +83,9 @@ class EvidenceResolver:
             request.user_id, request.request_date, request.request_id
         )
         ctx = ctx.merge(message_ctx)
-        return self.conflicts.resolve(request.user_id, ctx)
+        ctx = self.conflicts.resolve(request.user_id, ctx)
+        self._resolved[key] = ctx
+        return ctx
 
     def resolve_amount_overrides(self, request: RequestRow) -> dict[str, Decimal]:
         return self.resolve(request).amount_overrides

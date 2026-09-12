@@ -137,6 +137,8 @@ class Dataset:
     images_by_id: dict[str, ImageRow]
     exchange_rates: list[ExchangeRate]
     media_dir: Path = field(default_factory=Path)
+    context_requests_by_id: dict[str, RequestRow] = field(default_factory=dict)
+    image_records_by_event: dict[str, list[ImageRow]] = field(default_factory=dict)
 
 
 def _hash_dataset(paths: list[Path]) -> str:
@@ -275,6 +277,7 @@ def load_dataset(dataset_dir: Path) -> Dataset:
                 messages_by_request[msg.request_id].append(msg)
 
     images_by_event: dict[str, ImageRow] = {}
+    image_records_by_event: dict[str, list[ImageRow]] = defaultdict(list)
     images_by_id: dict[str, ImageRow] = {}
     with (dataset_dir / "images.csv").open(encoding="utf-8-sig", newline="") as fh:
         for row in csv.DictReader(fh):
@@ -284,7 +287,10 @@ def load_dataset(dataset_dir: Path) -> Dataset:
                 request_id=(row.get("request_id") or "").strip(),
                 related_event_id=row["related_event_id"],
             )
-            images_by_event[image.related_event_id] = image
+            if image.image_id in images_by_id:
+                raise ValueError(f"Duplicate image: {image.image_id}")
+            image_records_by_event[image.related_event_id].append(image)
+            images_by_event.setdefault(image.related_event_id, image)
             images_by_id[image.image_id] = image
 
     exchange_rates: list[ExchangeRate] = []
@@ -298,6 +304,59 @@ def load_dataset(dataset_dir: Path) -> Dataset:
                     rate=Decimal(row["rate"]),
                 )
             )
+
+    # Project only request INPUT fields. Public answers never enter a user case.
+    context_requests = dict(requests_by_id)
+    sample_path = dataset_dir / "sample_requests.csv"
+    if sample_path.exists():
+        with sample_path.open(encoding="utf-8-sig", newline="") as fh:
+            for row in csv.DictReader(fh):
+                req = RequestRow(row["request_id"], row["user_id"], _parse_date(row["request_date"]),
+                    row["request_type"], Decimal(row["requested_amount"]), _parse_date(row["desired_completion_date"]),
+                    row["allows_partial_payment"].lower() == "true", row["request_text"])
+                if req.request_id in context_requests:
+                    raise ValueError(f"Duplicate context request: {req.request_id}")
+                context_requests[req.request_id] = req
+    for req in context_requests.values():
+        if req.user_id not in profiles:
+            raise ValueError(f"Unknown request owner: {req.request_id}")
+    for event in events_by_id.values():
+        if event.user_id not in profiles:
+            raise ValueError(f"Unknown event owner: {event.event_id}")
+        if event.linked_event_id:
+            linked = events_by_id.get(event.linked_event_id)
+            if linked is None or linked.user_id != event.user_id or linked.event_id == event.event_id:
+                raise ValueError(f"Invalid lifecycle ownership: {event.event_id}")
+    seen_messages = set()
+    for record in [m for items in messages_by_user.values() for m in items] + list(images_by_id.values()):
+        identifier = getattr(record, "message_id", getattr(record, "image_id", ""))
+        if identifier in seen_messages:
+            raise ValueError(f"Duplicate evidence: {identifier}")
+        seen_messages.add(identifier)
+        if record.user_id not in profiles:
+            raise ValueError(f"Unknown evidence owner: {identifier}")
+        if record.request_id:
+            linked = context_requests.get(record.request_id)
+            if linked is None or linked.user_id != record.user_id:
+                raise ValueError(f"Invalid request ownership: {identifier}")
+        if record.related_event_id:
+            linked = events_by_id.get(record.related_event_id)
+            if linked is None or linked.user_id != record.user_id:
+                raise ValueError(f"Invalid evidence ownership: {identifier}")
+    option_ids = set()
+    for rid, options in payment_options_by_request.items():
+        if rid not in context_requests:
+            raise ValueError(f"Unknown payment-option request: {rid}")
+        for option in options:
+            if option.payment_option_id in option_ids:
+                raise ValueError(f"Duplicate payment option: {option.payment_option_id}")
+            option_ids.add(option.payment_option_id)
+    for items in events_by_user.values():
+        items.sort(key=lambda e: (e.settlement_date, e.event_date, e.event_id))
+    for items in messages_by_user.values():
+        items.sort(key=lambda m: (m.sent_at, m.message_id))
+    for items in image_records_by_event.values():
+        items.sort(key=lambda i: i.image_id)
 
     return Dataset(
         version_hash=_hash_dataset(paths),
@@ -313,6 +372,8 @@ def load_dataset(dataset_dir: Path) -> Dataset:
         images_by_id=images_by_id,
         exchange_rates=exchange_rates,
         media_dir=dataset_dir / "media" / "images",
+        context_requests_by_id=context_requests,
+        image_records_by_event=dict(image_records_by_event),
     )
 
 

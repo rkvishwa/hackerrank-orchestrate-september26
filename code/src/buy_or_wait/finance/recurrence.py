@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import calendar
 import statistics
-from collections import defaultdict
+from collections import defaultdict, Counter
 from dataclasses import dataclass
 from datetime import date, timedelta
 from decimal import Decimal
@@ -15,13 +15,16 @@ VARIABLE_CATEGORIES = {"groceries", "transport", "dining"}
 SPECULATIVE = ("commission", "bonus", "lottery", "refund", "arrears", "investment gain")
 PAYROLL_ALIASES = {"payroll credit", "base salary", "next confirmed salary", "prorated first salary",
                    "payroll before leave", "payroll after returning from leave", "final employer payroll",
-                   "previous employer payroll", "new employer payroll"}
+                   }
 PLATFORM_INCOME = ("platform payout", "app earnings", "marketplace payout", "gig earnings")
 
 
 def series_identity(event: FinancialEvent) -> str:
     description = normalize_description(event.description)
-    if event.direction == "debit" and event.category in VARIABLE_CATEGORIES and event.status == "settled":
+    document_or_exception = any(word in description.split() for word in
+                               ("invoice", "airline", "flight", "ticket", "wallet", "authorization"))
+    if (event.direction == "debit" and event.category in VARIABLE_CATEGORIES
+            and event.status == "settled" and not document_or_exception):
         description = "variable category spending"
     if event.direction == "credit" and event.category == "salary" and description in PAYROLL_ALIASES:
         description = "regular payroll"
@@ -46,6 +49,41 @@ class RecurringSeries:
     minimum_allowed_amount: Decimal | None
     anchor_day: int | None = None
     monthly: bool = False
+    member_event_ids: tuple[str, ...] = ()
+    estimator: str | None = None
+    cancellation_event_ids: tuple[str, ...] = ()
+
+
+def routine_members(group):
+    """A new merchant can join a routine, but cannot redefine its schedule.
+
+    Repeated descriptions establish the cadence. A novel description must land
+    on that cadence and not be an exceptional basket relative to that history.
+    This uses only the current user's history, never other users or sample answers.
+    """
+    if not group or group[0].direction != "debit" or group[0].category not in VARIABLE_CATEGORIES:
+        return group
+    counts = Counter(normalize_description(e.description) for e in group)
+    primary = [e for e in group if counts[normalize_description(e.description)] >= 2]
+    dates = sorted({e.settlement_date for e in primary})
+    if len(dates) < 3:
+        return group
+    gap = _median_gap(dates)
+    if gap <= 0 or int(gap) != gap:
+        return group
+    usual = [e.amount for e in primary if e.amount is not None]
+    ceiling = max(usual) * 3 if usual else None
+    all_dates = sorted({e.settlement_date for e in group})
+    all_gaps = {(b - a).days for a, b in zip(all_dates, all_dates[1:])}
+    if len(all_gaps) == 1:
+        # Merchant choice is not a payment schedule. Alternating a favourite
+        # merchant with other shops can make the favourite recur every second
+        # cycle. Preserve the complete, regular spending cadence in that case.
+        return [e for e in group if e in primary or
+                e.amount is None or ceiling is None or e.amount <= ceiling]
+    return [e for e in group if e in primary or
+            ((e.settlement_date - dates[-1]).days % int(gap) == 0
+             and (e.amount is None or ceiling is None or e.amount <= ceiling))]
 
 
 def _amount_cv(amounts: list[Decimal]) -> float:
@@ -115,6 +153,8 @@ def detect_recurring_series(
     evidence: EvidenceContext | None = None,
 ) -> list[RecurringSeries]:
     evidence = evidence or EvidenceContext()
+    from buy_or_wait.finance.income import associate_income
+    associations = associate_income(events, as_of, evidence)
     groups: dict[tuple[str, str, str, str], list[FinancialEvent]] = defaultdict(list)
     confirmed = [e for e in events if e.status == "scheduled" and e.settlement_date >= as_of
                  and e.category == "salary" and e.direction == "credit" and "confirmed" in e.description.lower()]
@@ -122,6 +162,8 @@ def detect_recurring_series(
         if event.settlement_date >= as_of:
             continue
         if event.status != "settled" or event.event_id in evidence.suppressed_event_ids:
+            continue
+        if event.event_id in evidence.nonrecurring_event_ids:
             continue
         if event.direction == "non_cash":
             continue
@@ -136,10 +178,12 @@ def detect_recurring_series(
 
     series_list: list[RecurringSeries] = []
     for key, group in groups.items():
-        group = sorted(group, key=lambda e: e.settlement_date)
+        group = routine_members(sorted(group, key=lambda e: (e.settlement_date, e.event_id)))
         if len(group) == 1 and group[0].direction == "credit" and group[0].category == "salary":
             previous = group[0]
             following = [e for e in confirmed if e.currency == previous.currency
+                         and e.event_id in associations
+                         and associations[e.event_id].matched_series_key == "|".join(key)
                          and e.settlement_date.day == previous.settlement_date.day
                          and 26 <= (e.settlement_date - previous.settlement_date).days <= 35]
             if len(following) == 1:
@@ -154,16 +198,23 @@ def detect_recurring_series(
             continue
         # A cancelled occurrence supplies a scheduled date, never income or
         # an expense amount. It can explain a gap between paid occurrences.
-        cancelled_dates = {e.settlement_date for e in events
+        cancelled_occurrences = [e for e in events
                            if e.status == "cancelled" and series_identity(e) == "|".join(key)
-                           and e.event_id in evidence.event_patches
-                           and evidence.event_patches[e.event_id].cancel
-                           and evidence.event_patches[e.event_id].cancel_scope == "occurrence"
-                           and dates[0] < e.settlement_date < dates[-1]}
+                           and (e.event_id not in evidence.event_patches
+                                or evidence.event_patches[e.event_id].cancel_scope == "occurrence")
+                           and dates[0] < e.settlement_date < dates[-1]]
+        cancelled_dates = {e.settlement_date for e in cancelled_occurrences}
         dates = sorted(set(dates) | cancelled_dates)
         median_gap = _median_gap(dates)
         amounts = [evidence.amount_overrides.get(e.event_id, e.amount) for e in group]
         amounts = [a for a in amounts if a is not None]
+        if group[-1].direction == "debit":
+            by_date = defaultdict(lambda: Decimal("0"))
+            for e in group:
+                value = evidence.amount_overrides.get(e.event_id, e.amount)
+                if value is not None:
+                    by_date[e.settlement_date] += value
+            amounts = [by_date[d] for d in sorted(by_date)]
         if not amounts:
             continue
         cv = _amount_cv(amounts)
@@ -240,6 +291,8 @@ def detect_recurring_series(
                 minimum_allowed_amount=latest.minimum_allowed_amount,
                 anchor_day=anchor_day,
                 monthly=monthly,
+                member_event_ids=tuple(e.event_id for e in group),
+                cancellation_event_ids=tuple(sorted(e.event_id for e in cancelled_occurrences)),
             )
         )
 

@@ -1,0 +1,65 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_141",
+  "source_id": "message_108",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "settlement",
+        "amount": "null",
+        "percentage": null,
+        "currency": null,
+        "effective_date": null,
+        "date_quote": null,
+        "timing": "unknown",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "ClearFund",
+        "quote": "The proceeds from your investment sale have settled in the cash account."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 674,
+    "output_tokens": 72
+  },
+  "accepted": [
+    {
+      "kind": "settlement",
+      "amount": null,
+      "percentage": null,
+      "currency": null,
+      "effective_date": null,
+      "date_quote": null,
+      "timing": "unknown",
+      "scope": "unknown",
+      "certainty": "confirmed",
+      "subject": null,
+      "quote": "The proceeds from your investment sale have settled in the cash account."
+    }
+  ],
+  "rejected": [
+    {
+      "fact": {
+        "kind": "settlement",
+        "amount": "null",
+        "percentage": null,
+        "currency": null,
+        "effective_date": null,
+        "date_quote": null,
+        "timing": "unknown",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "ClearFund",
+        "quote": "The proceeds from your investment sale have settled in the cash account."
+      },
+      "reason": "unsupported amount"
+    }
+  ],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "1cae1d46622d4e0da5720d9930d0a5b95db4af67ca92f43b858665d145fa5b58"
+}

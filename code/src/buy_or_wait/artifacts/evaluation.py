@@ -41,30 +41,37 @@ def forecast_audit(engine, request, context):
         if balance < minimum:
             minimum, binding = balance, row
     estimates = []
-    from buy_or_wait.finance.recurrence import series_identity
     from buy_or_wait.finance.events import effective_event
-    history = sorted([effective_event(e, context) for e in engine.dataset.events_by_user[request.user_id]
-               if e.status == "settled" and e.settlement_date < request.request_date], key=lambda e: e.settlement_date)
-    history = [e for e in history if e.status == "settled"]
+    effective = [effective_event(e, context) for e in engine.dataset.events_by_user[request.user_id]]
+    history = sorted([e for e in effective if e.status == "settled" and e.settlement_date < request.request_date],
+                     key=lambda e: (e.settlement_date, e.event_id))
     for series in engine.forecast._series_for_user(request.user_id, request.request_date, context):
-        values = [e.amount for e in history if series_identity(e) == series.series_key and e.amount is not None]
+        values = [e.amount for e in history if e.event_id in series.member_event_ids and e.amount is not None]
         estimates.append({"source": f"series:{series.template_event_id}", "identity": series.series_key,
             "amount": str(series.amount), "currency": series.currency, "cadence_days": series.cadence_days,
             "monthly": series.monthly, "history_count": len(values),
+            "member_event_ids": list(series.member_event_ids),
+            "cancellation_only_event_ids": list(series.cancellation_event_ids),
             "history_min": str(min(values)) if values else None,
             "history_max": str(max(values)) if values else None,
             "history_mean": str(sum(values) / len(values)) if values else None,
             "amount_varies_in_history": len(set(values)) > 1,
             "recent_observations": [str(v) for v in values[-12:]],
-            "estimator": "upper_quartile_latest_12" if series.direction == "debit" and len(set(values)) > 1 else "constant_or_income_policy"})
+            "estimator": series.estimator or ("upper_quartile_latest_12" if series.direction == "debit" and len(set(values)) > 1 else "constant_or_income_policy")})
     from buy_or_wait.verification.capacity import baseline_capacity
     capacity, capacity_date = baseline_capacity(profile, request,
-        engine.forecast.build_cashflows(profile, request, evidence=context), engine.settings.forecast_horizon_days)
+        engine.forecast.build_cashflows(profile, request, evidence=context), engine.settings.forecast_horizon_days,
+        unresolved=bool(context.unresolved_mandatory_debits))
+    from dataclasses import asdict
+    associations = engine.forecast.income_associations(request.user_id, request.request_date, context)
     return {"opening_balance": str(profile.current_available_balance), "minimum_balance": str(minimum),
             "headroom_at_minimum": str(minimum - profile.minimum_balance_to_keep),
             "baseline_shortfall": minimum < profile.minimum_balance_to_keep,
             "binding_cashflow": binding, "ledger": ledger, "recurring_estimates": estimates,
             "image_amounts": {eid: str(amount) for eid, amount in context.amount_overrides.items()},
+            "income_associations": [asdict(associations[eid]) for eid in sorted(associations)
+                                    if associations[eid].reason != "historical employment"],
+            "unquantified_commitments": sorted(context.unresolved_mandatory_debits),
             "independent_capacity": {"amount": str(capacity),
                 "earliest_date": capacity_date.isoformat() if capacity_date else "",
                 "method": "daily cumulative balances and suffix minima; independent of payment simulation"}}
@@ -104,7 +111,7 @@ def validate_output(output_path: Path, engine, expected_ids=None):
     return errors
 
 
-def score_samples(dataset_dir: Path, settings):
+def score_samples(dataset_dir: Path, settings, *, engine_factory=None):
     # Samples are evaluated separately; labels never enter the prediction pipeline.
     from buy_or_wait.engine import DecisionEngine
     from buy_or_wait.ingest.loader import load_dataset
@@ -112,11 +119,12 @@ def score_samples(dataset_dir: Path, settings):
     sample_path = dataset_dir / "sample_requests.csv"
     if not sample_path.exists():
         return {"available": False, "hidden_dataset_accuracy": "unknown"}
-    engine = DecisionEngine(load_dataset(dataset_dir), settings)
+    engine = (engine_factory or DecisionEngine)(load_dataset(dataset_dir), settings)
     matches = {field: 0 for field in SCORED_FIELDS}
     differences = []
     comparisons = []
     amount_errors = []
+    traces = {}
     total = 0
     with sample_path.open(encoding="utf-8-sig", newline="") as fh, UsageTracker.scoped(settings.model_prices):
         for row in csv.DictReader(fh):
@@ -124,6 +132,7 @@ def score_samples(dataset_dir: Path, settings):
                 row["request_type"], Decimal(row["requested_amount"]), date.fromisoformat(row["desired_completion_date"]),
                 row["allows_partial_payment"].lower() == "true", row["request_text"])
             result = engine.decide(request)
+            traces[request.request_id] = result.trace["case"]
             total += 1
             mismatch = {}
             for field in SCORED_FIELDS:
@@ -169,6 +178,7 @@ def score_samples(dataset_dir: Path, settings):
                                  for c in sorted(engine.forecast.build_cashflows(profile, request, evidence=context),
                                                  key=lambda c: (c.flow_date, c.direction, c.source))]})
     return {"available": True, "request_count": total, "matches": matches,
+            "complete_row_matches": sum(all(f["matches"] for f in c["fields"].values()) for c in comparisons),
             "accuracy": {k: v / total if total else 0 for k, v in matches.items()},
             "differences": differences, "comparisons": comparisons,
             "amount_diagnostics": {"mean_absolute_error_fraction_of_request": str(sum(amount_errors) / total) if total else None,
@@ -176,4 +186,4 @@ def score_samples(dataset_dir: Path, settings):
                 "underestimates": sum(Decimal(c["amount_difference"]) < 0 for c in comparisons),
                 "exact_matches": matches["amount_safe_to_pay"],
                 "note": "Supplementary error magnitude, not a replacement for exact matches or the unknown official scoring formula."},
-            "hidden_dataset_accuracy": "unknown"}
+            "case_traces": traces, "hidden_dataset_accuracy": "unknown"}

@@ -1,0 +1,3961 @@
+[
+  {
+    "request": {
+      "request_id": "request_13",
+      "user_id": "user_13",
+      "request_date": "2024-03-07",
+      "requested_amount": "941.6",
+      "desired_completion_date": "2024-05-15"
+    },
+    "profile": {
+      "user_id": "user_13",
+      "home_currency": "EUR",
+      "current_available_balance": "2789.52",
+      "minimum_balance_to_keep": "1300",
+      "financial_priorities": "education|emergency_savings",
+      "expense_categories_to_protect": "rent|groceries|transport",
+      "expense_categories_user_is_willing_to_reduce": "gym",
+      "expense_categories_user_is_willing_to_stop": "music_subscription|delivery_membership",
+      "payment_methods_user_will_consider": "full_payment",
+      "max_installment_months": ""
+    },
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "Primary household salary"
+        },
+        "monthly_day": 15,
+        "amount": "1343.54",
+        "currency": "EUR",
+        "direction": "credit",
+        "category": "salary",
+        "anchor": "2024-02-15",
+        "members": [
+          "event_1055",
+          "event_1063",
+          "event_1071",
+          "event_1079",
+          "event_1087"
+        ],
+        "observations": [
+          "1343.54",
+          "1343.54",
+          "1343.54",
+          "1343.54",
+          "1343.54"
+        ]
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 2,
+        "amount": "622.6",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "rent",
+        "anchor": "2024-03-02",
+        "members": [
+          "event_1057",
+          "event_1065",
+          "event_1073",
+          "event_1081",
+          "event_1088",
+          "event_1094"
+        ],
+        "observations": [
+          "622.6",
+          "622.6",
+          "622.6",
+          "622.6",
+          "622.6",
+          "622.6"
+        ]
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 6,
+        "amount": "146.33",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "utilities",
+        "anchor": "2024-03-06",
+        "members": [
+          "event_1058",
+          "event_1066",
+          "event_1074",
+          "event_1082",
+          "event_1089",
+          "event_1095"
+        ],
+        "observations": [
+          "162.77",
+          "143.39",
+          "146.33",
+          "143.7",
+          "131.53",
+          "134.25"
+        ]
+      },
+      {
+        "name": "music_subscription",
+        "match": {
+          "direction": "debit",
+          "category": "music_subscription"
+        },
+        "monthly_day": 11,
+        "amount": "29",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "music_subscription",
+        "anchor": "2024-02-11",
+        "members": [
+          "event_1059",
+          "event_1067",
+          "event_1075",
+          "event_1083",
+          "event_1090"
+        ],
+        "observations": [
+          "29",
+          "29",
+          "29",
+          "29",
+          "29"
+        ]
+      },
+      {
+        "name": "delivery_membership",
+        "match": {
+          "direction": "debit",
+          "category": "delivery_membership"
+        },
+        "monthly_day": 13,
+        "amount": "21",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "anchor": "2024-02-13",
+        "members": [
+          "event_1060",
+          "event_1068",
+          "event_1076",
+          "event_1084",
+          "event_1091"
+        ],
+        "observations": [
+          "21",
+          "21",
+          "21",
+          "21",
+          "21"
+        ]
+      },
+      {
+        "name": "gym",
+        "match": {
+          "direction": "debit",
+          "category": "gym"
+        },
+        "monthly_day": 10,
+        "amount": "61",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "gym",
+        "anchor": "2024-02-10",
+        "members": [
+          "event_1061",
+          "event_1069",
+          "event_1077",
+          "event_1085",
+          "event_1092"
+        ],
+        "observations": [
+          "61",
+          "61",
+          "61",
+          "61",
+          "61"
+        ]
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 14,
+        "amount": "33.83",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "entertainment",
+        "anchor": "2024-02-14",
+        "members": [
+          "event_1062",
+          "event_1070",
+          "event_1078",
+          "event_1086",
+          "event_1093"
+        ],
+        "observations": [
+          "33.83",
+          "30.88",
+          "37.9",
+          "31.8",
+          "30.39"
+        ]
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 7,
+        "amount": "98.36",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "groceries",
+        "anchor": "2024-03-05",
+        "members": [
+          "event_1096",
+          "event_1097",
+          "event_1098",
+          "event_1099",
+          "event_1100",
+          "event_1101",
+          "event_1102",
+          "event_1103",
+          "event_1104",
+          "event_1105",
+          "event_1106",
+          "event_1107",
+          "event_1108",
+          "event_1109",
+          "event_1110",
+          "event_1111",
+          "event_1112",
+          "event_1113",
+          "event_1114",
+          "event_1115",
+          "event_1116",
+          "event_1117",
+          "event_1118",
+          "event_1119",
+          "event_1120",
+          "event_1121"
+        ],
+        "observations": [
+          "93.15",
+          "81.24",
+          "86.23",
+          "94.28",
+          "84.23",
+          "120.89",
+          "114.53",
+          "73.74",
+          "98.36",
+          "118.36",
+          "85.71",
+          "93.66"
+        ]
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 7,
+        "amount": "49.29",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "transport",
+        "anchor": "2024-03-06",
+        "members": [
+          "event_1122",
+          "event_1123",
+          "event_1124",
+          "event_1125",
+          "event_1126",
+          "event_1127",
+          "event_1128",
+          "event_1129",
+          "event_1130",
+          "event_1131",
+          "event_1132",
+          "event_1133",
+          "event_1134",
+          "event_1135",
+          "event_1136",
+          "event_1137",
+          "event_1138",
+          "event_1139",
+          "event_1140",
+          "event_1141",
+          "event_1142",
+          "event_1143",
+          "event_1144",
+          "event_1145",
+          "event_1146",
+          "event_1147"
+        ],
+        "observations": [
+          "49.29",
+          "46.73",
+          "43.41",
+          "58.44",
+          "33.5",
+          "56.63",
+          "46.98",
+          "45.29",
+          "45.37",
+          "39.48",
+          "50.46",
+          "37.29"
+        ]
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 14,
+        "amount": "68.7",
+        "currency": "EUR",
+        "direction": "debit",
+        "category": "dining",
+        "anchor": "2024-02-29",
+        "members": [
+          "event_1148",
+          "event_1149",
+          "event_1150",
+          "event_1151",
+          "event_1152",
+          "event_1153",
+          "event_1154",
+          "event_1155",
+          "event_1156",
+          "event_1157",
+          "event_1158",
+          "event_1159",
+          "event_1160"
+        ],
+        "observations": [
+          "68.7",
+          "80.09",
+          "62.71",
+          "53.91",
+          "80.35",
+          "64.45",
+          "70.45",
+          "61.59",
+          "48.2",
+          "60.34",
+          "48.02",
+          "61.28"
+        ]
+      }
+    ],
+    "exclusions": [
+      {
+        "event_id": "event_1056",
+        "reason": "Four settled payments on October-January 20; February cycle absent before March 7 request. No confirmed resumption; do not project this income."
+      },
+      {
+        "event_id": "event_1064",
+        "reason": "Four settled payments on October-January 20; February cycle absent before March 7 request. No confirmed resumption; do not project this income."
+      },
+      {
+        "event_id": "event_1072",
+        "reason": "Four settled payments on October-January 20; February cycle absent before March 7 request. No confirmed resumption; do not project this income."
+      },
+      {
+        "event_id": "event_1080",
+        "reason": "Four settled payments on October-January 20; February cycle absent before March 7 request. No confirmed resumption; do not project this income."
+      }
+    ],
+    "reviewed_messages": {},
+    "source_event_count": 107,
+    "historical_settled_count": 106,
+    "amount_safe": "433.54",
+    "earliest_full": "",
+    "minimum_balance": "1733.54",
+    "daily": [
+      {
+        "date": "2024-03-07",
+        "balance": "2789.52",
+        "headroom": "1489.52"
+      },
+      {
+        "date": "2024-03-08",
+        "balance": "2789.52",
+        "headroom": "1489.52"
+      },
+      {
+        "date": "2024-03-09",
+        "balance": "2789.52",
+        "headroom": "1489.52"
+      },
+      {
+        "date": "2024-03-10",
+        "balance": "2728.52",
+        "headroom": "1428.52"
+      },
+      {
+        "date": "2024-03-11",
+        "balance": "2699.52",
+        "headroom": "1399.52"
+      },
+      {
+        "date": "2024-03-12",
+        "balance": "2601.16",
+        "headroom": "1301.16"
+      },
+      {
+        "date": "2024-03-13",
+        "balance": "2530.87",
+        "headroom": "1230.87"
+      },
+      {
+        "date": "2024-03-14",
+        "balance": "2428.34",
+        "headroom": "1128.34"
+      },
+      {
+        "date": "2024-03-15",
+        "balance": "3771.88",
+        "headroom": "2471.88"
+      },
+      {
+        "date": "2024-03-16",
+        "balance": "3771.88",
+        "headroom": "2471.88"
+      },
+      {
+        "date": "2024-03-17",
+        "balance": "3771.88",
+        "headroom": "2471.88"
+      },
+      {
+        "date": "2024-03-18",
+        "balance": "3771.88",
+        "headroom": "2471.88"
+      },
+      {
+        "date": "2024-03-19",
+        "balance": "3673.52",
+        "headroom": "2373.52"
+      },
+      {
+        "date": "2024-03-20",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-21",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-22",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-23",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-24",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-25",
+        "balance": "3624.23",
+        "headroom": "2324.23"
+      },
+      {
+        "date": "2024-03-26",
+        "balance": "3525.87",
+        "headroom": "2225.87"
+      },
+      {
+        "date": "2024-03-27",
+        "balance": "3476.58",
+        "headroom": "2176.58"
+      },
+      {
+        "date": "2024-03-28",
+        "balance": "3407.88",
+        "headroom": "2107.88"
+      },
+      {
+        "date": "2024-03-29",
+        "balance": "3407.88",
+        "headroom": "2107.88"
+      },
+      {
+        "date": "2024-03-30",
+        "balance": "3407.88",
+        "headroom": "2107.88"
+      },
+      {
+        "date": "2024-03-31",
+        "balance": "3407.88",
+        "headroom": "2107.88"
+      },
+      {
+        "date": "2024-04-01",
+        "balance": "3407.88",
+        "headroom": "2107.88"
+      },
+      {
+        "date": "2024-04-02",
+        "balance": "2686.92",
+        "headroom": "1386.92"
+      },
+      {
+        "date": "2024-04-03",
+        "balance": "2637.63",
+        "headroom": "1337.63"
+      },
+      {
+        "date": "2024-04-04",
+        "balance": "2637.63",
+        "headroom": "1337.63"
+      },
+      {
+        "date": "2024-04-05",
+        "balance": "2637.63",
+        "headroom": "1337.63"
+      },
+      {
+        "date": "2024-04-06",
+        "balance": "2491.30",
+        "headroom": "1191.30"
+      },
+      {
+        "date": "2024-04-07",
+        "balance": "2491.30",
+        "headroom": "1191.30"
+      },
+      {
+        "date": "2024-04-08",
+        "balance": "2491.30",
+        "headroom": "1191.30"
+      },
+      {
+        "date": "2024-04-09",
+        "balance": "2392.94",
+        "headroom": "1092.94"
+      },
+      {
+        "date": "2024-04-10",
+        "balance": "2282.65",
+        "headroom": "982.65"
+      },
+      {
+        "date": "2024-04-11",
+        "balance": "2184.95",
+        "headroom": "884.95"
+      },
+      {
+        "date": "2024-04-12",
+        "balance": "2184.95",
+        "headroom": "884.95"
+      },
+      {
+        "date": "2024-04-13",
+        "balance": "2163.95",
+        "headroom": "863.95"
+      },
+      {
+        "date": "2024-04-14",
+        "balance": "2130.12",
+        "headroom": "830.12"
+      },
+      {
+        "date": "2024-04-15",
+        "balance": "3473.66",
+        "headroom": "2173.66"
+      },
+      {
+        "date": "2024-04-16",
+        "balance": "3375.30",
+        "headroom": "2075.30"
+      },
+      {
+        "date": "2024-04-17",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-18",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-19",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-20",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-21",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-22",
+        "balance": "3326.01",
+        "headroom": "2026.01"
+      },
+      {
+        "date": "2024-04-23",
+        "balance": "3227.65",
+        "headroom": "1927.65"
+      },
+      {
+        "date": "2024-04-24",
+        "balance": "3178.36",
+        "headroom": "1878.36"
+      },
+      {
+        "date": "2024-04-25",
+        "balance": "3109.66",
+        "headroom": "1809.66"
+      },
+      {
+        "date": "2024-04-26",
+        "balance": "3109.66",
+        "headroom": "1809.66"
+      },
+      {
+        "date": "2024-04-27",
+        "balance": "3109.66",
+        "headroom": "1809.66"
+      },
+      {
+        "date": "2024-04-28",
+        "balance": "3109.66",
+        "headroom": "1809.66"
+      },
+      {
+        "date": "2024-04-29",
+        "balance": "3109.66",
+        "headroom": "1809.66"
+      },
+      {
+        "date": "2024-04-30",
+        "balance": "3011.30",
+        "headroom": "1711.30"
+      },
+      {
+        "date": "2024-05-01",
+        "balance": "2962.01",
+        "headroom": "1662.01"
+      },
+      {
+        "date": "2024-05-02",
+        "balance": "2339.41",
+        "headroom": "1039.41"
+      },
+      {
+        "date": "2024-05-03",
+        "balance": "2339.41",
+        "headroom": "1039.41"
+      },
+      {
+        "date": "2024-05-04",
+        "balance": "2339.41",
+        "headroom": "1039.41"
+      },
+      {
+        "date": "2024-05-05",
+        "balance": "2339.41",
+        "headroom": "1039.41"
+      },
+      {
+        "date": "2024-05-06",
+        "balance": "2193.08",
+        "headroom": "893.08"
+      },
+      {
+        "date": "2024-05-07",
+        "balance": "2094.72",
+        "headroom": "794.72"
+      },
+      {
+        "date": "2024-05-08",
+        "balance": "2045.43",
+        "headroom": "745.43"
+      },
+      {
+        "date": "2024-05-09",
+        "balance": "1976.73",
+        "headroom": "676.73"
+      },
+      {
+        "date": "2024-05-10",
+        "balance": "1915.73",
+        "headroom": "615.73"
+      },
+      {
+        "date": "2024-05-11",
+        "balance": "1886.73",
+        "headroom": "586.73"
+      },
+      {
+        "date": "2024-05-12",
+        "balance": "1886.73",
+        "headroom": "586.73"
+      },
+      {
+        "date": "2024-05-13",
+        "balance": "1865.73",
+        "headroom": "565.73"
+      },
+      {
+        "date": "2024-05-14",
+        "balance": "1733.54",
+        "headroom": "433.54"
+      },
+      {
+        "date": "2024-05-15",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-16",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-17",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-18",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-19",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-20",
+        "balance": "3027.79",
+        "headroom": "1727.79"
+      },
+      {
+        "date": "2024-05-21",
+        "balance": "2929.43",
+        "headroom": "1629.43"
+      },
+      {
+        "date": "2024-05-22",
+        "balance": "2880.14",
+        "headroom": "1580.14"
+      },
+      {
+        "date": "2024-05-23",
+        "balance": "2811.44",
+        "headroom": "1511.44"
+      },
+      {
+        "date": "2024-05-24",
+        "balance": "2811.44",
+        "headroom": "1511.44"
+      },
+      {
+        "date": "2024-05-25",
+        "balance": "2811.44",
+        "headroom": "1511.44"
+      },
+      {
+        "date": "2024-05-26",
+        "balance": "2811.44",
+        "headroom": "1511.44"
+      },
+      {
+        "date": "2024-05-27",
+        "balance": "2811.44",
+        "headroom": "1511.44"
+      },
+      {
+        "date": "2024-05-28",
+        "balance": "2713.08",
+        "headroom": "1413.08"
+      },
+      {
+        "date": "2024-05-29",
+        "balance": "2663.79",
+        "headroom": "1363.79"
+      },
+      {
+        "date": "2024-05-30",
+        "balance": "2663.79",
+        "headroom": "1363.79"
+      },
+      {
+        "date": "2024-05-31",
+        "balance": "2663.79",
+        "headroom": "1363.79"
+      },
+      {
+        "date": "2024-06-01",
+        "balance": "2663.79",
+        "headroom": "1363.79"
+      },
+      {
+        "date": "2024-06-02",
+        "balance": "2041.19",
+        "headroom": "741.19"
+      },
+      {
+        "date": "2024-06-03",
+        "balance": "2041.19",
+        "headroom": "741.19"
+      },
+      {
+        "date": "2024-06-04",
+        "balance": "1942.83",
+        "headroom": "642.83"
+      }
+    ],
+    "transactions": [
+      {
+        "date": "2024-03-10",
+        "amount": "61",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "2728.52"
+      },
+      {
+        "date": "2024-03-11",
+        "amount": "29",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "2699.52"
+      },
+      {
+        "date": "2024-03-12",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "2601.16"
+      },
+      {
+        "date": "2024-03-13",
+        "amount": "21",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "2580.16"
+      },
+      {
+        "date": "2024-03-13",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2530.87"
+      },
+      {
+        "date": "2024-03-14",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "2462.17"
+      },
+      {
+        "date": "2024-03-14",
+        "amount": "33.83",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "2428.34"
+      },
+      {
+        "date": "2024-03-15",
+        "amount": "1343.54",
+        "direction": "credit",
+        "category": "salary",
+        "source": "event_1161",
+        "balance_after": "3771.88"
+      },
+      {
+        "date": "2024-03-19",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3673.52"
+      },
+      {
+        "date": "2024-03-20",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "3624.23"
+      },
+      {
+        "date": "2024-03-26",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3525.87"
+      },
+      {
+        "date": "2024-03-27",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "3476.58"
+      },
+      {
+        "date": "2024-03-28",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "3407.88"
+      },
+      {
+        "date": "2024-04-02",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3309.52"
+      },
+      {
+        "date": "2024-04-02",
+        "amount": "622.6",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "2686.92"
+      },
+      {
+        "date": "2024-04-03",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2637.63"
+      },
+      {
+        "date": "2024-04-06",
+        "amount": "146.33",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "2491.30"
+      },
+      {
+        "date": "2024-04-09",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "2392.94"
+      },
+      {
+        "date": "2024-04-10",
+        "amount": "61",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "2331.94"
+      },
+      {
+        "date": "2024-04-10",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2282.65"
+      },
+      {
+        "date": "2024-04-11",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "2213.95"
+      },
+      {
+        "date": "2024-04-11",
+        "amount": "29",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "2184.95"
+      },
+      {
+        "date": "2024-04-13",
+        "amount": "21",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "2163.95"
+      },
+      {
+        "date": "2024-04-14",
+        "amount": "33.83",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "2130.12"
+      },
+      {
+        "date": "2024-04-15",
+        "amount": "1343.54",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "3473.66"
+      },
+      {
+        "date": "2024-04-16",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3375.30"
+      },
+      {
+        "date": "2024-04-17",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "3326.01"
+      },
+      {
+        "date": "2024-04-23",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3227.65"
+      },
+      {
+        "date": "2024-04-24",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "3178.36"
+      },
+      {
+        "date": "2024-04-25",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "3109.66"
+      },
+      {
+        "date": "2024-04-30",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "3011.30"
+      },
+      {
+        "date": "2024-05-01",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2962.01"
+      },
+      {
+        "date": "2024-05-02",
+        "amount": "622.6",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "2339.41"
+      },
+      {
+        "date": "2024-05-06",
+        "amount": "146.33",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "2193.08"
+      },
+      {
+        "date": "2024-05-07",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "2094.72"
+      },
+      {
+        "date": "2024-05-08",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2045.43"
+      },
+      {
+        "date": "2024-05-09",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "1976.73"
+      },
+      {
+        "date": "2024-05-10",
+        "amount": "61",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "1915.73"
+      },
+      {
+        "date": "2024-05-11",
+        "amount": "29",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "1886.73"
+      },
+      {
+        "date": "2024-05-13",
+        "amount": "21",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "1865.73"
+      },
+      {
+        "date": "2024-05-14",
+        "amount": "33.83",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "1831.90"
+      },
+      {
+        "date": "2024-05-14",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "1733.54"
+      },
+      {
+        "date": "2024-05-15",
+        "amount": "1343.54",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "3077.08"
+      },
+      {
+        "date": "2024-05-15",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "3027.79"
+      },
+      {
+        "date": "2024-05-21",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "2929.43"
+      },
+      {
+        "date": "2024-05-22",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2880.14"
+      },
+      {
+        "date": "2024-05-23",
+        "amount": "68.7",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "2811.44"
+      },
+      {
+        "date": "2024-05-28",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "2713.08"
+      },
+      {
+        "date": "2024-05-29",
+        "amount": "49.29",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "2663.79"
+      },
+      {
+        "date": "2024-06-02",
+        "amount": "622.6",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "2041.19"
+      },
+      {
+        "date": "2024-06-04",
+        "amount": "98.36",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "1942.83"
+      }
+    ],
+    "comparison": {
+      "first_ledger_difference": null,
+      "ledger_differences": [],
+      "engine_amount": "433.54",
+      "engine_earliest": "",
+      "capacity_agrees": true
+    },
+    "reference_comparison": {
+      "sample_amount": "433.4",
+      "sample_earliest": "2024-05-15",
+      "sample_plan": "2024-05-15:941.60",
+      "sample_plan_limiting_day": {
+        "date": "2024-06-04",
+        "headroom": "-298.77"
+      },
+      "interpretation": "Safety on the reviewed forecast assumptions only; not proof that the reference is wrong."
+    }
+  },
+  {
+    "request": {
+      "request_id": "request_04",
+      "user_id": "user_04",
+      "request_date": "2024-06-04",
+      "requested_amount": "12693000",
+      "desired_completion_date": "2024-06-19"
+    },
+    "profile": {
+      "user_id": "user_04",
+      "home_currency": "IDR",
+      "current_available_balance": "52206950",
+      "minimum_balance_to_keep": "30686600",
+      "financial_priorities": "education|emergency_savings",
+      "expense_categories_to_protect": "rent|groceries|transport",
+      "expense_categories_user_is_willing_to_reduce": "entertainment",
+      "expense_categories_user_is_willing_to_stop": "music_subscription",
+      "payment_methods_user_will_consider": "full_payment",
+      "max_installment_months": ""
+    },
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "Payroll credit"
+        },
+        "monthly_day": 15,
+        "amount": "38190000",
+        "currency": "IDR",
+        "direction": "credit",
+        "category": "salary",
+        "anchor": "2024-05-15",
+        "members": [
+          "event_255",
+          "event_262",
+          "event_269",
+          "event_277",
+          "event_284"
+        ],
+        "observations": [
+          "38190000",
+          "38190000",
+          "38190000",
+          "38190000",
+          "38190000"
+        ]
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 1,
+        "amount": "12293000",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "rent",
+        "anchor": "2024-06-01",
+        "members": [
+          "event_256",
+          "event_263",
+          "event_271",
+          "event_278",
+          "event_285",
+          "event_291"
+        ],
+        "observations": [
+          "12293000",
+          "12293000",
+          "12293000",
+          "12293000",
+          "12293000",
+          "12293000"
+        ]
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 5,
+        "amount": "2017103.37",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "utilities",
+        "anchor": "2024-05-05",
+        "members": [
+          "event_257",
+          "event_264",
+          "event_272",
+          "event_279",
+          "event_286"
+        ],
+        "observations": [
+          "2017103.37",
+          "1981052.47",
+          "2033868.83",
+          "1980834.82",
+          "2004118.6"
+        ]
+      },
+      {
+        "name": "music_subscription",
+        "match": {
+          "direction": "debit",
+          "category": "music_subscription"
+        },
+        "monthly_day": 10,
+        "amount": "332500",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "music_subscription",
+        "anchor": "2024-05-10",
+        "members": [
+          "event_258",
+          "event_265",
+          "event_273",
+          "event_280",
+          "event_287"
+        ],
+        "observations": [
+          "332500",
+          "332500",
+          "332500",
+          "332500",
+          "332500"
+        ]
+      },
+      {
+        "name": "delivery_membership",
+        "match": {
+          "direction": "debit",
+          "category": "delivery_membership"
+        },
+        "monthly_day": 12,
+        "amount": "377150",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "anchor": "2024-05-12",
+        "members": [
+          "event_259",
+          "event_266",
+          "event_274",
+          "event_281",
+          "event_288"
+        ],
+        "observations": [
+          "377150",
+          "377150",
+          "377150",
+          "377150",
+          "377150"
+        ]
+      },
+      {
+        "name": "gym",
+        "match": {
+          "direction": "debit",
+          "category": "gym"
+        },
+        "monthly_day": 9,
+        "amount": "1027900",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "gym",
+        "anchor": "2024-05-09",
+        "members": [
+          "event_260",
+          "event_267",
+          "event_275",
+          "event_282",
+          "event_289"
+        ],
+        "observations": [
+          "1027900",
+          "1027900",
+          "1027900",
+          "1027900",
+          "1027900"
+        ]
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 13,
+        "amount": "1484369.68",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "entertainment",
+        "anchor": "2024-05-13",
+        "members": [
+          "event_261",
+          "event_268",
+          "event_276",
+          "event_283",
+          "event_290"
+        ],
+        "observations": [
+          "1484369.68",
+          "1375854.05",
+          "1542620",
+          "1291303.65",
+          "1231859.39"
+        ]
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 7,
+        "amount": "1698278.31",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "groceries",
+        "anchor": "2024-06-01",
+        "members": [
+          "event_292",
+          "event_293",
+          "event_294",
+          "event_295",
+          "event_296",
+          "event_297",
+          "event_298",
+          "event_299",
+          "event_300",
+          "event_301",
+          "event_302",
+          "event_303",
+          "event_304",
+          "event_305",
+          "event_306",
+          "event_307",
+          "event_308",
+          "event_309",
+          "event_310",
+          "event_311",
+          "event_312",
+          "event_313",
+          "event_314",
+          "event_315",
+          "event_316",
+          "event_317"
+        ],
+        "observations": [
+          "1453711.32",
+          "1447770.09",
+          "1261462.72",
+          "1825667.28",
+          "1184189.4",
+          "1617937.79",
+          "1519414.73",
+          "1831437.58",
+          "1698278.31",
+          "1075064.04",
+          "1809752.54",
+          "1433695.5"
+        ]
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 7,
+        "amount": "935850.82",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "transport",
+        "anchor": "2024-06-02",
+        "members": [
+          "event_318",
+          "event_319",
+          "event_320",
+          "event_321",
+          "event_322",
+          "event_323",
+          "event_324",
+          "event_325",
+          "event_326",
+          "event_327",
+          "event_328",
+          "event_329",
+          "event_330",
+          "event_331",
+          "event_332",
+          "event_333",
+          "event_334",
+          "event_335",
+          "event_336",
+          "event_337",
+          "event_338",
+          "event_339",
+          "event_340",
+          "event_341",
+          "event_342",
+          "event_343"
+        ],
+        "observations": [
+          "677221.86",
+          "889762.96",
+          "842011.07",
+          "1000668.29",
+          "935850.82",
+          "874634.88",
+          "766019.04",
+          "1030376.9",
+          "912938.95",
+          "853091.62",
+          "602450.01",
+          "1016425.58"
+        ]
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 14,
+        "amount": "1931412.81",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "dining",
+        "anchor": "2024-05-27",
+        "members": [
+          "event_344",
+          "event_345",
+          "event_346",
+          "event_347",
+          "event_348",
+          "event_349",
+          "event_350",
+          "event_351",
+          "event_352",
+          "event_353",
+          "event_354",
+          "event_355",
+          "event_356"
+        ],
+        "observations": [
+          "1839656.04",
+          "1279029.86",
+          "2067659.14",
+          "1650545.96",
+          "1931412.81",
+          "1551598.07",
+          "2102251.18",
+          "1282286.6",
+          "1259307.64",
+          "1661337.11",
+          "1886856.1",
+          "2108488.15"
+        ]
+      }
+    ],
+    "exclusions": [
+      {
+        "event_id": "event_270",
+        "reason": "Settled historical bonus is already in opening balance. One observation and message_03 leave future bonus amount/date unconfirmed."
+      }
+    ],
+    "reviewed_messages": {
+      "message_03": "Quarterly bonus amount and payment date not approved. Exclude the bonus; this does not cancel regular settled monthly payroll."
+    },
+    "source_event_count": 103,
+    "historical_settled_count": 102,
+    "amount_safe": "10011485.01",
+    "earliest_full": "2024-06-15",
+    "minimum_balance": "40698085.01",
+    "daily": [
+      {
+        "date": "2024-06-04",
+        "balance": "52206950",
+        "headroom": "21520350"
+      },
+      {
+        "date": "2024-06-05",
+        "balance": "50189846.63",
+        "headroom": "19503246.63"
+      },
+      {
+        "date": "2024-06-06",
+        "balance": "50189846.63",
+        "headroom": "19503246.63"
+      },
+      {
+        "date": "2024-06-07",
+        "balance": "50189846.63",
+        "headroom": "19503246.63"
+      },
+      {
+        "date": "2024-06-08",
+        "balance": "48491568.32",
+        "headroom": "17804968.32"
+      },
+      {
+        "date": "2024-06-09",
+        "balance": "46527817.50",
+        "headroom": "15841217.50"
+      },
+      {
+        "date": "2024-06-10",
+        "balance": "44263904.69",
+        "headroom": "13577304.69"
+      },
+      {
+        "date": "2024-06-11",
+        "balance": "42559604.69",
+        "headroom": "11873004.69"
+      },
+      {
+        "date": "2024-06-12",
+        "balance": "42182454.69",
+        "headroom": "11495854.69"
+      },
+      {
+        "date": "2024-06-13",
+        "balance": "40698085.01",
+        "headroom": "10011485.01"
+      },
+      {
+        "date": "2024-06-14",
+        "balance": "40698085.01",
+        "headroom": "10011485.01"
+      },
+      {
+        "date": "2024-06-15",
+        "balance": "77189806.70",
+        "headroom": "46503206.70"
+      },
+      {
+        "date": "2024-06-16",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-17",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-18",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-19",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-20",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-21",
+        "balance": "76253955.88",
+        "headroom": "45567355.88"
+      },
+      {
+        "date": "2024-06-22",
+        "balance": "74555677.57",
+        "headroom": "43869077.57"
+      },
+      {
+        "date": "2024-06-23",
+        "balance": "73619826.75",
+        "headroom": "42933226.75"
+      },
+      {
+        "date": "2024-06-24",
+        "balance": "71688413.94",
+        "headroom": "41001813.94"
+      },
+      {
+        "date": "2024-06-25",
+        "balance": "71688413.94",
+        "headroom": "41001813.94"
+      },
+      {
+        "date": "2024-06-26",
+        "balance": "71688413.94",
+        "headroom": "41001813.94"
+      },
+      {
+        "date": "2024-06-27",
+        "balance": "71688413.94",
+        "headroom": "41001813.94"
+      },
+      {
+        "date": "2024-06-28",
+        "balance": "71688413.94",
+        "headroom": "41001813.94"
+      },
+      {
+        "date": "2024-06-29",
+        "balance": "69990135.63",
+        "headroom": "39303535.63"
+      },
+      {
+        "date": "2024-06-30",
+        "balance": "69054284.81",
+        "headroom": "38367684.81"
+      },
+      {
+        "date": "2024-07-01",
+        "balance": "56761284.81",
+        "headroom": "26074684.81"
+      },
+      {
+        "date": "2024-07-02",
+        "balance": "56761284.81",
+        "headroom": "26074684.81"
+      },
+      {
+        "date": "2024-07-03",
+        "balance": "56761284.81",
+        "headroom": "26074684.81"
+      },
+      {
+        "date": "2024-07-04",
+        "balance": "56761284.81",
+        "headroom": "26074684.81"
+      },
+      {
+        "date": "2024-07-05",
+        "balance": "54744181.44",
+        "headroom": "24057581.44"
+      },
+      {
+        "date": "2024-07-06",
+        "balance": "53045903.13",
+        "headroom": "22359303.13"
+      },
+      {
+        "date": "2024-07-07",
+        "balance": "52110052.31",
+        "headroom": "21423452.31"
+      },
+      {
+        "date": "2024-07-08",
+        "balance": "50178639.50",
+        "headroom": "19492039.50"
+      },
+      {
+        "date": "2024-07-09",
+        "balance": "49150739.50",
+        "headroom": "18464139.50"
+      },
+      {
+        "date": "2024-07-10",
+        "balance": "48818239.50",
+        "headroom": "18131639.50"
+      },
+      {
+        "date": "2024-07-11",
+        "balance": "48818239.50",
+        "headroom": "18131639.50"
+      },
+      {
+        "date": "2024-07-12",
+        "balance": "48441089.50",
+        "headroom": "17754489.50"
+      },
+      {
+        "date": "2024-07-13",
+        "balance": "45258441.51",
+        "headroom": "14571841.51"
+      },
+      {
+        "date": "2024-07-14",
+        "balance": "44322590.69",
+        "headroom": "13635990.69"
+      },
+      {
+        "date": "2024-07-15",
+        "balance": "82512590.69",
+        "headroom": "51825990.69"
+      },
+      {
+        "date": "2024-07-16",
+        "balance": "82512590.69",
+        "headroom": "51825990.69"
+      },
+      {
+        "date": "2024-07-17",
+        "balance": "82512590.69",
+        "headroom": "51825990.69"
+      },
+      {
+        "date": "2024-07-18",
+        "balance": "82512590.69",
+        "headroom": "51825990.69"
+      },
+      {
+        "date": "2024-07-19",
+        "balance": "82512590.69",
+        "headroom": "51825990.69"
+      },
+      {
+        "date": "2024-07-20",
+        "balance": "80814312.38",
+        "headroom": "50127712.38"
+      },
+      {
+        "date": "2024-07-21",
+        "balance": "79878461.56",
+        "headroom": "49191861.56"
+      },
+      {
+        "date": "2024-07-22",
+        "balance": "77947048.75",
+        "headroom": "47260448.75"
+      },
+      {
+        "date": "2024-07-23",
+        "balance": "77947048.75",
+        "headroom": "47260448.75"
+      },
+      {
+        "date": "2024-07-24",
+        "balance": "77947048.75",
+        "headroom": "47260448.75"
+      },
+      {
+        "date": "2024-07-25",
+        "balance": "77947048.75",
+        "headroom": "47260448.75"
+      },
+      {
+        "date": "2024-07-26",
+        "balance": "77947048.75",
+        "headroom": "47260448.75"
+      },
+      {
+        "date": "2024-07-27",
+        "balance": "76248770.44",
+        "headroom": "45562170.44"
+      },
+      {
+        "date": "2024-07-28",
+        "balance": "75312919.62",
+        "headroom": "44626319.62"
+      },
+      {
+        "date": "2024-07-29",
+        "balance": "75312919.62",
+        "headroom": "44626319.62"
+      },
+      {
+        "date": "2024-07-30",
+        "balance": "75312919.62",
+        "headroom": "44626319.62"
+      },
+      {
+        "date": "2024-07-31",
+        "balance": "75312919.62",
+        "headroom": "44626319.62"
+      },
+      {
+        "date": "2024-08-01",
+        "balance": "63019919.62",
+        "headroom": "32333319.62"
+      },
+      {
+        "date": "2024-08-02",
+        "balance": "63019919.62",
+        "headroom": "32333319.62"
+      },
+      {
+        "date": "2024-08-03",
+        "balance": "61321641.31",
+        "headroom": "30635041.31"
+      },
+      {
+        "date": "2024-08-04",
+        "balance": "60385790.49",
+        "headroom": "29699190.49"
+      },
+      {
+        "date": "2024-08-05",
+        "balance": "56437274.31",
+        "headroom": "25750674.31"
+      },
+      {
+        "date": "2024-08-06",
+        "balance": "56437274.31",
+        "headroom": "25750674.31"
+      },
+      {
+        "date": "2024-08-07",
+        "balance": "56437274.31",
+        "headroom": "25750674.31"
+      },
+      {
+        "date": "2024-08-08",
+        "balance": "56437274.31",
+        "headroom": "25750674.31"
+      },
+      {
+        "date": "2024-08-09",
+        "balance": "55409374.31",
+        "headroom": "24722774.31"
+      },
+      {
+        "date": "2024-08-10",
+        "balance": "53378596.00",
+        "headroom": "22691996.00"
+      },
+      {
+        "date": "2024-08-11",
+        "balance": "52442745.18",
+        "headroom": "21756145.18"
+      },
+      {
+        "date": "2024-08-12",
+        "balance": "52065595.18",
+        "headroom": "21378995.18"
+      },
+      {
+        "date": "2024-08-13",
+        "balance": "50581225.50",
+        "headroom": "19894625.50"
+      },
+      {
+        "date": "2024-08-14",
+        "balance": "50581225.50",
+        "headroom": "19894625.50"
+      },
+      {
+        "date": "2024-08-15",
+        "balance": "88771225.50",
+        "headroom": "58084625.50"
+      },
+      {
+        "date": "2024-08-16",
+        "balance": "88771225.50",
+        "headroom": "58084625.50"
+      },
+      {
+        "date": "2024-08-17",
+        "balance": "87072947.19",
+        "headroom": "56386347.19"
+      },
+      {
+        "date": "2024-08-18",
+        "balance": "86137096.37",
+        "headroom": "55450496.37"
+      },
+      {
+        "date": "2024-08-19",
+        "balance": "84205683.56",
+        "headroom": "53519083.56"
+      },
+      {
+        "date": "2024-08-20",
+        "balance": "84205683.56",
+        "headroom": "53519083.56"
+      },
+      {
+        "date": "2024-08-21",
+        "balance": "84205683.56",
+        "headroom": "53519083.56"
+      },
+      {
+        "date": "2024-08-22",
+        "balance": "84205683.56",
+        "headroom": "53519083.56"
+      },
+      {
+        "date": "2024-08-23",
+        "balance": "84205683.56",
+        "headroom": "53519083.56"
+      },
+      {
+        "date": "2024-08-24",
+        "balance": "82507405.25",
+        "headroom": "51820805.25"
+      },
+      {
+        "date": "2024-08-25",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-26",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-27",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-28",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-29",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-30",
+        "balance": "81571554.43",
+        "headroom": "50884954.43"
+      },
+      {
+        "date": "2024-08-31",
+        "balance": "79873276.12",
+        "headroom": "49186676.12"
+      },
+      {
+        "date": "2024-09-01",
+        "balance": "66644425.30",
+        "headroom": "35957825.30"
+      }
+    ],
+    "transactions": [
+      {
+        "date": "2024-06-05",
+        "amount": "2017103.37",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "50189846.63"
+      },
+      {
+        "date": "2024-06-08",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "48491568.32"
+      },
+      {
+        "date": "2024-06-09",
+        "amount": "1027900",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "47463668.32"
+      },
+      {
+        "date": "2024-06-09",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "46527817.50"
+      },
+      {
+        "date": "2024-06-10",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "44596404.69"
+      },
+      {
+        "date": "2024-06-10",
+        "amount": "332500",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "44263904.69"
+      },
+      {
+        "date": "2024-06-11",
+        "amount": "1704300",
+        "direction": "debit",
+        "category": "education",
+        "source": "event_357",
+        "balance_after": "42559604.69"
+      },
+      {
+        "date": "2024-06-12",
+        "amount": "377150",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "42182454.69"
+      },
+      {
+        "date": "2024-06-13",
+        "amount": "1484369.68",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "40698085.01"
+      },
+      {
+        "date": "2024-06-15",
+        "amount": "38190000",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "78888085.01"
+      },
+      {
+        "date": "2024-06-15",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "77189806.70"
+      },
+      {
+        "date": "2024-06-16",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "76253955.88"
+      },
+      {
+        "date": "2024-06-22",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "74555677.57"
+      },
+      {
+        "date": "2024-06-23",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "73619826.75"
+      },
+      {
+        "date": "2024-06-24",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "71688413.94"
+      },
+      {
+        "date": "2024-06-29",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "69990135.63"
+      },
+      {
+        "date": "2024-06-30",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "69054284.81"
+      },
+      {
+        "date": "2024-07-01",
+        "amount": "12293000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "56761284.81"
+      },
+      {
+        "date": "2024-07-05",
+        "amount": "2017103.37",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "54744181.44"
+      },
+      {
+        "date": "2024-07-06",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "53045903.13"
+      },
+      {
+        "date": "2024-07-07",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "52110052.31"
+      },
+      {
+        "date": "2024-07-08",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "50178639.50"
+      },
+      {
+        "date": "2024-07-09",
+        "amount": "1027900",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "49150739.50"
+      },
+      {
+        "date": "2024-07-10",
+        "amount": "332500",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "48818239.50"
+      },
+      {
+        "date": "2024-07-12",
+        "amount": "377150",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "48441089.50"
+      },
+      {
+        "date": "2024-07-13",
+        "amount": "1484369.68",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "46956719.82"
+      },
+      {
+        "date": "2024-07-13",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "45258441.51"
+      },
+      {
+        "date": "2024-07-14",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "44322590.69"
+      },
+      {
+        "date": "2024-07-15",
+        "amount": "38190000",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "82512590.69"
+      },
+      {
+        "date": "2024-07-20",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "80814312.38"
+      },
+      {
+        "date": "2024-07-21",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "79878461.56"
+      },
+      {
+        "date": "2024-07-22",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "77947048.75"
+      },
+      {
+        "date": "2024-07-27",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "76248770.44"
+      },
+      {
+        "date": "2024-07-28",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "75312919.62"
+      },
+      {
+        "date": "2024-08-01",
+        "amount": "12293000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "63019919.62"
+      },
+      {
+        "date": "2024-08-03",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "61321641.31"
+      },
+      {
+        "date": "2024-08-04",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "60385790.49"
+      },
+      {
+        "date": "2024-08-05",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "58454377.68"
+      },
+      {
+        "date": "2024-08-05",
+        "amount": "2017103.37",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "56437274.31"
+      },
+      {
+        "date": "2024-08-09",
+        "amount": "1027900",
+        "direction": "debit",
+        "category": "gym",
+        "source": "gym",
+        "balance_after": "55409374.31"
+      },
+      {
+        "date": "2024-08-10",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "53711096.00"
+      },
+      {
+        "date": "2024-08-10",
+        "amount": "332500",
+        "direction": "debit",
+        "category": "music_subscription",
+        "source": "music_subscription",
+        "balance_after": "53378596.00"
+      },
+      {
+        "date": "2024-08-11",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "52442745.18"
+      },
+      {
+        "date": "2024-08-12",
+        "amount": "377150",
+        "direction": "debit",
+        "category": "delivery_membership",
+        "source": "delivery_membership",
+        "balance_after": "52065595.18"
+      },
+      {
+        "date": "2024-08-13",
+        "amount": "1484369.68",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "50581225.50"
+      },
+      {
+        "date": "2024-08-15",
+        "amount": "38190000",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "88771225.50"
+      },
+      {
+        "date": "2024-08-17",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "87072947.19"
+      },
+      {
+        "date": "2024-08-18",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "86137096.37"
+      },
+      {
+        "date": "2024-08-19",
+        "amount": "1931412.81",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "84205683.56"
+      },
+      {
+        "date": "2024-08-24",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "82507405.25"
+      },
+      {
+        "date": "2024-08-25",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "81571554.43"
+      },
+      {
+        "date": "2024-08-31",
+        "amount": "1698278.31",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "79873276.12"
+      },
+      {
+        "date": "2024-09-01",
+        "amount": "12293000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "67580276.12"
+      },
+      {
+        "date": "2024-09-01",
+        "amount": "935850.82",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "66644425.30"
+      }
+    ],
+    "comparison": {
+      "first_ledger_difference": null,
+      "ledger_differences": [],
+      "engine_amount": "10011485.01",
+      "engine_earliest": "2024-06-15",
+      "capacity_agrees": true
+    },
+    "reference_comparison": {
+      "sample_amount": "8401800",
+      "sample_earliest": "2024-06-15",
+      "sample_plan": "2024-06-15:12693000",
+      "sample_plan_limiting_day": {
+        "date": "2024-07-14",
+        "headroom": "942990.69"
+      },
+      "interpretation": "Safety on the reviewed forecast assumptions only; not proof that the reference is wrong."
+    }
+  },
+  {
+    "request": {
+      "request_id": "request_25",
+      "user_id": "user_25",
+      "request_date": "2024-03-06",
+      "requested_amount": "60496000",
+      "desired_completion_date": "2024-04-17"
+    },
+    "profile": {
+      "user_id": "user_25",
+      "home_currency": "IDR",
+      "current_available_balance": "32063050",
+      "minimum_balance_to_keep": "23379100",
+      "financial_priorities": "emergency_savings|travel",
+      "expense_categories_to_protect": "rent|insurance|transport",
+      "expense_categories_user_is_willing_to_reduce": "",
+      "expense_categories_user_is_willing_to_stop": "",
+      "payment_methods_user_will_consider": "full_payment|installments",
+      "max_installment_months": "3"
+    },
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "International employer payroll"
+        },
+        "monthly_day": 15,
+        "amount": "1800",
+        "currency": "USD",
+        "direction": "credit",
+        "category": "salary",
+        "anchor": "2024-02-15",
+        "members": [
+          "event_2167",
+          "event_2175",
+          "event_2183",
+          "event_2191",
+          "event_2199"
+        ],
+        "observations": [
+          "1800",
+          "1800",
+          "1800",
+          "1800",
+          "1800"
+        ]
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 2,
+        "amount": "6954000",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "rent",
+        "anchor": "2024-03-02",
+        "members": [
+          "event_2168",
+          "event_2176",
+          "event_2184",
+          "event_2192",
+          "event_2200",
+          "event_2207"
+        ],
+        "observations": [
+          "6954000",
+          "6954000",
+          "6954000",
+          "6954000",
+          "6954000",
+          "6954000"
+        ]
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 6,
+        "amount": "1341541.39",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "utilities",
+        "anchor": "2024-02-06",
+        "members": [
+          "event_2169",
+          "event_2177",
+          "event_2185",
+          "event_2193",
+          "event_2201"
+        ],
+        "observations": [
+          "1338903.44",
+          "1401205.21",
+          "1334719.89",
+          "1341541.39",
+          "1201903.67"
+        ]
+      },
+      {
+        "name": "insurance",
+        "match": {
+          "direction": "debit",
+          "category": "insurance"
+        },
+        "monthly_day": 7,
+        "amount": "904400",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "insurance",
+        "anchor": "2024-02-07",
+        "members": [
+          "event_2170",
+          "event_2178",
+          "event_2186",
+          "event_2194",
+          "event_2202"
+        ],
+        "observations": [
+          "904400",
+          "904400",
+          "904400",
+          "904400",
+          "904400"
+        ]
+      },
+      {
+        "name": "cloud_storage",
+        "match": {
+          "direction": "debit",
+          "category": "cloud_storage"
+        },
+        "monthly_day": 12,
+        "amount": "126350",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "cloud_storage",
+        "anchor": "2024-02-12",
+        "members": [
+          "event_2171",
+          "event_2179",
+          "event_2187",
+          "event_2195",
+          "event_2203"
+        ],
+        "observations": [
+          "126350",
+          "126350",
+          "126350",
+          "126350",
+          "126350"
+        ]
+      },
+      {
+        "name": "streaming",
+        "match": {
+          "direction": "debit",
+          "category": "streaming"
+        },
+        "monthly_day": 9,
+        "amount": "573800",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "streaming",
+        "anchor": "2024-02-09",
+        "members": [
+          "event_2172",
+          "event_2180",
+          "event_2188",
+          "event_2196",
+          "event_2204"
+        ],
+        "observations": [
+          "573800",
+          "573800",
+          "573800",
+          "573800",
+          "573800"
+        ]
+      },
+      {
+        "name": "shopping",
+        "match": {
+          "direction": "debit",
+          "category": "shopping"
+        },
+        "monthly_day": 12,
+        "amount": "1102784.74",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "shopping",
+        "anchor": "2024-02-12",
+        "members": [
+          "event_2173",
+          "event_2181",
+          "event_2189",
+          "event_2197",
+          "event_2205"
+        ],
+        "observations": [
+          "966785.96",
+          "1054608.5",
+          "1000693.22",
+          "1102784.74",
+          "1170271.29"
+        ]
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 14,
+        "amount": "499510.22",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "entertainment",
+        "anchor": "2024-02-14",
+        "members": [
+          "event_2174",
+          "event_2182",
+          "event_2190",
+          "event_2198",
+          "event_2206"
+        ],
+        "observations": [
+          "451681.59",
+          "415734.51",
+          "499510.22",
+          "504697.37",
+          "426338.4"
+        ]
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 10,
+        "amount": "1369082.68",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "groceries",
+        "anchor": "2024-02-28",
+        "members": [
+          "event_2208",
+          "event_2209",
+          "event_2210",
+          "event_2211",
+          "event_2212",
+          "event_2213",
+          "event_2214",
+          "event_2215",
+          "event_2216",
+          "event_2217",
+          "event_2218",
+          "event_2219",
+          "event_2220",
+          "event_2221",
+          "event_2222",
+          "event_2223",
+          "event_2224",
+          "event_2225"
+        ],
+        "observations": [
+          "893559.78",
+          "1252001.65",
+          "1101344.82",
+          "876032.86",
+          "917586.64",
+          "1454933.56",
+          "983053.43",
+          "1388569.11",
+          "1335295.2",
+          "1369082.68",
+          "864688.59",
+          "1472349.1"
+        ]
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 5,
+        "amount": "663001.49",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "transport",
+        "anchor": "2024-03-05",
+        "members": [
+          "event_2226",
+          "event_2227",
+          "event_2228",
+          "event_2229",
+          "event_2230",
+          "event_2231",
+          "event_2232",
+          "event_2233",
+          "event_2234",
+          "event_2235",
+          "event_2236",
+          "event_2237",
+          "event_2238",
+          "event_2239",
+          "event_2240",
+          "event_2241",
+          "event_2242",
+          "event_2243",
+          "event_2244",
+          "event_2245",
+          "event_2246",
+          "event_2247",
+          "event_2248",
+          "event_2249",
+          "event_2250",
+          "event_2251",
+          "event_2252",
+          "event_2253",
+          "event_2254",
+          "event_2255",
+          "event_2256",
+          "event_2257",
+          "event_2258",
+          "event_2259",
+          "event_2260",
+          "event_2261"
+        ],
+        "observations": [
+          "562442.16",
+          "542331.16",
+          "463292.75",
+          "745983.26",
+          "549524.6",
+          "664768.21",
+          "448075.32",
+          "560613.2",
+          "458596.67",
+          "663001.49",
+          "729004.44",
+          "571596.93"
+        ]
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 7,
+        "amount": "1128974.93",
+        "currency": "IDR",
+        "direction": "debit",
+        "category": "dining",
+        "anchor": "2024-02-28",
+        "members": [
+          "event_2262",
+          "event_2263",
+          "event_2264",
+          "event_2265",
+          "event_2266",
+          "event_2267",
+          "event_2268",
+          "event_2269",
+          "event_2270",
+          "event_2271",
+          "event_2272",
+          "event_2273",
+          "event_2274",
+          "event_2275",
+          "event_2276",
+          "event_2277",
+          "event_2278",
+          "event_2279",
+          "event_2280",
+          "event_2281",
+          "event_2282",
+          "event_2283",
+          "event_2284",
+          "event_2285",
+          "event_2286"
+        ],
+        "observations": [
+          "1128974.93",
+          "956749.83",
+          "1095978.2",
+          "868921.02",
+          "925855.11",
+          "1204804.45",
+          "1057617.64",
+          "1251981.8",
+          "949118.03",
+          "1051249.87",
+          "777034.83",
+          "1133036.68"
+        ]
+      }
+    ],
+    "exclusions": [
+      {
+        "event_id": "event_2287",
+        "reason": "No settled or outstanding cash movement"
+      }
+    ],
+    "reviewed_messages": {},
+    "source_event_count": 122,
+    "historical_settled_count": 120,
+    "amount_safe": "0",
+    "earliest_full": "",
+    "minimum_balance": "23224629.62",
+    "daily": [
+      {
+        "date": "2024-03-06",
+        "balance": "29592533.68",
+        "headroom": "6213433.68"
+      },
+      {
+        "date": "2024-03-07",
+        "balance": "28688133.68",
+        "headroom": "5309033.68"
+      },
+      {
+        "date": "2024-03-08",
+        "balance": "28688133.68",
+        "headroom": "5309033.68"
+      },
+      {
+        "date": "2024-03-09",
+        "balance": "26745251.00",
+        "headroom": "3366151.00"
+      },
+      {
+        "date": "2024-03-10",
+        "balance": "26082249.51",
+        "headroom": "2703149.51"
+      },
+      {
+        "date": "2024-03-11",
+        "balance": "26082249.51",
+        "headroom": "2703149.51"
+      },
+      {
+        "date": "2024-03-12",
+        "balance": "24853114.77",
+        "headroom": "1474014.77"
+      },
+      {
+        "date": "2024-03-13",
+        "balance": "23724139.84",
+        "headroom": "345039.84"
+      },
+      {
+        "date": "2024-03-14",
+        "balance": "23224629.62",
+        "headroom": "-154470.38"
+      },
+      {
+        "date": "2024-03-15",
+        "balance": "51061622.13",
+        "headroom": "27682522.13"
+      },
+      {
+        "date": "2024-03-16",
+        "balance": "51061622.13",
+        "headroom": "27682522.13"
+      },
+      {
+        "date": "2024-03-17",
+        "balance": "51061622.13",
+        "headroom": "27682522.13"
+      },
+      {
+        "date": "2024-03-18",
+        "balance": "51061622.13",
+        "headroom": "27682522.13"
+      },
+      {
+        "date": "2024-03-19",
+        "balance": "49692539.45",
+        "headroom": "26313439.45"
+      },
+      {
+        "date": "2024-03-20",
+        "balance": "47900563.03",
+        "headroom": "24521463.03"
+      },
+      {
+        "date": "2024-03-21",
+        "balance": "47900563.03",
+        "headroom": "24521463.03"
+      },
+      {
+        "date": "2024-03-22",
+        "balance": "47900563.03",
+        "headroom": "24521463.03"
+      },
+      {
+        "date": "2024-03-23",
+        "balance": "47900563.03",
+        "headroom": "24521463.03"
+      },
+      {
+        "date": "2024-03-24",
+        "balance": "47900563.03",
+        "headroom": "24521463.03"
+      },
+      {
+        "date": "2024-03-25",
+        "balance": "47237561.54",
+        "headroom": "23858461.54"
+      },
+      {
+        "date": "2024-03-26",
+        "balance": "47237561.54",
+        "headroom": "23858461.54"
+      },
+      {
+        "date": "2024-03-27",
+        "balance": "46108586.61",
+        "headroom": "22729486.61"
+      },
+      {
+        "date": "2024-03-28",
+        "balance": "46108586.61",
+        "headroom": "22729486.61"
+      },
+      {
+        "date": "2024-03-29",
+        "balance": "44739503.93",
+        "headroom": "21360403.93"
+      },
+      {
+        "date": "2024-03-30",
+        "balance": "44076502.44",
+        "headroom": "20697402.44"
+      },
+      {
+        "date": "2024-03-31",
+        "balance": "44076502.44",
+        "headroom": "20697402.44"
+      },
+      {
+        "date": "2024-04-01",
+        "balance": "44076502.44",
+        "headroom": "20697402.44"
+      },
+      {
+        "date": "2024-04-02",
+        "balance": "37122502.44",
+        "headroom": "13743402.44"
+      },
+      {
+        "date": "2024-04-03",
+        "balance": "35993527.51",
+        "headroom": "12614427.51"
+      },
+      {
+        "date": "2024-04-04",
+        "balance": "35330526.02",
+        "headroom": "11951426.02"
+      },
+      {
+        "date": "2024-04-05",
+        "balance": "35330526.02",
+        "headroom": "11951426.02"
+      },
+      {
+        "date": "2024-04-06",
+        "balance": "33988984.63",
+        "headroom": "10609884.63"
+      },
+      {
+        "date": "2024-04-07",
+        "balance": "33084584.63",
+        "headroom": "9705484.63"
+      },
+      {
+        "date": "2024-04-08",
+        "balance": "31715501.95",
+        "headroom": "8336401.95"
+      },
+      {
+        "date": "2024-04-09",
+        "balance": "30478700.46",
+        "headroom": "7099600.46"
+      },
+      {
+        "date": "2024-04-10",
+        "balance": "29349725.53",
+        "headroom": "5970625.53"
+      },
+      {
+        "date": "2024-04-11",
+        "balance": "29349725.53",
+        "headroom": "5970625.53"
+      },
+      {
+        "date": "2024-04-12",
+        "balance": "28120590.79",
+        "headroom": "4741490.79"
+      },
+      {
+        "date": "2024-04-13",
+        "balance": "28120590.79",
+        "headroom": "4741490.79"
+      },
+      {
+        "date": "2024-04-14",
+        "balance": "26958079.08",
+        "headroom": "3578979.08"
+      },
+      {
+        "date": "2024-04-15",
+        "balance": "55458073.08",
+        "headroom": "32078973.08"
+      },
+      {
+        "date": "2024-04-16",
+        "balance": "55458073.08",
+        "headroom": "32078973.08"
+      },
+      {
+        "date": "2024-04-17",
+        "balance": "54329098.15",
+        "headroom": "30949998.15"
+      },
+      {
+        "date": "2024-04-18",
+        "balance": "52960015.47",
+        "headroom": "29580915.47"
+      },
+      {
+        "date": "2024-04-19",
+        "balance": "52297013.98",
+        "headroom": "28917913.98"
+      },
+      {
+        "date": "2024-04-20",
+        "balance": "52297013.98",
+        "headroom": "28917913.98"
+      },
+      {
+        "date": "2024-04-21",
+        "balance": "52297013.98",
+        "headroom": "28917913.98"
+      },
+      {
+        "date": "2024-04-22",
+        "balance": "52297013.98",
+        "headroom": "28917913.98"
+      },
+      {
+        "date": "2024-04-23",
+        "balance": "52297013.98",
+        "headroom": "28917913.98"
+      },
+      {
+        "date": "2024-04-24",
+        "balance": "50505037.56",
+        "headroom": "27125937.56"
+      },
+      {
+        "date": "2024-04-25",
+        "balance": "50505037.56",
+        "headroom": "27125937.56"
+      },
+      {
+        "date": "2024-04-26",
+        "balance": "50505037.56",
+        "headroom": "27125937.56"
+      },
+      {
+        "date": "2024-04-27",
+        "balance": "50505037.56",
+        "headroom": "27125937.56"
+      },
+      {
+        "date": "2024-04-28",
+        "balance": "49135954.88",
+        "headroom": "25756854.88"
+      },
+      {
+        "date": "2024-04-29",
+        "balance": "48472953.39",
+        "headroom": "25093853.39"
+      },
+      {
+        "date": "2024-04-30",
+        "balance": "48472953.39",
+        "headroom": "25093853.39"
+      },
+      {
+        "date": "2024-05-01",
+        "balance": "47343978.46",
+        "headroom": "23964878.46"
+      },
+      {
+        "date": "2024-05-02",
+        "balance": "40389978.46",
+        "headroom": "17010878.46"
+      },
+      {
+        "date": "2024-05-03",
+        "balance": "40389978.46",
+        "headroom": "17010878.46"
+      },
+      {
+        "date": "2024-05-04",
+        "balance": "39726976.97",
+        "headroom": "16347876.97"
+      },
+      {
+        "date": "2024-05-05",
+        "balance": "39726976.97",
+        "headroom": "16347876.97"
+      },
+      {
+        "date": "2024-05-06",
+        "balance": "38385435.58",
+        "headroom": "15006335.58"
+      },
+      {
+        "date": "2024-05-07",
+        "balance": "37481035.58",
+        "headroom": "14101935.58"
+      },
+      {
+        "date": "2024-05-08",
+        "balance": "34982977.97",
+        "headroom": "11603877.97"
+      },
+      {
+        "date": "2024-05-09",
+        "balance": "33746176.48",
+        "headroom": "10367076.48"
+      },
+      {
+        "date": "2024-05-10",
+        "balance": "33746176.48",
+        "headroom": "10367076.48"
+      },
+      {
+        "date": "2024-05-11",
+        "balance": "33746176.48",
+        "headroom": "10367076.48"
+      },
+      {
+        "date": "2024-05-12",
+        "balance": "32517041.74",
+        "headroom": "9137941.74"
+      },
+      {
+        "date": "2024-05-13",
+        "balance": "32517041.74",
+        "headroom": "9137941.74"
+      },
+      {
+        "date": "2024-05-14",
+        "balance": "31354530.03",
+        "headroom": "7975430.03"
+      },
+      {
+        "date": "2024-05-15",
+        "balance": "58725549.10",
+        "headroom": "35346449.10"
+      },
+      {
+        "date": "2024-05-16",
+        "balance": "58725549.10",
+        "headroom": "35346449.10"
+      },
+      {
+        "date": "2024-05-17",
+        "balance": "58725549.10",
+        "headroom": "35346449.10"
+      },
+      {
+        "date": "2024-05-18",
+        "balance": "57356466.42",
+        "headroom": "33977366.42"
+      },
+      {
+        "date": "2024-05-19",
+        "balance": "56693464.93",
+        "headroom": "33314364.93"
+      },
+      {
+        "date": "2024-05-20",
+        "balance": "56693464.93",
+        "headroom": "33314364.93"
+      },
+      {
+        "date": "2024-05-21",
+        "balance": "56693464.93",
+        "headroom": "33314364.93"
+      },
+      {
+        "date": "2024-05-22",
+        "balance": "55564490.00",
+        "headroom": "32185390.00"
+      },
+      {
+        "date": "2024-05-23",
+        "balance": "55564490.00",
+        "headroom": "32185390.00"
+      },
+      {
+        "date": "2024-05-24",
+        "balance": "54901488.51",
+        "headroom": "31522388.51"
+      },
+      {
+        "date": "2024-05-25",
+        "balance": "54901488.51",
+        "headroom": "31522388.51"
+      },
+      {
+        "date": "2024-05-26",
+        "balance": "54901488.51",
+        "headroom": "31522388.51"
+      },
+      {
+        "date": "2024-05-27",
+        "balance": "54901488.51",
+        "headroom": "31522388.51"
+      },
+      {
+        "date": "2024-05-28",
+        "balance": "53532405.83",
+        "headroom": "30153305.83"
+      },
+      {
+        "date": "2024-05-29",
+        "balance": "51740429.41",
+        "headroom": "28361329.41"
+      },
+      {
+        "date": "2024-05-30",
+        "balance": "51740429.41",
+        "headroom": "28361329.41"
+      },
+      {
+        "date": "2024-05-31",
+        "balance": "51740429.41",
+        "headroom": "28361329.41"
+      },
+      {
+        "date": "2024-06-01",
+        "balance": "51740429.41",
+        "headroom": "28361329.41"
+      },
+      {
+        "date": "2024-06-02",
+        "balance": "44786429.41",
+        "headroom": "21407329.41"
+      },
+      {
+        "date": "2024-06-03",
+        "balance": "44123427.92",
+        "headroom": "20744327.92"
+      }
+    ],
+    "transactions": [
+      {
+        "date": "2024-03-06",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "30934075.07"
+      },
+      {
+        "date": "2024-03-06",
+        "amount": "1341541.39",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "29592533.68"
+      },
+      {
+        "date": "2024-03-07",
+        "amount": "904400",
+        "direction": "debit",
+        "category": "insurance",
+        "source": "insurance",
+        "balance_after": "28688133.68"
+      },
+      {
+        "date": "2024-03-09",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "27319051.00"
+      },
+      {
+        "date": "2024-03-09",
+        "amount": "573800",
+        "direction": "debit",
+        "category": "streaming",
+        "source": "streaming",
+        "balance_after": "26745251.00"
+      },
+      {
+        "date": "2024-03-10",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "26082249.51"
+      },
+      {
+        "date": "2024-03-12",
+        "amount": "126350",
+        "direction": "debit",
+        "category": "cloud_storage",
+        "source": "cloud_storage",
+        "balance_after": "25955899.51"
+      },
+      {
+        "date": "2024-03-12",
+        "amount": "1102784.74",
+        "direction": "debit",
+        "category": "shopping",
+        "source": "shopping",
+        "balance_after": "24853114.77"
+      },
+      {
+        "date": "2024-03-13",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "23724139.84"
+      },
+      {
+        "date": "2024-03-14",
+        "amount": "499510.22",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "23224629.62"
+      },
+      {
+        "date": "2024-03-15",
+        "amount": "28499994.00",
+        "direction": "credit",
+        "category": "salary",
+        "source": "event_2288",
+        "balance_after": "51724623.62"
+      },
+      {
+        "date": "2024-03-15",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "51061622.13"
+      },
+      {
+        "date": "2024-03-19",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "49692539.45"
+      },
+      {
+        "date": "2024-03-20",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "48563564.52"
+      },
+      {
+        "date": "2024-03-20",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "47900563.03"
+      },
+      {
+        "date": "2024-03-25",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "47237561.54"
+      },
+      {
+        "date": "2024-03-27",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "46108586.61"
+      },
+      {
+        "date": "2024-03-29",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "44739503.93"
+      },
+      {
+        "date": "2024-03-30",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "44076502.44"
+      },
+      {
+        "date": "2024-04-02",
+        "amount": "6954000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "37122502.44"
+      },
+      {
+        "date": "2024-04-03",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "35993527.51"
+      },
+      {
+        "date": "2024-04-04",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "35330526.02"
+      },
+      {
+        "date": "2024-04-06",
+        "amount": "1341541.39",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "33988984.63"
+      },
+      {
+        "date": "2024-04-07",
+        "amount": "904400",
+        "direction": "debit",
+        "category": "insurance",
+        "source": "insurance",
+        "balance_after": "33084584.63"
+      },
+      {
+        "date": "2024-04-08",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "31715501.95"
+      },
+      {
+        "date": "2024-04-09",
+        "amount": "573800",
+        "direction": "debit",
+        "category": "streaming",
+        "source": "streaming",
+        "balance_after": "31141701.95"
+      },
+      {
+        "date": "2024-04-09",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "30478700.46"
+      },
+      {
+        "date": "2024-04-10",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "29349725.53"
+      },
+      {
+        "date": "2024-04-12",
+        "amount": "126350",
+        "direction": "debit",
+        "category": "cloud_storage",
+        "source": "cloud_storage",
+        "balance_after": "29223375.53"
+      },
+      {
+        "date": "2024-04-12",
+        "amount": "1102784.74",
+        "direction": "debit",
+        "category": "shopping",
+        "source": "shopping",
+        "balance_after": "28120590.79"
+      },
+      {
+        "date": "2024-04-14",
+        "amount": "499510.22",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "27621080.57"
+      },
+      {
+        "date": "2024-04-14",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "26958079.08"
+      },
+      {
+        "date": "2024-04-15",
+        "amount": "28499994.00",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "55458073.08"
+      },
+      {
+        "date": "2024-04-17",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "54329098.15"
+      },
+      {
+        "date": "2024-04-18",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "52960015.47"
+      },
+      {
+        "date": "2024-04-19",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "52297013.98"
+      },
+      {
+        "date": "2024-04-24",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "51168039.05"
+      },
+      {
+        "date": "2024-04-24",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "50505037.56"
+      },
+      {
+        "date": "2024-04-28",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "49135954.88"
+      },
+      {
+        "date": "2024-04-29",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "48472953.39"
+      },
+      {
+        "date": "2024-05-01",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "47343978.46"
+      },
+      {
+        "date": "2024-05-02",
+        "amount": "6954000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "40389978.46"
+      },
+      {
+        "date": "2024-05-04",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "39726976.97"
+      },
+      {
+        "date": "2024-05-06",
+        "amount": "1341541.39",
+        "direction": "debit",
+        "category": "utilities",
+        "source": "utilities",
+        "balance_after": "38385435.58"
+      },
+      {
+        "date": "2024-05-07",
+        "amount": "904400",
+        "direction": "debit",
+        "category": "insurance",
+        "source": "insurance",
+        "balance_after": "37481035.58"
+      },
+      {
+        "date": "2024-05-08",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "36352060.65"
+      },
+      {
+        "date": "2024-05-08",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "34982977.97"
+      },
+      {
+        "date": "2024-05-09",
+        "amount": "573800",
+        "direction": "debit",
+        "category": "streaming",
+        "source": "streaming",
+        "balance_after": "34409177.97"
+      },
+      {
+        "date": "2024-05-09",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "33746176.48"
+      },
+      {
+        "date": "2024-05-12",
+        "amount": "126350",
+        "direction": "debit",
+        "category": "cloud_storage",
+        "source": "cloud_storage",
+        "balance_after": "33619826.48"
+      },
+      {
+        "date": "2024-05-12",
+        "amount": "1102784.74",
+        "direction": "debit",
+        "category": "shopping",
+        "source": "shopping",
+        "balance_after": "32517041.74"
+      },
+      {
+        "date": "2024-05-14",
+        "amount": "499510.22",
+        "direction": "debit",
+        "category": "entertainment",
+        "source": "entertainment",
+        "balance_after": "32017531.52"
+      },
+      {
+        "date": "2024-05-14",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "31354530.03"
+      },
+      {
+        "date": "2024-05-15",
+        "amount": "28499994.00",
+        "direction": "credit",
+        "category": "salary",
+        "source": "salary",
+        "balance_after": "59854524.03"
+      },
+      {
+        "date": "2024-05-15",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "58725549.10"
+      },
+      {
+        "date": "2024-05-18",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "57356466.42"
+      },
+      {
+        "date": "2024-05-19",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "56693464.93"
+      },
+      {
+        "date": "2024-05-22",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "55564490.00"
+      },
+      {
+        "date": "2024-05-24",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "54901488.51"
+      },
+      {
+        "date": "2024-05-28",
+        "amount": "1369082.68",
+        "direction": "debit",
+        "category": "groceries",
+        "source": "groceries",
+        "balance_after": "53532405.83"
+      },
+      {
+        "date": "2024-05-29",
+        "amount": "1128974.93",
+        "direction": "debit",
+        "category": "dining",
+        "source": "dining",
+        "balance_after": "52403430.90"
+      },
+      {
+        "date": "2024-05-29",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "51740429.41"
+      },
+      {
+        "date": "2024-06-02",
+        "amount": "6954000",
+        "direction": "debit",
+        "category": "rent",
+        "source": "rent",
+        "balance_after": "44786429.41"
+      },
+      {
+        "date": "2024-06-03",
+        "amount": "663001.49",
+        "direction": "debit",
+        "category": "transport",
+        "source": "transport",
+        "balance_after": "44123427.92"
+      }
+    ],
+    "comparison": {
+      "first_ledger_difference": null,
+      "ledger_differences": [],
+      "engine_amount": "0",
+      "engine_earliest": "",
+      "capacity_agrees": true
+    },
+    "reference_comparison": {
+      "sample_amount": "1425000",
+      "sample_earliest": "",
+      "sample_plan": "none",
+      "sample_plan_limiting_day": {
+        "date": "2024-03-14",
+        "headroom": "-154470.38"
+      },
+      "interpretation": "Safety on the reviewed forecast assumptions only; not proof that the reference is wrong."
+    }
+  }
+]

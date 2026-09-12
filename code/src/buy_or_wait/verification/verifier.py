@@ -145,7 +145,8 @@ class OutputVerifier:
             from buy_or_wait.verification.capacity import baseline_capacity
             safe_amount, safe_date = baseline_capacity(profile, request,
                 self.forecast.build_cashflows(profile, request, evidence=evidence),
-                self.forecast.settings.forecast_horizon_days)
+                self.forecast.settings.forecast_horizon_days,
+                unresolved=bool(evidence.unresolved_mandatory_debits))
             if result.amount_safe_to_pay != safe_amount:
                 errors.append("amount_safe_to_pay does not equal baseline capacity")
             if earliest != safe_date:

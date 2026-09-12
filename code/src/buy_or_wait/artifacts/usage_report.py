@@ -5,6 +5,16 @@ from pathlib import Path
 from buy_or_wait.llm.usage import UsageTracker
 
 
+def reference_estimate(summary):
+    """A disclosed public list-price comparison, not an Azure billing claim."""
+    total = 0.0
+    for name, model in summary["per_model"].items():
+        if name.rsplit("/", 1)[-1] not in {"gpt-4o", "gpt-4o-2024-11-20"}:
+            return None
+        total += (model["input_tokens"] * 2.5 + model["output_tokens"] * 10) / 1_000_000
+    return total
+
+
 def usage_markdown(summary, metadata):
     cost = summary["estimated_total_cost_usd"]
     per_cost = summary["estimated_cost_per_request_usd"]
@@ -35,6 +45,20 @@ def usage_markdown(summary, metadata):
     lines.extend(["", "Only this output-producing run is counted. Public-sample audits use separate accounting.",
                   "Reviewed image transcriptions were produced during development. Their development token usage is unavailable and is not reported as final-run model usage.",
                   "A cache hit is not a model call. Missing prices are never assumed to be zero."])
+    upstream = metadata.get("upstream_extraction")
+    if upstream:
+        prior = upstream["usage"]
+        estimate = reference_estimate(prior)
+        lines.extend(["", "## Upstream preparation (separate from final-run usage)", "",
+            f"Prepared source files: {upstream['completed_sources']}; failed extractions: {len(upstream['failures'])}.",
+            f"Provider/models: {', '.join(prior['per_model'])}.",
+            f"Model calls: {prior['total_calls']}; input tokens: {prior['input_tokens']}; output tokens: {prior['output_tokens']}; total tokens: {prior['total_tokens']}.",
+            f"Preparation tokens per user case ({prior['request_count']} cases): {prior['avg_tokens_per_request']:.4f}.",
+            f"Public list-price reference estimate: USD {estimate:.6f}." if estimate is not None else "Reference price unavailable.",
+            f"Reference cost per prepared case: USD {estimate / prior['request_count']:.6f}." if estimate is not None and prior['request_count'] else "",
+            "Reference rates: GPT-4o USD 2.50/M input and USD 10.00/M output, checked 2026-09-12 at https://developers.openai.com/api/docs/models/gpt-4o .",
+            "This is a reference estimate; the Azure deployment's region-specific billing rate was not supplied. Set MODEL_PRICES to obtain a deployment-specific estimate.",
+            "Preparation covers all 215 messages and 16 images, including sample users. It is not added to the final cached replay's provider-call count."])
     return "\n".join(lines) + "\n"
 
 

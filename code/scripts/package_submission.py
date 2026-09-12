@@ -25,7 +25,8 @@ EXCLUDE_PARTS = {"__pycache__", ".pytest_cache", ".ruff_cache", ".venv", ".env",
 REPORTS = {"usage_report.md", "evaluation_report.md", "evaluation_report.json"}
 
 
-def package(repo_root: Path, output_path: Path | None = None, report_dir: Path | None = None):
+def package(repo_root: Path, output_path: Path | None = None, report_dir: Path | None = None,
+            dataset_dir: Path | None = None, evidence_cache_dir: Path | None = None):
     code_dir = repo_root / "code"
     if not code_dir.exists():
         code_dir = CODE_ROOT
@@ -44,11 +45,17 @@ def package(repo_root: Path, output_path: Path | None = None, report_dir: Path |
     for name in ("usage_report.md", "evaluation_report.md"):
         if metadata.get("report_sha256", {}).get(name) != sha256(report_dir / name):
             raise ValueError(f"Report hash does not match run metadata: {name}")
+    for trace in metadata.get("request_traces", {}).values():
+        path = (report_dir / trace["path"]).resolve()
+        if not path.is_relative_to(report_dir.resolve()) or not path.is_file() or sha256(path) != trace["sha256"]:
+            raise ValueError("Request trace does not match run metadata")
     usage_text = (report_dir / "usage_report.md").read_text(encoding="utf-8")
     if metadata["run_id"] not in usage_text or metadata["output_sha256"] not in usage_text:
         raise ValueError("Usage report belongs to a different run")
     settings = Settings()
-    dataset_dir = settings.dataset_dir or repo_root / "dataset"
+    dataset_dir = dataset_dir or repo_root / "dataset"
+    if evidence_cache_dir:
+        settings.evidence_cache_dir = evidence_cache_dir
     dataset = load_dataset(dataset_dir)
     if metadata["dataset_sha256"] != dataset.version_hash:
         raise ValueError("Dataset changed after the run")
@@ -81,6 +88,8 @@ def package(repo_root: Path, output_path: Path | None = None, report_dir: Path |
                     continue
                 if relative.as_posix() in {f"evaluation/{n}" for n in REPORTS}:
                     continue
+                if relative.parts[:2] == ("evaluation", "traces"):
+                    continue
                 if "evidence_cache" in relative.parts and path.suffix == ".json":
                     data = json.loads(path.read_text(encoding="utf-8"))
                     if data.get("prompt_version") != PROMPT_VERSION or data.get("dataset_hash") != dataset.version_hash:
@@ -88,6 +97,8 @@ def package(repo_root: Path, output_path: Path | None = None, report_dir: Path |
                 zf.write(path, relative.as_posix())
             for name in sorted(REPORTS):
                 zf.write(report_dir / name, f"evaluation/{name}")
+            for trace in metadata.get("request_traces", {}).values():
+                zf.write(report_dir / trace["path"], "evaluation/" + trace["path"])
         os.chmod(staged, 0o644)
         os.replace(staged, zip_path)
     finally:
@@ -105,6 +116,8 @@ if __name__ == "__main__":
     parser.add_argument("--repo-root", type=Path, default=CODE_ROOT.parent)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--report-dir", type=Path)
+    parser.add_argument("--dataset-dir", type=Path)
+    parser.add_argument("--evidence-cache-dir", type=Path)
     args = parser.parse_args()
-    for path in package(args.repo_root.resolve(), args.output, args.report_dir):
+    for path in package(args.repo_root.resolve(), args.output, args.report_dir, args.dataset_dir, args.evidence_cache_dir):
         print(f"Created {path}")

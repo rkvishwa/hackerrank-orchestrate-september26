@@ -1,0 +1,74 @@
+{
+  "version": "financial-facts-1",
+  "user_id": "user_219",
+  "source_id": "message_170",
+  "model": "gpt-4o-2024-11-20",
+  "deployment": "gpt-4o",
+  "extraction": {
+    "facts": [
+      {
+        "kind": "income_resume",
+        "amount": "1914",
+        "percentage": null,
+        "currency": "EUR",
+        "effective_date": "2026-04-15",
+        "date_quote": "2026-04-15",
+        "timing": "on_date",
+        "scope": "series",
+        "certainty": "confirmed",
+        "subject": "BrightPath Media",
+        "quote": "Regular salary of EUR 1914 resumes on 2026-04-15."
+      },
+      {
+        "kind": "expense_start",
+        "amount": null,
+        "percentage": null,
+        "currency": null,
+        "effective_date": null,
+        "date_quote": "in the same month",
+        "timing": "unknown",
+        "scope": "unknown",
+        "certainty": "confirmed",
+        "subject": "childcare payment",
+        "quote": "A new recurring childcare payment begins in the same month."
+      }
+    ],
+    "uncertainties": []
+  },
+  "usage": {
+    "input_tokens": 678,
+    "output_tokens": 152
+  },
+  "accepted": [
+    {
+      "kind": "income_resume",
+      "amount": "1914",
+      "percentage": null,
+      "currency": "EUR",
+      "effective_date": "2026-04-15",
+      "date_quote": "2026-04-15",
+      "timing": "on_date",
+      "scope": "series",
+      "certainty": "confirmed",
+      "subject": null,
+      "quote": "Regular salary of EUR 1914 resumes on 2026-04-15."
+    },
+    {
+      "kind": "expense_start",
+      "amount": null,
+      "percentage": null,
+      "currency": null,
+      "effective_date": null,
+      "date_quote": "in the same month",
+      "timing": "unknown",
+      "scope": "unknown",
+      "certainty": "confirmed",
+      "subject": "childcare payment",
+      "quote": "A new recurring childcare payment begins in the same month."
+    }
+  ],
+  "rejected": [],
+  "prompt_version": "v3-content-context-verified",
+  "dataset_hash": "512dd2d6cfd2aad34c42a97db093484984618179c6bce2055cfb087428fcfb94",
+  "source_hash": "1778b88a1b0def838466fc86e71e87741e8bd5a27f6e812d244e2849fd9202e8"
+}

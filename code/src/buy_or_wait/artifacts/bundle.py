@@ -70,6 +70,20 @@ def publish(engine, results, settings, tracker, expected_ids):
             }
             audit_settings = settings.model_copy(update={"deterministic_mode": True, "llm_enabled": False})
             metadata["samples"] = score_samples(settings.resolved_dataset_dir, audit_settings)
+            sample_traces = metadata["samples"].pop("case_traces", {})
+            traces = {r.request_id: r.trace["case"] for r in results}
+            traces.update(sample_traces)
+            metadata["evidence_completeness"] = {
+                "requests_with_unquantified_commitments": sorted(rid for rid, trace in traces.items()
+                    if trace["accounting_coverage"]["unquantified_commitments"]),
+                "accounted_source_records": sum(t["accounting_coverage"]["accounted_records"] for t in traces.values()),
+            }
+            preparation = settings.resolved_evidence_cache_dir.parent / "extraction_report.json"
+            if preparation.exists():
+                prepared = json.loads(preparation.read_text(encoding="utf-8"))
+                if prepared.get("dataset_sha256") == engine.dataset.version_hash:
+                    metadata["upstream_extraction"] = {"usage": prepared["usage"],
+                        "completed_sources": len(prepared["completed"]), "failures": prepared["failures"]}
             metadata["text_hash_policy"] = "Dataset, source and sample text use LF-normalized bytes; artifacts and images use exact bytes."
             metadata["sample_dataset_sha256"] = text_sha256(settings.resolved_dataset_dir / "sample_requests.csv") if (settings.resolved_dataset_dir / "sample_requests.csv").exists() else None
             markdown = ["# Evaluation Report", "", f"Run ID: {tracker.run_id}",
@@ -111,6 +125,16 @@ def publish(engine, results, settings, tracker, expected_ids):
                 "usage_report.md": usage_markdown(metadata["usage"], metadata),
                 "evaluation_report.md": "\n".join(markdown) + "\n",
             }
+            trace_files = {}
+            for rid, trace in sorted(traces.items()):
+                import re
+                safe_id = rid if re.fullmatch(r"[A-Za-z0-9_-]+", rid) else hashlib.sha256(rid.encode()).hexdigest()
+                name = f"traces/{safe_id}.json"
+                body = json.dumps(trace, indent=2, sort_keys=True,
+                                  default=lambda v: sorted(v) if isinstance(v, set) else str(v)) + "\n"
+                documents[name] = body
+                trace_files[rid] = {"path": name, "sha256": hashlib.sha256(body.encode()).hexdigest()}
+            metadata["request_traces"] = trace_files
             metadata["report_sha256"] = {name: hashlib.sha256(body.encode()).hexdigest()
                                           for name, body in documents.items()}
             documents["evaluation_report.json"] = json.dumps(metadata, indent=2, sort_keys=True)
@@ -118,6 +142,7 @@ def publish(engine, results, settings, tracker, expected_ids):
             pending = []
             for name, body in documents.items():
                 target = report_dir / name
+                target.parent.mkdir(parents=True, exist_ok=True)
                 with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", newline="\n",
                                                   dir=report_dir, suffix=".tmp", delete=False) as fh:
                     fh.write(body)

@@ -1,0 +1,291 @@
+[
+  {
+    "request_id": "request_13",
+    "review_basis": "Manually reviewed participant history; amounts calculated from observations, no public outputs used.",
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "Primary household salary"
+        },
+        "monthly_day": 15
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 2
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 6
+      },
+      {
+        "name": "music_subscription",
+        "match": {
+          "direction": "debit",
+          "category": "music_subscription"
+        },
+        "monthly_day": 11
+      },
+      {
+        "name": "delivery_membership",
+        "match": {
+          "direction": "debit",
+          "category": "delivery_membership"
+        },
+        "monthly_day": 13
+      },
+      {
+        "name": "gym",
+        "match": {
+          "direction": "debit",
+          "category": "gym"
+        },
+        "monthly_day": 10
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 14
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 7
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 7
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 14
+      }
+    ],
+    "excluded_history": {
+      "Second household income": "Four settled payments on October-January 20; February cycle absent before March 7 request. No confirmed resumption; do not project this income."
+    },
+    "replaces_series": {
+      "event_1161": "salary"
+    },
+    "message_sha256": {}
+  },
+  {
+    "request_id": "request_04",
+    "review_basis": "Manually reviewed participant history; amounts calculated from observations, no public outputs used.",
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "Payroll credit"
+        },
+        "monthly_day": 15
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 1
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 5
+      },
+      {
+        "name": "music_subscription",
+        "match": {
+          "direction": "debit",
+          "category": "music_subscription"
+        },
+        "monthly_day": 10
+      },
+      {
+        "name": "delivery_membership",
+        "match": {
+          "direction": "debit",
+          "category": "delivery_membership"
+        },
+        "monthly_day": 12
+      },
+      {
+        "name": "gym",
+        "match": {
+          "direction": "debit",
+          "category": "gym"
+        },
+        "monthly_day": 9
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 13
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 7
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 7
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 14
+      }
+    ],
+    "reviewed_messages": {
+      "message_03": "Quarterly bonus amount and payment date not approved. Exclude the bonus; this does not cancel regular settled monthly payroll."
+    },
+    "excluded_history": {
+      "Quarterly performance bonus": "Settled historical bonus is already in opening balance. One observation and message_03 leave future bonus amount/date unconfirmed."
+    },
+    "message_sha256": {
+      "message_03": "62b2bc24daa8b2d071758259312eac13f1f239825bbbea19f8ae7c0317206a72"
+    }
+  },
+  {
+    "request_id": "request_25",
+    "review_basis": "Manually reviewed participant history; amounts calculated from observations, no public outputs used.",
+    "series": [
+      {
+        "name": "salary",
+        "match": {
+          "direction": "credit",
+          "category": "salary",
+          "description": "International employer payroll"
+        },
+        "monthly_day": 15
+      },
+      {
+        "name": "rent",
+        "match": {
+          "direction": "debit",
+          "category": "rent"
+        },
+        "monthly_day": 2
+      },
+      {
+        "name": "utilities",
+        "match": {
+          "direction": "debit",
+          "category": "utilities"
+        },
+        "monthly_day": 6
+      },
+      {
+        "name": "insurance",
+        "match": {
+          "direction": "debit",
+          "category": "insurance"
+        },
+        "monthly_day": 7
+      },
+      {
+        "name": "cloud_storage",
+        "match": {
+          "direction": "debit",
+          "category": "cloud_storage"
+        },
+        "monthly_day": 12
+      },
+      {
+        "name": "streaming",
+        "match": {
+          "direction": "debit",
+          "category": "streaming"
+        },
+        "monthly_day": 9
+      },
+      {
+        "name": "shopping",
+        "match": {
+          "direction": "debit",
+          "category": "shopping"
+        },
+        "monthly_day": 12
+      },
+      {
+        "name": "entertainment",
+        "match": {
+          "direction": "debit",
+          "category": "entertainment"
+        },
+        "monthly_day": 14
+      },
+      {
+        "name": "groceries",
+        "match": {
+          "direction": "debit",
+          "category": "groceries"
+        },
+        "interval_days": 10
+      },
+      {
+        "name": "transport",
+        "match": {
+          "direction": "debit",
+          "category": "transport"
+        },
+        "interval_days": 5
+      },
+      {
+        "name": "dining",
+        "match": {
+          "direction": "debit",
+          "category": "dining"
+        },
+        "interval_days": 7
+      }
+    ],
+    "replaces_series": {
+      "event_2288": "salary"
+    },
+    "message_sha256": {}
+  }
+]

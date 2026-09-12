@@ -39,7 +39,8 @@ def test_matching_confirmation_retains_independent_second_income(second_amount):
             for name, amount in [("Primary household salary", "500"), ("Second household income", second_amount)]
             for m in (10, 11, 12)]
     rows.append(event("confirmed", date(2026, 1, 15), "500", description="Next confirmed salary",
-                      category="salary", direction="credit", status="scheduled"))
+                      category="salary", direction="credit", status="scheduled",
+                      linked="Primary household salary12"))
     f, p, q = forecast(rows)
     january = [c for c in f.build_cashflows(p, q) if c.flow_date == date(2026, 1, 15)]
     assert len(january) == 2

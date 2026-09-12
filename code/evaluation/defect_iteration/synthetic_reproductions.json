@@ -1,0 +1,455 @@
+{
+  "candidate": {
+    "cancelled_internal_occurrence": {
+      "forecast": [
+        {
+          "amount": "100",
+          "category": "rent",
+          "direction": "debit",
+          "flexible": false,
+          "flow_date": "2026-01-05",
+          "protected": true,
+          "source": "series:dec"
+        },
+        {
+          "amount": "100",
+          "category": "rent",
+          "direction": "debit",
+          "flexible": false,
+          "flow_date": "2026-02-05",
+          "protected": true,
+          "source": "series:dec"
+        },
+        {
+          "amount": "100",
+          "category": "rent",
+          "direction": "debit",
+          "flexible": false,
+          "flow_date": "2026-03-05",
+          "protected": true,
+          "source": "series:dec"
+        }
+      ],
+      "input_events": [
+        {
+          "amount": "100",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-10-05",
+          "event_id": "oct",
+          "event_type": "expense",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-10-05",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "9999",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-11-05",
+          "event_id": "nov",
+          "event_type": "expense",
+          "flexibility": "stoppable",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-11-05",
+          "status": "cancelled",
+          "user_id": "u"
+        },
+        {
+          "amount": "100",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-12-05",
+          "event_id": "dec",
+          "event_type": "expense",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-05",
+          "status": "settled",
+          "user_id": "u"
+        }
+      ]
+    },
+    "unrelated_confirmation_establishes_recurrence": {
+      "forecast": [
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-01-15",
+          "protected": false,
+          "source": "b_jan"
+        }
+      ],
+      "input_events": [
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-12-15",
+          "event_id": "a_dec",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer B confirmed salary",
+          "direction": "credit",
+          "event_date": "2026-01-15",
+          "event_id": "b_jan",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2026-01-15",
+          "status": "scheduled",
+          "user_id": "u"
+        }
+      ]
+    },
+    "unrelated_confirmation_suppresses_salary": {
+      "forecast": [
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-01-15",
+          "protected": false,
+          "source": "b_jan"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-01-15",
+          "protected": false,
+          "source": "series:a_12"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-02-15",
+          "protected": false,
+          "source": "series:a_12"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-03-15",
+          "protected": false,
+          "source": "series:a_12"
+        }
+      ],
+      "input_events": [
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-10-15",
+          "event_id": "a_10",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-10-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-11-15",
+          "event_id": "a_11",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-11-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-12-15",
+          "event_id": "a_12",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer B confirmed salary",
+          "direction": "credit",
+          "event_date": "2026-01-15",
+          "event_id": "b_jan",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2026-01-15",
+          "status": "scheduled",
+          "user_id": "u"
+        }
+      ]
+    }
+  },
+  "control": {
+    "cancelled_internal_occurrence": {
+      "forecast": [],
+      "input_events": [
+        {
+          "amount": "100",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-10-05",
+          "event_id": "oct",
+          "event_type": "expense",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-10-05",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "9999",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-11-05",
+          "event_id": "nov",
+          "event_type": "expense",
+          "flexibility": "stoppable",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-11-05",
+          "status": "cancelled",
+          "user_id": "u"
+        },
+        {
+          "amount": "100",
+          "category": "rent",
+          "currency": "INR",
+          "description": "Monthly rent",
+          "direction": "debit",
+          "event_date": "2025-12-05",
+          "event_id": "dec",
+          "event_type": "expense",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-05",
+          "status": "settled",
+          "user_id": "u"
+        }
+      ]
+    },
+    "unrelated_confirmation_establishes_recurrence": {
+      "forecast": [
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-01-15",
+          "protected": false,
+          "source": "b_jan"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-02-15",
+          "protected": false,
+          "source": "series:b_jan"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-03-15",
+          "protected": false,
+          "source": "series:b_jan"
+        }
+      ],
+      "input_events": [
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-12-15",
+          "event_id": "a_dec",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer B confirmed salary",
+          "direction": "credit",
+          "event_date": "2026-01-15",
+          "event_id": "b_jan",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2026-01-15",
+          "status": "scheduled",
+          "user_id": "u"
+        }
+      ]
+    },
+    "unrelated_confirmation_suppresses_salary": {
+      "forecast": [
+        {
+          "amount": "900",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-01-15",
+          "protected": false,
+          "source": "b_jan"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-02-15",
+          "protected": false,
+          "source": "series:a_12"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "direction": "credit",
+          "flexible": false,
+          "flow_date": "2026-03-15",
+          "protected": false,
+          "source": "series:a_12"
+        }
+      ],
+      "input_events": [
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-10-15",
+          "event_id": "a_10",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-10-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-11-15",
+          "event_id": "a_11",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-11-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "500",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer A payroll",
+          "direction": "credit",
+          "event_date": "2025-12-15",
+          "event_id": "a_12",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2025-12-15",
+          "status": "settled",
+          "user_id": "u"
+        },
+        {
+          "amount": "900",
+          "category": "salary",
+          "currency": "INR",
+          "description": "Employer B confirmed salary",
+          "direction": "credit",
+          "event_date": "2026-01-15",
+          "event_id": "b_jan",
+          "event_type": "income",
+          "flexibility": "fixed",
+          "linked_event_id": "",
+          "minimum_allowed_amount": "0",
+          "settlement_date": "2026-01-15",
+          "status": "scheduled",
+          "user_id": "u"
+        }
+      ]
+    }
+  }
+}

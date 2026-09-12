@@ -63,6 +63,7 @@ class IncomeSchedulePatch:
 class RentPatch:
     multiplier: Decimal
     effective_from: date
+    target_series_keys: tuple[str, ...] | None = None
 
 
 @dataclass
@@ -74,6 +75,9 @@ class EvidenceContext:
     rent_patches: list[RentPatch] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
     unresolved_mandatory_debits: set[str] = field(default_factory=set)
+    fact_audit: list[dict] = field(default_factory=list)
+    nonrecurring_event_ids: set[str] = field(default_factory=set)
+    confirmed_flows: list[dict] = field(default_factory=list)
 
     def merge(self, other: EvidenceContext) -> EvidenceContext:
         patches = dict(self.event_patches)
@@ -105,5 +109,8 @@ class EvidenceContext:
             rent_patches=[*self.rent_patches, *other.rent_patches],
             notes=[*self.notes, *other.notes],
             unresolved_mandatory_debits=self.unresolved_mandatory_debits | other.unresolved_mandatory_debits,
+            fact_audit=[*self.fact_audit, *other.fact_audit],
+            nonrecurring_event_ids=self.nonrecurring_event_ids | other.nonrecurring_event_ids,
+            confirmed_flows=[*self.confirmed_flows, *other.confirmed_flows],
         )
         return merged
