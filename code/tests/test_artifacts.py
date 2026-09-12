@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import csv
 import json
+import os
+import stat
 from dataclasses import replace
 from decimal import Decimal as D
 from pathlib import Path
@@ -79,5 +81,8 @@ def test_bundle_hashes_and_report_values_match(tmp_path, monkeypatch):
     assert metadata["hidden_dataset_accuracy"] == "unknown"
     assert metadata["run_id"] in (e.settings.resolved_report_dir / "usage_report.md").read_text()
     assert metadata["report_sha256"]["usage_report.md"] == sha256(e.settings.resolved_report_dir / "usage_report.md")
+    if os.name != "nt":
+        for name in ("usage_report.md", "evaluation_report.md", "evaluation_report.json"):
+            assert stat.S_IMODE((e.settings.resolved_report_dir / name).stat().st_mode) == 0o644
     (e.settings.resolved_report_dir / "usage_report.md").write_text("tampered")
     assert metadata["report_sha256"]["usage_report.md"] != sha256(e.settings.resolved_report_dir / "usage_report.md")

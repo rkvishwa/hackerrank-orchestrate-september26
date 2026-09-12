@@ -9,6 +9,7 @@ from buy_or_wait.db.models import BatchRun, DecisionJob
 from buy_or_wait.db.session import get_session, init_db
 from buy_or_wait.engine import DecisionEngine, run_pipeline
 from buy_or_wait.ingest.loader import load_dataset
+from buy_or_wait.llm.usage import UsageTracker
 from buy_or_wait.worker.celery_app import celery_app
 
 
@@ -26,7 +27,8 @@ def decide_request_task(self, job_id: str, request_id: str) -> None:
         session.commit()
         dataset = load_dataset(settings.resolved_dataset_dir)
         engine = DecisionEngine(dataset, settings)
-        result = engine.decide(dataset.requests_by_id[request_id])
+        with UsageTracker.scoped(settings.model_prices, job_id) as usage:
+            result = engine.decide(dataset.requests_by_id[request_id])
         job.result_json = json.dumps(
             {
                 "request_id": result.request_id,
@@ -37,6 +39,7 @@ def decide_request_task(self, job_id: str, request_id: str) -> None:
                 "earliest_date_for_full_payment": result.earliest_date_for_full_payment,
                 "spending_changes_needed": result.spending_changes_needed,
                 "decision_explanation": result.decision_explanation,
+                "usage": usage.summary(1),
             }
         )
         job.status = "completed"

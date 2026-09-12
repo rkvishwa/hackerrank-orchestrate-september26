@@ -97,6 +97,9 @@ def publish(engine, results, settings, tracker, expected_ids):
                                                   dir=report_dir, suffix=".tmp", delete=False) as fh:
                     fh.write(body)
                     pending.append((Path(fh.name), target))
+                # NamedTemporaryFile defaults to 0600; published reports must
+                # also be readable by the host account on a Docker bind mount.
+                os.chmod(fh.name, 0o644)
             pending.insert(0, (staged_output, output))
             old = {target: target.read_bytes() if target.exists() else None for _, target in pending}
             changed = []

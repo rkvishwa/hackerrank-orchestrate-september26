@@ -88,6 +88,7 @@ def package(repo_root: Path, output_path: Path | None = None, report_dir: Path |
                 zf.write(path, relative.as_posix())
             for name in sorted(REPORTS):
                 zf.write(report_dir / name, f"evaluation/{name}")
+        os.chmod(staged, 0o644)
         os.replace(staged, zip_path)
     finally:
         staged.unlink(missing_ok=True)

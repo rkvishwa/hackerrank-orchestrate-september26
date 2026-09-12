@@ -11,6 +11,7 @@ from buy_or_wait.db.models import DecisionJob
 from buy_or_wait.db.session import get_session, init_db
 from buy_or_wait.engine import DecisionEngine
 from buy_or_wait.ingest.loader import load_dataset
+from buy_or_wait.llm.usage import UsageTracker
 from buy_or_wait.worker.tasks import decide_request_task
 
 router = APIRouter(tags=["decisions"])
@@ -31,7 +32,8 @@ def create_decision(payload: DecisionRequest, request: Request, _: str = Depends
 
     if payload.sync:
         engine = DecisionEngine(dataset, settings)
-        result = engine.decide(dataset.requests_by_id[payload.request_id])
+        with UsageTracker.scoped(settings.model_prices) as usage:
+            result = engine.decide(dataset.requests_by_id[payload.request_id])
         return {
             "request_id": result.request_id,
             "amount_safe_to_pay": str(result.amount_safe_to_pay),
@@ -41,6 +43,7 @@ def create_decision(payload: DecisionRequest, request: Request, _: str = Depends
             "earliest_date_for_full_payment": result.earliest_date_for_full_payment,
             "spending_changes_needed": result.spending_changes_needed,
             "decision_explanation": result.decision_explanation,
+            "usage": usage.summary(1),
         }
 
     job_id = uuid.uuid4().hex
