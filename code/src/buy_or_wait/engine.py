@@ -33,21 +33,26 @@ def _format_spending(changes: list[SpendingChange]) -> str:
     return "|".join(parts)
 
 
-def _map_status(plan: PlanCandidate, request: RequestRow, profile, amount_safe: Decimal, earliest_full: date | None) -> tuple[str, str]:
+def _map_status(
+    plan: PlanCandidate,
+    request: RequestRow,
+    profile,
+    amount_safe: Decimal,
+    earliest_full: date | None,
+) -> tuple[str, str]:
     if plan.method == "not_recommended":
-        if earliest_full is None and amount_safe < request.requested_amount:
-            return "not_affordable", plan.method
-        if plan.method == "not_recommended":
-            return "not_affordable", "not_recommended"
+        return "not_affordable", "not_recommended"
     if plan.method == "wait":
         return "affordable_later", plan.method
-    if plan.method == "full_payment" and amount_safe >= request.requested_amount and not plan.spending_changes:
-        if "full_payment" in profile.payment_methods_user_will_consider:
-            return "affordable_now", plan.method
+    if (
+        plan.method == "full_payment"
+        and amount_safe >= request.requested_amount
+        and not plan.spending_changes
+        and "full_payment" in profile.payment_methods_user_will_consider
+    ):
+        return "affordable_now", plan.method
     if plan.method in {"full_payment", "partial_payment", "installments"}:
         return "affordable_with_plan", plan.method
-    if plan.method == "not_recommended":
-        return "not_affordable", plan.method
     return "not_affordable", plan.method
 
 
@@ -58,22 +63,29 @@ class DecisionEngine:
         self.forecast = ForecastEngine(dataset, self.settings)
         self.enumerator = PlanEnumerator(self.forecast)
         self.evidence = EvidenceResolver(dataset, self.settings)
-        self.verifier = OutputVerifier()
+        self.verifier = OutputVerifier(self.forecast)
 
     def decide(self, request: RequestRow) -> DecisionResult:
         profile = self.dataset.profiles[request.user_id]
         options = self.dataset.payment_options_by_request.get(request.request_id, [])
-        amount_overrides = self.evidence.resolve_amount_overrides(request)
+        evidence_ctx = self.evidence.resolve(request)
+        amount_overrides = evidence_ctx.amount_overrides
 
         amount_safe = self.forecast.max_safe_payment(
-            profile, request, spending_changes=None, amount_overrides=amount_overrides
+            profile, request, spending_changes=None, evidence=evidence_ctx
         )
         earliest = self.forecast.earliest_full_payment_date(
-            profile, request, spending_changes=None, amount_overrides=amount_overrides
+            profile, request, spending_changes=None, evidence=evidence_ctx
         )
 
         candidates = self.enumerator.enumerate(
-            profile, request, options, amount_safe, earliest, amount_overrides
+            profile,
+            request,
+            options,
+            amount_safe,
+            earliest,
+            amount_overrides,
+            evidence_ctx,
         )
         ranked = PlanEnumerator.rank(candidates)
 
@@ -102,7 +114,16 @@ class DecisionEngine:
         elif earliest is not None:
             earliest_str = earliest.isoformat()
 
-        explanation = build_explanation(profile, request, selected, amount_safe, earliest_str, status)
+        explanation = build_explanation(
+            profile,
+            request,
+            selected,
+            amount_safe,
+            earliest_str,
+            status,
+            evidence_notes=evidence_ctx.notes,
+            forecast_horizon=self.settings.forecast_horizon_days,
+        )
         result = DecisionResult(
             request_id=request.request_id,
             amount_safe_to_pay=amount_safe,
@@ -112,9 +133,16 @@ class DecisionEngine:
             earliest_date_for_full_payment=earliest_str,
             spending_changes_needed=_format_spending(selected.spending_changes),
             decision_explanation=explanation,
-            trace={"amount_overrides": {k: str(v) for k, v in amount_overrides.items()}},
+            trace={
+                "amount_overrides": {k: str(v) for k, v in amount_overrides.items()},
+                "suppressed_events": sorted(evidence_ctx.suppressed_event_ids),
+                "evidence": __import__("dataclasses").asdict(evidence_ctx),
+                "notes": evidence_ctx.notes,
+            },
         )
-        self.verifier.verify_request_row(request, result)
+        errors = self.verifier.verify_request_row(request, result, profile, options, selected, evidence_ctx)
+        if errors:
+            raise ValueError(f"{request.request_id}: verification failed: {'; '.join(errors)}")
         return result
 
     def run_batch(self, request_ids: list[str] | None = None) -> list[DecisionResult]:
@@ -146,9 +174,13 @@ class DecisionEngine:
 
 
 def run_pipeline(settings: Settings | None = None, request_ids: list[str] | None = None) -> tuple[list[DecisionResult], Path]:
+    from buy_or_wait.llm.usage import UsageTracker
+    from buy_or_wait.artifacts.bundle import publish
     settings = settings or Settings()
     dataset = load_dataset(settings.resolved_dataset_dir)
     engine = DecisionEngine(dataset, settings)
-    results = engine.run_batch(request_ids)
-    engine.write_output(results, settings.resolved_output_path)
-    return results, settings.resolved_output_path
+    with UsageTracker.scoped(settings.model_prices) as tracker:
+        results = engine.run_batch(request_ids)
+        output = publish(engine, results, settings, tracker,
+                         request_ids if request_ids is not None else list(dataset.requests_by_id))
+    return results, output

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 from dataclasses import asdict
 
 from buy_or_wait.config import Settings
@@ -16,6 +17,7 @@ def decide_request_task(self, job_id: str, request_id: str) -> None:
     settings = Settings()
     init_db(settings)
     session = get_session(settings)
+    job = None
     try:
         job = session.get(DecisionJob, job_id)
         if job is None:
@@ -52,8 +54,13 @@ def decide_request_task(self, job_id: str, request_id: str) -> None:
 @celery_app.task(bind=True, max_retries=3)
 def run_batch_task(self, run_id: str) -> None:
     settings = Settings()
+    # Keep concurrent jobs and retries from overwriting another run's artifacts.
+    run_dir = settings.resolved_output_path.parent / "runs" / run_id
+    settings.output_path = run_dir / "output.csv"
+    settings.report_dir = run_dir / "evaluation"
     init_db(settings)
     session = get_session(settings)
+    run = None
     try:
         run = session.get(BatchRun, run_id)
         if run is None:

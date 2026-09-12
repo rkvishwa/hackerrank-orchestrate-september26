@@ -22,6 +22,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=None, help="Output CSV path")
     parser.add_argument("--deterministic", action="store_true", help="Disable Azure LLM calls")
     parser.add_argument("--emit-usage-report", action="store_true", help="Write evaluation/usage_report.md")
+    parser.add_argument("--report-dir", type=Path, default=None, help="Directory for matching usage and evaluation reports")
     args = parser.parse_args()
 
     settings = Settings()
@@ -29,6 +30,8 @@ def main() -> int:
         settings.dataset_dir = args.dataset_dir
     if args.output:
         settings.output_path = args.output
+    if args.report_dir:
+        settings.report_dir = args.report_dir
     if args.deterministic:
         settings.deterministic_mode = True
         settings.llm_enabled = False
@@ -36,12 +39,7 @@ def main() -> int:
     results, output_path = run_pipeline(settings)
     print(f"Wrote {len(results)} predictions to {output_path}")
 
-    if args.emit_usage_report:
-        from buy_or_wait.artifacts.usage_report import write_usage_report
-
-        report_path = ROOT / "evaluation" / "usage_report.md"
-        write_usage_report(results, settings, report_path)
-        print(f"Wrote usage report to {report_path}")
+    print(f"Wrote matching reports to {settings.resolved_report_dir}")
 
     return 0
 

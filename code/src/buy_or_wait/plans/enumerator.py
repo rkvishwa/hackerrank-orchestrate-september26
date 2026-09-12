@@ -5,12 +5,15 @@ from decimal import Decimal
 from itertools import combinations
 
 from buy_or_wait.domain import PaymentLeg, PlanCandidate, SpendingChange
+from buy_or_wait.evidence.models import EvidenceContext
 from buy_or_wait.finance.forecast import ForecastEngine
 from buy_or_wait.ingest.loader import PaymentOption, Profile, RequestRow
 
 
 def _installment_legs(option: PaymentOption) -> list[PaymentLeg]:
     legs: list[PaymentLeg] = []
+    if option.number_of_payments < 1 or (option.number_of_payments > 1 and not option.payment_frequency_days):
+        return []
     current = option.first_payment_date
     for _ in range(option.number_of_payments):
         legs.append(PaymentLeg(payment_date=current, amount=option.payment_amount))
@@ -33,9 +36,14 @@ class PlanEnumerator:
     def __init__(self, forecast: ForecastEngine):
         self.forecast = forecast
 
-    def _eligible_spending_changes(self, profile: Profile, request: RequestRow) -> list[SpendingChange]:
+    def _eligible_spending_changes(
+        self, profile: Profile, request: RequestRow, evidence: EvidenceContext | None = None
+    ) -> list[SpendingChange]:
+        evidence = evidence or EvidenceContext()
         changes: list[SpendingChange] = []
-        historical = self.forecast.dataset.events_by_user.get(request.user_id, [])
+        historical = [self.forecast.dataset.events_by_id[s.template_event_id]
+                      for s in self.forecast._series_for_user(request.user_id, request.request_date, evidence)
+                      if s.direction == "debit"]
         seen: set[str] = set()
         for event in sorted(historical, key=lambda e: e.settlement_date, reverse=True):
             if event.settlement_date > request.request_date:
@@ -46,6 +54,8 @@ class PlanEnumerator:
                 continue
             if event.event_id in seen:
                 continue
+            if event.event_id in evidence.suppressed_event_ids:
+                continue
             seen.add(event.event_id)
             if event.flexibility in {"stoppable", "reducible_or_stoppable"}:
                 if event.category in profile.expense_categories_user_is_willing_to_stop:
@@ -54,20 +64,41 @@ class PlanEnumerator:
                 if event.category in profile.expense_categories_user_is_willing_to_reduce:
                     minimum = event.minimum_allowed_amount or Decimal("0")
                     if event.amount is not None and event.amount > minimum:
-                        reduced = minimum if minimum > 0 else (event.amount * Decimal("0.5")).quantize(Decimal("0.01"))
-                        changes.append(
-                            SpendingChange(action="reduce_to", event_id=event.event_id, new_amount=reduced)
+                        amount_home = self.forecast.converter.convert(
+                            event.amount,
+                            event.currency,
+                            profile.home_currency,
+                            event.settlement_date,
                         )
-            if len(changes) >= 12:
-                break
+                        minimum_home = (
+                            self.forecast.converter.convert(
+                                minimum,
+                                event.currency,
+                                profile.home_currency,
+                                event.settlement_date,
+                            )
+                            if minimum > 0
+                            else Decimal("0")
+                        )
+                        if amount_home > minimum_home:
+                            reduced = minimum_home if minimum_home > 0 else (amount_home * Decimal("0.5")).quantize(
+                                Decimal("0.01")
+                            )
+                            changes.append(
+                                SpendingChange(
+                                    action="reduce_to",
+                                    event_id=event.event_id,
+                                    new_amount=reduced,
+                                )
+                            )
         return changes
 
     def _spending_combos(self, changes: list[SpendingChange], max_changes: int = 3) -> list[list[SpendingChange]]:
         combos: list[list[SpendingChange]] = [[]]
-        for change in changes[:8]:
+        for change in changes:
             combos.append([change])
         for size in range(2, min(max_changes, 3) + 1):
-            for combo in combinations(changes[:8], size):
+            for combo in combinations(changes, size):
                 stops = {c.event_id for c in combo if c.action == "stop"}
                 reduces = {c.event_id for c in combo if c.action == "reduce_to"}
                 if stops & reduces:
@@ -90,16 +121,22 @@ class PlanEnumerator:
         amount_safe: Decimal,
         earliest_full: date | None,
         amount_overrides: dict[str, Decimal] | None = None,
+        evidence: EvidenceContext | None = None,
     ) -> list[PlanCandidate]:
+        evidence = evidence or EvidenceContext()
         candidates: list[PlanCandidate] = []
         methods = set(profile.payment_methods_user_will_consider)
-        spending_pool = self._eligible_spending_changes(profile, request)
+        spending_pool = self._eligible_spending_changes(profile, request, evidence)
 
         for spending_changes in self._spending_combos(spending_pool):
+            combo_earliest = self.forecast.earliest_full_payment_date(
+                profile, request, spending_changes, amount_overrides, evidence
+            )
+
             if "full_payment" in methods:
                 legs = [PaymentLeg(payment_date=request.request_date, amount=request.requested_amount)]
                 sim = self.forecast.simulate_plan(
-                    profile, request, legs, spending_changes, amount_overrides
+                    profile, request, legs, spending_changes, amount_overrides, evidence
                 )
                 candidates.append(
                     PlanCandidate(
@@ -125,7 +162,7 @@ class PlanEnumerator:
                     PaymentLeg(payment_date=earliest_full, amount=remainder),
                 ]
                 sim = self.forecast.simulate_plan(
-                    profile, request, legs, spending_changes, amount_overrides
+                    profile, request, legs, spending_changes, amount_overrides, evidence
                 )
                 candidates.append(
                     PlanCandidate(
@@ -145,9 +182,14 @@ class PlanEnumerator:
                     if _months_span(request.request_date, option) > profile.max_installment_months:
                         continue
                     legs = _installment_legs(option)
+                    if not legs or sum(leg.amount for leg in legs) != option.total_payable_amount:
+                        continue
                     last_date = legs[-1].payment_date
+                    if (legs[0].payment_date < request.request_date or
+                            last_date > request.request_date + timedelta(days=self.forecast.settings.forecast_horizon_days)):
+                        continue
                     sim = self.forecast.simulate_plan(
-                        profile, request, legs, spending_changes, amount_overrides
+                        profile, request, legs, spending_changes, amount_overrides, evidence
                     )
                     candidates.append(
                         PlanCandidate(
@@ -163,20 +205,20 @@ class PlanEnumerator:
 
             if (
                 "full_payment" in methods
-                and earliest_full
-                and earliest_full > request.request_date
+                and combo_earliest
+                and combo_earliest > request.request_date
             ):
-                legs = [PaymentLeg(payment_date=earliest_full, amount=request.requested_amount)]
+                legs = [PaymentLeg(payment_date=combo_earliest, amount=request.requested_amount)]
                 sim = self.forecast.simulate_plan(
-                    profile, request, legs, spending_changes, amount_overrides
+                    profile, request, legs, spending_changes, amount_overrides, evidence
                 )
                 candidates.append(
                     PlanCandidate(
-                        method="wait",
+                        method="full_payment" if spending_changes else "wait",
                         legs=legs,
                         total_paid=request.requested_amount,
                         spending_changes=spending_changes,
-                        completes_by_deadline=earliest_full <= request.desired_completion_date,
+                        completes_by_deadline=combo_earliest <= request.desired_completion_date,
                         safe=sim.safe,
                     )
                 )
@@ -195,4 +237,4 @@ class PlanEnumerator:
                 plan.payment_option_id or "",
             )
 
-        return sorted([p for p in candidates if p.safe], key=sort_key)
+        return sorted([p for p in candidates if p.safe and p.completes_by_deadline], key=sort_key)

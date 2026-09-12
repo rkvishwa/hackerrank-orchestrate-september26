@@ -26,9 +26,12 @@ def _parse_decimal(value: str) -> Decimal | None:
     if not value:
         return None
     try:
-        return Decimal(value)
+        amount = Decimal(value)
+        if not amount.is_finite() or amount < 0:
+            raise ValueError(f"Invalid monetary value: {value}")
+        return amount
     except InvalidOperation:
-        return None
+        raise ValueError(f"Invalid monetary value: {value}") from None
 
 
 def _split_pipe(value: str) -> list[str]:
@@ -140,8 +143,10 @@ def _hash_dataset(paths: list[Path]) -> str:
     digest = hashlib.sha256()
     for path in sorted(paths):
         digest.update(path.name.encode())
-        digest.update(path.read_bytes())
-    return digest.hexdigest()[:16]
+        # Git checkouts use platform-specific CSV line endings. Evidence must
+        # stay valid when the same supplied text moves between Windows/Linux.
+        digest.update(path.read_bytes().replace(b"\r\n", b"\n"))
+    return digest.hexdigest()
 
 
 def load_dataset(dataset_dir: Path) -> Dataset:
@@ -162,6 +167,8 @@ def load_dataset(dataset_dir: Path) -> Dataset:
     with (dataset_dir / "financial_profiles.csv").open(encoding="utf-8-sig", newline="") as fh:
         for row in csv.DictReader(fh):
             max_months = row["max_installment_months"].strip()
+            if row["user_id"] in profiles:
+                raise ValueError(f"Duplicate profile: {row['user_id']}")
             profiles[row["user_id"]] = Profile(
                 user_id=row["user_id"],
                 home_currency=row["home_currency"],
@@ -200,6 +207,8 @@ def load_dataset(dataset_dir: Path) -> Dataset:
                 minimum_allowed_amount=_parse_decimal(row.get("minimum_allowed_amount", "")),
             )
             events_by_user[event.user_id].append(event)
+            if event.event_id in events_by_id:
+                raise ValueError(f"Duplicate event: {event.event_id}")
             events_by_id[event.event_id] = event
 
     requests: list[RequestRow] = []
@@ -219,6 +228,12 @@ def load_dataset(dataset_dir: Path) -> Dataset:
                 request_text=row["request_text"],
             )
             requests.append(req)
+            if req.request_id in requests_by_id:
+                raise ValueError(f"Duplicate request: {req.request_id}")
+            if not req.requested_amount.is_finite() or req.requested_amount <= 0:
+                raise ValueError(f"Invalid requested amount: {req.request_id}")
+            if req.desired_completion_date < req.request_date:
+                raise ValueError(f"Deadline before request: {req.request_id}")
             requests_by_id[req.request_id] = req
 
     payment_options_by_request: dict[str, list[PaymentOption]] = defaultdict(list)

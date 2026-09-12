@@ -45,6 +45,7 @@ def test_batch_writes_output(tmp_path):
     settings = Settings(
         dataset_dir=DATASET,
         output_path=tmp_path / "output.csv",
+        report_dir=tmp_path / "evaluation",
         deterministic_mode=True,
         llm_enabled=False,
     )
@@ -60,5 +61,5 @@ def test_verifier_rejects_bad_amount(engine, dataset):
     request = dataset.requests[0]
     result = engine.decide(request)
     result.amount_safe_to_pay = request.requested_amount + Decimal("1")
-    errors = OutputVerifier.verify_request_row(request, result)
+    errors = OutputVerifier(engine.forecast).verify_request_row(request, result)
     assert errors

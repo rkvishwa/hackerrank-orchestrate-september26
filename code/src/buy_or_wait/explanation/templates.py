@@ -19,20 +19,19 @@ def build_explanation(
     amount_safe: Decimal,
     earliest_full: str,
     affordability_status: str,
+    evidence_notes: list[str] | None = None,
+    forecast_horizon: int = 90,
 ) -> str:
     ccy = profile.home_currency
     minimum = profile.minimum_balance_to_keep
 
     if plan.method == "not_recommended":
-        if amount_safe > 0 and affordability_status == "not_affordable":
-            return (
-                f"Do not proceed with the {ccy} {_fmt(request.requested_amount)} request. "
-                f"Although {ccy} {_fmt(amount_safe)} is available today, the full amount cannot be "
-                f"completed safely within 90 days."
-            )
         return (
             f"Do not make this payment by {request.desired_completion_date.isoformat()}. "
-            f"None of the available options keeps the {ccy} {_fmt(minimum)} minimum protected."
+            f"No eligible plan meets that deadline while protecting the {ccy} {_fmt(minimum)} minimum. "
+            f"Baseline safe payment today is {ccy} {_fmt(amount_safe)}. "
+            + (f"Single-payment capacity is first available on {earliest_full}." if earliest_full
+               else f"No safe full-payment date was found within {forecast_horizon} days.")
         )
 
     if plan.method == "full_payment":
@@ -47,8 +46,8 @@ def build_explanation(
         else:
             prefix = ""
         return (
-            f"{prefix}Pay {ccy} {_fmt(request.requested_amount)} today. "
-            f"This leaves at least {ccy} {_fmt(minimum)} available over the next 90 days."
+            f"{prefix}Pay {ccy} {_fmt(request.requested_amount)} on {plan.legs[0].payment_date.isoformat()}. "
+            f"This leaves at least {ccy} {_fmt(minimum)} available over the next {forecast_horizon} days."
         )
 
     if plan.method == "partial_payment":

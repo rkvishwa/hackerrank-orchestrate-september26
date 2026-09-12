@@ -6,6 +6,8 @@ from typing import Literal
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+CODE_ROOT = Path(__file__).resolve().parents[2]
+
 
 class RecurrencePolicy(BaseSettings):
     min_history: int = 2
@@ -17,12 +19,15 @@ class RecurrencePolicy(BaseSettings):
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    model_config = SettingsConfigDict(env_file=CODE_ROOT / ".env", env_file_encoding="utf-8", extra="ignore")
 
     repo_root: Path = Field(default_factory=lambda: Path(__file__).resolve().parents[3])
     dataset_dir: Path | None = None
     output_path: Path | None = None
     evidence_cache_dir: Path | None = None
+    report_dir: Path | None = None
+    # USD per million input/output tokens, keyed by actual model or deployment.
+    model_prices: dict[str, tuple[float, float]] = Field(default_factory=dict)
 
     retrieval_mode: Literal["exact", "hybrid"] = "exact"
     llm_enabled: bool = True
@@ -55,6 +60,10 @@ class Settings(BaseSettings):
     @property
     def resolved_evidence_cache_dir(self) -> Path:
         return self.evidence_cache_dir or (Path(__file__).resolve().parents[2] / "evaluation" / "evidence_cache")
+
+    @property
+    def resolved_report_dir(self) -> Path:
+        return self.report_dir or CODE_ROOT / "evaluation"
 
 
 def get_settings() -> Settings:

@@ -1,7 +1,7 @@
 # Token Usage Report
 
-Generated: 2026-09-12T13:52:24.496298+00:00
-Dataset hash: E:\Projects\hackerrank-orchestrate-september26\dataset
+Run ID: 7971ff73cbaf4536a5cf99bfc835780d
+Output SHA-256: d862ef189924636bb6e86beb72398344f55d7dfd2d1e916975cc8e2d95c20bcb
 Requests processed: 250
 
 ## Overall
@@ -9,8 +9,15 @@ Requests processed: 250
 - Input tokens: 0
 - Output tokens: 0
 - Total tokens: 0
-- Average tokens per request: 0.00
-- Estimated total cost (USD): 0.0000
-- Estimated cost per request (USD): 0.000000
+- Average tokens per request: 0.0000
+- Estimated total cost (USD): 0
+- Estimated cost per request (USD): 0.0
+- Responses without usage metadata: 0
+- Cache hits by evidence source: {"reviewed_image": 22}
 
 ## Per Model
+No provider calls occurred during this run. Rules and validated cached evidence were used.
+
+Only this output-producing run is counted. Public-sample audits use separate accounting.
+Reviewed image transcriptions were produced during development. Their development token usage is unavailable and is not reported as final-run model usage.
+A cache hit is not a model call. Missing prices are never assumed to be zero.

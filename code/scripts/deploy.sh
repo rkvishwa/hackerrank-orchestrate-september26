@@ -52,7 +52,7 @@ deploy_stack() {
 wait_ready() {
   local attempts=30
   while (( attempts > 0 )); do
-    if curl -fsS "http://127.0.0.1:8000/health" >/dev/null 2>&1; then
+    if docker compose -f "$COMPOSE_FILE" exec -T api curl -fsS "http://127.0.0.1:8000/health" >/dev/null 2>&1; then
       log "API health check passed"
       return 0
     fi
@@ -82,6 +82,7 @@ case "$cmd" in
     ;;
   run-batch)
     docker compose -f "$COMPOSE_FILE" exec -T api python main.py --deterministic --emit-usage-report
+    log "Output: ${APP_DIR}/artifacts/output.csv; reports: ${APP_DIR}/artifacts/evaluation"
     ;;
   rollback)
     cd "$APP_DIR"

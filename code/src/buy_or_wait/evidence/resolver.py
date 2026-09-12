@@ -1,12 +1,15 @@
 from __future__ import annotations
 
-import json
-import re
 from decimal import Decimal
 from pathlib import Path
 
 from buy_or_wait.config import Settings
-from buy_or_wait.ingest.loader import Dataset, RequestRow
+from buy_or_wait.evidence.cache import EvidenceCache, image_source_hash
+from buy_or_wait.evidence.conflicts import ConflictResolver
+from buy_or_wait.evidence.image_catalog import infer_amount_role
+from buy_or_wait.evidence.messages import MessageResolver
+from buy_or_wait.evidence.models import EvidenceContext, EventPatch, ExtractedAmount
+from buy_or_wait.ingest.loader import Dataset, FinancialEvent, RequestRow
 
 
 class EvidenceResolver:
@@ -14,48 +17,120 @@ class EvidenceResolver:
         self.dataset = dataset
         self.settings = settings or Settings()
         self.cache_dir = self.settings.resolved_evidence_cache_dir
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self.cache = EvidenceCache(self.cache_dir, self.dataset.version_hash)
+        self.messages = MessageResolver(dataset, self.settings)
+        self.conflicts = ConflictResolver(dataset)
 
-    def resolve_amount_overrides(self, request: RequestRow) -> dict[str, Decimal]:
-        overrides: dict[str, Decimal] = {}
+    def resolve(self, request: RequestRow) -> EvidenceContext:
+        ctx = EvidenceContext()
         user_events = self.dataset.events_by_user.get(request.user_id, [])
+
         for event in user_events:
             if event.amount is not None:
                 continue
             image = self.dataset.images_by_event.get(event.event_id)
             if not image:
+                if event.direction == "debit" and event.status in {"pending", "scheduled"}:
+                    ctx.unresolved_mandatory_debits.add(event.event_id)
                 continue
-            amount = self._extract_image_amount(image.image_id)
-            if amount is not None:
-                overrides[event.event_id] = amount
-        return overrides
+            extracted = self._extract_image_amount(event, image.image_id)
+            if extracted is None:
+                if event.direction == "debit" and event.status in {"pending", "scheduled"}:
+                    ctx.unresolved_mandatory_debits.add(event.event_id)
+                continue
+            if extracted.currency and extracted.currency != event.currency:
+                raise ValueError(f"Image currency mismatch for {event.event_id}")
+            ctx.amount_overrides[event.event_id] = extracted.amount
+            ctx.event_patches[event.event_id] = EventPatch(
+                event_id=event.event_id,
+                amount=extracted.amount,
+                currency=extracted.currency or event.currency,
+                source="verified_image", explicit=False,
+            )
 
-    def _cache_path(self, key: str) -> Path:
-        return self.cache_dir / f"{key}.json"
+        message_ctx = self.messages.resolve_for_user(
+            request.user_id, request.request_date, request.request_id
+        )
+        ctx = ctx.merge(message_ctx)
+        return self.conflicts.resolve(request.user_id, ctx)
 
-    def _extract_image_amount(self, image_id: str) -> Decimal | None:
-        cache_file = self._cache_path(f"image_{image_id}")
-        if cache_file.exists():
-            data = json.loads(cache_file.read_text(encoding="utf-8"))
-            if data.get("amount") is not None:
-                return Decimal(str(data["amount"]))
+    def resolve_amount_overrides(self, request: RequestRow) -> dict[str, Decimal]:
+        return self.resolve(request).amount_overrides
 
+    def _extract_image_amount(self, event: FinancialEvent, image_id: str) -> ExtractedAmount | None:
         image_path = self.dataset.media_dir / f"{image_id}.png"
         if not image_path.exists():
             return None
 
-        amount = self._rule_based_image_amount(image_path)
-        if amount is None and self.settings.llm_enabled and not self.settings.deterministic_mode:
-            from buy_or_wait.llm.azure_client import AzureEvidenceClient
+        source_hash = image_source_hash(image_path, event)
+        cached = self.cache.read("image", image_id, source_hash)
+        if cached and cached.get("amount") is not None:
+            amount = Decimal(str(cached["amount"]))
+            if not amount.is_finite() or amount < 0 or cached.get("event_id") != event.event_id:
+                raise ValueError(f"Invalid cached evidence for {event.event_id}")
+            from buy_or_wait.llm.usage import UsageTracker
+            UsageTracker.instance().cache_hit(cached.get("source", "cache"), source_hash)
+            return ExtractedAmount(
+                amount,
+                cached.get("currency", event.currency),
+                cached.get("amount_role", "unknown"),
+                cached.get("confidence", 1.0),
+                cached.get("source", "cache"),
+            )
 
-            client = AzureEvidenceClient(self.settings)
-            amount = client.extract_image_amount(image_path, image_id)
+        extracted = None
+        if self.settings.llm_enabled and not self.settings.deterministic_mode:
+            extracted = self._llm_image_amount(event, image_id, image_path)
 
-        if amount is not None:
-            cache_file.write_text(json.dumps({"amount": str(amount)}), encoding="utf-8")
-        return amount
+        if extracted is not None:
+            if (not extracted.amount.is_finite() or extracted.amount < 0 or extracted.confidence < 0.8
+                    or extracted.currency != event.currency):
+                raise ValueError(f"Uncertain or inconsistent image evidence for {event.event_id}")
+            from buy_or_wait.llm.usage import UsageTracker
+            UsageTracker.instance().evidence_hashes.add(source_hash)
+            self.cache.write(
+                "image",
+                image_id,
+                source_hash,
+                {
+                    "amount": str(extracted.amount),
+                    "currency": extracted.currency,
+                    "amount_role": extracted.amount_role,
+                    "confidence": extracted.confidence,
+                    "source": extracted.source,
+                    "event_id": event.event_id,
+                },
+            )
+        return extracted
 
-    @staticmethod
-    def _rule_based_image_amount(image_path: Path) -> Decimal | None:
-        # Deterministic fallback without OCR dependencies.
+    def _rule_based_image_amount(self, event: FinancialEvent, image_id: str) -> ExtractedAmount | None:
+        # IDs are identifiers, never evidence of an amount.
         return None
+
+    def _llm_image_amount(
+        self, event: FinancialEvent, image_id: str, image_path: Path
+    ) -> ExtractedAmount | None:
+        from buy_or_wait.llm.azure_client import AzureEvidenceClient
+
+        role = infer_amount_role(event.description, event.direction, event.status)
+        client = AzureEvidenceClient(self.settings)
+        result = client.extract_image_amount(
+            image_path,
+            image_id,
+            event_description=event.description,
+            direction=event.direction,
+            category=event.category,
+            status=event.status,
+            currency=event.currency,
+            settlement_date=event.settlement_date.isoformat(),
+            amount_role=role,
+        )
+        if result is None:
+            return None
+        return ExtractedAmount(
+            result["amount"],
+            result.get("currency") or event.currency,
+            result.get("amount_role", role),
+            float(result.get("confidence", 0.8)),
+            "azure",
+        )
