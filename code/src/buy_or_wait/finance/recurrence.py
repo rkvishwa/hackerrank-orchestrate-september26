@@ -75,26 +75,36 @@ def _apply_income_patches(
     amount = series.amount
     stopped = False
     for patch in evidence.income_patches:
+        if not income_patch_applies(series, patch):
+            continue
         identity = getattr(series, "series_key", getattr(series, "description", "")).lower()
         if patch.unconfirmed_variable_income and any(term in identity for term in PLATFORM_INCOME):
             return None
         if patch.stop_after and projected_date > patch.stop_after:
             stopped = True
-        if patch.resume_from:
+        if patch.resume_from and not patch.ambiguous_target:
             stopped = projected_date < patch.resume_from
         if (patch.amount is not None and patch.effective_from and projected_date >= patch.effective_from
                 and (patch.effective_until is None or projected_date <= patch.effective_until)):
             if patch.currency and patch.currency != series.currency:
                 raise ValueError("Salary amendment currency differs from recurring salary")
-            amount = patch.amount
+            amount = min(amount, patch.amount) if patch.ambiguous_target else patch.amount
     return None if stopped else amount
+
+
+def income_patch_applies(item, patch: IncomeSchedulePatch) -> bool:
+    if hasattr(item, "event_id") and patch.target_event_ids is not None:
+        return item.event_id in patch.target_event_ids
+    identity = getattr(item, "series_key", None) or series_identity(item)
+    return patch.target_series_keys is None or identity in patch.target_series_keys
 
 
 def income_payment_date(item, original_date: date, evidence: EvidenceContext) -> date:
     if item.category == "salary" and item.direction == "credit":
         for patch in evidence.income_patches:
-            if patch.payment_date and patch.original_date == original_date:
-                original_date = patch.payment_date
+            if (income_patch_applies(item, patch) and patch.payment_date
+                    and patch.original_date == original_date):
+                original_date = max(original_date, patch.payment_date) if patch.ambiguous_target else patch.payment_date
     return original_date
 
 
@@ -142,6 +152,15 @@ def detect_recurring_series(
         dates = sorted({e.settlement_date for e in group})
         if len(dates) < policy.min_history:
             continue
+        # A cancelled occurrence supplies a scheduled date, never income or
+        # an expense amount. It can explain a gap between paid occurrences.
+        cancelled_dates = {e.settlement_date for e in events
+                           if e.status == "cancelled" and series_identity(e) == "|".join(key)
+                           and e.event_id in evidence.event_patches
+                           and evidence.event_patches[e.event_id].cancel
+                           and evidence.event_patches[e.event_id].cancel_scope == "occurrence"
+                           and dates[0] < e.settlement_date < dates[-1]}
+        dates = sorted(set(dates) | cancelled_dates)
         median_gap = _median_gap(dates)
         amounts = [evidence.amount_overrides.get(e.event_id, e.amount) for e in group]
         amounts = [a for a in amounts if a is not None]
@@ -151,14 +170,16 @@ def detect_recurring_series(
         is_fixed = cv <= policy.amount_cv_threshold
         monthly = policy.monthly_days[0] <= median_gap <= policy.monthly_days[1]
         gaps = [(b - a).days for a, b in zip(dates, dates[1:])]
-        resumed = [p for p in evidence.income_patches if p.resume_from and p.amount is not None
+        resumed = [p for p in evidence.income_patches if income_patch_applies(group[-1], p)
+                   and not p.ambiguous_target and p.resume_from and p.amount is not None
                    and group[-1].category == "salary" and group[-1].direction == "credit"
                    and p.currency in {None, group[-1].currency}
                    and p.resume_from.day in {d.day for d in dates}]
         confirmed_monthly_resume = bool(resumed and len({d.day for d in dates}) == 1
                                         and all(g >= 28 for g in gaps))
         confirmed_calendar_shift = bool(len(gaps) >= 2 and all(26 <= g <= 35 for g in gaps[:-1])
-            and any(p.payment_date and p.payment_date.day == dates[-1].day
+            and any(income_patch_applies(group[-1], p) and not p.ambiguous_target
+                    and p.payment_date and p.payment_date.day == dates[-1].day
                     and 26 <= (p.payment_date - dates[-1]).days <= 35 for p in evidence.income_patches))
         if confirmed_monthly_resume or confirmed_calendar_shift:
             monthly = True
@@ -189,7 +210,7 @@ def detect_recurring_series(
             # Irregular income retains a conservative lower observed amount.
             forecast_amount = (latest.amount if latest.status == "scheduled" else
                                statistics.mode(amounts) if is_fixed or "payroll" in key[-1] else min(amounts[-3:]))
-        elif latest.category in VARIABLE_CATEGORIES or not is_fixed:
+        elif latest.category in VARIABLE_CATEGORIES or len(set(amounts)) > 1:
             # Upper quartile is conservative without repeating exceptional one-off baskets.
             recent = sorted(amounts[-12:])
             forecast_amount = recent[(3 * len(recent) - 1) // 4]
@@ -197,7 +218,8 @@ def detect_recurring_series(
         anchor_day = latest.settlement_date.day
         if monthly and latest.direction == "credit":
             anchor_day = statistics.mode([d.day for d in dates])
-            if any(p.payment_date and p.payment_date.day == latest.settlement_date.day
+            if any(income_patch_applies(latest, p) and not p.ambiguous_target
+                   and p.payment_date and p.payment_date.day == latest.settlement_date.day
                    and 26 <= (p.payment_date - latest.settlement_date).days <= 35
                    for p in evidence.income_patches):
                 # A recently shifted payday corroborated by the next confirmed

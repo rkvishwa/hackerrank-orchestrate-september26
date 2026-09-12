@@ -51,6 +51,13 @@ def _parse_date(text: str) -> date | None:
     return None
 
 
+def _financial_text(text: str) -> str:
+    directives = re.compile(r"ignore (?:all |previous |the |system |challenge )?(?:instructions|rules)|"
+                            r"amount_safe_to_pay|recommended_payment_method|system prompt|you are now", re.I)
+    return " ".join(part for part in re.split(r"(?<=[.!?])\s+|[\r\n]+", text)
+                    if not directives.search(part))
+
+
 class MessageResolver:
     def __init__(self, dataset: Dataset, settings: Settings | None = None):
         self.dataset = dataset
@@ -81,12 +88,57 @@ class MessageResolver:
         return ctx
 
     def _resolve_message(self, message: MessageRow, request_date: date) -> EvidenceContext:
-        text = message.message_text
+        ctx = self._extract_message_context(message, request_date)
+        if not ctx.income_patches:
+            return ctx
+        from buy_or_wait.finance.recurrence import detect_recurring_series, series_identity, SPECULATIVE
+        events = [e for e in self.dataset.events_by_user.get(message.user_id, [])
+                  if e.direction == "credit" and e.category == "salary"
+                  and e.status in {"settled", "scheduled"}
+                  and not any(word in e.description.lower() for word in SPECULATIVE)]
+        recurring = detect_recurring_series(events, request_date, self.settings.recurrence)
+        keys = {s.series_key for s in recurring}
+        if not keys:
+            keys = {series_identity(e) for e in events if e.settlement_date < request_date}
+        assignments = {e.event_id: {series_identity(e)} for e in events}
+        for event in events:
+            if event.status != "scheduled" or event.settlement_date < request_date:
+                continue
+            identity = series_identity(event)
+            if identity not in keys and event.description.lower() == "next confirmed salary":
+                matches = {s.series_key for s in recurring if s.currency == event.currency
+                           and s.amount == event.amount and s.anchor_day == event.settlement_date.day}
+                if not matches:
+                    matches = {key for key in keys if key.split("|")[2] == event.currency}
+                if len(matches) == 1:
+                    assignments[event.event_id] = matches
+                    continue
+            keys.add(identity)
+        linked = self.dataset.events_by_id.get(message.related_event_id)
+        targets = set()
+        if message.related_event_id:
+            if linked and linked.user_id == message.user_id and linked.direction == "credit" and linked.category == "salary":
+                targets = assignments.get(linked.event_id, {series_identity(linked)})
+        else:
+            currencies = {p.currency for p in ctx.income_patches if p.currency}
+            if len(currencies) == 1:
+                keys = {key for key in keys if key.split("|")[2] in currencies}
+            named = {series_identity(e) for e in events
+                     if e.description.lower() in _financial_text(message.message_text).lower()
+                     and series_identity(e) in keys}
+            targets = named if len(named) == 1 else keys
+        ambiguous = len(targets & keys) > 1 or (not targets and not message.related_event_id)
+        target_events = tuple(sorted(eid for eid, assigned in assignments.items() if assigned & targets))
+        ctx.income_patches = [replace(p, target_series_keys=tuple(sorted(targets)),
+                                     target_event_ids=target_events,
+                                     ambiguous_target=ambiguous) for p in ctx.income_patches]
+        if ambiguous:
+            ctx.notes.append(f"ambiguous income target; no increase or resumption {message.message_id}")
+        return ctx
+
+    def _extract_message_context(self, message: MessageRow, request_date: date) -> EvidenceContext:
+        text = _financial_text(message.message_text)
         # Discard directives about the agent/output, retaining separate factual sentences.
-        directives = re.compile(r"ignore (?:all |previous |the |system |challenge )?(?:instructions|rules)|"
-                                r"amount_safe_to_pay|recommended_payment_method|system prompt|you are now", re.I)
-        text = " ".join(part for part in re.split(r"(?<=[.!?])\s+|[\r\n]+", text)
-                        if not directives.search(part))
         lower = text.lower()
         ctx = EvidenceContext()
         if not text.strip():
@@ -198,6 +250,7 @@ class MessageResolver:
                             amount=amount,
                             effective_from=effective or request_date,
                             currency=_ccy or None,
+                            resume_from=effective if "resumes" in lower else None,
                         )
                     )
                 elif "resumes" in lower or "confirmed for" in lower:
@@ -213,9 +266,14 @@ class MessageResolver:
                 ctx.notes.append(f"salary patch {message.message_id}")
 
         if message.related_event_id and "cancel" in lower and not any(p in lower for p in ("not cancel", "not been cancel")):
+            ongoing = bool(re.search(r"(?:subscription|membership|standing order|recurring (?:payment|bill)|contract)\s+(?:(?:has been|is|was)\s+)?cancel", lower)
+                           or re.search(r"cancel(?:led|ed)?\s+(?:the |my |your )?(?:subscription|membership|standing order)", lower)
+                           or "no future charges" in lower or "no further payments" in lower)
             ctx.event_patches[message.related_event_id] = EventPatch(
                 event_id=message.related_event_id,
                 cancel=True,
+                cancel_scope="series" if ongoing else "occurrence",
+                cancel_from=(_parse_date(text) or datetime.fromisoformat(message.sent_at.replace("Z", "+00:00")).date()) if ongoing else None,
             )
         if message.related_event_id and any(p in lower for p in ("settled", "has been credited", "payment posted")):
             ctx.event_patches[message.related_event_id] = EventPatch(

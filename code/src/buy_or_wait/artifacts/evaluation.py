@@ -43,8 +43,9 @@ def forecast_audit(engine, request, context):
     estimates = []
     from buy_or_wait.finance.recurrence import series_identity
     from buy_or_wait.finance.events import effective_event
-    history = [effective_event(e, context) for e in engine.dataset.events_by_user[request.user_id]
-               if e.status == "settled" and e.settlement_date < request.request_date]
+    history = sorted([effective_event(e, context) for e in engine.dataset.events_by_user[request.user_id]
+               if e.status == "settled" and e.settlement_date < request.request_date], key=lambda e: e.settlement_date)
+    history = [e for e in history if e.status == "settled"]
     for series in engine.forecast._series_for_user(request.user_id, request.request_date, context):
         values = [e.amount for e in history if series_identity(e) == series.series_key and e.amount is not None]
         estimates.append({"source": f"series:{series.template_event_id}", "identity": series.series_key,
@@ -53,12 +54,20 @@ def forecast_audit(engine, request, context):
             "history_min": str(min(values)) if values else None,
             "history_max": str(max(values)) if values else None,
             "history_mean": str(sum(values) / len(values)) if values else None,
-            "amount_varies_in_history": len(set(values)) > 1})
+            "amount_varies_in_history": len(set(values)) > 1,
+            "recent_observations": [str(v) for v in values[-12:]],
+            "estimator": "upper_quartile_latest_12" if series.direction == "debit" and len(set(values)) > 1 else "constant_or_income_policy"})
+    from buy_or_wait.verification.capacity import baseline_capacity
+    capacity, capacity_date = baseline_capacity(profile, request,
+        engine.forecast.build_cashflows(profile, request, evidence=context), engine.settings.forecast_horizon_days)
     return {"opening_balance": str(profile.current_available_balance), "minimum_balance": str(minimum),
             "headroom_at_minimum": str(minimum - profile.minimum_balance_to_keep),
             "baseline_shortfall": minimum < profile.minimum_balance_to_keep,
             "binding_cashflow": binding, "ledger": ledger, "recurring_estimates": estimates,
-            "image_amounts": {eid: str(amount) for eid, amount in context.amount_overrides.items()}}
+            "image_amounts": {eid: str(amount) for eid, amount in context.amount_overrides.items()},
+            "independent_capacity": {"amount": str(capacity),
+                "earliest_date": capacity_date.isoformat() if capacity_date else "",
+                "method": "daily cumulative balances and suffix minima; independent of payment simulation"}}
 
 
 def validate_output(output_path: Path, engine, expected_ids=None):
@@ -146,6 +155,9 @@ def score_samples(dataset_dir: Path, settings):
                     investigation.append("Variable historical amounts require estimates; inspect recurring_estimates and the ledger for their effect.")
                 investigation.append("The public example supplies a final answer, not its underlying forecast. Residual differences cannot be attributed to a specific reference transaction without that forecast.")
                 differences.append({"request_id": request.request_id, "fields": mismatch,
+                    "classification": "unresolved_reference_difference",
+                    "capacity_cross_check_passed": (Decimal(audit["independent_capacity"]["amount"]) == result.amount_safe_to_pay
+                        and audit["independent_capacity"]["earliest_date"] == result.earliest_date_for_full_payment),
                     "baseline_minimum": str(baseline.min_balance), "required_minimum": str(profile.minimum_balance_to_keep),
                     "sample_plan_safe_under_this_forecast": sample_plan.safe,
                     "sample_plan_minimum_under_this_forecast": str(sample_plan.min_balance),

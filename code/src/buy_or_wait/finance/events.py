@@ -35,7 +35,8 @@ def effective_event(event: FinancialEvent, evidence: EvidenceContext) -> Financi
         for name in ('amount', 'currency', 'settlement_date', 'status'):
             if getattr(patch, name) is not None:
                 values[name] = getattr(patch, name)
-        if patch.cancel or patch.suppress:
+        if patch.suppress or (patch.cancel and (patch.cancel_scope == 'occurrence'
+                or patch.cancel_from is None or event.settlement_date >= patch.cancel_from)):
             values['status'] = 'cancelled'
     if event.event_id in evidence.suppressed_event_ids:
         values['status'] = 'cancelled'

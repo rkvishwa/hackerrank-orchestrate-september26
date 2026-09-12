@@ -45,7 +45,7 @@ class ConflictResolver:
                 ctx.suppressed_event_ids.add(event.event_id)
 
         for event_id, patch in list(ctx.event_patches.items()):
-            if patch.cancel or patch.suppress:
+            if patch.suppress or (patch.cancel and patch.cancel_scope == "occurrence"):
                 ctx.suppressed_event_ids.add(event_id)
 
         self._dedupe_refund_pairs(events, ctx)

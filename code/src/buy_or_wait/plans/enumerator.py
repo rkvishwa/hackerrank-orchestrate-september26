@@ -41,9 +41,9 @@ class PlanEnumerator:
     ) -> list[SpendingChange]:
         evidence = evidence or EvidenceContext()
         changes: list[SpendingChange] = []
-        historical = [self.forecast.dataset.events_by_id[s.template_event_id]
-                      for s in self.forecast._series_for_user(request.user_id, request.request_date, evidence)
-                      if s.direction == "debit"]
+        recurring = {s.template_event_id: s for s in self.forecast._series_for_user(
+            request.user_id, request.request_date, evidence) if s.direction == "debit"}
+        historical = [self.forecast.dataset.events_by_id[eid] for eid in recurring]
         seen: set[str] = set()
         for event in sorted(historical, key=lambda e: e.settlement_date, reverse=True):
             if event.settlement_date > request.request_date:
@@ -63,9 +63,9 @@ class PlanEnumerator:
             if event.flexibility in {"reducible", "reducible_or_stoppable"}:
                 if event.category in profile.expense_categories_user_is_willing_to_reduce:
                     minimum = event.minimum_allowed_amount or Decimal("0")
-                    if event.amount is not None and event.amount > minimum:
+                    if recurring[event.event_id].amount > minimum:
                         amount_home = self.forecast.converter.convert(
-                            event.amount,
+                            recurring[event.event_id].amount,
                             event.currency,
                             profile.home_currency,
                             event.settlement_date,
@@ -81,9 +81,11 @@ class PlanEnumerator:
                             else Decimal("0")
                         )
                         if amount_home > minimum_home:
-                            reduced = minimum_home if minimum_home > 0 else (amount_home * Decimal("0.5")).quantize(
-                                Decimal("0.01")
-                            )
+                            # Zero is a stop, which has separate permission.
+                            # Try the lowest positive cent when no floor is stated.
+                            reduced = max(minimum_home, Decimal("0.01"))
+                            if reduced >= amount_home:
+                                continue
                             changes.append(
                                 SpendingChange(
                                     action="reduce_to",

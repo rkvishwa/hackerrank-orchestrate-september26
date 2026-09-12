@@ -31,7 +31,20 @@ def main():
     parser.add_argument("--output", type=Path, default=Settings().resolved_output_path)
     parser.add_argument("--score-samples", action="store_true")
     parser.add_argument("--strict", action="store_true", default=True)
+    parser.add_argument("--baseline-report", type=Path,
+                        help="Compare the candidate report with this release baseline")
+    parser.add_argument("--candidate-report", type=Path,
+                        help="Candidate evaluation_report.json used by the release gate")
     args = parser.parse_args()
+    if args.baseline_report:
+        if not args.candidate_report:
+            parser.error("--baseline-report requires --candidate-report")
+        import json
+        from buy_or_wait.artifacts.release_gate import assess_release
+        assessment = assess_release(json.loads(args.baseline_report.read_text(encoding="utf-8")),
+                                    json.loads(args.candidate_report.read_text(encoding="utf-8")))
+        print(json.dumps(assessment, indent=2))
+        return 0 if assessment["eligible"] else 1
     if args.score_samples:
         for field, value in score_samples(args.dataset_dir.resolve()).items():
             print(f"{field}: {value:.1%}")

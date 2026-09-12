@@ -38,6 +38,8 @@ class EventPatch:
     source: str = ""
     observed_at: str = ""
     explicit: bool = True
+    cancel_scope: Literal["occurrence", "series"] = "occurrence"
+    cancel_from: date | None = None
 
 
 @dataclass
@@ -52,6 +54,9 @@ class IncomeSchedulePatch:
     original_date: date | None = None
     payment_date: date | None = None
     unconfirmed_variable_income: bool = False
+    target_series_keys: tuple[str, ...] | None = None
+    target_event_ids: tuple[str, ...] | None = None
+    ambiguous_target: bool = False
 
 
 @dataclass

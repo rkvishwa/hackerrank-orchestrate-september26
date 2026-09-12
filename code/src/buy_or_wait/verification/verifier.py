@@ -140,8 +140,12 @@ class OutputVerifier:
                                profile.home_currency, event.settlement_date)
                     if not minimum <= change.new_amount < original:
                         errors.append("reduction is outside the permitted amount range")
-            safe_amount = self.forecast.max_safe_payment(profile, request, evidence=evidence)
-            safe_date = self.forecast.earliest_full_payment_date(profile, request, evidence=evidence)
+                    if change.new_amount == 0:
+                        errors.append("zero spending must use stop with explicit permission")
+            from buy_or_wait.verification.capacity import baseline_capacity
+            safe_amount, safe_date = baseline_capacity(profile, request,
+                self.forecast.build_cashflows(profile, request, evidence=evidence),
+                self.forecast.settings.forecast_horizon_days)
             if result.amount_safe_to_pay != safe_amount:
                 errors.append("amount_safe_to_pay does not equal baseline capacity")
             if earliest != safe_date:

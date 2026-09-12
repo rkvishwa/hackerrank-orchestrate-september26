@@ -38,6 +38,20 @@ Image extraction requires the actual PNG. The included reviewed transcriptions w
 
 Public samples are scored separately, with numeric and structural comparisons. The JSON report includes every field mismatch and its forecast for investigation. Zero contract violations does not establish hidden-dataset accuracy; that accuracy is unknown.
 
+Payroll amendments target the linked or uniquely identified income stream. Ambiguous amendments cannot increase income or restart it, and cancellation of one payment does not cancel the ongoing commitment. Only explicit subscription/commitment cancellation suppresses future charges from its effective date. Reductions use the permitted minimum; when no positive floor is stated, a one-cent budget preserves the distinction from stopping.
+
+Every varying expense series uses the upper quartile of its latest 12 observations, including small variations in utilities, healthcare and shopping. An independent cumulative-balance check validates baseline capacity and its first safe date without calling the payment simulator. This checks arithmetic on the estimated ledger, not the hidden reference forecast.
+
+## Release gate
+
+The frozen `evaluation/reference_baseline.json` records the sample metrics from commit `3ba63a8`. Prediction code never reads it. Run the release check after producing a candidate full-dataset report:
+
+```text
+python code/evaluation/main.py --baseline-report code/evaluation/reference_baseline.json --candidate-report artifacts/candidate/evaluation/evaluation_report.json
+```
+
+The command exits nonzero if any of the six sample match counts falls, the dataset differs, contract validation fails, or there is no improvement in match counts or normalized amount error. The sample regression test enforces the same accuracy expectations. A failed gate means the candidate must not replace the running service, even when its financial invariant tests pass. Candidate artifacts are for review until that gate passes.
+
 ## Optional Azure extraction
 
 PowerShell: `Copy-Item code/.env.example code/.env`

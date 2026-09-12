@@ -56,13 +56,17 @@ class ForecastEngine:
                 if (e.settlement_date < as_of and e.status == "settled") or (
                     e.status == "scheduled" and e.category == "salary" and "confirmed" in e.description.lower())
             ]
-            from buy_or_wait.finance.recurrence import series_identity
-            cancelled_series = {series_identity(raw) for raw in self.dataset.events_by_user.get(user_id, [])
-                                if raw.settlement_date < as_of and raw.event_id in evidence.event_patches
-                                and evidence.event_patches[raw.event_id].cancel}
-            self._series_cache[key] = [s for s in detect_recurring_series(historical, as_of, self.policy, evidence)
-                                       if s.series_key not in cancelled_series]
+            self._series_cache[key] = detect_recurring_series(historical, as_of, self.policy, evidence)
         return self._series_cache[key]
+
+    def _cancelled_commitment(self, user_id, series_key, day, evidence):
+        from buy_or_wait.finance.recurrence import series_identity
+        return any(p.cancel and p.cancel_scope == "series"
+                   and (p.cancel_from is None or day >= p.cancel_from)
+                   and raw is not None and raw.user_id == user_id
+                   and series_identity(raw) == series_key
+                   for eid, p in evidence.event_patches.items()
+                   for raw in [self.dataset.events_by_id.get(eid)])
 
     def build_cashflows(
         self,
@@ -107,6 +111,8 @@ class ForecastEngine:
 
         for event in events:
             if not event.include_in_forecast:
+                continue
+            if self._cancelled_commitment(request.user_id, event.series_key, event.settlement_date, evidence):
                 continue
             amount = event.amount_home
             if event.event_id in stopped_events:
@@ -153,6 +159,8 @@ class ForecastEngine:
                 original_projection_date = projected_date
                 projected_date = income_payment_date(series, projected_date, evidence)
                 if not request.request_date <= projected_date <= horizon_end:
+                    continue
+                if self._cancelled_commitment(request.user_id, series.series_key, projected_date, evidence):
                     continue
                 dedupe_key = (projected_date, series.direction, series.category, series.series_key)
                 if dedupe_key in known_projection_keys:

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
@@ -10,6 +11,7 @@ import pytest
 from buy_or_wait.config import Settings
 from buy_or_wait.engine import DecisionEngine
 from buy_or_wait.ingest.loader import RequestRow, load_dataset
+from buy_or_wait.artifacts.evaluation import SCORED_FIELDS, normalize
 
 DATASET = Path(__file__).resolve().parents[2] / "dataset"
 
@@ -38,19 +40,21 @@ def engine():
     return DecisionEngine(dataset, Settings(deterministic_mode=True, llm_enabled=False))
 
 
-def test_sample_regression_thresholds(engine):
+def test_sample_release_gate(engine):
     samples = _load_sample_requests()
-    status_hits = 0
-    method_hits = 0
+    hits = dict.fromkeys(SCORED_FIELDS, 0)
+    error = Decimal("0")
     for request, label in samples:
         result = engine.decide(request)
-        if result.affordability_status == label["affordability_status"]:
-            status_hits += 1
-        if result.recommended_payment_method == label["recommended_payment_method"]:
-            method_hits += 1
-    total = len(samples)
-    assert status_hits / total >= 0.70, f"status match {status_hits}/{total}"
-    assert method_hits / total >= 0.80, f"method match {method_hits}/{total}"
+        for field in SCORED_FIELDS:
+            hits[field] += normalize(field, getattr(result, field)) == normalize(field, label[field])
+        error += abs(result.amount_safe_to_pay - Decimal(label["amount_safe_to_pay"])) / request.requested_amount
+    baseline = json.loads((Path(__file__).resolve().parents[1] / "evaluation" / "reference_baseline.json").read_text())["samples"]
+    regressions = [f"{f}: {baseline['matches'][f]} -> {hits[f]}" for f in SCORED_FIELDS
+                   if hits[f] < baseline["matches"][f]]
+    assert not regressions, "Release blocked by sample regressions: " + "; ".join(regressions)
+    assert (any(hits[f] > baseline["matches"][f] for f in SCORED_FIELDS)
+            or error / len(samples) < Decimal(baseline["amount_diagnostics"]["mean_absolute_error_fraction_of_request"])), "Release requires a measured sample improvement"
 
 
 @pytest.mark.parametrize(

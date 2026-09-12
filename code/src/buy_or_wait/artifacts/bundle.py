@@ -77,6 +77,15 @@ def publish(engine, results, settings, tracker, expected_ids):
                         f"Requests: {len(results)}", "Contract violations: 0",
                         "Hidden-dataset accuracy: unknown", "", "## Public sample matches"]
             samples = metadata["samples"]
+            baseline_path = CODE_ROOT / "evaluation" / "reference_baseline.json"
+            if samples.get("available") and baseline_path.exists():
+                from buy_or_wait.artifacts.release_gate import assess_release
+                baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
+                metadata["release_gate"] = assess_release(baseline, metadata)
+                gate = metadata["release_gate"]
+                markdown.extend(["", "Deployment gate: " + ("ELIGIBLE" if gate["eligible"] else "BLOCKED")])
+                markdown.extend(f"- {reason}" for reason in gate["reasons"])
+                markdown.append("")
             for field, count in samples.get("matches", {}).items():
                 markdown.append(f"- {field}: {count}/{samples['request_count']} ({samples['accuracy'][field]:.1%})")
             diagnostics = samples.get("amount_diagnostics", {})
@@ -88,6 +97,16 @@ def publish(engine, results, settings, tracker, expected_ids):
             markdown.extend(["", "All 25 field comparisons, balance ledgers, limiting cash flows, historical amount ranges and remaining mismatch investigations are in evaluation_report.json.",
                 "Sample agreement is measured separately from financial contract validation; passing validation does not prove hidden-label accuracy.",
                 "", "## Forecast policy", metadata["forecast_policy"]])
+            markdown.extend(["", "## Unresolved public-sample differences", "",
+                "These are reference disagreements, not proof that either forecast is correct. "
+                "The independent capacity check verifies arithmetic on the derived ledger; it does not establish the reference's undocumented estimates.", "",
+                "| Request | Differing fields | Limiting date / flow | Baseline below reserve |",
+                "| --- | --- | --- | --- |"])
+            for difference in samples.get("differences", []):
+                audit = difference["forecast_audit"]
+                binding = audit["binding_cashflow"]
+                markdown.append(f"| {difference['request_id']} | {', '.join(difference['fields'])} | "
+                    f"{binding['date']} / {binding['source']} | {audit['baseline_shortfall']} |")
             documents = {
                 "usage_report.md": usage_markdown(metadata["usage"], metadata),
                 "evaluation_report.md": "\n".join(markdown) + "\n",
