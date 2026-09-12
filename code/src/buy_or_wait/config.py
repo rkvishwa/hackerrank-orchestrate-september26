@@ -46,7 +46,7 @@ class Settings(BaseSettings):
     api_key: str = "dev-api-key-change-me"
     azure_max_concurrency: int = 8
 
-    forecast_horizon_days: int = 90
+    forecast_horizon_days: int = Field(default=90, ge=1)
     recurrence: RecurrencePolicy = Field(default_factory=RecurrencePolicy)
 
     @property

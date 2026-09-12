@@ -16,6 +16,7 @@ SPECULATIVE = ("commission", "bonus", "lottery", "refund", "arrears", "investmen
 PAYROLL_ALIASES = {"payroll credit", "base salary", "next confirmed salary", "prorated first salary",
                    "payroll before leave", "payroll after returning from leave", "final employer payroll",
                    "previous employer payroll", "new employer payroll"}
+PLATFORM_INCOME = ("platform payout", "app earnings", "marketplace payout", "gig earnings")
 
 
 def series_identity(event: FinancialEvent) -> str:
@@ -74,6 +75,9 @@ def _apply_income_patches(
     amount = series.amount
     stopped = False
     for patch in evidence.income_patches:
+        identity = getattr(series, "series_key", getattr(series, "description", "")).lower()
+        if patch.unconfirmed_variable_income and any(term in identity for term in PLATFORM_INCOME):
+            return None
         if patch.stop_after and projected_date > patch.stop_after:
             stopped = True
         if patch.resume_from:
@@ -86,6 +90,14 @@ def _apply_income_patches(
     return None if stopped else amount
 
 
+def income_payment_date(item, original_date: date, evidence: EvidenceContext) -> date:
+    if item.category == "salary" and item.direction == "credit":
+        for patch in evidence.income_patches:
+            if patch.payment_date and patch.original_date == original_date:
+                original_date = patch.payment_date
+    return original_date
+
+
 def detect_recurring_series(
     events: list[FinancialEvent],
     as_of: date,
@@ -94,13 +106,10 @@ def detect_recurring_series(
 ) -> list[RecurringSeries]:
     evidence = evidence or EvidenceContext()
     groups: dict[tuple[str, str, str, str], list[FinancialEvent]] = defaultdict(list)
-    explicit_future_salary_dates: set[tuple[str, date]] = set()
-
+    confirmed = [e for e in events if e.status == "scheduled" and e.settlement_date >= as_of
+                 and e.category == "salary" and e.direction == "credit" and "confirmed" in e.description.lower()]
     for event in events:
-        if event.settlement_date > as_of:
-            if (event.category == "salary" and event.direction == "credit" and event.status == "scheduled"
-                    and "confirmed" in event.description.lower()):
-                groups[tuple(series_identity(event).split("|"))].append(event)
+        if event.settlement_date >= as_of:
             continue
         if event.status != "settled" or event.event_id in evidence.suppressed_event_ids:
             continue
@@ -118,27 +127,16 @@ def detect_recurring_series(
     series_list: list[RecurringSeries] = []
     for key, group in groups.items():
         group = sorted(group, key=lambda e: e.settlement_date)
+        if len(group) == 1 and group[0].direction == "credit" and group[0].category == "salary":
+            previous = group[0]
+            following = [e for e in confirmed if e.currency == previous.currency
+                         and e.settlement_date.day == previous.settlement_date.day
+                         and 26 <= (e.settlement_date - previous.settlement_date).days <= 35]
+            if len(following) == 1:
+                # A first (possibly prorated) payment plus a confirmed next
+                # monthly cycle supports regular payroll; a lone future row does not.
+                group = [previous, following[0]]
         if len(group) < policy.min_history:
-            if any(e.status == "scheduled" and e.event_type in {"income", "subscription"} for e in group):
-                latest = group[-1]
-                if latest.amount is None:
-                    continue
-                series_list.append(
-                    RecurringSeries(
-                        series_key="|".join(key),
-                        template_event_id=latest.event_id,
-                        category=latest.category,
-                        direction=latest.direction,
-                        cadence_days=30,
-                        amount=latest.amount,
-                        currency=latest.currency,
-                        is_fixed=True,
-                        flexibility=latest.flexibility,
-                        minimum_allowed_amount=latest.minimum_allowed_amount,
-                        anchor_day=latest.settlement_date.day,
-                        monthly=True,
-                    )
-                )
             continue
 
         dates = sorted({e.settlement_date for e in group})
@@ -153,7 +151,18 @@ def detect_recurring_series(
         is_fixed = cv <= policy.amount_cv_threshold
         monthly = policy.monthly_days[0] <= median_gap <= policy.monthly_days[1]
         gaps = [(b - a).days for a, b in zip(dates, dates[1:])]
-        if sum(abs(g - median_gap) <= policy.day_tolerance for g in gaps) / len(gaps) < 0.75:
+        resumed = [p for p in evidence.income_patches if p.resume_from and p.amount is not None
+                   and group[-1].category == "salary" and group[-1].direction == "credit"
+                   and p.currency in {None, group[-1].currency}
+                   and p.resume_from.day in {d.day for d in dates}]
+        confirmed_monthly_resume = bool(resumed and len({d.day for d in dates}) == 1
+                                        and all(g >= 28 for g in gaps))
+        confirmed_calendar_shift = bool(len(gaps) >= 2 and all(26 <= g <= 35 for g in gaps[:-1])
+            and any(p.payment_date and p.payment_date.day == dates[-1].day
+                    and 26 <= (p.payment_date - dates[-1]).days <= 35 for p in evidence.income_patches))
+        if confirmed_monthly_resume or confirmed_calendar_shift:
+            monthly = True
+        if not (confirmed_monthly_resume or confirmed_calendar_shift) and sum(abs(g - median_gap) <= policy.day_tolerance for g in gaps) / len(gaps) < 0.75:
             continue
         if policy.weekly_days[0] <= median_gap <= policy.weekly_days[1]:
             cadence = int(round(median_gap))
@@ -167,7 +176,7 @@ def detect_recurring_series(
             continue
 
         latest = group[-1]
-        if (latest.direction == "credit" and latest.status == "settled"
+        if (not confirmed_monthly_resume and latest.direction == "credit" and latest.status == "settled"
                 and (as_of - latest.settlement_date).days > cadence + policy.day_tolerance):
             # An expected pay cycle was missed; history alone no longer confirms ongoing pay.
             continue
@@ -185,6 +194,16 @@ def detect_recurring_series(
             recent = sorted(amounts[-12:])
             forecast_amount = recent[(3 * len(recent) - 1) // 4]
 
+        anchor_day = latest.settlement_date.day
+        if monthly and latest.direction == "credit":
+            anchor_day = statistics.mode([d.day for d in dates])
+            if any(p.payment_date and p.payment_date.day == latest.settlement_date.day
+                   and 26 <= (p.payment_date - latest.settlement_date).days <= 35
+                   for p in evidence.income_patches):
+                # A recently shifted payday corroborated by the next confirmed
+                # cycle supersedes the older calendar pattern.
+                anchor_day = latest.settlement_date.day
+
         series_list.append(
             RecurringSeries(
                 series_key="|".join(key),
@@ -197,7 +216,7 @@ def detect_recurring_series(
                 is_fixed=is_fixed,
                 flexibility=latest.flexibility,
                 minimum_allowed_amount=latest.minimum_allowed_amount,
-                anchor_day=latest.settlement_date.day,
+                anchor_day=anchor_day,
                 monthly=monthly,
             )
         )

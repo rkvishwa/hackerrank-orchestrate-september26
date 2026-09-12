@@ -65,7 +65,7 @@ def publish(engine, results, settings, tracker, expected_ids):
                 "evidence_source_hashes": sorted(tracker.evidence_hashes),
                 "requests": len(results), "full_dataset": set(expected_ids) == set(engine.dataset.requests_by_id),
                 "contract_errors": [], "hidden_dataset_accuracy": "unknown",
-                "forecast_policy": "90 days; confirmed credits available on settlement date before outgoing payments; independent commitments; variable spending upper quartile of latest 12 observed payments; no speculative credits",
+                "forecast_policy": "90 calendar dates including request date (ending request date + 89 days); confirmed credits available on settlement date before outgoing payments; independent commitments; variable spending upper quartile of latest 12 observed payments; no speculative credits",
                 "usage": tracker.summary(len(results)),
             }
             audit_settings = settings.model_copy(update={"deterministic_mode": True, "llm_enabled": False})
@@ -79,7 +79,13 @@ def publish(engine, results, settings, tracker, expected_ids):
             samples = metadata["samples"]
             for field, count in samples.get("matches", {}).items():
                 markdown.append(f"- {field}: {count}/{samples['request_count']} ({samples['accuracy'][field]:.1%})")
-            markdown.extend(["", "Detailed field differences and the supporting cash-flow forecasts are in evaluation_report.json.",
+            diagnostics = samples.get("amount_diagnostics", {})
+            if diagnostics.get("mean_absolute_error_fraction_of_request") is not None:
+                from decimal import Decimal
+                error = Decimal(diagnostics["mean_absolute_error_fraction_of_request"]) * 100
+                markdown.extend(["", f"Mean absolute amount error / requested amount: {error:.2f}%.",
+                    "This supplementary measure describes error size; it does not replace exact matching or establish the official score."])
+            markdown.extend(["", "All 25 field comparisons, balance ledgers, limiting cash flows, historical amount ranges and remaining mismatch investigations are in evaluation_report.json.",
                 "Sample agreement is measured separately from financial contract validation; passing validation does not prove hidden-label accuracy.",
                 "", "## Forecast policy", metadata["forecast_policy"]])
             documents = {

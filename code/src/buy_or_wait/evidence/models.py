@@ -49,6 +49,9 @@ class IncomeSchedulePatch:
     effective_until: date | None = None
     resume_from: date | None = None
     currency: str | None = None
+    original_date: date | None = None
+    payment_date: date | None = None
+    unconfirmed_variable_income: bool = False
 
 
 @dataclass

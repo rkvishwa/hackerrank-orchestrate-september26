@@ -148,7 +148,7 @@ class OutputVerifier:
                 errors.append("earliest_date_for_full_payment does not equal baseline capacity date")
             if legs and not self.forecast.simulate_plan(profile, request, legs, changes, evidence=evidence).safe:
                 errors.append("payment plan breaches the minimum balance")
-            horizon = request.request_date + timedelta(days=self.forecast.settings.forecast_horizon_days)
+            horizon = request.request_date + timedelta(days=self.forecast.settings.forecast_horizon_days - 1)
             if any(leg.payment_date > horizon for leg in legs):
                 errors.append("payment outside verified forecast horizon")
         return list(dict.fromkeys(errors))

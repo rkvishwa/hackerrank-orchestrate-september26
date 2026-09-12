@@ -15,6 +15,7 @@ from buy_or_wait.finance.recurrence import (
     _apply_income_patches,
     detect_recurring_series,
     project_series_dates,
+    income_payment_date,
 )
 from buy_or_wait.ingest.loader import Dataset, Profile, RequestRow, normalize_description
 
@@ -87,7 +88,7 @@ class ForecastEngine:
                 unresolved_mandatory_debits=evidence.unresolved_mandatory_debits,
             )
 
-        horizon_end = request.request_date + timedelta(days=self.settings.forecast_horizon_days)
+        horizon_end = request.request_date + timedelta(days=self.settings.forecast_horizon_days - 1)
         events = resolve_user_events(
             self.dataset,
             profile,
@@ -149,6 +150,10 @@ class ForecastEngine:
                 monthly=series.monthly,
                 anchor_day=series.anchor_day,
             ):
+                original_projection_date = projected_date
+                projected_date = income_payment_date(series, projected_date, evidence)
+                if not request.request_date <= projected_date <= horizon_end:
+                    continue
                 dedupe_key = (projected_date, series.direction, series.category, series.series_key)
                 if dedupe_key in known_projection_keys:
                     continue
@@ -158,8 +163,11 @@ class ForecastEngine:
                                 self.dataset.events_by_id[e.event_id].description.lower()]
                     eligible = [s for s in self._series_for_user(request.user_id, request.request_date, evidence)
                                 if s.direction == "credit" and s.category == "salary"
-                                and s.anchor_day == projected_date.day]
-                    if matching and len(eligible) == 1:
+                                and s.anchor_day == original_projection_date.day]
+                    matching_amount = [s for s in eligible if any(
+                        self.dataset.events_by_id[e.event_id].currency == s.currency and
+                        self.dataset.events_by_id[e.event_id].amount == s.amount for e in matching)]
+                    if matching and (len(eligible) == 1 or (matching_amount and matching_amount[0] == series)):
                         continue
                 # An explicit amended occurrence replaces its original recurrence date.
                 template = self.dataset.events_by_id[series.template_event_id]
@@ -280,7 +288,7 @@ class ForecastEngine:
         amount_overrides: dict[str, Decimal] | None = None,
         evidence: EvidenceContext | None = None,
     ) -> date | None:
-        horizon_end = request.request_date + timedelta(days=self.settings.forecast_horizon_days)
+        horizon_end = request.request_date + timedelta(days=self.settings.forecast_horizon_days - 1)
         if self.simulate_plan(
             profile,
             request,

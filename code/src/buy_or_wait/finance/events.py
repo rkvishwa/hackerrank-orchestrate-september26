@@ -6,7 +6,7 @@ from decimal import Decimal
 
 from buy_or_wait.evidence.models import EvidenceContext
 from buy_or_wait.ingest.loader import Dataset, FinancialEvent, Profile
-from buy_or_wait.finance.recurrence import SPECULATIVE, series_identity, _apply_income_patches
+from buy_or_wait.finance.recurrence import SPECULATIVE, series_identity, _apply_income_patches, income_payment_date
 
 
 @dataclass
@@ -39,7 +39,10 @@ def effective_event(event: FinancialEvent, evidence: EvidenceContext) -> Financi
             values['status'] = 'cancelled'
     if event.event_id in evidence.suppressed_event_ids:
         values['status'] = 'cancelled'
-    return replace(event, **values)
+    result = replace(event, **values)
+    if result.status != 'settled':
+        result = replace(result, settlement_date=income_payment_date(result, result.settlement_date, evidence))
+    return result
 
 
 def resolve_user_events(dataset: Dataset, profile: Profile, user_id: str, request_date: date,
@@ -79,7 +82,13 @@ def resolve_user_events(dataset: Dataset, profile: Profile, user_id: str, reques
             amount = _apply_income_patches(event, event.settlement_date, evidence)
             if amount is None:
                 continue
-        if event.category == 'rent':
+        documented_amount = original.event_id in evidence.amount_overrides or (
+            original.event_id in evidence.event_patches and
+            evidence.event_patches[original.event_id].amount is not None)
+        # A stated balance due is already the final liability. A generic lease
+        # increase changes recurring rent, not an issued invoice or arrears.
+        if event.category == 'rent' and not documented_amount and not any(
+                word in event.description.lower() for word in ('outstanding', 'arrears', 'balance due')):
             for patch in evidence.rent_patches:
                 if event.settlement_date >= patch.effective_from:
                     amount = (amount * patch.multiplier).quantize(Decimal('0.01'))

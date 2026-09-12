@@ -186,7 +186,7 @@ class PlanEnumerator:
                         continue
                     last_date = legs[-1].payment_date
                     if (legs[0].payment_date < request.request_date or
-                            last_date > request.request_date + timedelta(days=self.forecast.settings.forecast_horizon_days)):
+                            last_date > request.request_date + timedelta(days=self.forecast.settings.forecast_horizon_days - 1)):
                         continue
                     sim = self.forecast.simulate_plan(
                         profile, request, legs, spending_changes, amount_overrides, evidence

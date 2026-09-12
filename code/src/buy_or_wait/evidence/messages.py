@@ -128,6 +128,11 @@ class MessageResolver:
         if "commission" in lower and ("not approved" in lower or "belum disetujui" in lower or "not included" in lower):
             ctx.notes.append(f"commission excluded {message.message_id}")
 
+        if ("payout" in lower or "app earnings" in lower) and any(p in lower for p in
+                ("still pending", "not withdrawable", "isn't withdrawable", "isn\u2019t withdrawable", "can change until")):
+            ctx.income_patches.append(IncomeSchedulePatch(unconfirmed_variable_income=True))
+            ctx.notes.append(f"unconfirmed platform earnings excluded {message.message_id}")
+
         if "rent" in lower and "increases" in lower and "%" in lower:
             pct_match = _PERCENT_RE.search(text)
             if pct_match:
@@ -147,6 +152,19 @@ class MessageResolver:
         if any(p in lower for p in salary_patterns):
             parsed = _parse_amount(text)
             effective = _parse_date(text)
+            if not parsed and effective and any(p in lower for p in ("expected on", "revised date", "rescheduled")):
+                from buy_or_wait.finance.recurrence import detect_recurring_series, project_series_dates
+                from datetime import timedelta
+                future = []
+                for series in detect_recurring_series(self.dataset.events_by_user.get(message.user_id, []),
+                                                       request_date, self.settings.recurrence):
+                    if series.category == "salary" and series.direction == "credit":
+                        anchor = self.dataset.events_by_id[series.template_event_id].settlement_date
+                        future.extend(project_series_dates(request_date, request_date + timedelta(days=40),
+                            series.cadence_days, anchor, monthly=series.monthly, anchor_day=series.anchor_day))
+                if future:
+                    ctx.income_patches.append(IncomeSchedulePatch(original_date=min(future), payment_date=effective))
+                    ctx.notes.append(f"salary date amended {message.message_id}")
             if parsed:
                 amount, _ccy = parsed
                 # A stated upcoming cycle is not a permanent change to all future pay.
