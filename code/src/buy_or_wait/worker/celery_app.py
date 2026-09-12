@@ -7,6 +7,7 @@ from buy_or_wait.config import Settings
 settings = Settings()
 celery_app = Celery("buy_or_wait", broker=settings.celery_broker_url, backend=settings.redis_url)
 celery_app.conf.update(
+    task_default_queue="decisions",
     task_acks_late=True,
     worker_prefetch_multiplier=1,
     task_default_retry_delay=5,
