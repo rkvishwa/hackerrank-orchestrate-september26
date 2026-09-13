@@ -1,7 +1,7 @@
 # Evaluation Report
 
-Run ID: b2749129b4984f06a337b03e96510bee
-Output SHA-256: fb6a5af2589282a0b3a5730ad45f398b96d3390b90bf2e15889f39a701509347
+Run ID: 4c06f7a7bddb4445aec3627adfb28650
+Output SHA-256: cea9169cb8684366a56044f30c12d785762997248f682e4162bbd3c7335763bd
 Requests: 250
 Contract violations: 0
 Hidden-dataset accuracy: unknown
@@ -9,10 +9,12 @@ Hidden-dataset accuracy: unknown
 ## Public sample matches
 
 Deployment gate: BLOCKED
+- 8 requests have unquantified mandatory commitments
 - affordability_status regressed: 20 -> 18
 - recommended_payment_method regressed: 21 -> 19
 - payment_plan regressed: 21 -> 20
 - earliest_date_for_full_payment regressed: 17 -> 15
+- no sample match count or normalized amount error improved
 
 - amount_safe_to_pay: 3/25 (12.0%)
 - affordability_status: 18/25 (72.0%)
@@ -21,7 +23,7 @@ Deployment gate: BLOCKED
 - earliest_date_for_full_payment: 15/25 (60.0%)
 - spending_changes_needed: 17/25 (68.0%)
 
-Mean absolute amount error / requested amount: 3.50%.
+Mean absolute amount error / requested amount: 4.43%.
 This supplementary measure describes error size; it does not replace exact matching or establish the official score.
 
 All 25 field comparisons, balance ledgers, limiting cash flows, historical amount ranges and remaining mismatch investigations are in evaluation_report.json.

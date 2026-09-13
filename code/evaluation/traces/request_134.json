@@ -1,0 +1,6071 @@
+{
+  "accounting_coverage": {
+    "accounted_records": 103,
+    "explicit_records_verified_once": 1,
+    "required_explicit_records": 1,
+    "source_records": 103,
+    "unique_recurring_members": 100,
+    "unquantified_commitments": []
+  },
+  "baseline": {
+    "baseline_shortfall": false,
+    "binding_cashflow": {
+      "amount": "219450",
+      "balance_after": "19955237.29",
+      "category": "delivery_membership",
+      "date": "2025-08-14",
+      "direction": "debit",
+      "headroom_after": "4052737.29",
+      "source": "series:event_12315"
+    },
+    "headroom_at_minimum": "4052737.29",
+    "image_amounts": {},
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|IDR|regular payroll"
+        ],
+        "event_id": "event_12383",
+        "matched_series_key": "credit|salary|IDR|regular payroll",
+        "reason": "unique compatible unnamed confirmation",
+        "source_event_ids": [
+          "event_12281",
+          "event_12288",
+          "event_12295",
+          "event_12302",
+          "event_12309"
+        ]
+      }
+    ],
+    "independent_capacity": {
+      "amount": "4052737.29",
+      "earliest_date": "2025-10-15",
+      "method": "daily cumulative balances and suffix minima; independent of payment simulation"
+    },
+    "ledger": [
+      {
+        "amount": "544952.88",
+        "balance_after": "27475747.12",
+        "category": "transport",
+        "date": "2025-08-04",
+        "direction": "debit",
+        "headroom_after": "11573247.12",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1173756.33",
+        "balance_after": "26301990.79",
+        "category": "utilities",
+        "date": "2025-08-07",
+        "direction": "debit",
+        "headroom_after": "10399490.79",
+        "source": "series:event_12311"
+      },
+      {
+        "amount": "1738500",
+        "balance_after": "24563490.79",
+        "category": "education",
+        "date": "2025-08-09",
+        "direction": "debit",
+        "headroom_after": "8660990.79",
+        "source": "series:event_12312"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "23560210.66",
+        "category": "groceries",
+        "date": "2025-08-10",
+        "direction": "debit",
+        "headroom_after": "7657710.66",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "23015257.78",
+        "category": "transport",
+        "date": "2025-08-11",
+        "direction": "debit",
+        "headroom_after": "7112757.78",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1377500",
+        "balance_after": "21637757.78",
+        "category": "debt_repayment",
+        "date": "2025-08-12",
+        "direction": "debit",
+        "headroom_after": "5735257.78",
+        "source": "series:event_12313"
+      },
+      {
+        "amount": "265050",
+        "balance_after": "21372707.78",
+        "category": "music_subscription",
+        "date": "2025-08-12",
+        "direction": "debit",
+        "headroom_after": "5470207.78",
+        "source": "series:event_12314"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "20174687.29",
+        "category": "dining",
+        "date": "2025-08-12",
+        "direction": "debit",
+        "headroom_after": "4272187.29",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "219450",
+        "balance_after": "19955237.29",
+        "category": "delivery_membership",
+        "date": "2025-08-14",
+        "direction": "debit",
+        "headroom_after": "4052737.29",
+        "source": "series:event_12315"
+      },
+      {
+        "amount": "24510000",
+        "balance_after": "44465237.29",
+        "category": "salary",
+        "date": "2025-08-15",
+        "direction": "credit",
+        "headroom_after": "28562737.29",
+        "source": "event_12383"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "43461957.16",
+        "category": "groceries",
+        "date": "2025-08-17",
+        "direction": "debit",
+        "headroom_after": "27559457.16",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "42917004.28",
+        "category": "transport",
+        "date": "2025-08-18",
+        "direction": "debit",
+        "headroom_after": "27014504.28",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "41913724.15",
+        "category": "groceries",
+        "date": "2025-08-24",
+        "direction": "debit",
+        "headroom_after": "26011224.15",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "41368771.27",
+        "category": "transport",
+        "date": "2025-08-25",
+        "direction": "debit",
+        "headroom_after": "25466271.27",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "40170750.78",
+        "category": "dining",
+        "date": "2025-08-26",
+        "direction": "debit",
+        "headroom_after": "24268250.78",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "39167470.65",
+        "category": "groceries",
+        "date": "2025-08-31",
+        "direction": "debit",
+        "headroom_after": "23264970.65",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "38622517.77",
+        "category": "transport",
+        "date": "2025-09-01",
+        "direction": "debit",
+        "headroom_after": "22720017.77",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "7600000",
+        "balance_after": "31022517.77",
+        "category": "rent",
+        "date": "2025-09-03",
+        "direction": "debit",
+        "headroom_after": "15120017.77",
+        "source": "series:event_12316"
+      },
+      {
+        "amount": "1173756.33",
+        "balance_after": "29848761.44",
+        "category": "utilities",
+        "date": "2025-09-07",
+        "direction": "debit",
+        "headroom_after": "13946261.44",
+        "source": "series:event_12311"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "28845481.31",
+        "category": "groceries",
+        "date": "2025-09-07",
+        "direction": "debit",
+        "headroom_after": "12942981.31",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "28300528.43",
+        "category": "transport",
+        "date": "2025-09-08",
+        "direction": "debit",
+        "headroom_after": "12398028.43",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1738500",
+        "balance_after": "26562028.43",
+        "category": "education",
+        "date": "2025-09-09",
+        "direction": "debit",
+        "headroom_after": "10659528.43",
+        "source": "series:event_12312"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "25364007.94",
+        "category": "dining",
+        "date": "2025-09-09",
+        "direction": "debit",
+        "headroom_after": "9461507.94",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1377500",
+        "balance_after": "23986507.94",
+        "category": "debt_repayment",
+        "date": "2025-09-12",
+        "direction": "debit",
+        "headroom_after": "8084007.94",
+        "source": "series:event_12313"
+      },
+      {
+        "amount": "265050",
+        "balance_after": "23721457.94",
+        "category": "music_subscription",
+        "date": "2025-09-12",
+        "direction": "debit",
+        "headroom_after": "7818957.94",
+        "source": "series:event_12314"
+      },
+      {
+        "amount": "219450",
+        "balance_after": "23502007.94",
+        "category": "delivery_membership",
+        "date": "2025-09-14",
+        "direction": "debit",
+        "headroom_after": "7599507.94",
+        "source": "series:event_12315"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "22498727.81",
+        "category": "groceries",
+        "date": "2025-09-14",
+        "direction": "debit",
+        "headroom_after": "6596227.81",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "24510000",
+        "balance_after": "47008727.81",
+        "category": "salary",
+        "date": "2025-09-15",
+        "direction": "credit",
+        "headroom_after": "31106227.81",
+        "source": "series:event_12309"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "46463774.93",
+        "category": "transport",
+        "date": "2025-09-15",
+        "direction": "debit",
+        "headroom_after": "30561274.93",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "45460494.80",
+        "category": "groceries",
+        "date": "2025-09-21",
+        "direction": "debit",
+        "headroom_after": "29557994.80",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "44915541.92",
+        "category": "transport",
+        "date": "2025-09-22",
+        "direction": "debit",
+        "headroom_after": "29013041.92",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "43717521.43",
+        "category": "dining",
+        "date": "2025-09-23",
+        "direction": "debit",
+        "headroom_after": "27815021.43",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "42714241.30",
+        "category": "groceries",
+        "date": "2025-09-28",
+        "direction": "debit",
+        "headroom_after": "26811741.30",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "42169288.42",
+        "category": "transport",
+        "date": "2025-09-29",
+        "direction": "debit",
+        "headroom_after": "26266788.42",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "7600000",
+        "balance_after": "34569288.42",
+        "category": "rent",
+        "date": "2025-10-03",
+        "direction": "debit",
+        "headroom_after": "18666788.42",
+        "source": "series:event_12316"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "33566008.29",
+        "category": "groceries",
+        "date": "2025-10-05",
+        "direction": "debit",
+        "headroom_after": "17663508.29",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "33021055.41",
+        "category": "transport",
+        "date": "2025-10-06",
+        "direction": "debit",
+        "headroom_after": "17118555.41",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1173756.33",
+        "balance_after": "31847299.08",
+        "category": "utilities",
+        "date": "2025-10-07",
+        "direction": "debit",
+        "headroom_after": "15944799.08",
+        "source": "series:event_12311"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "30649278.59",
+        "category": "dining",
+        "date": "2025-10-07",
+        "direction": "debit",
+        "headroom_after": "14746778.59",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1738500",
+        "balance_after": "28910778.59",
+        "category": "education",
+        "date": "2025-10-09",
+        "direction": "debit",
+        "headroom_after": "13008278.59",
+        "source": "series:event_12312"
+      },
+      {
+        "amount": "1377500",
+        "balance_after": "27533278.59",
+        "category": "debt_repayment",
+        "date": "2025-10-12",
+        "direction": "debit",
+        "headroom_after": "11630778.59",
+        "source": "series:event_12313"
+      },
+      {
+        "amount": "265050",
+        "balance_after": "27268228.59",
+        "category": "music_subscription",
+        "date": "2025-10-12",
+        "direction": "debit",
+        "headroom_after": "11365728.59",
+        "source": "series:event_12314"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "26264948.46",
+        "category": "groceries",
+        "date": "2025-10-12",
+        "direction": "debit",
+        "headroom_after": "10362448.46",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "25719995.58",
+        "category": "transport",
+        "date": "2025-10-13",
+        "direction": "debit",
+        "headroom_after": "9817495.58",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "219450",
+        "balance_after": "25500545.58",
+        "category": "delivery_membership",
+        "date": "2025-10-14",
+        "direction": "debit",
+        "headroom_after": "9598045.58",
+        "source": "series:event_12315"
+      },
+      {
+        "amount": "24510000",
+        "balance_after": "50010545.58",
+        "category": "salary",
+        "date": "2025-10-15",
+        "direction": "credit",
+        "headroom_after": "34108045.58",
+        "source": "series:event_12309"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "49007265.45",
+        "category": "groceries",
+        "date": "2025-10-19",
+        "direction": "debit",
+        "headroom_after": "33104765.45",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "48462312.57",
+        "category": "transport",
+        "date": "2025-10-20",
+        "direction": "debit",
+        "headroom_after": "32559812.57",
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1198020.49",
+        "balance_after": "47264292.08",
+        "category": "dining",
+        "date": "2025-10-21",
+        "direction": "debit",
+        "headroom_after": "31361792.08",
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1003280.13",
+        "balance_after": "46261011.95",
+        "category": "groceries",
+        "date": "2025-10-26",
+        "direction": "debit",
+        "headroom_after": "30358511.95",
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "544952.88",
+        "balance_after": "45716059.07",
+        "category": "transport",
+        "date": "2025-10-27",
+        "direction": "debit",
+        "headroom_after": "29813559.07",
+        "source": "series:event_12367"
+      }
+    ],
+    "minimum_balance": "19955237.29",
+    "opening_balance": "28020700",
+    "recurring_estimates": [
+      {
+        "amount": "24510000",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "24510000",
+        "history_mean": "24510000",
+        "history_min": "24510000",
+        "identity": "credit|salary|IDR|regular payroll",
+        "member_event_ids": [
+          "event_12281",
+          "event_12288",
+          "event_12295",
+          "event_12302",
+          "event_12309"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "24510000",
+          "24510000",
+          "24510000",
+          "24510000",
+          "24510000"
+        ],
+        "source": "series:event_12309"
+      },
+      {
+        "amount": "1377500",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "1377500",
+        "history_mean": "1377500",
+        "history_min": "1377500",
+        "identity": "debit|debt_repayment|IDR|loan repayment",
+        "member_event_ids": [
+          "event_12285",
+          "event_12292",
+          "event_12299",
+          "event_12306",
+          "event_12313"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1377500",
+          "1377500",
+          "1377500",
+          "1377500",
+          "1377500"
+        ],
+        "source": "series:event_12313"
+      },
+      {
+        "amount": "219450",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "219450",
+        "history_mean": "219450",
+        "history_min": "219450",
+        "identity": "debit|delivery_membership|IDR|food delivery membership",
+        "member_event_ids": [
+          "event_12287",
+          "event_12294",
+          "event_12301",
+          "event_12308",
+          "event_12315"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "219450",
+          "219450",
+          "219450",
+          "219450",
+          "219450"
+        ],
+        "source": "series:event_12315"
+      },
+      {
+        "amount": "1198020.49",
+        "amount_varies_in_history": true,
+        "cadence_days": 14,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 13,
+        "history_max": "1278907.79",
+        "history_mean": "1054440.443846153846153846154",
+        "history_min": "762860.26",
+        "identity": "debit|dining|IDR|variable category spending",
+        "member_event_ids": [
+          "event_12368",
+          "event_12369",
+          "event_12370",
+          "event_12371",
+          "event_12372",
+          "event_12373",
+          "event_12374",
+          "event_12375",
+          "event_12376",
+          "event_12377",
+          "event_12378",
+          "event_12379",
+          "event_12380"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "1278907.79",
+          "1093248.6",
+          "1198020.49",
+          "762860.26",
+          "1200085.62",
+          "1100549.03",
+          "925587.98",
+          "1019303.31",
+          "978622.94",
+          "1241658.57",
+          "851726.26",
+          "1168829.28"
+        ],
+        "source": "series:event_12380"
+      },
+      {
+        "amount": "1738500",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "1738500",
+        "history_mean": "1738500",
+        "history_min": "1738500",
+        "identity": "debit|education|IDR|professional training fee",
+        "member_event_ids": [
+          "event_12284",
+          "event_12291",
+          "event_12298",
+          "event_12305",
+          "event_12312"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1738500",
+          "1738500",
+          "1738500",
+          "1738500",
+          "1738500"
+        ],
+        "source": "series:event_12312"
+      },
+      {
+        "amount": "1003280.13",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 26,
+        "history_max": "1126321.27",
+        "history_mean": "868273.3542307692307692307692",
+        "history_min": "669832.54",
+        "identity": "debit|groceries|IDR|variable category spending",
+        "member_event_ids": [
+          "event_12317",
+          "event_12318",
+          "event_12319",
+          "event_12320",
+          "event_12321",
+          "event_12322",
+          "event_12323",
+          "event_12324",
+          "event_12325",
+          "event_12326",
+          "event_12327",
+          "event_12328",
+          "event_12329",
+          "event_12330",
+          "event_12331",
+          "event_12332",
+          "event_12333",
+          "event_12334",
+          "event_12335",
+          "event_12336",
+          "event_12337",
+          "event_12338",
+          "event_12339",
+          "event_12340",
+          "event_12341",
+          "event_12342"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "1003280.13",
+          "689837",
+          "738107.22",
+          "1021578.02",
+          "1096455.74",
+          "941184.09",
+          "761677.45",
+          "669832.54",
+          "879281.38",
+          "917962.36",
+          "1014569.63",
+          "803428.79"
+        ],
+        "source": "series:event_12342"
+      },
+      {
+        "amount": "265050",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "265050",
+        "history_mean": "265050",
+        "history_min": "265050",
+        "identity": "debit|music_subscription|IDR|music subscription",
+        "member_event_ids": [
+          "event_12286",
+          "event_12293",
+          "event_12300",
+          "event_12307",
+          "event_12314"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "265050",
+          "265050",
+          "265050",
+          "265050",
+          "265050"
+        ],
+        "source": "series:event_12314"
+      },
+      {
+        "amount": "7600000",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 6,
+        "history_max": "7600000",
+        "history_mean": "7600000",
+        "history_min": "7600000",
+        "identity": "debit|rent|IDR|apartment rent transfer",
+        "member_event_ids": [
+          "event_12282",
+          "event_12289",
+          "event_12296",
+          "event_12303",
+          "event_12310",
+          "event_12316"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "7600000",
+          "7600000",
+          "7600000",
+          "7600000",
+          "7600000",
+          "7600000"
+        ],
+        "source": "series:event_12316"
+      },
+      {
+        "amount": "544952.88",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 25,
+        "history_max": "596956.59",
+        "history_mean": "492548.7236",
+        "history_min": "381799.54",
+        "identity": "debit|transport|IDR|variable category spending",
+        "member_event_ids": [
+          "event_12343",
+          "event_12344",
+          "event_12345",
+          "event_12346",
+          "event_12347",
+          "event_12348",
+          "event_12349",
+          "event_12350",
+          "event_12351",
+          "event_12352",
+          "event_12353",
+          "event_12354",
+          "event_12355",
+          "event_12356",
+          "event_12357",
+          "event_12358",
+          "event_12359",
+          "event_12360",
+          "event_12361",
+          "event_12362",
+          "event_12363",
+          "event_12364",
+          "event_12365",
+          "event_12366",
+          "event_12367"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "584487.96",
+          "381799.54",
+          "559257.43",
+          "418843.11",
+          "544952.88",
+          "531527.94",
+          "431477.81",
+          "518958.74",
+          "523196.16",
+          "434974.7",
+          "589678.89",
+          "451335.39"
+        ],
+        "source": "series:event_12367"
+      },
+      {
+        "amount": "1173756.33",
+        "amount_varies_in_history": true,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "IDR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 5,
+        "history_max": "1307689.62",
+        "history_mean": "1148480.628",
+        "history_min": "1070182.14",
+        "identity": "debit|utilities|IDR|energy provider bill",
+        "member_event_ids": [
+          "event_12283",
+          "event_12290",
+          "event_12297",
+          "event_12304",
+          "event_12311"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1080821.88",
+          "1109953.17",
+          "1070182.14",
+          "1307689.62",
+          "1173756.33"
+        ],
+        "source": "series:event_12311"
+      }
+    ],
+    "unquantified_commitments": []
+  },
+  "candidates": [
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-08-04"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-10-15"
+          }
+        ],
+        "method": "wait",
+        "payment_option_id": null,
+        "safe": true,
+        "spending_changes": [],
+        "total_paid": "21831000"
+      },
+      "rejections": [],
+      "selected": true
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-08-04"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12315",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-10-15"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": true,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12315",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "ranked below selected plan by contract priorities"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-08-04"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12314",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-10-15"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": true,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12314",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "ranked below selected plan by contract priorities"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-08-04"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12315",
+            "new_amount": null
+          },
+          {
+            "action": "stop",
+            "event_id": "event_12314",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "21831000",
+            "payment_date": "2025-10-15"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": true,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_12315",
+            "new_amount": null
+          },
+          {
+            "action": "stop",
+            "event_id": "event_12314",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "21831000"
+      },
+      "rejections": [
+        "ranked below selected plan by contract priorities"
+      ],
+      "selected": false
+    }
+  ],
+  "evidence": [],
+  "history": [
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12317",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12317"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "871968.66",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-02-09",
+        "event_id": "event_12317",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "871968.66",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-02-09",
+        "event_id": "event_12317",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12343",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12343"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "590025.07",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-02-10",
+        "event_id": "event_12343",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-10",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "590025.07",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-02-10",
+        "event_id": "event_12343",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-10",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12368",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12368"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "888325.64",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-02-11",
+        "event_id": "event_12368",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "888325.64",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-02-11",
+        "event_id": "event_12368",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12318",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12318"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "920772.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-02-16",
+        "event_id": "event_12318",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "920772.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-02-16",
+        "event_id": "event_12318",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12344",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12344"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "383452.71",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-02-17",
+        "event_id": "event_12344",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "383452.71",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-02-17",
+        "event_id": "event_12344",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12319",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12319"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "795730.21",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-02-23",
+        "event_id": "event_12319",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "795730.21",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-02-23",
+        "event_id": "event_12319",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12345",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12345"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "559246.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-02-24",
+        "event_id": "event_12345",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-24",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "559246.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-02-24",
+        "event_id": "event_12345",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-24",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12369",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12369"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1278907.79",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-02-25",
+        "event_id": "event_12369",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1278907.79",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-02-25",
+        "event_id": "event_12369",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12320",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12320"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "683333.41",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-03-02",
+        "event_id": "event_12320",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-02",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "683333.41",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-03-02",
+        "event_id": "event_12320",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-02",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12282",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12282"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-03-03",
+        "event_id": "event_12282",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-03-03",
+        "event_id": "event_12282",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12346",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12346"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "596956.59",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-03-03",
+        "event_id": "event_12346",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "596956.59",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-03-03",
+        "event_id": "event_12346",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12283",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12283"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1080821.88",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-03-07",
+        "event_id": "event_12283",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1080821.88",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-03-07",
+        "event_id": "event_12283",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|utilities|IDR|energy provider bill"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12284",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12284"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-03-09",
+        "event_id": "event_12284",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-03-09",
+        "event_id": "event_12284",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|education|IDR|professional training fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12321",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12321"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1078595.32",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-03-09",
+        "event_id": "event_12321",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1078595.32",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-03-09",
+        "event_id": "event_12321",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12347",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12347"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "467480.95",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-03-10",
+        "event_id": "event_12347",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-10",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "467480.95",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-03-10",
+        "event_id": "event_12347",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-10",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12370",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12370"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1093248.6",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-03-11",
+        "event_id": "event_12370",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1093248.6",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-03-11",
+        "event_id": "event_12370",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12285",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12285"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-03-12",
+        "event_id": "event_12285",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-03-12",
+        "event_id": "event_12285",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|debt_repayment|IDR|loan repayment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12286",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12286"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-03-12",
+        "event_id": "event_12286",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-03-12",
+        "event_id": "event_12286",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|music_subscription|IDR|music subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12287",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12287"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-03-14",
+        "event_id": "event_12287",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-03-14",
+        "event_id": "event_12287",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|delivery_membership|IDR|food delivery membership"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12281",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12281"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-03-15",
+        "event_id": "event_12281",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-03-15",
+        "event_id": "event_12281",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "credit|salary|IDR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12322",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12322"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "718534.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-03-16",
+        "event_id": "event_12322",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "718534.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-03-16",
+        "event_id": "event_12322",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12348",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12348"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "499585.66",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-03-17",
+        "event_id": "event_12348",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "499585.66",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-03-17",
+        "event_id": "event_12348",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12323",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12323"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1040692.5",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-03-23",
+        "event_id": "event_12323",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1040692.5",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-03-23",
+        "event_id": "event_12323",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12349",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12349"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "425274.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2025-03-24",
+        "event_id": "event_12349",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-24",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "425274.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2025-03-24",
+        "event_id": "event_12349",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-24",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12371",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12371"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1198020.49",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-03-25",
+        "event_id": "event_12371",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1198020.49",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-03-25",
+        "event_id": "event_12371",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12324",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12324"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "812333.75",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-03-30",
+        "event_id": "event_12324",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-30",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "812333.75",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2025-03-30",
+        "event_id": "event_12324",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-30",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12350",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12350"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "435170.17",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-03-31",
+        "event_id": "event_12350",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-31",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "435170.17",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-03-31",
+        "event_id": "event_12350",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-03-31",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12289",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12289"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-04-03",
+        "event_id": "event_12289",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-04-03",
+        "event_id": "event_12289",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12325",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12325"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "675966.02",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-04-06",
+        "event_id": "event_12325",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "675966.02",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-04-06",
+        "event_id": "event_12325",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12290",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12290"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1109953.17",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-04-07",
+        "event_id": "event_12290",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1109953.17",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-04-07",
+        "event_id": "event_12290",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|utilities|IDR|energy provider bill"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12351",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12351"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "417010.63",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-04-07",
+        "event_id": "event_12351",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "417010.63",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-04-07",
+        "event_id": "event_12351",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12372",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12372"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "762860.26",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-04-08",
+        "event_id": "event_12372",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-08",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "762860.26",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-04-08",
+        "event_id": "event_12372",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-08",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12291",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12291"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-04-09",
+        "event_id": "event_12291",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-04-09",
+        "event_id": "event_12291",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|education|IDR|professional training fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12292",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12292"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-04-12",
+        "event_id": "event_12292",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-04-12",
+        "event_id": "event_12292",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|debt_repayment|IDR|loan repayment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12293",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12293"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-04-12",
+        "event_id": "event_12293",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-04-12",
+        "event_id": "event_12293",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|music_subscription|IDR|music subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12326",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12326"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "777263.44",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-04-13",
+        "event_id": "event_12326",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-13",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "777263.44",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-04-13",
+        "event_id": "event_12326",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-13",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12294",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12294"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-04-14",
+        "event_id": "event_12294",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-04-14",
+        "event_id": "event_12294",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|delivery_membership|IDR|food delivery membership"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12352",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12352"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "564369.58",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-04-14",
+        "event_id": "event_12352",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "564369.58",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-04-14",
+        "event_id": "event_12352",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12288",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12288"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-04-15",
+        "event_id": "event_12288",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-04-15",
+        "event_id": "event_12288",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "credit|salary|IDR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12327",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12327"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "685170.7",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-04-20",
+        "event_id": "event_12327",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "685170.7",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-04-20",
+        "event_id": "event_12327",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12353",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12353"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "460883.95",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-04-21",
+        "event_id": "event_12353",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-21",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "460883.95",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-04-21",
+        "event_id": "event_12353",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-21",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12373",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12373"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1200085.62",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2025-04-22",
+        "event_id": "event_12373",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-22",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1200085.62",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2025-04-22",
+        "event_id": "event_12373",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-22",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12328",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12328"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "996488.93",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-04-27",
+        "event_id": "event_12328",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-27",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "996488.93",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-04-27",
+        "event_id": "event_12328",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-27",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12354",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12354"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "426989.11",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-04-28",
+        "event_id": "event_12354",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "426989.11",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-04-28",
+        "event_id": "event_12354",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-04-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12381",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12381"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7353000",
+        "category": "investment",
+        "currency": "IDR",
+        "description": "Investment contribution",
+        "direction": "debit",
+        "event_date": "2025-05-01",
+        "event_id": "event_12381",
+        "event_type": "investment_purchase",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7353000",
+        "category": "investment",
+        "currency": "IDR",
+        "description": "Investment contribution",
+        "direction": "debit",
+        "event_date": "2025-05-01",
+        "event_id": "event_12381",
+        "event_type": "investment_purchase",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12296",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12296"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-05-03",
+        "event_id": "event_12296",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-05-03",
+        "event_id": "event_12296",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12329",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12329"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1126321.27",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-05-04",
+        "event_id": "event_12329",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-04",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1126321.27",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-05-04",
+        "event_id": "event_12329",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-04",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12355",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12355"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "516781.2",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-05-05",
+        "event_id": "event_12355",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-05",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "516781.2",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-05-05",
+        "event_id": "event_12355",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-05",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12374",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12374"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1100549.03",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-05-06",
+        "event_id": "event_12374",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1100549.03",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-05-06",
+        "event_id": "event_12374",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12297",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12297"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1070182.14",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-05-07",
+        "event_id": "event_12297",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1070182.14",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-05-07",
+        "event_id": "event_12297",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|utilities|IDR|energy provider bill"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12298",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12298"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-05-09",
+        "event_id": "event_12298",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-05-09",
+        "event_id": "event_12298",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|education|IDR|professional training fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12330",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12330"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "854742.39",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-05-11",
+        "event_id": "event_12330",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "854742.39",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-05-11",
+        "event_id": "event_12330",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-11",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12299",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12299"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12299",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12299",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|debt_repayment|IDR|loan repayment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12300",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12300"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12300",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12300",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|music_subscription|IDR|music subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12356",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12356"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "584487.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12356",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "584487.96",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-05-12",
+        "event_id": "event_12356",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12301",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12301"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-05-14",
+        "event_id": "event_12301",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-05-14",
+        "event_id": "event_12301",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|delivery_membership|IDR|food delivery membership"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12295",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12295"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-05-15",
+        "event_id": "event_12295",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-05-15",
+        "event_id": "event_12295",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "credit|salary|IDR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12331",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12331"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1003280.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-05-18",
+        "event_id": "event_12331",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-18",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1003280.13",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-05-18",
+        "event_id": "event_12331",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-18",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12357",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12357"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "381799.54",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-05-19",
+        "event_id": "event_12357",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-19",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "381799.54",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-05-19",
+        "event_id": "event_12357",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-19",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12375",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12375"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "925587.98",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-05-20",
+        "event_id": "event_12375",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "925587.98",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2025-05-20",
+        "event_id": "event_12375",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12332",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12332"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "689837",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-05-25",
+        "event_id": "event_12332",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "689837",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-05-25",
+        "event_id": "event_12332",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-25",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12358",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12358"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "559257.43",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-05-26",
+        "event_id": "event_12358",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-26",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "559257.43",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-05-26",
+        "event_id": "event_12358",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-05-26",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12333",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12333"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "738107.22",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-06-01",
+        "event_id": "event_12333",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "738107.22",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-06-01",
+        "event_id": "event_12333",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12359",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12359"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "418843.11",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-06-02",
+        "event_id": "event_12359",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-02",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "418843.11",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-06-02",
+        "event_id": "event_12359",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-02",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12303",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12303"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-06-03",
+        "event_id": "event_12303",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-06-03",
+        "event_id": "event_12303",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12376",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12376"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1019303.31",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-06-03",
+        "event_id": "event_12376",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1019303.31",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-06-03",
+        "event_id": "event_12376",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12304",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12304"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1307689.62",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-06-07",
+        "event_id": "event_12304",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1307689.62",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-06-07",
+        "event_id": "event_12304",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|utilities|IDR|energy provider bill"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12334",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12334"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1021578.02",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-06-08",
+        "event_id": "event_12334",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-08",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1021578.02",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-06-08",
+        "event_id": "event_12334",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-08",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12305",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12305"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-06-09",
+        "event_id": "event_12305",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-06-09",
+        "event_id": "event_12305",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|education|IDR|professional training fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12360",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12360"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "544952.88",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-06-09",
+        "event_id": "event_12360",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "544952.88",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-06-09",
+        "event_id": "event_12360",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12306",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12306"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-06-12",
+        "event_id": "event_12306",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-06-12",
+        "event_id": "event_12306",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|debt_repayment|IDR|loan repayment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12307",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12307"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-06-12",
+        "event_id": "event_12307",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-06-12",
+        "event_id": "event_12307",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|music_subscription|IDR|music subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12308",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12308"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-06-14",
+        "event_id": "event_12308",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-06-14",
+        "event_id": "event_12308",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|delivery_membership|IDR|food delivery membership"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12302",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12302"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-06-15",
+        "event_id": "event_12302",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-06-15",
+        "event_id": "event_12302",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "credit|salary|IDR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12335",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12335"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1096455.74",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-06-15",
+        "event_id": "event_12335",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1096455.74",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-06-15",
+        "event_id": "event_12335",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12361",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12361"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "531527.94",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-06-16",
+        "event_id": "event_12361",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "531527.94",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-06-16",
+        "event_id": "event_12361",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-16",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12377",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12377"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "978622.94",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-06-17",
+        "event_id": "event_12377",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "978622.94",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-06-17",
+        "event_id": "event_12377",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-17",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12336",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12336"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "941184.09",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-06-22",
+        "event_id": "event_12336",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-22",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "941184.09",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2025-06-22",
+        "event_id": "event_12336",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-22",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12362",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12362"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "431477.81",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-06-23",
+        "event_id": "event_12362",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "431477.81",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2025-06-23",
+        "event_id": "event_12362",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-23",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12337",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12337"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "761677.45",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-06-29",
+        "event_id": "event_12337",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-29",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "761677.45",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-06-29",
+        "event_id": "event_12337",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-29",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12363",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12363"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "518958.74",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-06-30",
+        "event_id": "event_12363",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-30",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "518958.74",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2025-06-30",
+        "event_id": "event_12363",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-06-30",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12378",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12378"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1241658.57",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-07-01",
+        "event_id": "event_12378",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1241658.57",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2025-07-01",
+        "event_id": "event_12378",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-01",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12310",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12310"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-07-03",
+        "event_id": "event_12310",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-07-03",
+        "event_id": "event_12310",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12338",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12338"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "669832.54",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-07-06",
+        "event_id": "event_12338",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "669832.54",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-07-06",
+        "event_id": "event_12338",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-06",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12311",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12311"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1173756.33",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-07-07",
+        "event_id": "event_12311",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1173756.33",
+        "category": "utilities",
+        "currency": "IDR",
+        "description": "Energy provider bill",
+        "direction": "debit",
+        "event_date": "2025-07-07",
+        "event_id": "event_12311",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|utilities|IDR|energy provider bill"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12364",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12364"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "523196.16",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2025-07-07",
+        "event_id": "event_12364",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "523196.16",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2025-07-07",
+        "event_id": "event_12364",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-07",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12312",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12312"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-07-09",
+        "event_id": "event_12312",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1738500",
+        "category": "education",
+        "currency": "IDR",
+        "description": "Professional training fee",
+        "direction": "debit",
+        "event_date": "2025-07-09",
+        "event_id": "event_12312",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-09",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|education|IDR|professional training fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12313",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12313"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-07-12",
+        "event_id": "event_12313",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1377500",
+        "category": "debt_repayment",
+        "currency": "IDR",
+        "description": "Loan repayment",
+        "direction": "debit",
+        "event_date": "2025-07-12",
+        "event_id": "event_12313",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|debt_repayment|IDR|loan repayment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12314",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12314"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-07-12",
+        "event_id": "event_12314",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "265050",
+        "category": "music_subscription",
+        "currency": "IDR",
+        "description": "Music subscription",
+        "direction": "debit",
+        "event_date": "2025-07-12",
+        "event_id": "event_12314",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-12",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|music_subscription|IDR|music subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12339",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12339"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "879281.38",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-07-13",
+        "event_id": "event_12339",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-13",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "879281.38",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-07-13",
+        "event_id": "event_12339",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-13",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12315",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12315"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-07-14",
+        "event_id": "event_12315",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "219450",
+        "category": "delivery_membership",
+        "currency": "IDR",
+        "description": "Food delivery membership",
+        "direction": "debit",
+        "event_date": "2025-07-14",
+        "event_id": "event_12315",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|delivery_membership|IDR|food delivery membership"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12365",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12365"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "434974.7",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-07-14",
+        "event_id": "event_12365",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "434974.7",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-07-14",
+        "event_id": "event_12365",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-14",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12309",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12309"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-07-15",
+        "event_id": "event_12309",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-07-15",
+        "event_id": "event_12309",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "credit|salary|IDR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12379",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12379"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "851726.26",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-07-15",
+        "event_id": "event_12379",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "851726.26",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Bakery and snacks",
+        "direction": "debit",
+        "event_date": "2025-07-15",
+        "event_id": "event_12379",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-15",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12340",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12340"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "917962.36",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-07-20",
+        "event_id": "event_12340",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "917962.36",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2025-07-20",
+        "event_id": "event_12340",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-20",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12366",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12366"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "589678.89",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-07-21",
+        "event_id": "event_12366",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-21",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "589678.89",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2025-07-21",
+        "event_id": "event_12366",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-21",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12341",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12341"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1014569.63",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-07-27",
+        "event_id": "event_12341",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-27",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1014569.63",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2025-07-27",
+        "event_id": "event_12341",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-27",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12367",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12367"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "451335.39",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-07-28",
+        "event_id": "event_12367",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "451335.39",
+        "category": "transport",
+        "currency": "IDR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-07-28",
+        "event_id": "event_12367",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|transport|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12382",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12382"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "13480500",
+        "category": "investment",
+        "currency": "IDR",
+        "description": "Investment sale proceeds",
+        "direction": "credit",
+        "event_date": "2025-07-27",
+        "event_id": "event_12382",
+        "event_type": "investment_sale",
+        "flexibility": "fixed",
+        "linked_event_id": "event_12381",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "13480500",
+        "category": "investment",
+        "currency": "IDR",
+        "description": "Investment sale proceeds",
+        "direction": "credit",
+        "event_date": "2025-07-27",
+        "event_id": "event_12382",
+        "event_type": "investment_sale",
+        "flexibility": "fixed",
+        "linked_event_id": "event_12381",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-28",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12380",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12380"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1168829.28",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-07-29",
+        "event_id": "event_12380",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-29",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "1168829.28",
+        "category": "dining",
+        "currency": "IDR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-07-29",
+        "event_id": "event_12380",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-07-29",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|dining|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12316",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12316"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-08-03",
+        "event_id": "event_12316",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "7600000",
+        "category": "rent",
+        "currency": "IDR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2025-08-03",
+        "event_id": "event_12316",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|rent|IDR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_12342",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_12342"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "803428.79",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-08-03",
+        "event_id": "event_12342",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "803428.79",
+        "category": "groceries",
+        "currency": "IDR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2025-08-03",
+        "event_id": "event_12342",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-03",
+        "status": "settled",
+        "user_id": "user_134"
+      },
+      "recurring_series": "debit|groceries|IDR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "24510000",
+        "cash_date": "2025-08-15",
+        "event_id": "event_12383",
+        "exchange_rate_date": "2025-08-15",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_12383"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2025-08-15",
+        "event_id": "event_12383",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-15",
+        "status": "scheduled",
+        "user_id": "user_134"
+      },
+      "original": {
+        "amount": "24510000",
+        "category": "salary",
+        "currency": "IDR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2025-08-15",
+        "event_id": "event_12383",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-08-15",
+        "status": "scheduled",
+        "user_id": "user_134"
+      },
+      "recurring_series": null
+    }
+  ],
+  "offers": [
+    {
+      "eligibility_rejections": [],
+      "option": {
+        "financing_fee": "0",
+        "first_payment_date": "2025-08-04",
+        "number_of_payments": 1,
+        "payment_amount": "21831000",
+        "payment_frequency_days": null,
+        "payment_method": "full_payment",
+        "payment_option_id": "payment_option_380",
+        "request_id": "request_134",
+        "total_payable_amount": "21831000"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "user does not accept method",
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "2183100",
+        "first_payment_date": "2025-08-07",
+        "number_of_payments": 15,
+        "payment_amount": "1600940",
+        "payment_frequency_days": 30,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_381",
+        "request_id": "request_134",
+        "total_payable_amount": "24014100"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "user does not accept method",
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "4802820",
+        "first_payment_date": "2025-08-18",
+        "number_of_payments": 24,
+        "payment_amount": "1109742.5",
+        "payment_frequency_days": 28,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_382",
+        "request_id": "request_134",
+        "total_payable_amount": "26633820"
+      }
+    }
+  ],
+  "profile": {
+    "current_available_balance": "28020700",
+    "expense_categories_to_protect": [
+      "rent",
+      "education",
+      "groceries",
+      "debt_repayment"
+    ],
+    "expense_categories_user_is_willing_to_reduce": [],
+    "expense_categories_user_is_willing_to_stop": [
+      "music_subscription",
+      "delivery_membership"
+    ],
+    "financial_priorities": [
+      "education",
+      "debt_repayment"
+    ],
+    "home_currency": "IDR",
+    "max_installment_months": null,
+    "minimum_balance_to_keep": "15902500",
+    "payment_methods_user_will_consider": [
+      "full_payment"
+    ],
+    "user_id": "user_134"
+  },
+  "request": {
+    "allows_partial_payment": false,
+    "desired_completion_date": "2025-10-15",
+    "request_date": "2025-08-04",
+    "request_id": "request_134",
+    "request_text": "The laptop I'm looking at is IDR 21,831,000. I need to complete it by 15 October 2025. Can I buy the laptop now without making next month's bills tight?",
+    "request_type": "purchase",
+    "requested_amount": "21831000",
+    "user_id": "user_134"
+  },
+  "selected_plan_replay": [
+    {
+      "balance": "27475747.12",
+      "date": "2025-08-04",
+      "delta": "-544952.88",
+      "headroom": "11573247.12",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "26301990.79",
+      "date": "2025-08-07",
+      "delta": "-1173756.33",
+      "headroom": "10399490.79",
+      "source": "series:event_12311"
+    },
+    {
+      "balance": "24563490.79",
+      "date": "2025-08-09",
+      "delta": "-1738500",
+      "headroom": "8660990.79",
+      "source": "series:event_12312"
+    },
+    {
+      "balance": "23560210.66",
+      "date": "2025-08-10",
+      "delta": "-1003280.13",
+      "headroom": "7657710.66",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "23015257.78",
+      "date": "2025-08-11",
+      "delta": "-544952.88",
+      "headroom": "7112757.78",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "21637757.78",
+      "date": "2025-08-12",
+      "delta": "-1377500",
+      "headroom": "5735257.78",
+      "source": "series:event_12313"
+    },
+    {
+      "balance": "21372707.78",
+      "date": "2025-08-12",
+      "delta": "-265050",
+      "headroom": "5470207.78",
+      "source": "series:event_12314"
+    },
+    {
+      "balance": "20174687.29",
+      "date": "2025-08-12",
+      "delta": "-1198020.49",
+      "headroom": "4272187.29",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "19955237.29",
+      "date": "2025-08-14",
+      "delta": "-219450",
+      "headroom": "4052737.29",
+      "source": "series:event_12315"
+    },
+    {
+      "balance": "44465237.29",
+      "date": "2025-08-15",
+      "delta": "24510000",
+      "headroom": "28562737.29",
+      "source": "event_12383"
+    },
+    {
+      "balance": "43461957.16",
+      "date": "2025-08-17",
+      "delta": "-1003280.13",
+      "headroom": "27559457.16",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "42917004.28",
+      "date": "2025-08-18",
+      "delta": "-544952.88",
+      "headroom": "27014504.28",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "41913724.15",
+      "date": "2025-08-24",
+      "delta": "-1003280.13",
+      "headroom": "26011224.15",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "41368771.27",
+      "date": "2025-08-25",
+      "delta": "-544952.88",
+      "headroom": "25466271.27",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "40170750.78",
+      "date": "2025-08-26",
+      "delta": "-1198020.49",
+      "headroom": "24268250.78",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "39167470.65",
+      "date": "2025-08-31",
+      "delta": "-1003280.13",
+      "headroom": "23264970.65",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "38622517.77",
+      "date": "2025-09-01",
+      "delta": "-544952.88",
+      "headroom": "22720017.77",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "31022517.77",
+      "date": "2025-09-03",
+      "delta": "-7600000",
+      "headroom": "15120017.77",
+      "source": "series:event_12316"
+    },
+    {
+      "balance": "29848761.44",
+      "date": "2025-09-07",
+      "delta": "-1173756.33",
+      "headroom": "13946261.44",
+      "source": "series:event_12311"
+    },
+    {
+      "balance": "28845481.31",
+      "date": "2025-09-07",
+      "delta": "-1003280.13",
+      "headroom": "12942981.31",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "28300528.43",
+      "date": "2025-09-08",
+      "delta": "-544952.88",
+      "headroom": "12398028.43",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "26562028.43",
+      "date": "2025-09-09",
+      "delta": "-1738500",
+      "headroom": "10659528.43",
+      "source": "series:event_12312"
+    },
+    {
+      "balance": "25364007.94",
+      "date": "2025-09-09",
+      "delta": "-1198020.49",
+      "headroom": "9461507.94",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "23986507.94",
+      "date": "2025-09-12",
+      "delta": "-1377500",
+      "headroom": "8084007.94",
+      "source": "series:event_12313"
+    },
+    {
+      "balance": "23721457.94",
+      "date": "2025-09-12",
+      "delta": "-265050",
+      "headroom": "7818957.94",
+      "source": "series:event_12314"
+    },
+    {
+      "balance": "23502007.94",
+      "date": "2025-09-14",
+      "delta": "-219450",
+      "headroom": "7599507.94",
+      "source": "series:event_12315"
+    },
+    {
+      "balance": "22498727.81",
+      "date": "2025-09-14",
+      "delta": "-1003280.13",
+      "headroom": "6596227.81",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "47008727.81",
+      "date": "2025-09-15",
+      "delta": "24510000",
+      "headroom": "31106227.81",
+      "source": "series:event_12309"
+    },
+    {
+      "balance": "46463774.93",
+      "date": "2025-09-15",
+      "delta": "-544952.88",
+      "headroom": "30561274.93",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "45460494.80",
+      "date": "2025-09-21",
+      "delta": "-1003280.13",
+      "headroom": "29557994.80",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "44915541.92",
+      "date": "2025-09-22",
+      "delta": "-544952.88",
+      "headroom": "29013041.92",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "43717521.43",
+      "date": "2025-09-23",
+      "delta": "-1198020.49",
+      "headroom": "27815021.43",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "42714241.30",
+      "date": "2025-09-28",
+      "delta": "-1003280.13",
+      "headroom": "26811741.30",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "42169288.42",
+      "date": "2025-09-29",
+      "delta": "-544952.88",
+      "headroom": "26266788.42",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "34569288.42",
+      "date": "2025-10-03",
+      "delta": "-7600000",
+      "headroom": "18666788.42",
+      "source": "series:event_12316"
+    },
+    {
+      "balance": "33566008.29",
+      "date": "2025-10-05",
+      "delta": "-1003280.13",
+      "headroom": "17663508.29",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "33021055.41",
+      "date": "2025-10-06",
+      "delta": "-544952.88",
+      "headroom": "17118555.41",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "31847299.08",
+      "date": "2025-10-07",
+      "delta": "-1173756.33",
+      "headroom": "15944799.08",
+      "source": "series:event_12311"
+    },
+    {
+      "balance": "30649278.59",
+      "date": "2025-10-07",
+      "delta": "-1198020.49",
+      "headroom": "14746778.59",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "28910778.59",
+      "date": "2025-10-09",
+      "delta": "-1738500",
+      "headroom": "13008278.59",
+      "source": "series:event_12312"
+    },
+    {
+      "balance": "27533278.59",
+      "date": "2025-10-12",
+      "delta": "-1377500",
+      "headroom": "11630778.59",
+      "source": "series:event_12313"
+    },
+    {
+      "balance": "27268228.59",
+      "date": "2025-10-12",
+      "delta": "-265050",
+      "headroom": "11365728.59",
+      "source": "series:event_12314"
+    },
+    {
+      "balance": "26264948.46",
+      "date": "2025-10-12",
+      "delta": "-1003280.13",
+      "headroom": "10362448.46",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "25719995.58",
+      "date": "2025-10-13",
+      "delta": "-544952.88",
+      "headroom": "9817495.58",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "25500545.58",
+      "date": "2025-10-14",
+      "delta": "-219450",
+      "headroom": "9598045.58",
+      "source": "series:event_12315"
+    },
+    {
+      "balance": "50010545.58",
+      "date": "2025-10-15",
+      "delta": "24510000",
+      "headroom": "34108045.58",
+      "source": "series:event_12309"
+    },
+    {
+      "balance": "28179545.58",
+      "date": "2025-10-15",
+      "delta": "-21831000",
+      "headroom": "12277045.58",
+      "source": "request_payment"
+    },
+    {
+      "balance": "27176265.45",
+      "date": "2025-10-19",
+      "delta": "-1003280.13",
+      "headroom": "11273765.45",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "26631312.57",
+      "date": "2025-10-20",
+      "delta": "-544952.88",
+      "headroom": "10728812.57",
+      "source": "series:event_12367"
+    },
+    {
+      "balance": "25433292.08",
+      "date": "2025-10-21",
+      "delta": "-1198020.49",
+      "headroom": "9530792.08",
+      "source": "series:event_12380"
+    },
+    {
+      "balance": "24430011.95",
+      "date": "2025-10-26",
+      "delta": "-1003280.13",
+      "headroom": "8527511.95",
+      "source": "series:event_12342"
+    },
+    {
+      "balance": "23885059.07",
+      "date": "2025-10-27",
+      "delta": "-544952.88",
+      "headroom": "7982559.07",
+      "source": "series:event_12367"
+    }
+  ]
+}

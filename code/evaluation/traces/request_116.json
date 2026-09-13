@@ -1,0 +1,5938 @@
+{
+  "accounting_coverage": {
+    "accounted_records": 104,
+    "explicit_records_verified_once": 1,
+    "required_explicit_records": 1,
+    "source_records": 104,
+    "unique_recurring_members": 101,
+    "unquantified_commitments": []
+  },
+  "baseline": {
+    "baseline_shortfall": false,
+    "binding_cashflow": {
+      "amount": "6064.81",
+      "balance_after": "86930.65",
+      "category": "groceries",
+      "date": "2025-02-14",
+      "direction": "debit",
+      "headroom_after": "6630.65",
+      "source": "series:event_10761"
+    },
+    "headroom_at_minimum": "6630.65",
+    "image_amounts": {},
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|INR|regular payroll"
+        ],
+        "event_id": "event_10803",
+        "matched_series_key": "credit|salary|INR|regular payroll",
+        "reason": "unique compatible unnamed confirmation",
+        "source_event_ids": [
+          "event_10700",
+          "event_10707",
+          "event_10714",
+          "event_10721",
+          "event_10728"
+        ]
+      }
+    ],
+    "independent_capacity": {
+      "amount": "6630.65",
+      "earliest_date": "",
+      "method": "daily cumulative balances and suffix minima; independent of payment simulation"
+    },
+    "ledger": [
+      {
+        "amount": "6031.33",
+        "balance_after": "132343.67",
+        "category": "utilities",
+        "date": "2025-02-05",
+        "direction": "debit",
+        "headroom_after": "52043.67",
+        "source": "series:event_10730"
+      },
+      {
+        "amount": "12160",
+        "balance_after": "120183.67",
+        "category": "education",
+        "date": "2025-02-07",
+        "direction": "debit",
+        "headroom_after": "39883.67",
+        "source": "series:event_10731"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "114118.86",
+        "category": "groceries",
+        "date": "2025-02-07",
+        "direction": "debit",
+        "headroom_after": "33818.86",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "110845.38",
+        "category": "transport",
+        "date": "2025-02-08",
+        "direction": "debit",
+        "headroom_after": "30545.38",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "105740.46",
+        "category": "dining",
+        "date": "2025-02-09",
+        "direction": "debit",
+        "headroom_after": "25440.46",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "10250",
+        "balance_after": "95490.46",
+        "category": "debt_repayment",
+        "date": "2025-02-10",
+        "direction": "debit",
+        "headroom_after": "15190.46",
+        "source": "series:event_10732"
+      },
+      {
+        "amount": "1375",
+        "balance_after": "94115.46",
+        "category": "music_subscription",
+        "date": "2025-02-10",
+        "direction": "debit",
+        "headroom_after": "13815.46",
+        "source": "series:event_10733"
+      },
+      {
+        "amount": "1120",
+        "balance_after": "92995.46",
+        "category": "delivery_membership",
+        "date": "2025-02-12",
+        "direction": "debit",
+        "headroom_after": "12695.46",
+        "source": "series:event_10734"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "86930.65",
+        "category": "groceries",
+        "date": "2025-02-14",
+        "direction": "debit",
+        "headroom_after": "6630.65",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "124000",
+        "balance_after": "210930.65",
+        "category": "salary",
+        "date": "2025-02-15",
+        "direction": "credit",
+        "headroom_after": "130630.65",
+        "source": "event_10803"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "207657.17",
+        "category": "transport",
+        "date": "2025-02-15",
+        "direction": "debit",
+        "headroom_after": "127357.17",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "201592.36",
+        "category": "groceries",
+        "date": "2025-02-21",
+        "direction": "debit",
+        "headroom_after": "121292.36",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "198318.88",
+        "category": "transport",
+        "date": "2025-02-22",
+        "direction": "debit",
+        "headroom_after": "118018.88",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "193213.96",
+        "category": "dining",
+        "date": "2025-02-23",
+        "direction": "debit",
+        "headroom_after": "112913.96",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "187149.15",
+        "category": "groceries",
+        "date": "2025-02-28",
+        "direction": "debit",
+        "headroom_after": "106849.15",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "41100",
+        "balance_after": "146049.15",
+        "category": "rent",
+        "date": "2025-03-01",
+        "direction": "debit",
+        "headroom_after": "65749.15",
+        "source": "series:event_10735"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "142775.67",
+        "category": "transport",
+        "date": "2025-03-01",
+        "direction": "debit",
+        "headroom_after": "62475.67",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "6031.33",
+        "balance_after": "136744.34",
+        "category": "utilities",
+        "date": "2025-03-05",
+        "direction": "debit",
+        "headroom_after": "56444.34",
+        "source": "series:event_10730"
+      },
+      {
+        "amount": "12160",
+        "balance_after": "124584.34",
+        "category": "education",
+        "date": "2025-03-07",
+        "direction": "debit",
+        "headroom_after": "44284.34",
+        "source": "series:event_10731"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "118519.53",
+        "category": "groceries",
+        "date": "2025-03-07",
+        "direction": "debit",
+        "headroom_after": "38219.53",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "115246.05",
+        "category": "transport",
+        "date": "2025-03-08",
+        "direction": "debit",
+        "headroom_after": "34946.05",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "110141.13",
+        "category": "dining",
+        "date": "2025-03-09",
+        "direction": "debit",
+        "headroom_after": "29841.13",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "10250",
+        "balance_after": "99891.13",
+        "category": "debt_repayment",
+        "date": "2025-03-10",
+        "direction": "debit",
+        "headroom_after": "19591.13",
+        "source": "series:event_10732"
+      },
+      {
+        "amount": "1375",
+        "balance_after": "98516.13",
+        "category": "music_subscription",
+        "date": "2025-03-10",
+        "direction": "debit",
+        "headroom_after": "18216.13",
+        "source": "series:event_10733"
+      },
+      {
+        "amount": "1120",
+        "balance_after": "97396.13",
+        "category": "delivery_membership",
+        "date": "2025-03-12",
+        "direction": "debit",
+        "headroom_after": "17096.13",
+        "source": "series:event_10734"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "91331.32",
+        "category": "groceries",
+        "date": "2025-03-14",
+        "direction": "debit",
+        "headroom_after": "11031.32",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "124000",
+        "balance_after": "215331.32",
+        "category": "salary",
+        "date": "2025-03-15",
+        "direction": "credit",
+        "headroom_after": "135031.32",
+        "source": "series:event_10728"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "212057.84",
+        "category": "transport",
+        "date": "2025-03-15",
+        "direction": "debit",
+        "headroom_after": "131757.84",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "205993.03",
+        "category": "groceries",
+        "date": "2025-03-21",
+        "direction": "debit",
+        "headroom_after": "125693.03",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "202719.55",
+        "category": "transport",
+        "date": "2025-03-22",
+        "direction": "debit",
+        "headroom_after": "122419.55",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "197614.63",
+        "category": "dining",
+        "date": "2025-03-23",
+        "direction": "debit",
+        "headroom_after": "117314.63",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "191549.82",
+        "category": "groceries",
+        "date": "2025-03-28",
+        "direction": "debit",
+        "headroom_after": "111249.82",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "188276.34",
+        "category": "transport",
+        "date": "2025-03-29",
+        "direction": "debit",
+        "headroom_after": "107976.34",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "41100",
+        "balance_after": "147176.34",
+        "category": "rent",
+        "date": "2025-04-01",
+        "direction": "debit",
+        "headroom_after": "66876.34",
+        "source": "series:event_10735"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "141111.53",
+        "category": "groceries",
+        "date": "2025-04-04",
+        "direction": "debit",
+        "headroom_after": "60811.53",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "6031.33",
+        "balance_after": "135080.20",
+        "category": "utilities",
+        "date": "2025-04-05",
+        "direction": "debit",
+        "headroom_after": "54780.20",
+        "source": "series:event_10730"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "131806.72",
+        "category": "transport",
+        "date": "2025-04-05",
+        "direction": "debit",
+        "headroom_after": "51506.72",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "126701.80",
+        "category": "dining",
+        "date": "2025-04-06",
+        "direction": "debit",
+        "headroom_after": "46401.80",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "12160",
+        "balance_after": "114541.80",
+        "category": "education",
+        "date": "2025-04-07",
+        "direction": "debit",
+        "headroom_after": "34241.80",
+        "source": "series:event_10731"
+      },
+      {
+        "amount": "10250",
+        "balance_after": "104291.80",
+        "category": "debt_repayment",
+        "date": "2025-04-10",
+        "direction": "debit",
+        "headroom_after": "23991.80",
+        "source": "series:event_10732"
+      },
+      {
+        "amount": "1375",
+        "balance_after": "102916.80",
+        "category": "music_subscription",
+        "date": "2025-04-10",
+        "direction": "debit",
+        "headroom_after": "22616.80",
+        "source": "series:event_10733"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "96851.99",
+        "category": "groceries",
+        "date": "2025-04-11",
+        "direction": "debit",
+        "headroom_after": "16551.99",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "1120",
+        "balance_after": "95731.99",
+        "category": "delivery_membership",
+        "date": "2025-04-12",
+        "direction": "debit",
+        "headroom_after": "15431.99",
+        "source": "series:event_10734"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "92458.51",
+        "category": "transport",
+        "date": "2025-04-12",
+        "direction": "debit",
+        "headroom_after": "12158.51",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "124000",
+        "balance_after": "216458.51",
+        "category": "salary",
+        "date": "2025-04-15",
+        "direction": "credit",
+        "headroom_after": "136158.51",
+        "source": "series:event_10728"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "210393.70",
+        "category": "groceries",
+        "date": "2025-04-18",
+        "direction": "debit",
+        "headroom_after": "130093.70",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "207120.22",
+        "category": "transport",
+        "date": "2025-04-19",
+        "direction": "debit",
+        "headroom_after": "126820.22",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "5104.92",
+        "balance_after": "202015.30",
+        "category": "dining",
+        "date": "2025-04-20",
+        "direction": "debit",
+        "headroom_after": "121715.30",
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "195950.49",
+        "category": "groceries",
+        "date": "2025-04-25",
+        "direction": "debit",
+        "headroom_after": "115650.49",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "192677.01",
+        "category": "transport",
+        "date": "2025-04-26",
+        "direction": "debit",
+        "headroom_after": "112377.01",
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "41100",
+        "balance_after": "151577.01",
+        "category": "rent",
+        "date": "2025-05-01",
+        "direction": "debit",
+        "headroom_after": "71277.01",
+        "source": "series:event_10735"
+      },
+      {
+        "amount": "6064.81",
+        "balance_after": "145512.20",
+        "category": "groceries",
+        "date": "2025-05-02",
+        "direction": "debit",
+        "headroom_after": "65212.20",
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "3273.48",
+        "balance_after": "142238.72",
+        "category": "transport",
+        "date": "2025-05-03",
+        "direction": "debit",
+        "headroom_after": "61938.72",
+        "source": "series:event_10787"
+      }
+    ],
+    "minimum_balance": "86930.65",
+    "opening_balance": "138375",
+    "recurring_estimates": [
+      {
+        "amount": "124000",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "124000",
+        "history_mean": "124000",
+        "history_min": "124000",
+        "identity": "credit|salary|INR|regular payroll",
+        "member_event_ids": [
+          "event_10700",
+          "event_10707",
+          "event_10714",
+          "event_10721",
+          "event_10728"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "124000",
+          "124000",
+          "124000",
+          "124000",
+          "124000"
+        ],
+        "source": "series:event_10728"
+      },
+      {
+        "amount": "10250",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "10250",
+        "history_mean": "10250",
+        "history_min": "10250",
+        "identity": "debit|debt_repayment|INR|vehicle loan payment",
+        "member_event_ids": [
+          "event_10704",
+          "event_10711",
+          "event_10718",
+          "event_10725",
+          "event_10732"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "10250",
+          "10250",
+          "10250",
+          "10250",
+          "10250"
+        ],
+        "source": "series:event_10732"
+      },
+      {
+        "amount": "1120",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "1120",
+        "history_mean": "1120",
+        "history_min": "1120",
+        "identity": "debit|delivery_membership|INR|delivery service plan",
+        "member_event_ids": [
+          "event_10706",
+          "event_10713",
+          "event_10720",
+          "event_10727",
+          "event_10734"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1120",
+          "1120",
+          "1120",
+          "1120",
+          "1120"
+        ],
+        "source": "series:event_10734"
+      },
+      {
+        "amount": "5104.92",
+        "amount_varies_in_history": true,
+        "cadence_days": 14,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 13,
+        "history_max": "5922.28",
+        "history_mean": "4859.878461538461538461538462",
+        "history_min": "3483.86",
+        "identity": "debit|dining|INR|variable category spending",
+        "member_event_ids": [
+          "event_10788",
+          "event_10789",
+          "event_10790",
+          "event_10791",
+          "event_10792",
+          "event_10793",
+          "event_10794",
+          "event_10795",
+          "event_10796",
+          "event_10797",
+          "event_10798",
+          "event_10799",
+          "event_10800"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "5922.28",
+          "4758.48",
+          "4362.1",
+          "4861.17",
+          "4341.65",
+          "3836.01",
+          "5857.79",
+          "3483.86",
+          "5104.92",
+          "5445.75",
+          "4883.25",
+          "5051.05"
+        ],
+        "source": "series:event_10800"
+      },
+      {
+        "amount": "12160",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "12160",
+        "history_mean": "12160",
+        "history_min": "12160",
+        "identity": "debit|education|INR|child education fee",
+        "member_event_ids": [
+          "event_10703",
+          "event_10710",
+          "event_10717",
+          "event_10724",
+          "event_10731"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "12160",
+          "12160",
+          "12160",
+          "12160",
+          "12160"
+        ],
+        "source": "series:event_10731"
+      },
+      {
+        "amount": "6064.81",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 26,
+        "history_max": "6288.77",
+        "history_mean": "5102.114615384615384615384615",
+        "history_min": "3911.76",
+        "identity": "debit|groceries|INR|variable category spending",
+        "member_event_ids": [
+          "event_10736",
+          "event_10737",
+          "event_10738",
+          "event_10739",
+          "event_10740",
+          "event_10741",
+          "event_10742",
+          "event_10743",
+          "event_10744",
+          "event_10745",
+          "event_10746",
+          "event_10747",
+          "event_10748",
+          "event_10749",
+          "event_10750",
+          "event_10751",
+          "event_10752",
+          "event_10753",
+          "event_10754",
+          "event_10755",
+          "event_10756",
+          "event_10757",
+          "event_10758",
+          "event_10759",
+          "event_10760",
+          "event_10761"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "6064.81",
+          "5415.53",
+          "4867.46",
+          "6036.99",
+          "5204.82",
+          "5835.67",
+          "3911.76",
+          "5291.28",
+          "6267.84",
+          "6288.77",
+          "5800.94",
+          "6089.38"
+        ],
+        "source": "series:event_10761"
+      },
+      {
+        "amount": "1375",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "1375",
+        "history_mean": "1375",
+        "history_min": "1375",
+        "identity": "debit|music_subscription|INR|music service subscription",
+        "member_event_ids": [
+          "event_10705",
+          "event_10712",
+          "event_10719",
+          "event_10726",
+          "event_10733"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1375",
+          "1375",
+          "1375",
+          "1375",
+          "1375"
+        ],
+        "source": "series:event_10733"
+      },
+      {
+        "amount": "41100",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 6,
+        "history_max": "41100",
+        "history_mean": "41100",
+        "history_min": "41100",
+        "identity": "debit|rent|INR|residential rent payment",
+        "member_event_ids": [
+          "event_10701",
+          "event_10708",
+          "event_10715",
+          "event_10722",
+          "event_10729",
+          "event_10735"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "41100",
+          "41100",
+          "41100",
+          "41100",
+          "41100",
+          "41100"
+        ],
+        "source": "series:event_10735"
+      },
+      {
+        "amount": "3273.48",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 26,
+        "history_max": "3765.71",
+        "history_mean": "3076.755",
+        "history_min": "2315.86",
+        "identity": "debit|transport|INR|variable category spending",
+        "member_event_ids": [
+          "event_10762",
+          "event_10763",
+          "event_10764",
+          "event_10765",
+          "event_10766",
+          "event_10767",
+          "event_10768",
+          "event_10769",
+          "event_10770",
+          "event_10771",
+          "event_10772",
+          "event_10773",
+          "event_10774",
+          "event_10775",
+          "event_10776",
+          "event_10777",
+          "event_10778",
+          "event_10779",
+          "event_10780",
+          "event_10781",
+          "event_10782",
+          "event_10783",
+          "event_10784",
+          "event_10785",
+          "event_10786",
+          "event_10787"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "3535.75",
+          "3490.06",
+          "3021.07",
+          "2447.21",
+          "2455.89",
+          "2728.84",
+          "3273.48",
+          "2960.67",
+          "2854.48",
+          "3201.47",
+          "3748.9",
+          "2899.96"
+        ],
+        "source": "series:event_10787"
+      },
+      {
+        "amount": "6031.33",
+        "amount_varies_in_history": true,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "INR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 5,
+        "history_max": "6571.21",
+        "history_mean": "5849.304",
+        "history_min": "5489.84",
+        "identity": "debit|utilities|INR|water and power payment",
+        "member_event_ids": [
+          "event_10702",
+          "event_10709",
+          "event_10716",
+          "event_10723",
+          "event_10730"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "5528.12",
+          "5626.02",
+          "6571.21",
+          "6031.33",
+          "5489.84"
+        ],
+        "source": "series:event_10730"
+      }
+    ],
+    "unquantified_commitments": []
+  },
+  "candidates": [],
+  "evidence": [],
+  "history": [
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10736",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10736"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5268.67",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-08-09",
+        "event_id": "event_10736",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-09",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5268.67",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-08-09",
+        "event_id": "event_10736",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-09",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10762",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10762"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3294.26",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-08-10",
+        "event_id": "event_10762",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3294.26",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-08-10",
+        "event_id": "event_10762",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10788",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10788"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5270.11",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-08-11",
+        "event_id": "event_10788",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-08-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5270.11",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-08-11",
+        "event_id": "event_10788",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-08-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10737",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10737"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4737.3",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-08-16",
+        "event_id": "event_10737",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-16",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4737.3",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-08-16",
+        "event_id": "event_10737",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-16",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10763",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10763"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2720.47",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-08-17",
+        "event_id": "event_10763",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2720.47",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-08-17",
+        "event_id": "event_10763",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10738",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10738"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4254.52",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-08-23",
+        "event_id": "event_10738",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-23",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4254.52",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-08-23",
+        "event_id": "event_10738",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-23",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10764",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10764"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3078.64",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-08-24",
+        "event_id": "event_10764",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-24",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3078.64",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-08-24",
+        "event_id": "event_10764",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-24",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10789",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10789"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5922.28",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-08-25",
+        "event_id": "event_10789",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-08-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5922.28",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-08-25",
+        "event_id": "event_10789",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-08-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10739",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10739"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4613.72",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-08-30",
+        "event_id": "event_10739",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-30",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4613.72",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-08-30",
+        "event_id": "event_10739",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-30",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10765",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10765"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3190.18",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-08-31",
+        "event_id": "event_10765",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3190.18",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-08-31",
+        "event_id": "event_10765",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10701",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10701"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-09-01",
+        "event_id": "event_10701",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-09-01",
+        "event_id": "event_10701",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10702",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10702"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5528.12",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-09-05",
+        "event_id": "event_10702",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5528.12",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-09-05",
+        "event_id": "event_10702",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|utilities|INR|water and power payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10740",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10740"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5403.15",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-09-06",
+        "event_id": "event_10740",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5403.15",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-09-06",
+        "event_id": "event_10740",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10703",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10703"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-09-07",
+        "event_id": "event_10703",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-09-07",
+        "event_id": "event_10703",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|education|INR|child education fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10766",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10766"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2315.86",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-09-07",
+        "event_id": "event_10766",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2315.86",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-09-07",
+        "event_id": "event_10766",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10790",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10790"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4758.48",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-09-08",
+        "event_id": "event_10790",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-09-08",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4758.48",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-09-08",
+        "event_id": "event_10790",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-09-08",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10704",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10704"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-09-10",
+        "event_id": "event_10704",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-09-10",
+        "event_id": "event_10704",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|debt_repayment|INR|vehicle loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10705",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10705"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-09-10",
+        "event_id": "event_10705",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-09-10",
+        "event_id": "event_10705",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|music_subscription|INR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10706",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10706"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-09-12",
+        "event_id": "event_10706",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-09-12",
+        "event_id": "event_10706",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|delivery_membership|INR|delivery service plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10741",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10741"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4479.56",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-09-13",
+        "event_id": "event_10741",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-13",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4479.56",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-09-13",
+        "event_id": "event_10741",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-13",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10767",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10767"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2894.11",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-09-14",
+        "event_id": "event_10767",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-14",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2894.11",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-09-14",
+        "event_id": "event_10767",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-14",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10700",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10700"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-09-15",
+        "event_id": "event_10700",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-09-15",
+        "event_id": "event_10700",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "credit|salary|INR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10742",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10742"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4276.95",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-09-20",
+        "event_id": "event_10742",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4276.95",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-09-20",
+        "event_id": "event_10742",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10768",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10768"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2726.23",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-09-21",
+        "event_id": "event_10768",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-21",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2726.23",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-09-21",
+        "event_id": "event_10768",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-21",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10791",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10791"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4362.1",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-09-22",
+        "event_id": "event_10791",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-09-22",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4362.1",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-09-22",
+        "event_id": "event_10791",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-09-22",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10743",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10743"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4454.73",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-09-27",
+        "event_id": "event_10743",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-27",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4454.73",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-09-27",
+        "event_id": "event_10743",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-27",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10769",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10769"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3586.69",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-09-28",
+        "event_id": "event_10769",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-28",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3586.69",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-09-28",
+        "event_id": "event_10769",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-28",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10708",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10708"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-10-01",
+        "event_id": "event_10708",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-10-01",
+        "event_id": "event_10708",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10744",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10744"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4086.15",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-10-04",
+        "event_id": "event_10744",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-04",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4086.15",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-10-04",
+        "event_id": "event_10744",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-04",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10709",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10709"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5626.02",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-10-05",
+        "event_id": "event_10709",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5626.02",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-10-05",
+        "event_id": "event_10709",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|utilities|INR|water and power payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10770",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10770"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3761.54",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-10-05",
+        "event_id": "event_10770",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3761.54",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-10-05",
+        "event_id": "event_10770",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10792",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10792"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4861.17",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-10-06",
+        "event_id": "event_10792",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-10-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4861.17",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-10-06",
+        "event_id": "event_10792",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-10-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10710",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10710"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-10-07",
+        "event_id": "event_10710",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-10-07",
+        "event_id": "event_10710",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|education|INR|child education fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10711",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10711"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-10-10",
+        "event_id": "event_10711",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-10-10",
+        "event_id": "event_10711",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|debt_repayment|INR|vehicle loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10712",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10712"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-10-10",
+        "event_id": "event_10712",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-10-10",
+        "event_id": "event_10712",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|music_subscription|INR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10745",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10745"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4116.4",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-10-11",
+        "event_id": "event_10745",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4116.4",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-10-11",
+        "event_id": "event_10745",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10713",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10713"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-10-12",
+        "event_id": "event_10713",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-10-12",
+        "event_id": "event_10713",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|delivery_membership|INR|delivery service plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10771",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10771"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2655.05",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-10-12",
+        "event_id": "event_10771",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2655.05",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-10-12",
+        "event_id": "event_10771",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10707",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10707"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-10-15",
+        "event_id": "event_10707",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-10-15",
+        "event_id": "event_10707",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "credit|salary|INR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10746",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10746"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4377.45",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-10-18",
+        "event_id": "event_10746",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-18",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4377.45",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-10-18",
+        "event_id": "event_10746",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-18",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10772",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10772"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2696.08",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-10-19",
+        "event_id": "event_10772",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-19",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2696.08",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-10-19",
+        "event_id": "event_10772",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-19",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10793",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10793"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4341.65",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Quick-service meal",
+        "direction": "debit",
+        "event_date": "2024-10-20",
+        "event_id": "event_10793",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-10-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4341.65",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Quick-service meal",
+        "direction": "debit",
+        "event_date": "2024-10-20",
+        "event_id": "event_10793",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-10-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10747",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10747"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6246.66",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-10-25",
+        "event_id": "event_10747",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6246.66",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-10-25",
+        "event_id": "event_10747",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10773",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10773"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3765.71",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-10-26",
+        "event_id": "event_10773",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-26",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3765.71",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-10-26",
+        "event_id": "event_10773",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-10-26",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10715",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10715"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-11-01",
+        "event_id": "event_10715",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-11-01",
+        "event_id": "event_10715",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10748",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10748"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4500.31",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-11-01",
+        "event_id": "event_10748",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4500.31",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-11-01",
+        "event_id": "event_10748",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10774",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10774"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3272.44",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-11-02",
+        "event_id": "event_10774",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-02",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3272.44",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-11-02",
+        "event_id": "event_10774",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-02",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10794",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10794"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3836.01",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-11-03",
+        "event_id": "event_10794",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-11-03",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3836.01",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-11-03",
+        "event_id": "event_10794",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-11-03",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10716",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10716"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6571.21",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-11-05",
+        "event_id": "event_10716",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6571.21",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-11-05",
+        "event_id": "event_10716",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|utilities|INR|water and power payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10717",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10717"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-11-07",
+        "event_id": "event_10717",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-11-07",
+        "event_id": "event_10717",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|education|INR|child education fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10749",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10749"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4764.16",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-11-08",
+        "event_id": "event_10749",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-08",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4764.16",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-11-08",
+        "event_id": "event_10749",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-08",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10775",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10775"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3420.59",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-11-09",
+        "event_id": "event_10775",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-09",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3420.59",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-11-09",
+        "event_id": "event_10775",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-09",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10718",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10718"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-11-10",
+        "event_id": "event_10718",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-11-10",
+        "event_id": "event_10718",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|debt_repayment|INR|vehicle loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10719",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10719"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-11-10",
+        "event_id": "event_10719",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-11-10",
+        "event_id": "event_10719",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|music_subscription|INR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10720",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10720"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-11-12",
+        "event_id": "event_10720",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-11-12",
+        "event_id": "event_10720",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|delivery_membership|INR|delivery service plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10714",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10714"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-11-15",
+        "event_id": "event_10714",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-11-15",
+        "event_id": "event_10714",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "credit|salary|INR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10750",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10750"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6064.81",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-11-15",
+        "event_id": "event_10750",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6064.81",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-11-15",
+        "event_id": "event_10750",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10776",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10776"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3535.75",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-11-16",
+        "event_id": "event_10776",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-16",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3535.75",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-11-16",
+        "event_id": "event_10776",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-16",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10795",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10795"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5857.79",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-11-17",
+        "event_id": "event_10795",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-11-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5857.79",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-11-17",
+        "event_id": "event_10795",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-11-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10751",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10751"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5415.53",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2024-11-22",
+        "event_id": "event_10751",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-22",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5415.53",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2024-11-22",
+        "event_id": "event_10751",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-22",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10777",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10777"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3490.06",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-11-23",
+        "event_id": "event_10777",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-23",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3490.06",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-11-23",
+        "event_id": "event_10777",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-23",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10752",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10752"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4867.46",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-11-29",
+        "event_id": "event_10752",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-29",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4867.46",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-11-29",
+        "event_id": "event_10752",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-29",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10778",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10778"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3021.07",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-11-30",
+        "event_id": "event_10778",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-30",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3021.07",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-11-30",
+        "event_id": "event_10778",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-11-30",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10722",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10722"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-12-01",
+        "event_id": "event_10722",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2024-12-01",
+        "event_id": "event_10722",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10796",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10796"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3483.86",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-12-01",
+        "event_id": "event_10796",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3483.86",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-12-01",
+        "event_id": "event_10796",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10723",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10723"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6031.33",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-12-05",
+        "event_id": "event_10723",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6031.33",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2024-12-05",
+        "event_id": "event_10723",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|utilities|INR|water and power payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10753",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10753"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6036.99",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-06",
+        "event_id": "event_10753",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6036.99",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-06",
+        "event_id": "event_10753",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-06",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10724",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10724"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-12-07",
+        "event_id": "event_10724",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2024-12-07",
+        "event_id": "event_10724",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|education|INR|child education fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10779",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10779"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2447.21",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-12-07",
+        "event_id": "event_10779",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2447.21",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-12-07",
+        "event_id": "event_10779",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10725",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10725"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-12-10",
+        "event_id": "event_10725",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2024-12-10",
+        "event_id": "event_10725",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|debt_repayment|INR|vehicle loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10726",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10726"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-12-10",
+        "event_id": "event_10726",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-12-10",
+        "event_id": "event_10726",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|music_subscription|INR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10727",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10727"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-12-12",
+        "event_id": "event_10727",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2024-12-12",
+        "event_id": "event_10727",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|delivery_membership|INR|delivery service plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10754",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10754"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5204.82",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-13",
+        "event_id": "event_10754",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-13",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5204.82",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-13",
+        "event_id": "event_10754",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-13",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10780",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10780"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2455.89",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-12-14",
+        "event_id": "event_10780",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-14",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2455.89",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-12-14",
+        "event_id": "event_10780",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-14",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10721",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10721"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-12-15",
+        "event_id": "event_10721",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-12-15",
+        "event_id": "event_10721",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "credit|salary|INR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10797",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10797"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5104.92",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-12-15",
+        "event_id": "event_10797",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5104.92",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-12-15",
+        "event_id": "event_10797",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10755",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10755"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5835.67",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-12-20",
+        "event_id": "event_10755",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5835.67",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-12-20",
+        "event_id": "event_10755",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-20",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10781",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10781"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2728.84",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-12-21",
+        "event_id": "event_10781",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-21",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2728.84",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-12-21",
+        "event_id": "event_10781",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-21",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10756",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10756"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3911.76",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-27",
+        "event_id": "event_10756",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-27",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3911.76",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-12-27",
+        "event_id": "event_10756",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-27",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10782",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10782"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3273.48",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-12-28",
+        "event_id": "event_10782",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-28",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3273.48",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-12-28",
+        "event_id": "event_10782",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-28",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10798",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10798"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5445.75",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-12-29",
+        "event_id": "event_10798",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-29",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5445.75",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2024-12-29",
+        "event_id": "event_10798",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2024-12-29",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10801",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10801"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7440",
+        "category": "work_expense",
+        "currency": "INR",
+        "description": "Reimbursable work expense",
+        "direction": "debit",
+        "event_date": "2024-12-31",
+        "event_id": "event_10801",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "7440",
+        "category": "work_expense",
+        "currency": "INR",
+        "description": "Reimbursable work expense",
+        "direction": "debit",
+        "event_date": "2024-12-31",
+        "event_id": "event_10801",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-12-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10729",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10729"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2025-01-01",
+        "event_id": "event_10729",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2025-01-01",
+        "event_id": "event_10729",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10757",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10757"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5291.28",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-01-03",
+        "event_id": "event_10757",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-03",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5291.28",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2025-01-03",
+        "event_id": "event_10757",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-03",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10783",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10783"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2960.67",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-01-04",
+        "event_id": "event_10783",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-04",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2960.67",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2025-01-04",
+        "event_id": "event_10783",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-04",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10730",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10730"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5489.84",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2025-01-05",
+        "event_id": "event_10730",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5489.84",
+        "category": "utilities",
+        "currency": "INR",
+        "description": "Water and power payment",
+        "direction": "debit",
+        "event_date": "2025-01-05",
+        "event_id": "event_10730",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-05",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|utilities|INR|water and power payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10731",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10731"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2025-01-07",
+        "event_id": "event_10731",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "12160",
+        "category": "education",
+        "currency": "INR",
+        "description": "Child education fee",
+        "direction": "debit",
+        "event_date": "2025-01-07",
+        "event_id": "event_10731",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-07",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|education|INR|child education fee"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10732",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10732"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10732",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "10250",
+        "category": "debt_repayment",
+        "currency": "INR",
+        "description": "Vehicle loan payment",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10732",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|debt_repayment|INR|vehicle loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10733",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10733"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10733",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1375",
+        "category": "music_subscription",
+        "currency": "INR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10733",
+        "event_type": "subscription",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|music_subscription|INR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10758",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10758"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6267.84",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10758",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6267.84",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-10",
+        "event_id": "event_10758",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-10",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10784",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10784"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2854.48",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-01-11",
+        "event_id": "event_10784",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2854.48",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-01-11",
+        "event_id": "event_10784",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-11",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10734",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10734"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2025-01-12",
+        "event_id": "event_10734",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "1120",
+        "category": "delivery_membership",
+        "currency": "INR",
+        "description": "Delivery service plan",
+        "direction": "debit",
+        "event_date": "2025-01-12",
+        "event_id": "event_10734",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|delivery_membership|INR|delivery service plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10799",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10799"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "4883.25",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2025-01-12",
+        "event_id": "event_10799",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2025-01-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "4883.25",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2025-01-12",
+        "event_id": "event_10799",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2025-01-12",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10728",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10728"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-01-15",
+        "event_id": "event_10728",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2025-01-15",
+        "event_id": "event_10728",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-15",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "credit|salary|INR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10759",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10759"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6288.77",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-01-17",
+        "event_id": "event_10759",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6288.77",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2025-01-17",
+        "event_id": "event_10759",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-17",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10785",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10785"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3201.47",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-01-18",
+        "event_id": "event_10785",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-18",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3201.47",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-01-18",
+        "event_id": "event_10785",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-18",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10760",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10760"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5800.94",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-24",
+        "event_id": "event_10760",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-24",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5800.94",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-24",
+        "event_id": "event_10760",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-24",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10786",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10786"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "3748.9",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-01-25",
+        "event_id": "event_10786",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "3748.9",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2025-01-25",
+        "event_id": "event_10786",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-25",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10800",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10800"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "5051.05",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-01-26",
+        "event_id": "event_10800",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2025-01-26",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "5051.05",
+        "category": "dining",
+        "currency": "INR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2025-01-26",
+        "event_id": "event_10800",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "2405",
+        "settlement_date": "2025-01-26",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|dining|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10761",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10761"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "6089.38",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-31",
+        "event_id": "event_10761",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "6089.38",
+        "category": "groceries",
+        "currency": "INR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2025-01-31",
+        "event_id": "event_10761",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|groceries|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10802",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10802"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "7440",
+        "category": "work_expense",
+        "currency": "INR",
+        "description": "Employer expense reimbursement",
+        "direction": "credit",
+        "event_date": "2025-01-30",
+        "event_id": "event_10802",
+        "event_type": "refund",
+        "flexibility": "fixed",
+        "linked_event_id": "event_10801",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "7440",
+        "category": "work_expense",
+        "currency": "INR",
+        "description": "Employer expense reimbursement",
+        "direction": "credit",
+        "event_date": "2025-01-30",
+        "event_id": "event_10802",
+        "event_type": "refund",
+        "flexibility": "fixed",
+        "linked_event_id": "event_10801",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-01-31",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10735",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10735"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2025-02-01",
+        "event_id": "event_10735",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "41100",
+        "category": "rent",
+        "currency": "INR",
+        "description": "Residential rent payment",
+        "direction": "debit",
+        "event_date": "2025-02-01",
+        "event_id": "event_10735",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|rent|INR|residential rent payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_10787",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_10787"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2899.96",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-02-01",
+        "event_id": "event_10787",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "2899.96",
+        "category": "transport",
+        "currency": "INR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2025-02-01",
+        "event_id": "event_10787",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-01",
+        "status": "settled",
+        "user_id": "user_116"
+      },
+      "recurring_series": "debit|transport|INR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "124000",
+        "cash_date": "2025-02-15",
+        "event_id": "event_10803",
+        "exchange_rate_date": "2025-02-15",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_10803"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2025-02-15",
+        "event_id": "event_10803",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-15",
+        "status": "scheduled",
+        "user_id": "user_116"
+      },
+      "original": {
+        "amount": "124000",
+        "category": "salary",
+        "currency": "INR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2025-02-15",
+        "event_id": "event_10803",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2025-02-15",
+        "status": "scheduled",
+        "user_id": "user_116"
+      },
+      "recurring_series": null
+    }
+  ],
+  "offers": [
+    {
+      "eligibility_rejections": [
+        "user does not accept method"
+      ],
+      "option": {
+        "financing_fee": "0",
+        "first_payment_date": "2025-02-03",
+        "number_of_payments": 1,
+        "payment_amount": "241200",
+        "payment_frequency_days": null,
+        "payment_method": "full_payment",
+        "payment_option_id": "payment_option_328",
+        "request_id": "request_116",
+        "total_payable_amount": "241200"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "24120",
+        "first_payment_date": "2025-02-17",
+        "number_of_payments": 15,
+        "payment_amount": "17688",
+        "payment_frequency_days": 30,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_329",
+        "request_id": "request_116",
+        "total_payable_amount": "265320"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "53064",
+        "first_payment_date": "2025-02-06",
+        "number_of_payments": 24,
+        "payment_amount": "12261",
+        "payment_frequency_days": 28,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_330",
+        "request_id": "request_116",
+        "total_payable_amount": "294264"
+      }
+    }
+  ],
+  "profile": {
+    "current_available_balance": "138375",
+    "expense_categories_to_protect": [
+      "rent",
+      "education",
+      "groceries",
+      "debt_repayment"
+    ],
+    "expense_categories_user_is_willing_to_reduce": [
+      "dining"
+    ],
+    "expense_categories_user_is_willing_to_stop": [
+      "delivery_membership"
+    ],
+    "financial_priorities": [
+      "education",
+      "debt_repayment"
+    ],
+    "home_currency": "INR",
+    "max_installment_months": 12,
+    "minimum_balance_to_keep": "80300",
+    "payment_methods_user_will_consider": [
+      "partial_payment",
+      "installments"
+    ],
+    "user_id": "user_116"
+  },
+  "request": {
+    "allows_partial_payment": false,
+    "desired_completion_date": "2025-04-16",
+    "request_date": "2025-02-03",
+    "request_id": "request_116",
+    "request_text": "The amount I want to send is INR 241,200. Should I send the full amount, send part of it, or wait?",
+    "request_type": "family_transfer",
+    "requested_amount": "241200",
+    "user_id": "user_116"
+  },
+  "selected_plan_replay": [
+    {
+      "balance": "132343.67",
+      "date": "2025-02-05",
+      "delta": "-6031.33",
+      "headroom": "52043.67",
+      "source": "series:event_10730"
+    },
+    {
+      "balance": "120183.67",
+      "date": "2025-02-07",
+      "delta": "-12160",
+      "headroom": "39883.67",
+      "source": "series:event_10731"
+    },
+    {
+      "balance": "114118.86",
+      "date": "2025-02-07",
+      "delta": "-6064.81",
+      "headroom": "33818.86",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "110845.38",
+      "date": "2025-02-08",
+      "delta": "-3273.48",
+      "headroom": "30545.38",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "105740.46",
+      "date": "2025-02-09",
+      "delta": "-5104.92",
+      "headroom": "25440.46",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "95490.46",
+      "date": "2025-02-10",
+      "delta": "-10250",
+      "headroom": "15190.46",
+      "source": "series:event_10732"
+    },
+    {
+      "balance": "94115.46",
+      "date": "2025-02-10",
+      "delta": "-1375",
+      "headroom": "13815.46",
+      "source": "series:event_10733"
+    },
+    {
+      "balance": "92995.46",
+      "date": "2025-02-12",
+      "delta": "-1120",
+      "headroom": "12695.46",
+      "source": "series:event_10734"
+    },
+    {
+      "balance": "86930.65",
+      "date": "2025-02-14",
+      "delta": "-6064.81",
+      "headroom": "6630.65",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "210930.65",
+      "date": "2025-02-15",
+      "delta": "124000",
+      "headroom": "130630.65",
+      "source": "event_10803"
+    },
+    {
+      "balance": "207657.17",
+      "date": "2025-02-15",
+      "delta": "-3273.48",
+      "headroom": "127357.17",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "201592.36",
+      "date": "2025-02-21",
+      "delta": "-6064.81",
+      "headroom": "121292.36",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "198318.88",
+      "date": "2025-02-22",
+      "delta": "-3273.48",
+      "headroom": "118018.88",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "193213.96",
+      "date": "2025-02-23",
+      "delta": "-5104.92",
+      "headroom": "112913.96",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "187149.15",
+      "date": "2025-02-28",
+      "delta": "-6064.81",
+      "headroom": "106849.15",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "146049.15",
+      "date": "2025-03-01",
+      "delta": "-41100",
+      "headroom": "65749.15",
+      "source": "series:event_10735"
+    },
+    {
+      "balance": "142775.67",
+      "date": "2025-03-01",
+      "delta": "-3273.48",
+      "headroom": "62475.67",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "136744.34",
+      "date": "2025-03-05",
+      "delta": "-6031.33",
+      "headroom": "56444.34",
+      "source": "series:event_10730"
+    },
+    {
+      "balance": "124584.34",
+      "date": "2025-03-07",
+      "delta": "-12160",
+      "headroom": "44284.34",
+      "source": "series:event_10731"
+    },
+    {
+      "balance": "118519.53",
+      "date": "2025-03-07",
+      "delta": "-6064.81",
+      "headroom": "38219.53",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "115246.05",
+      "date": "2025-03-08",
+      "delta": "-3273.48",
+      "headroom": "34946.05",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "110141.13",
+      "date": "2025-03-09",
+      "delta": "-5104.92",
+      "headroom": "29841.13",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "99891.13",
+      "date": "2025-03-10",
+      "delta": "-10250",
+      "headroom": "19591.13",
+      "source": "series:event_10732"
+    },
+    {
+      "balance": "98516.13",
+      "date": "2025-03-10",
+      "delta": "-1375",
+      "headroom": "18216.13",
+      "source": "series:event_10733"
+    },
+    {
+      "balance": "97396.13",
+      "date": "2025-03-12",
+      "delta": "-1120",
+      "headroom": "17096.13",
+      "source": "series:event_10734"
+    },
+    {
+      "balance": "91331.32",
+      "date": "2025-03-14",
+      "delta": "-6064.81",
+      "headroom": "11031.32",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "215331.32",
+      "date": "2025-03-15",
+      "delta": "124000",
+      "headroom": "135031.32",
+      "source": "series:event_10728"
+    },
+    {
+      "balance": "212057.84",
+      "date": "2025-03-15",
+      "delta": "-3273.48",
+      "headroom": "131757.84",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "205993.03",
+      "date": "2025-03-21",
+      "delta": "-6064.81",
+      "headroom": "125693.03",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "202719.55",
+      "date": "2025-03-22",
+      "delta": "-3273.48",
+      "headroom": "122419.55",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "197614.63",
+      "date": "2025-03-23",
+      "delta": "-5104.92",
+      "headroom": "117314.63",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "191549.82",
+      "date": "2025-03-28",
+      "delta": "-6064.81",
+      "headroom": "111249.82",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "188276.34",
+      "date": "2025-03-29",
+      "delta": "-3273.48",
+      "headroom": "107976.34",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "147176.34",
+      "date": "2025-04-01",
+      "delta": "-41100",
+      "headroom": "66876.34",
+      "source": "series:event_10735"
+    },
+    {
+      "balance": "141111.53",
+      "date": "2025-04-04",
+      "delta": "-6064.81",
+      "headroom": "60811.53",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "135080.20",
+      "date": "2025-04-05",
+      "delta": "-6031.33",
+      "headroom": "54780.20",
+      "source": "series:event_10730"
+    },
+    {
+      "balance": "131806.72",
+      "date": "2025-04-05",
+      "delta": "-3273.48",
+      "headroom": "51506.72",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "126701.80",
+      "date": "2025-04-06",
+      "delta": "-5104.92",
+      "headroom": "46401.80",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "114541.80",
+      "date": "2025-04-07",
+      "delta": "-12160",
+      "headroom": "34241.80",
+      "source": "series:event_10731"
+    },
+    {
+      "balance": "104291.80",
+      "date": "2025-04-10",
+      "delta": "-10250",
+      "headroom": "23991.80",
+      "source": "series:event_10732"
+    },
+    {
+      "balance": "102916.80",
+      "date": "2025-04-10",
+      "delta": "-1375",
+      "headroom": "22616.80",
+      "source": "series:event_10733"
+    },
+    {
+      "balance": "96851.99",
+      "date": "2025-04-11",
+      "delta": "-6064.81",
+      "headroom": "16551.99",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "95731.99",
+      "date": "2025-04-12",
+      "delta": "-1120",
+      "headroom": "15431.99",
+      "source": "series:event_10734"
+    },
+    {
+      "balance": "92458.51",
+      "date": "2025-04-12",
+      "delta": "-3273.48",
+      "headroom": "12158.51",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "216458.51",
+      "date": "2025-04-15",
+      "delta": "124000",
+      "headroom": "136158.51",
+      "source": "series:event_10728"
+    },
+    {
+      "balance": "210393.70",
+      "date": "2025-04-18",
+      "delta": "-6064.81",
+      "headroom": "130093.70",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "207120.22",
+      "date": "2025-04-19",
+      "delta": "-3273.48",
+      "headroom": "126820.22",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "202015.30",
+      "date": "2025-04-20",
+      "delta": "-5104.92",
+      "headroom": "121715.30",
+      "source": "series:event_10800"
+    },
+    {
+      "balance": "195950.49",
+      "date": "2025-04-25",
+      "delta": "-6064.81",
+      "headroom": "115650.49",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "192677.01",
+      "date": "2025-04-26",
+      "delta": "-3273.48",
+      "headroom": "112377.01",
+      "source": "series:event_10787"
+    },
+    {
+      "balance": "151577.01",
+      "date": "2025-05-01",
+      "delta": "-41100",
+      "headroom": "71277.01",
+      "source": "series:event_10735"
+    },
+    {
+      "balance": "145512.20",
+      "date": "2025-05-02",
+      "delta": "-6064.81",
+      "headroom": "65212.20",
+      "source": "series:event_10761"
+    },
+    {
+      "balance": "142238.72",
+      "date": "2025-05-03",
+      "delta": "-3273.48",
+      "headroom": "61938.72",
+      "source": "series:event_10787"
+    }
+  ]
+}

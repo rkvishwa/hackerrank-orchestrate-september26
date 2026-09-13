@@ -1,0 +1,3537 @@
+{
+  "accounting_coverage": {
+    "accounted_records": 59,
+    "explicit_records_verified_once": 2,
+    "required_explicit_records": 2,
+    "source_records": 59,
+    "unique_recurring_members": 52,
+    "unquantified_commitments": []
+  },
+  "baseline": {
+    "baseline_shortfall": false,
+    "binding_cashflow": {
+      "amount": "342.1",
+      "balance_after": "1113.24",
+      "category": "rent",
+      "date": "2024-12-04",
+      "direction": "debit",
+      "headroom_after": "313.24",
+      "source": "series:event_20479"
+    },
+    "headroom_at_minimum": "313.24",
+    "image_amounts": {},
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|EUR|new employer payroll",
+          "credit|salary|EUR|previous employer payroll"
+        ],
+        "event_id": "event_20512",
+        "matched_series_key": null,
+        "reason": "ambiguous confirmation; no employment amendment or new recurrence",
+        "source_event_ids": [
+          "event_20454",
+          "event_20459",
+          "event_20464",
+          "event_20469",
+          "event_20474"
+        ]
+      }
+    ],
+    "independent_capacity": {
+      "amount": "313.24",
+      "earliest_date": "",
+      "method": "daily cumulative balances and suffix minima; independent of payment simulation"
+    },
+    "ledger": [
+      {
+        "amount": "63.09",
+        "balance_after": "2192.42",
+        "category": "utilities",
+        "date": "2024-09-08",
+        "direction": "debit",
+        "headroom_after": "1392.42",
+        "source": "series:event_20476"
+      },
+      {
+        "amount": "64",
+        "balance_after": "2128.42",
+        "category": "healthcare",
+        "date": "2024-09-11",
+        "direction": "debit",
+        "headroom_after": "1328.42",
+        "source": "event_20511"
+      },
+      {
+        "amount": "165",
+        "balance_after": "1963.42",
+        "category": "debt_repayment",
+        "date": "2024-09-13",
+        "direction": "debit",
+        "headroom_after": "1163.42",
+        "source": "series:event_20477"
+      },
+      {
+        "amount": "12",
+        "balance_after": "1951.42",
+        "category": "music_subscription",
+        "date": "2024-09-13",
+        "direction": "debit",
+        "headroom_after": "1151.42",
+        "source": "series:event_20478"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "1888.25",
+        "category": "groceries",
+        "date": "2024-09-14",
+        "direction": "debit",
+        "headroom_after": "1088.25",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "1309",
+        "balance_after": "3197.25",
+        "category": "salary",
+        "date": "2024-09-15",
+        "direction": "credit",
+        "headroom_after": "2397.25",
+        "source": "event_20512"
+      },
+      {
+        "amount": "35.81",
+        "balance_after": "3161.44",
+        "category": "dining",
+        "date": "2024-09-18",
+        "direction": "debit",
+        "headroom_after": "2361.44",
+        "source": "series:event_20510"
+      },
+      {
+        "amount": "29.61",
+        "balance_after": "3131.83",
+        "category": "transport",
+        "date": "2024-09-22",
+        "direction": "debit",
+        "headroom_after": "2331.83",
+        "source": "series:event_20501"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "3068.66",
+        "category": "groceries",
+        "date": "2024-09-28",
+        "direction": "debit",
+        "headroom_after": "2268.66",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "342.1",
+        "balance_after": "2726.56",
+        "category": "rent",
+        "date": "2024-10-04",
+        "direction": "debit",
+        "headroom_after": "1926.56",
+        "source": "series:event_20479"
+      },
+      {
+        "amount": "63.09",
+        "balance_after": "2663.47",
+        "category": "utilities",
+        "date": "2024-10-08",
+        "direction": "debit",
+        "headroom_after": "1863.47",
+        "source": "series:event_20476"
+      },
+      {
+        "amount": "35.81",
+        "balance_after": "2627.66",
+        "category": "dining",
+        "date": "2024-10-09",
+        "direction": "debit",
+        "headroom_after": "1827.66",
+        "source": "series:event_20510"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "2564.49",
+        "category": "groceries",
+        "date": "2024-10-12",
+        "direction": "debit",
+        "headroom_after": "1764.49",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "165",
+        "balance_after": "2399.49",
+        "category": "debt_repayment",
+        "date": "2024-10-13",
+        "direction": "debit",
+        "headroom_after": "1599.49",
+        "source": "series:event_20477"
+      },
+      {
+        "amount": "12",
+        "balance_after": "2387.49",
+        "category": "music_subscription",
+        "date": "2024-10-13",
+        "direction": "debit",
+        "headroom_after": "1587.49",
+        "source": "series:event_20478"
+      },
+      {
+        "amount": "29.61",
+        "balance_after": "2357.88",
+        "category": "transport",
+        "date": "2024-10-13",
+        "direction": "debit",
+        "headroom_after": "1557.88",
+        "source": "series:event_20501"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "2294.71",
+        "category": "groceries",
+        "date": "2024-10-26",
+        "direction": "debit",
+        "headroom_after": "1494.71",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "35.81",
+        "balance_after": "2258.90",
+        "category": "dining",
+        "date": "2024-10-30",
+        "direction": "debit",
+        "headroom_after": "1458.90",
+        "source": "series:event_20510"
+      },
+      {
+        "amount": "29.61",
+        "balance_after": "2229.29",
+        "category": "transport",
+        "date": "2024-11-03",
+        "direction": "debit",
+        "headroom_after": "1429.29",
+        "source": "series:event_20501"
+      },
+      {
+        "amount": "342.1",
+        "balance_after": "1887.19",
+        "category": "rent",
+        "date": "2024-11-04",
+        "direction": "debit",
+        "headroom_after": "1087.19",
+        "source": "series:event_20479"
+      },
+      {
+        "amount": "63.09",
+        "balance_after": "1824.10",
+        "category": "utilities",
+        "date": "2024-11-08",
+        "direction": "debit",
+        "headroom_after": "1024.10",
+        "source": "series:event_20476"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "1760.93",
+        "category": "groceries",
+        "date": "2024-11-09",
+        "direction": "debit",
+        "headroom_after": "960.93",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "165",
+        "balance_after": "1595.93",
+        "category": "debt_repayment",
+        "date": "2024-11-13",
+        "direction": "debit",
+        "headroom_after": "795.93",
+        "source": "series:event_20477"
+      },
+      {
+        "amount": "12",
+        "balance_after": "1583.93",
+        "category": "music_subscription",
+        "date": "2024-11-13",
+        "direction": "debit",
+        "headroom_after": "783.93",
+        "source": "series:event_20478"
+      },
+      {
+        "amount": "35.81",
+        "balance_after": "1548.12",
+        "category": "dining",
+        "date": "2024-11-20",
+        "direction": "debit",
+        "headroom_after": "748.12",
+        "source": "series:event_20510"
+      },
+      {
+        "amount": "63.17",
+        "balance_after": "1484.95",
+        "category": "groceries",
+        "date": "2024-11-23",
+        "direction": "debit",
+        "headroom_after": "684.95",
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "29.61",
+        "balance_after": "1455.34",
+        "category": "transport",
+        "date": "2024-11-24",
+        "direction": "debit",
+        "headroom_after": "655.34",
+        "source": "series:event_20501"
+      },
+      {
+        "amount": "342.1",
+        "balance_after": "1113.24",
+        "category": "rent",
+        "date": "2024-12-04",
+        "direction": "debit",
+        "headroom_after": "313.24",
+        "source": "series:event_20479"
+      }
+    ],
+    "minimum_balance": "1113.24",
+    "opening_balance": "2255.51",
+    "recurring_estimates": [
+      {
+        "amount": "165",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "165",
+        "history_mean": "165",
+        "history_min": "165",
+        "identity": "debit|debt_repayment|EUR|personal loan payment",
+        "member_event_ids": [
+          "event_20457",
+          "event_20462",
+          "event_20467",
+          "event_20472",
+          "event_20477"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "165",
+          "165",
+          "165",
+          "165",
+          "165"
+        ],
+        "source": "series:event_20477"
+      },
+      {
+        "amount": "35.81",
+        "amount_varies_in_history": true,
+        "cadence_days": 21,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 9,
+        "history_max": "45.66",
+        "history_mean": "34.94111111111111111111111111",
+        "history_min": "28.37",
+        "identity": "debit|dining|EUR|variable category spending",
+        "member_event_ids": [
+          "event_20502",
+          "event_20503",
+          "event_20504",
+          "event_20505",
+          "event_20506",
+          "event_20507",
+          "event_20508",
+          "event_20509",
+          "event_20510"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "45.66",
+          "41.23",
+          "33.08",
+          "35.81",
+          "28.37",
+          "28.69",
+          "31.94",
+          "35.56",
+          "34.13"
+        ],
+        "source": "series:event_20510"
+      },
+      {
+        "amount": "63.17",
+        "amount_varies_in_history": true,
+        "cadence_days": 14,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 13,
+        "history_max": "69.63",
+        "history_mean": "56.98076923076923076923076923",
+        "history_min": "43",
+        "identity": "debit|groceries|EUR|variable category spending",
+        "member_event_ids": [
+          "event_20480",
+          "event_20481",
+          "event_20482",
+          "event_20483",
+          "event_20484",
+          "event_20485",
+          "event_20486",
+          "event_20487",
+          "event_20488",
+          "event_20489",
+          "event_20490",
+          "event_20491",
+          "event_20492"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "68.58",
+          "48.36",
+          "61.66",
+          "63.66",
+          "43",
+          "63.17",
+          "47.54",
+          "61.58",
+          "57.65",
+          "59.05",
+          "69.63",
+          "53.26"
+        ],
+        "source": "series:event_20492"
+      },
+      {
+        "amount": "12",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "12",
+        "history_mean": "12",
+        "history_min": "12",
+        "identity": "debit|music_subscription|EUR|music service subscription",
+        "member_event_ids": [
+          "event_20458",
+          "event_20463",
+          "event_20468",
+          "event_20473",
+          "event_20478"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "12",
+          "12",
+          "12",
+          "12",
+          "12"
+        ],
+        "source": "series:event_20478"
+      },
+      {
+        "amount": "342.1",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 6,
+        "history_max": "342.1",
+        "history_mean": "342.1",
+        "history_min": "342.1",
+        "identity": "debit|rent|EUR|monthly rent",
+        "member_event_ids": [
+          "event_20455",
+          "event_20460",
+          "event_20465",
+          "event_20470",
+          "event_20475",
+          "event_20479"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "342.1",
+          "342.1",
+          "342.1",
+          "342.1",
+          "342.1",
+          "342.1"
+        ],
+        "source": "series:event_20479"
+      },
+      {
+        "amount": "29.61",
+        "amount_varies_in_history": true,
+        "cadence_days": 21,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 9,
+        "history_max": "30.57",
+        "history_mean": "24.11444444444444444444444444",
+        "history_min": "17.46",
+        "identity": "debit|transport|EUR|variable category spending",
+        "member_event_ids": [
+          "event_20493",
+          "event_20494",
+          "event_20495",
+          "event_20496",
+          "event_20497",
+          "event_20498",
+          "event_20499",
+          "event_20500",
+          "event_20501"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "17.46",
+          "24.22",
+          "18.33",
+          "19.6",
+          "20.83",
+          "25.87",
+          "30.57",
+          "30.54",
+          "29.61"
+        ],
+        "source": "series:event_20501"
+      },
+      {
+        "amount": "63.09",
+        "amount_varies_in_history": true,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "EUR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 5,
+        "history_max": "65.86",
+        "history_mean": "61.408",
+        "history_min": "57.45",
+        "identity": "debit|utilities|EUR|household utility payment",
+        "member_event_ids": [
+          "event_20456",
+          "event_20461",
+          "event_20466",
+          "event_20471",
+          "event_20476"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "63.09",
+          "57.45",
+          "62.99",
+          "57.65",
+          "65.86"
+        ],
+        "source": "series:event_20476"
+      }
+    ],
+    "unquantified_commitments": []
+  },
+  "candidates": [
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "898.7",
+            "payment_date": "2024-09-07"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [],
+        "total_paid": "898.7"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "898.7",
+            "payment_date": "2024-09-07"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "reduce_to",
+            "event_id": "event_20510",
+            "new_amount": "18.5"
+          }
+        ],
+        "total_paid": "898.7"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "898.7",
+            "payment_date": "2024-09-07"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_20478",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "898.7"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "898.7",
+            "payment_date": "2024-09-07"
+          }
+        ],
+        "method": "full_payment",
+        "payment_option_id": null,
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "reduce_to",
+            "event_id": "event_20510",
+            "new_amount": "18.5"
+          },
+          {
+            "action": "stop",
+            "event_id": "event_20478",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "898.7"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    }
+  ],
+  "evidence": [],
+  "history": [
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20502",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20502"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "45.66",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-03-13",
+        "event_id": "event_20502",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-03-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "45.66",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-03-13",
+        "event_id": "event_20502",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-03-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20480",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20480"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "43.61",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-03-16",
+        "event_id": "event_20480",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-16",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "43.61",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-03-16",
+        "event_id": "event_20480",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-16",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20493",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20493"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "17.46",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-03-17",
+        "event_id": "event_20493",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "17.46",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-03-17",
+        "event_id": "event_20493",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20481",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20481"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "68.58",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-03-30",
+        "event_id": "event_20481",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-30",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "68.58",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-03-30",
+        "event_id": "event_20481",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-30",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20503",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20503"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "41.23",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-04-03",
+        "event_id": "event_20503",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-04-03",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "41.23",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-04-03",
+        "event_id": "event_20503",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-04-03",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20455",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20455"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-04-04",
+        "event_id": "event_20455",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-04-04",
+        "event_id": "event_20455",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20494",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20494"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "24.22",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-04-07",
+        "event_id": "event_20494",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-07",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "24.22",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-04-07",
+        "event_id": "event_20494",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-07",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20456",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20456"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "63.09",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_20456",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "63.09",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_20456",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|utilities|EUR|household utility payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20457",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20457"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20457",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20457",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|debt_repayment|EUR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20458",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20458"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20458",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20458",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|music_subscription|EUR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20482",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20482"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "48.36",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20482",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "48.36",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-04-13",
+        "event_id": "event_20482",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20454",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20454"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-04-15",
+        "event_id": "event_20454",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-04-15",
+        "event_id": "event_20454",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20504",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20504"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "33.08",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-04-24",
+        "event_id": "event_20504",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-04-24",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "33.08",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-04-24",
+        "event_id": "event_20504",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-04-24",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20483",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20483"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "61.66",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-04-27",
+        "event_id": "event_20483",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-27",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "61.66",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-04-27",
+        "event_id": "event_20483",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-27",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20495",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20495"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "18.33",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-28",
+        "event_id": "event_20495",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-28",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "18.33",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-28",
+        "event_id": "event_20495",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-28",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20460",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20460"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-05-04",
+        "event_id": "event_20460",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-05-04",
+        "event_id": "event_20460",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20461",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20461"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "57.45",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-05-08",
+        "event_id": "event_20461",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "57.45",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-05-08",
+        "event_id": "event_20461",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|utilities|EUR|household utility payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20484",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20484"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "63.66",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_20484",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "63.66",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_20484",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20462",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20462"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_20462",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_20462",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|debt_repayment|EUR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20463",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20463"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_20463",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_20463",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|music_subscription|EUR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20459",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20459"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-05-15",
+        "event_id": "event_20459",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-05-15",
+        "event_id": "event_20459",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20505",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20505"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "35.81",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Quick-service meal",
+        "direction": "debit",
+        "event_date": "2024-05-15",
+        "event_id": "event_20505",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "35.81",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Quick-service meal",
+        "direction": "debit",
+        "event_date": "2024-05-15",
+        "event_id": "event_20505",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20496",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20496"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "19.6",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-05-19",
+        "event_id": "event_20496",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-19",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "19.6",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-05-19",
+        "event_id": "event_20496",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-19",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20485",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20485"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "43",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-05-25",
+        "event_id": "event_20485",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-25",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "43",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-05-25",
+        "event_id": "event_20485",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-25",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20465",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20465"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-06-04",
+        "event_id": "event_20465",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-06-04",
+        "event_id": "event_20465",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20506",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20506"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "28.37",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_20506",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-06-05",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "28.37",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_20506",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-06-05",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20466",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20466"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "62.99",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-06-08",
+        "event_id": "event_20466",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "62.99",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-06-08",
+        "event_id": "event_20466",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|utilities|EUR|household utility payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20486",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20486"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "63.17",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-06-08",
+        "event_id": "event_20486",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "63.17",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-06-08",
+        "event_id": "event_20486",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20497",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20497"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "20.83",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-06-09",
+        "event_id": "event_20497",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-09",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "20.83",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-06-09",
+        "event_id": "event_20497",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-09",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20467",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20467"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-06-13",
+        "event_id": "event_20467",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-06-13",
+        "event_id": "event_20467",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|debt_repayment|EUR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20468",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20468"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-06-13",
+        "event_id": "event_20468",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-06-13",
+        "event_id": "event_20468",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|music_subscription|EUR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20464",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20464"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-06-15",
+        "event_id": "event_20464",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-06-15",
+        "event_id": "event_20464",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20487",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20487"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "47.54",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-06-22",
+        "event_id": "event_20487",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-22",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "47.54",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-06-22",
+        "event_id": "event_20487",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-22",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20507",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20507"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "28.69",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-06-26",
+        "event_id": "event_20507",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-06-26",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "28.69",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-06-26",
+        "event_id": "event_20507",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-06-26",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20498",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20498"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "25.87",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-06-30",
+        "event_id": "event_20498",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-30",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "25.87",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-06-30",
+        "event_id": "event_20498",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-30",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20470",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20470"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-07-04",
+        "event_id": "event_20470",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-07-04",
+        "event_id": "event_20470",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20488",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20488"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "61.58",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-07-06",
+        "event_id": "event_20488",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-06",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "61.58",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-07-06",
+        "event_id": "event_20488",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-06",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20471",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20471"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "57.65",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-07-08",
+        "event_id": "event_20471",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "57.65",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-07-08",
+        "event_id": "event_20471",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|utilities|EUR|household utility payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20472",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20472"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-07-13",
+        "event_id": "event_20472",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-07-13",
+        "event_id": "event_20472",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|debt_repayment|EUR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20473",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20473"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-07-13",
+        "event_id": "event_20473",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-07-13",
+        "event_id": "event_20473",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|music_subscription|EUR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20469",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20469"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-07-15",
+        "event_id": "event_20469",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Previous employer payroll",
+        "direction": "credit",
+        "event_date": "2024-07-15",
+        "event_id": "event_20469",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20508",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20508"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "31.94",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-07-17",
+        "event_id": "event_20508",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-07-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "31.94",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-07-17",
+        "event_id": "event_20508",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-07-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20489",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20489"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "57.65",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-07-20",
+        "event_id": "event_20489",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-20",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "57.65",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-07-20",
+        "event_id": "event_20489",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-20",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20499",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20499"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "30.57",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-07-21",
+        "event_id": "event_20499",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-21",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "30.57",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-07-21",
+        "event_id": "event_20499",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-07-21",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20490",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20490"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "59.05",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-08-03",
+        "event_id": "event_20490",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-03",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "59.05",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-08-03",
+        "event_id": "event_20490",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-03",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20475",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20475"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-08-04",
+        "event_id": "event_20475",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-08-04",
+        "event_id": "event_20475",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20509",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20509"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "35.56",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-08-07",
+        "event_id": "event_20509",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-08-07",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "35.56",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-08-07",
+        "event_id": "event_20509",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-08-07",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20476",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20476"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "65.86",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-08-08",
+        "event_id": "event_20476",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "65.86",
+        "category": "utilities",
+        "currency": "EUR",
+        "description": "Household utility payment",
+        "direction": "debit",
+        "event_date": "2024-08-08",
+        "event_id": "event_20476",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-08",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|utilities|EUR|household utility payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20500",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20500"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "30.54",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-08-11",
+        "event_id": "event_20500",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-11",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "30.54",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-08-11",
+        "event_id": "event_20500",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-11",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20477",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20477"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-08-13",
+        "event_id": "event_20477",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "165",
+        "category": "debt_repayment",
+        "currency": "EUR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-08-13",
+        "event_id": "event_20477",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|debt_repayment|EUR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20478",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20478"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-08-13",
+        "event_id": "event_20478",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "12",
+        "category": "music_subscription",
+        "currency": "EUR",
+        "description": "Music service subscription",
+        "direction": "debit",
+        "event_date": "2024-08-13",
+        "event_id": "event_20478",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-13",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|music_subscription|EUR|music service subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20474",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20474"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "New employer payroll",
+        "direction": "credit",
+        "event_date": "2024-08-15",
+        "event_id": "event_20474",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "New employer payroll",
+        "direction": "credit",
+        "event_date": "2024-08-15",
+        "event_id": "event_20474",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-15",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20491",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20491"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "69.63",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-08-17",
+        "event_id": "event_20491",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "69.63",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-08-17",
+        "event_id": "event_20491",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-17",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20510",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20510"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "34.13",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-08-28",
+        "event_id": "event_20510",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-08-28",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "34.13",
+        "category": "dining",
+        "currency": "EUR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-08-28",
+        "event_id": "event_20510",
+        "event_type": "expense",
+        "flexibility": "reducible",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "18.5",
+        "settlement_date": "2024-08-28",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|dining|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20492",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20492"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "53.26",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-08-31",
+        "event_id": "event_20492",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-31",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "53.26",
+        "category": "groceries",
+        "currency": "EUR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-08-31",
+        "event_id": "event_20492",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-08-31",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|groceries|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20501",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20501"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "29.61",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-09-01",
+        "event_id": "event_20501",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-01",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "29.61",
+        "category": "transport",
+        "currency": "EUR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-09-01",
+        "event_id": "event_20501",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-01",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|transport|EUR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_20479",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_20479"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-09-04",
+        "event_id": "event_20479",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "342.1",
+        "category": "rent",
+        "currency": "EUR",
+        "description": "Monthly rent",
+        "direction": "debit",
+        "event_date": "2024-09-04",
+        "event_id": "event_20479",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-04",
+        "status": "settled",
+        "user_id": "user_223"
+      },
+      "recurring_series": "debit|rent|EUR|monthly rent"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "64",
+        "cash_date": "2024-09-11",
+        "event_id": "event_20511",
+        "exchange_rate_date": "2024-09-11",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_20511"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "64",
+        "category": "healthcare",
+        "currency": "EUR",
+        "description": "Pending pharmacy card charge",
+        "direction": "debit",
+        "event_date": "2024-09-06",
+        "event_id": "event_20511",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-11",
+        "status": "pending",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "64",
+        "category": "healthcare",
+        "currency": "EUR",
+        "description": "Pending pharmacy card charge",
+        "direction": "debit",
+        "event_date": "2024-09-06",
+        "event_id": "event_20511",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-11",
+        "status": "pending",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "1309",
+        "cash_date": "2024-09-15",
+        "event_id": "event_20512",
+        "exchange_rate_date": "2024-09-15",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_20512"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2024-09-15",
+        "event_id": "event_20512",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-15",
+        "status": "scheduled",
+        "user_id": "user_223"
+      },
+      "original": {
+        "amount": "1309",
+        "category": "salary",
+        "currency": "EUR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2024-09-15",
+        "event_id": "event_20512",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-09-15",
+        "status": "scheduled",
+        "user_id": "user_223"
+      },
+      "recurring_series": null
+    }
+  ],
+  "offers": [
+    {
+      "eligibility_rejections": [],
+      "option": {
+        "financing_fee": "0",
+        "first_payment_date": "2024-09-07",
+        "number_of_payments": 1,
+        "payment_amount": "898.7",
+        "payment_frequency_days": null,
+        "payment_method": "full_payment",
+        "payment_option_id": "payment_option_641",
+        "request_id": "request_223",
+        "total_payable_amount": "898.7"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "user does not accept method",
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "161.8",
+        "first_payment_date": "2024-09-14",
+        "number_of_payments": 21,
+        "payment_amount": "50.5",
+        "payment_frequency_days": 28,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_642",
+        "request_id": "request_223",
+        "total_payable_amount": "1060.5"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "user does not accept method",
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "71.92",
+        "first_payment_date": "2024-09-21",
+        "number_of_payments": 6,
+        "payment_amount": "161.77",
+        "payment_frequency_days": 30,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_643",
+        "request_id": "request_223",
+        "total_payable_amount": "970.62"
+      }
+    }
+  ],
+  "profile": {
+    "current_available_balance": "2255.51",
+    "expense_categories_to_protect": [
+      "rent",
+      "utilities",
+      "debt_repayment"
+    ],
+    "expense_categories_user_is_willing_to_reduce": [
+      "dining"
+    ],
+    "expense_categories_user_is_willing_to_stop": [
+      "music_subscription"
+    ],
+    "financial_priorities": [
+      "debt_repayment",
+      "emergency_savings"
+    ],
+    "home_currency": "EUR",
+    "max_installment_months": null,
+    "minimum_balance_to_keep": "800",
+    "payment_methods_user_will_consider": [
+      "full_payment"
+    ],
+    "user_id": "user_223"
+  },
+  "request": {
+    "allows_partial_payment": true,
+    "desired_completion_date": "2024-10-20",
+    "request_date": "2024-09-07",
+    "request_id": "request_223",
+    "request_text": "Is the laptop affordable right now, or should I wait? I need to decide by 20 October 2024. The laptop costs EUR 898.70.",
+    "request_type": "purchase",
+    "requested_amount": "898.7",
+    "user_id": "user_223"
+  },
+  "selected_plan_replay": [
+    {
+      "balance": "2192.42",
+      "date": "2024-09-08",
+      "delta": "-63.09",
+      "headroom": "1392.42",
+      "source": "series:event_20476"
+    },
+    {
+      "balance": "2128.42",
+      "date": "2024-09-11",
+      "delta": "-64",
+      "headroom": "1328.42",
+      "source": "event_20511"
+    },
+    {
+      "balance": "1963.42",
+      "date": "2024-09-13",
+      "delta": "-165",
+      "headroom": "1163.42",
+      "source": "series:event_20477"
+    },
+    {
+      "balance": "1951.42",
+      "date": "2024-09-13",
+      "delta": "-12",
+      "headroom": "1151.42",
+      "source": "series:event_20478"
+    },
+    {
+      "balance": "1888.25",
+      "date": "2024-09-14",
+      "delta": "-63.17",
+      "headroom": "1088.25",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "3197.25",
+      "date": "2024-09-15",
+      "delta": "1309",
+      "headroom": "2397.25",
+      "source": "event_20512"
+    },
+    {
+      "balance": "3161.44",
+      "date": "2024-09-18",
+      "delta": "-35.81",
+      "headroom": "2361.44",
+      "source": "series:event_20510"
+    },
+    {
+      "balance": "3131.83",
+      "date": "2024-09-22",
+      "delta": "-29.61",
+      "headroom": "2331.83",
+      "source": "series:event_20501"
+    },
+    {
+      "balance": "3068.66",
+      "date": "2024-09-28",
+      "delta": "-63.17",
+      "headroom": "2268.66",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "2726.56",
+      "date": "2024-10-04",
+      "delta": "-342.1",
+      "headroom": "1926.56",
+      "source": "series:event_20479"
+    },
+    {
+      "balance": "2663.47",
+      "date": "2024-10-08",
+      "delta": "-63.09",
+      "headroom": "1863.47",
+      "source": "series:event_20476"
+    },
+    {
+      "balance": "2627.66",
+      "date": "2024-10-09",
+      "delta": "-35.81",
+      "headroom": "1827.66",
+      "source": "series:event_20510"
+    },
+    {
+      "balance": "2564.49",
+      "date": "2024-10-12",
+      "delta": "-63.17",
+      "headroom": "1764.49",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "2399.49",
+      "date": "2024-10-13",
+      "delta": "-165",
+      "headroom": "1599.49",
+      "source": "series:event_20477"
+    },
+    {
+      "balance": "2387.49",
+      "date": "2024-10-13",
+      "delta": "-12",
+      "headroom": "1587.49",
+      "source": "series:event_20478"
+    },
+    {
+      "balance": "2357.88",
+      "date": "2024-10-13",
+      "delta": "-29.61",
+      "headroom": "1557.88",
+      "source": "series:event_20501"
+    },
+    {
+      "balance": "2294.71",
+      "date": "2024-10-26",
+      "delta": "-63.17",
+      "headroom": "1494.71",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "2258.90",
+      "date": "2024-10-30",
+      "delta": "-35.81",
+      "headroom": "1458.90",
+      "source": "series:event_20510"
+    },
+    {
+      "balance": "2229.29",
+      "date": "2024-11-03",
+      "delta": "-29.61",
+      "headroom": "1429.29",
+      "source": "series:event_20501"
+    },
+    {
+      "balance": "1887.19",
+      "date": "2024-11-04",
+      "delta": "-342.1",
+      "headroom": "1087.19",
+      "source": "series:event_20479"
+    },
+    {
+      "balance": "1824.10",
+      "date": "2024-11-08",
+      "delta": "-63.09",
+      "headroom": "1024.10",
+      "source": "series:event_20476"
+    },
+    {
+      "balance": "1760.93",
+      "date": "2024-11-09",
+      "delta": "-63.17",
+      "headroom": "960.93",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "1595.93",
+      "date": "2024-11-13",
+      "delta": "-165",
+      "headroom": "795.93",
+      "source": "series:event_20477"
+    },
+    {
+      "balance": "1583.93",
+      "date": "2024-11-13",
+      "delta": "-12",
+      "headroom": "783.93",
+      "source": "series:event_20478"
+    },
+    {
+      "balance": "1548.12",
+      "date": "2024-11-20",
+      "delta": "-35.81",
+      "headroom": "748.12",
+      "source": "series:event_20510"
+    },
+    {
+      "balance": "1484.95",
+      "date": "2024-11-23",
+      "delta": "-63.17",
+      "headroom": "684.95",
+      "source": "series:event_20492"
+    },
+    {
+      "balance": "1455.34",
+      "date": "2024-11-24",
+      "delta": "-29.61",
+      "headroom": "655.34",
+      "source": "series:event_20501"
+    },
+    {
+      "balance": "1113.24",
+      "date": "2024-12-04",
+      "delta": "-342.1",
+      "headroom": "313.24",
+      "source": "series:event_20479"
+    }
+  ]
+}

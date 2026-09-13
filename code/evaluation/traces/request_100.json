@@ -1,0 +1,6192 @@
+{
+  "accounting_coverage": {
+    "accounted_records": 105,
+    "explicit_records_verified_once": 2,
+    "required_explicit_records": 2,
+    "source_records": 105,
+    "unique_recurring_members": 102,
+    "unquantified_commitments": []
+  },
+  "baseline": {
+    "baseline_shortfall": false,
+    "binding_cashflow": {
+      "amount": "1793.99",
+      "balance_after": "57025.30",
+      "category": "dining",
+      "date": "2024-06-12",
+      "direction": "debit",
+      "headroom_after": "24525.30",
+      "source": "series:event_9336"
+    },
+    "headroom_at_minimum": "24525.30",
+    "image_amounts": {},
+    "income_associations": [
+      {
+        "candidate_series_keys": [
+          "credit|salary|ZAR|regular payroll"
+        ],
+        "event_id": "event_9338",
+        "matched_series_key": "credit|salary|ZAR|regular payroll",
+        "reason": "unique compatible unnamed confirmation",
+        "source_event_ids": [
+          "event_9234",
+          "event_9241",
+          "event_9248",
+          "event_9255",
+          "event_9262"
+        ]
+      }
+    ],
+    "independent_capacity": {
+      "amount": "24525.30",
+      "earliest_date": "2024-08-15",
+      "method": "daily cumulative balances and suffix minima; independent of payment simulation"
+    },
+    "ledger": [
+      {
+        "amount": "1027.4",
+        "balance_after": "67336.13",
+        "category": "shopping",
+        "date": "2024-06-07",
+        "direction": "debit",
+        "headroom_after": "34836.13",
+        "source": "event_9337"
+      },
+      {
+        "amount": "1016.4",
+        "balance_after": "66319.73",
+        "category": "streaming",
+        "date": "2024-06-08",
+        "direction": "debit",
+        "headroom_after": "33819.73",
+        "source": "series:event_9267"
+      },
+      {
+        "amount": "2222",
+        "balance_after": "64097.73",
+        "category": "debt_repayment",
+        "date": "2024-06-10",
+        "direction": "debit",
+        "headroom_after": "31597.73",
+        "source": "series:event_9266"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "61789.20",
+        "category": "groceries",
+        "date": "2024-06-10",
+        "direction": "debit",
+        "headroom_after": "29289.20",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "238.7",
+        "balance_after": "61550.50",
+        "category": "cloud_storage",
+        "date": "2024-06-11",
+        "direction": "debit",
+        "headroom_after": "29050.50",
+        "source": "series:event_9268"
+      },
+      {
+        "amount": "1826.81",
+        "balance_after": "59723.69",
+        "category": "shopping",
+        "date": "2024-06-11",
+        "direction": "debit",
+        "headroom_after": "27223.69",
+        "source": "series:event_9269"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "58819.29",
+        "category": "transport",
+        "date": "2024-06-11",
+        "direction": "debit",
+        "headroom_after": "26319.29",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "57025.30",
+        "category": "dining",
+        "date": "2024-06-12",
+        "direction": "debit",
+        "headroom_after": "24525.30",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "42680",
+        "balance_after": "99705.30",
+        "category": "salary",
+        "date": "2024-06-15",
+        "direction": "credit",
+        "headroom_after": "67205.30",
+        "source": "event_9338"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "97396.77",
+        "category": "groceries",
+        "date": "2024-06-17",
+        "direction": "debit",
+        "headroom_after": "64896.77",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "96492.37",
+        "category": "transport",
+        "date": "2024-06-18",
+        "direction": "debit",
+        "headroom_after": "63992.37",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "94183.84",
+        "category": "groceries",
+        "date": "2024-06-24",
+        "direction": "debit",
+        "headroom_after": "61683.84",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "93279.44",
+        "category": "transport",
+        "date": "2024-06-25",
+        "direction": "debit",
+        "headroom_after": "60779.44",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "91485.45",
+        "category": "dining",
+        "date": "2024-06-26",
+        "direction": "debit",
+        "headroom_after": "58985.45",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "12716",
+        "balance_after": "78769.45",
+        "category": "rent",
+        "date": "2024-07-01",
+        "direction": "debit",
+        "headroom_after": "46269.45",
+        "source": "series:event_9270"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "76460.92",
+        "category": "groceries",
+        "date": "2024-07-01",
+        "direction": "debit",
+        "headroom_after": "43960.92",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "75556.52",
+        "category": "transport",
+        "date": "2024-07-02",
+        "direction": "debit",
+        "headroom_after": "43056.52",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "2953.25",
+        "balance_after": "72603.27",
+        "category": "utilities",
+        "date": "2024-07-05",
+        "direction": "debit",
+        "headroom_after": "40103.27",
+        "source": "series:event_9271"
+      },
+      {
+        "amount": "1016.4",
+        "balance_after": "71586.87",
+        "category": "streaming",
+        "date": "2024-07-08",
+        "direction": "debit",
+        "headroom_after": "39086.87",
+        "source": "series:event_9267"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "69278.34",
+        "category": "groceries",
+        "date": "2024-07-08",
+        "direction": "debit",
+        "headroom_after": "36778.34",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "68373.94",
+        "category": "transport",
+        "date": "2024-07-09",
+        "direction": "debit",
+        "headroom_after": "35873.94",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "2222",
+        "balance_after": "66151.94",
+        "category": "debt_repayment",
+        "date": "2024-07-10",
+        "direction": "debit",
+        "headroom_after": "33651.94",
+        "source": "series:event_9266"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "64357.95",
+        "category": "dining",
+        "date": "2024-07-10",
+        "direction": "debit",
+        "headroom_after": "31857.95",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "238.7",
+        "balance_after": "64119.25",
+        "category": "cloud_storage",
+        "date": "2024-07-11",
+        "direction": "debit",
+        "headroom_after": "31619.25",
+        "source": "series:event_9268"
+      },
+      {
+        "amount": "1826.81",
+        "balance_after": "62292.44",
+        "category": "shopping",
+        "date": "2024-07-11",
+        "direction": "debit",
+        "headroom_after": "29792.44",
+        "source": "series:event_9269"
+      },
+      {
+        "amount": "42680",
+        "balance_after": "104972.44",
+        "category": "salary",
+        "date": "2024-07-15",
+        "direction": "credit",
+        "headroom_after": "72472.44",
+        "source": "series:event_9262"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "102663.91",
+        "category": "groceries",
+        "date": "2024-07-15",
+        "direction": "debit",
+        "headroom_after": "70163.91",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "101759.51",
+        "category": "transport",
+        "date": "2024-07-16",
+        "direction": "debit",
+        "headroom_after": "69259.51",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "99450.98",
+        "category": "groceries",
+        "date": "2024-07-22",
+        "direction": "debit",
+        "headroom_after": "66950.98",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "98546.58",
+        "category": "transport",
+        "date": "2024-07-23",
+        "direction": "debit",
+        "headroom_after": "66046.58",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "96752.59",
+        "category": "dining",
+        "date": "2024-07-24",
+        "direction": "debit",
+        "headroom_after": "64252.59",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "94444.06",
+        "category": "groceries",
+        "date": "2024-07-29",
+        "direction": "debit",
+        "headroom_after": "61944.06",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "93539.66",
+        "category": "transport",
+        "date": "2024-07-30",
+        "direction": "debit",
+        "headroom_after": "61039.66",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "12716",
+        "balance_after": "80823.66",
+        "category": "rent",
+        "date": "2024-08-01",
+        "direction": "debit",
+        "headroom_after": "48323.66",
+        "source": "series:event_9270"
+      },
+      {
+        "amount": "2953.25",
+        "balance_after": "77870.41",
+        "category": "utilities",
+        "date": "2024-08-05",
+        "direction": "debit",
+        "headroom_after": "45370.41",
+        "source": "series:event_9271"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "75561.88",
+        "category": "groceries",
+        "date": "2024-08-05",
+        "direction": "debit",
+        "headroom_after": "43061.88",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "74657.48",
+        "category": "transport",
+        "date": "2024-08-06",
+        "direction": "debit",
+        "headroom_after": "42157.48",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "72863.49",
+        "category": "dining",
+        "date": "2024-08-07",
+        "direction": "debit",
+        "headroom_after": "40363.49",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "1016.4",
+        "balance_after": "71847.09",
+        "category": "streaming",
+        "date": "2024-08-08",
+        "direction": "debit",
+        "headroom_after": "39347.09",
+        "source": "series:event_9267"
+      },
+      {
+        "amount": "2222",
+        "balance_after": "69625.09",
+        "category": "debt_repayment",
+        "date": "2024-08-10",
+        "direction": "debit",
+        "headroom_after": "37125.09",
+        "source": "series:event_9266"
+      },
+      {
+        "amount": "238.7",
+        "balance_after": "69386.39",
+        "category": "cloud_storage",
+        "date": "2024-08-11",
+        "direction": "debit",
+        "headroom_after": "36886.39",
+        "source": "series:event_9268"
+      },
+      {
+        "amount": "1826.81",
+        "balance_after": "67559.58",
+        "category": "shopping",
+        "date": "2024-08-11",
+        "direction": "debit",
+        "headroom_after": "35059.58",
+        "source": "series:event_9269"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "65251.05",
+        "category": "groceries",
+        "date": "2024-08-12",
+        "direction": "debit",
+        "headroom_after": "32751.05",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "64346.65",
+        "category": "transport",
+        "date": "2024-08-13",
+        "direction": "debit",
+        "headroom_after": "31846.65",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "42680",
+        "balance_after": "107026.65",
+        "category": "salary",
+        "date": "2024-08-15",
+        "direction": "credit",
+        "headroom_after": "74526.65",
+        "source": "series:event_9262"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "104718.12",
+        "category": "groceries",
+        "date": "2024-08-19",
+        "direction": "debit",
+        "headroom_after": "72218.12",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "103813.72",
+        "category": "transport",
+        "date": "2024-08-20",
+        "direction": "debit",
+        "headroom_after": "71313.72",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "1793.99",
+        "balance_after": "102019.73",
+        "category": "dining",
+        "date": "2024-08-21",
+        "direction": "debit",
+        "headroom_after": "69519.73",
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "99711.20",
+        "category": "groceries",
+        "date": "2024-08-26",
+        "direction": "debit",
+        "headroom_after": "67211.20",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "98806.80",
+        "category": "transport",
+        "date": "2024-08-27",
+        "direction": "debit",
+        "headroom_after": "66306.80",
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "12716",
+        "balance_after": "86090.80",
+        "category": "rent",
+        "date": "2024-09-01",
+        "direction": "debit",
+        "headroom_after": "53590.80",
+        "source": "series:event_9270"
+      },
+      {
+        "amount": "2308.53",
+        "balance_after": "83782.27",
+        "category": "groceries",
+        "date": "2024-09-02",
+        "direction": "debit",
+        "headroom_after": "51282.27",
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "904.4",
+        "balance_after": "82877.87",
+        "category": "transport",
+        "date": "2024-09-03",
+        "direction": "debit",
+        "headroom_after": "50377.87",
+        "source": "series:event_9323"
+      }
+    ],
+    "minimum_balance": "57025.30",
+    "opening_balance": "68363.53",
+    "recurring_estimates": [
+      {
+        "amount": "42680",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "42680",
+        "history_mean": "42680",
+        "history_min": "42680",
+        "identity": "credit|salary|ZAR|regular payroll",
+        "member_event_ids": [
+          "event_9234",
+          "event_9241",
+          "event_9248",
+          "event_9255",
+          "event_9262"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "42680",
+          "42680",
+          "42680",
+          "42680",
+          "42680"
+        ],
+        "source": "series:event_9262"
+      },
+      {
+        "amount": "238.7",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "238.7",
+        "history_mean": "238.7",
+        "history_min": "238.7",
+        "identity": "debit|cloud_storage|ZAR|shared storage plan",
+        "member_event_ids": [
+          "event_9239",
+          "event_9246",
+          "event_9253",
+          "event_9260",
+          "event_9268"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "238.7",
+          "238.7",
+          "238.7",
+          "238.7",
+          "238.7"
+        ],
+        "source": "series:event_9268"
+      },
+      {
+        "amount": "2222",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "2222",
+        "history_mean": "2222",
+        "history_min": "2222",
+        "identity": "debit|debt_repayment|ZAR|personal loan payment",
+        "member_event_ids": [
+          "event_9237",
+          "event_9244",
+          "event_9251",
+          "event_9258",
+          "event_9266"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "2222",
+          "2222",
+          "2222",
+          "2222",
+          "2222"
+        ],
+        "source": "series:event_9266"
+      },
+      {
+        "amount": "1793.99",
+        "amount_varies_in_history": true,
+        "cadence_days": 14,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 13,
+        "history_max": "2015.19",
+        "history_mean": "1606.56",
+        "history_min": "1249.09",
+        "identity": "debit|dining|ZAR|variable category spending",
+        "member_event_ids": [
+          "event_9324",
+          "event_9325",
+          "event_9326",
+          "event_9327",
+          "event_9328",
+          "event_9329",
+          "event_9330",
+          "event_9331",
+          "event_9332",
+          "event_9333",
+          "event_9334",
+          "event_9335",
+          "event_9336"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "1249.09",
+          "1913.77",
+          "1630.55",
+          "1481.09",
+          "1434.93",
+          "2015.19",
+          "1402.48",
+          "1997.75",
+          "1793.99",
+          "1289.67",
+          "1685.94",
+          "1255.88"
+        ],
+        "source": "series:event_9336"
+      },
+      {
+        "amount": "2308.53",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 26,
+        "history_max": "2549.51",
+        "history_mean": "1983.413076923076923076923077",
+        "history_min": "1460.95",
+        "identity": "debit|groceries|ZAR|variable category spending",
+        "member_event_ids": [
+          "event_9272",
+          "event_9273",
+          "event_9274",
+          "event_9275",
+          "event_9276",
+          "event_9277",
+          "event_9278",
+          "event_9279",
+          "event_9280",
+          "event_9281",
+          "event_9282",
+          "event_9283",
+          "event_9284",
+          "event_9285",
+          "event_9286",
+          "event_9287",
+          "event_9288",
+          "event_9289",
+          "event_9290",
+          "event_9291",
+          "event_9292",
+          "event_9293",
+          "event_9294",
+          "event_9295",
+          "event_9296",
+          "event_9297"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "2308.53",
+          "2361.33",
+          "1489.03",
+          "2034.93",
+          "1978.03",
+          "1531.21",
+          "2384.31",
+          "2549.51",
+          "2130.25",
+          "1461.82",
+          "2059.78",
+          "1460.95"
+        ],
+        "source": "series:event_9297"
+      },
+      {
+        "amount": "12716",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 6,
+        "history_max": "12716",
+        "history_mean": "12716",
+        "history_min": "12716",
+        "identity": "debit|rent|ZAR|apartment rent transfer",
+        "member_event_ids": [
+          "event_9235",
+          "event_9242",
+          "event_9249",
+          "event_9256",
+          "event_9264",
+          "event_9270"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "12716",
+          "12716",
+          "12716",
+          "12716",
+          "12716",
+          "12716"
+        ],
+        "source": "series:event_9270"
+      },
+      {
+        "amount": "1826.81",
+        "amount_varies_in_history": true,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 5,
+        "history_max": "1868.05",
+        "history_mean": "1783.198",
+        "history_min": "1735.99",
+        "identity": "debit|shopping|ZAR|household shopping",
+        "member_event_ids": [
+          "event_9240",
+          "event_9247",
+          "event_9254",
+          "event_9261",
+          "event_9269"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1826.81",
+          "1868.05",
+          "1735.99",
+          "1742.28",
+          "1742.86"
+        ],
+        "source": "series:event_9269"
+      },
+      {
+        "amount": "1016.4",
+        "amount_varies_in_history": false,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "constant_or_income_policy",
+        "history_count": 5,
+        "history_max": "1016.4",
+        "history_mean": "1016.4",
+        "history_min": "1016.4",
+        "identity": "debit|streaming|ZAR|streaming subscription",
+        "member_event_ids": [
+          "event_9238",
+          "event_9245",
+          "event_9252",
+          "event_9259",
+          "event_9267"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "1016.4",
+          "1016.4",
+          "1016.4",
+          "1016.4",
+          "1016.4"
+        ],
+        "source": "series:event_9267"
+      },
+      {
+        "amount": "904.4",
+        "amount_varies_in_history": true,
+        "cadence_days": 7,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 26,
+        "history_max": "1010.36",
+        "history_mean": "816.8234615384615384615384615",
+        "history_min": "602.69",
+        "identity": "debit|transport|ZAR|variable category spending",
+        "member_event_ids": [
+          "event_9298",
+          "event_9299",
+          "event_9300",
+          "event_9301",
+          "event_9302",
+          "event_9303",
+          "event_9304",
+          "event_9305",
+          "event_9306",
+          "event_9307",
+          "event_9308",
+          "event_9309",
+          "event_9310",
+          "event_9311",
+          "event_9312",
+          "event_9313",
+          "event_9314",
+          "event_9315",
+          "event_9316",
+          "event_9317",
+          "event_9318",
+          "event_9319",
+          "event_9320",
+          "event_9321",
+          "event_9322",
+          "event_9323"
+        ],
+        "monthly": false,
+        "recent_observations": [
+          "742",
+          "958.51",
+          "727.25",
+          "904.4",
+          "705.81",
+          "857.71",
+          "901.81",
+          "948.8",
+          "661.32",
+          "637.48",
+          "856.5",
+          "1010.36"
+        ],
+        "source": "series:event_9323"
+      },
+      {
+        "amount": "2953.25",
+        "amount_varies_in_history": true,
+        "cadence_days": 30,
+        "cancellation_only_event_ids": [],
+        "currency": "ZAR",
+        "estimator": "upper_quartile_latest_12",
+        "history_count": 6,
+        "history_max": "2995.95",
+        "history_mean": "2657.851666666666666666666667",
+        "history_min": "2455.32",
+        "identity": "debit|utilities|ZAR|municipal utilities",
+        "member_event_ids": [
+          "event_9236",
+          "event_9243",
+          "event_9250",
+          "event_9257",
+          "event_9265",
+          "event_9271"
+        ],
+        "monthly": true,
+        "recent_observations": [
+          "2995.95",
+          "2505.98",
+          "2455.32",
+          "2953.25",
+          "2514.48",
+          "2522.13"
+        ],
+        "source": "series:event_9271"
+      }
+    ],
+    "unquantified_commitments": []
+  },
+  "candidates": [
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_9268",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_9267",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "reduce_to",
+            "event_id": "event_9267",
+            "new_amount": "508.2"
+          }
+        ],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_9268",
+            "new_amount": null
+          },
+          {
+            "action": "stop",
+            "event_id": "event_9267",
+            "new_amount": null
+          }
+        ],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    },
+    {
+      "candidate": {
+        "completes_by_deadline": true,
+        "legs": [
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-06-13"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-07-14"
+          },
+          {
+            "amount": "12866.19",
+            "payment_date": "2024-08-14"
+          }
+        ],
+        "method": "installments",
+        "payment_option_id": "payment_option_281",
+        "safe": false,
+        "spending_changes": [
+          {
+            "action": "stop",
+            "event_id": "event_9268",
+            "new_amount": null
+          },
+          {
+            "action": "reduce_to",
+            "event_id": "event_9267",
+            "new_amount": "508.2"
+          }
+        ],
+        "total_paid": "38598.57"
+      },
+      "rejections": [
+        "reserve breach or unquantified mandatory commitment"
+      ],
+      "selected": false
+    }
+  ],
+  "evidence": [],
+  "history": [
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9272",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9272"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2091.8",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2023-12-11",
+        "event_id": "event_9272",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2091.8",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2023-12-11",
+        "event_id": "event_9272",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9298",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9298"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "877.33",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2023-12-12",
+        "event_id": "event_9298",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "877.33",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2023-12-12",
+        "event_id": "event_9298",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9324",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9324"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1734.95",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2023-12-13",
+        "event_id": "event_9324",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1734.95",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2023-12-13",
+        "event_id": "event_9324",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9273",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9273"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1715.74",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2023-12-18",
+        "event_id": "event_9273",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-18",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1715.74",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2023-12-18",
+        "event_id": "event_9273",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-18",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9299",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9299"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "724.49",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2023-12-19",
+        "event_id": "event_9299",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "724.49",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2023-12-19",
+        "event_id": "event_9299",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9274",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9274"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2483.66",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2023-12-25",
+        "event_id": "event_9274",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-25",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2483.66",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2023-12-25",
+        "event_id": "event_9274",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-25",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9300",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9300"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "975.22",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2023-12-26",
+        "event_id": "event_9300",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "975.22",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2023-12-26",
+        "event_id": "event_9300",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9325",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9325"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1249.09",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2023-12-27",
+        "event_id": "event_9325",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1249.09",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Lunch with colleagues",
+        "direction": "debit",
+        "event_date": "2023-12-27",
+        "event_id": "event_9325",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2023-12-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9235",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9235"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-01-01",
+        "event_id": "event_9235",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-01-01",
+        "event_id": "event_9235",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9275",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9275"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1862.05",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-01-01",
+        "event_id": "event_9275",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1862.05",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-01-01",
+        "event_id": "event_9275",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9301",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9301"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "642",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-01-02",
+        "event_id": "event_9301",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-02",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "642",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-01-02",
+        "event_id": "event_9301",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-02",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9236",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9236"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2995.95",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-01-05",
+        "event_id": "event_9236",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2995.95",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-01-05",
+        "event_id": "event_9236",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9238",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9238"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-01-08",
+        "event_id": "event_9238",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-01-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-01-08",
+        "event_id": "event_9238",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-01-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|streaming|ZAR|streaming subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9276",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9276"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1689.79",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-01-08",
+        "event_id": "event_9276",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1689.79",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Local market purchase",
+        "direction": "debit",
+        "event_date": "2024-01-08",
+        "event_id": "event_9276",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9302",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9302"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "602.69",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-01-09",
+        "event_id": "event_9302",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-09",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "602.69",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-01-09",
+        "event_id": "event_9302",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-09",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9237",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9237"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-01-10",
+        "event_id": "event_9237",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-01-10",
+        "event_id": "event_9237",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|debt_repayment|ZAR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9326",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9326"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1913.77",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-01-10",
+        "event_id": "event_9326",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1913.77",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-01-10",
+        "event_id": "event_9326",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9239",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9239"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-01-11",
+        "event_id": "event_9239",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-01-11",
+        "event_id": "event_9239",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|cloud_storage|ZAR|shared storage plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9240",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9240"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1826.81",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-01-11",
+        "event_id": "event_9240",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1826.81",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-01-11",
+        "event_id": "event_9240",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|shopping|ZAR|household shopping"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9234",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9234"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-01-15",
+        "event_id": "event_9234",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-01-15",
+        "event_id": "event_9234",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "credit|salary|ZAR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9277",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9277"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2502.08",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-01-15",
+        "event_id": "event_9277",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2502.08",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-01-15",
+        "event_id": "event_9277",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9303",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9303"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "861.7",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-01-16",
+        "event_id": "event_9303",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-16",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "861.7",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-01-16",
+        "event_id": "event_9303",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-16",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9278",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9278"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2180.43",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-01-22",
+        "event_id": "event_9278",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-22",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2180.43",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-01-22",
+        "event_id": "event_9278",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-22",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9304",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9304"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "769.26",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-01-23",
+        "event_id": "event_9304",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-23",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "769.26",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-01-23",
+        "event_id": "event_9304",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-23",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9327",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9327"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1630.55",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-01-24",
+        "event_id": "event_9327",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-24",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1630.55",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-01-24",
+        "event_id": "event_9327",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-24",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9279",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9279"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2080.99",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-01-29",
+        "event_id": "event_9279",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2080.99",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-01-29",
+        "event_id": "event_9279",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9305",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9305"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "918.29",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-01-30",
+        "event_id": "event_9305",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-30",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "918.29",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Parking and tolls",
+        "direction": "debit",
+        "event_date": "2024-01-30",
+        "event_id": "event_9305",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-01-30",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9242",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9242"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-02-01",
+        "event_id": "event_9242",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-02-01",
+        "event_id": "event_9242",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9243",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9243"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2505.98",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-02-05",
+        "event_id": "event_9243",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2505.98",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-02-05",
+        "event_id": "event_9243",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9280",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9280"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1630.34",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-02-05",
+        "event_id": "event_9280",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1630.34",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-02-05",
+        "event_id": "event_9280",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9306",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9306"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "676.47",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-02-06",
+        "event_id": "event_9306",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "676.47",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-02-06",
+        "event_id": "event_9306",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9328",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9328"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1481.09",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-02-07",
+        "event_id": "event_9328",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-07",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1481.09",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-02-07",
+        "event_id": "event_9328",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-07",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9245",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9245"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-02-08",
+        "event_id": "event_9245",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-02-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-02-08",
+        "event_id": "event_9245",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-02-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|streaming|ZAR|streaming subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9244",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9244"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-02-10",
+        "event_id": "event_9244",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-02-10",
+        "event_id": "event_9244",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|debt_repayment|ZAR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9246",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9246"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-02-11",
+        "event_id": "event_9246",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-02-11",
+        "event_id": "event_9246",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|cloud_storage|ZAR|shared storage plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9247",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9247"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1868.05",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-02-11",
+        "event_id": "event_9247",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1868.05",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-02-11",
+        "event_id": "event_9247",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|shopping|ZAR|household shopping"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9281",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9281"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1745.45",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-02-12",
+        "event_id": "event_9281",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1745.45",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-02-12",
+        "event_id": "event_9281",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9307",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9307"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "756.55",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-02-13",
+        "event_id": "event_9307",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "756.55",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-02-13",
+        "event_id": "event_9307",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9241",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9241"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-02-15",
+        "event_id": "event_9241",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-02-15",
+        "event_id": "event_9241",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "credit|salary|ZAR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9282",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9282"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1905.58",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-02-19",
+        "event_id": "event_9282",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1905.58",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-02-19",
+        "event_id": "event_9282",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9308",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9308"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "755.67",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-02-20",
+        "event_id": "event_9308",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "755.67",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-02-20",
+        "event_id": "event_9308",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9329",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9329"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1434.93",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2024-02-21",
+        "event_id": "event_9329",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-21",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1434.93",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2024-02-21",
+        "event_id": "event_9329",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-21",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9283",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9283"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1845.36",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-02-26",
+        "event_id": "event_9283",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1845.36",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-02-26",
+        "event_id": "event_9283",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9309",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9309"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "966.12",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-02-27",
+        "event_id": "event_9309",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "966.12",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-02-27",
+        "event_id": "event_9309",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-02-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9249",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9249"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-03-01",
+        "event_id": "event_9249",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-03-01",
+        "event_id": "event_9249",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9284",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9284"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1615.66",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-03-04",
+        "event_id": "event_9284",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-04",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1615.66",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-03-04",
+        "event_id": "event_9284",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-04",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9250",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9250"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2455.32",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-03-05",
+        "event_id": "event_9250",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2455.32",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-03-05",
+        "event_id": "event_9250",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9310",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9310"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "878.28",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-03-05",
+        "event_id": "event_9310",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "878.28",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-03-05",
+        "event_id": "event_9310",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9330",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9330"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2015.19",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-03-06",
+        "event_id": "event_9330",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2015.19",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Family dinner",
+        "direction": "debit",
+        "event_date": "2024-03-06",
+        "event_id": "event_9330",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9252",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9252"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-03-08",
+        "event_id": "event_9252",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-03-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-03-08",
+        "event_id": "event_9252",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-03-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|streaming|ZAR|streaming subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9251",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9251"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-03-10",
+        "event_id": "event_9251",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-03-10",
+        "event_id": "event_9251",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|debt_repayment|ZAR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9253",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9253"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9253",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9253",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|cloud_storage|ZAR|shared storage plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9254",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9254"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1735.99",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9254",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1735.99",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9254",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|shopping|ZAR|household shopping"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9285",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9285"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2470.13",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9285",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2470.13",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-03-11",
+        "event_id": "event_9285",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9311",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9311"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "921.39",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-03-12",
+        "event_id": "event_9311",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "921.39",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Vehicle charging",
+        "direction": "debit",
+        "event_date": "2024-03-12",
+        "event_id": "event_9311",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-12",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9248",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9248"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-03-15",
+        "event_id": "event_9248",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-03-15",
+        "event_id": "event_9248",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "credit|salary|ZAR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9286",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9286"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2308.53",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-03-18",
+        "event_id": "event_9286",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-18",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2308.53",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-03-18",
+        "event_id": "event_9286",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-18",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9312",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9312"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "742",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-03-19",
+        "event_id": "event_9312",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "742",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-03-19",
+        "event_id": "event_9312",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-19",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9331",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9331"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1402.48",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2024-03-20",
+        "event_id": "event_9331",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1402.48",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Coffee shop",
+        "direction": "debit",
+        "event_date": "2024-03-20",
+        "event_id": "event_9331",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9287",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9287"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2361.33",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-03-25",
+        "event_id": "event_9287",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-25",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2361.33",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-03-25",
+        "event_id": "event_9287",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-25",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9313",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9313"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "958.51",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-03-26",
+        "event_id": "event_9313",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "958.51",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-03-26",
+        "event_id": "event_9313",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-03-26",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9256",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9256"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-04-01",
+        "event_id": "event_9256",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-04-01",
+        "event_id": "event_9256",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9288",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9288"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1489.03",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-04-01",
+        "event_id": "event_9288",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1489.03",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Neighbourhood grocer",
+        "direction": "debit",
+        "event_date": "2024-04-01",
+        "event_id": "event_9288",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9314",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9314"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "727.25",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-04-02",
+        "event_id": "event_9314",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-02",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "727.25",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Ride-hailing trip",
+        "direction": "debit",
+        "event_date": "2024-04-02",
+        "event_id": "event_9314",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-02",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9332",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9332"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1997.75",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-04-03",
+        "event_id": "event_9332",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-03",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1997.75",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Neighbourhood restaurant",
+        "direction": "debit",
+        "event_date": "2024-04-03",
+        "event_id": "event_9332",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-03",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9257",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9257"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2953.25",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-04-05",
+        "event_id": "event_9257",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2953.25",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-04-05",
+        "event_id": "event_9257",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9259",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9259"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_9259",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_9259",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|streaming|ZAR|streaming subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9289",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9289"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2034.93",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_9289",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2034.93",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-04-08",
+        "event_id": "event_9289",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9315",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9315"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "904.4",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-04-09",
+        "event_id": "event_9315",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-09",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "904.4",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Commuter pass",
+        "direction": "debit",
+        "event_date": "2024-04-09",
+        "event_id": "event_9315",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-09",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9258",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9258"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-04-10",
+        "event_id": "event_9258",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-04-10",
+        "event_id": "event_9258",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|debt_repayment|ZAR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9260",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9260"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-04-11",
+        "event_id": "event_9260",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-04-11",
+        "event_id": "event_9260",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|cloud_storage|ZAR|shared storage plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9261",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9261"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1742.28",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-04-11",
+        "event_id": "event_9261",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1742.28",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-04-11",
+        "event_id": "event_9261",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|shopping|ZAR|household shopping"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9255",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9255"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-04-15",
+        "event_id": "event_9255",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-04-15",
+        "event_id": "event_9255",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "credit|salary|ZAR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9290",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9290"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1978.03",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-04-15",
+        "event_id": "event_9290",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1978.03",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Weekly produce market",
+        "direction": "debit",
+        "event_date": "2024-04-15",
+        "event_id": "event_9290",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9316",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9316"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "705.81",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-04-16",
+        "event_id": "event_9316",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-16",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "705.81",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-04-16",
+        "event_id": "event_9316",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-16",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9333",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9333"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1793.99",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-04-17",
+        "event_id": "event_9333",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-17",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1793.99",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-04-17",
+        "event_id": "event_9333",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-17",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9291",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9291"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1531.21",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-04-22",
+        "event_id": "event_9291",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-22",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1531.21",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-04-22",
+        "event_id": "event_9291",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-22",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9317",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9317"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "857.71",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-23",
+        "event_id": "event_9317",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-23",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "857.71",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-23",
+        "event_id": "event_9317",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-23",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9292",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9292"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2384.31",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-04-29",
+        "event_id": "event_9292",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2384.31",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-04-29",
+        "event_id": "event_9292",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9318",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9318"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "901.81",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-30",
+        "event_id": "event_9318",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-30",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "901.81",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-04-30",
+        "event_id": "event_9318",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-04-30",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9264",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9264"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-05-01",
+        "event_id": "event_9264",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-05-01",
+        "event_id": "event_9264",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9334",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9334"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1289.67",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-05-01",
+        "event_id": "event_9334",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1289.67",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-05-01",
+        "event_id": "event_9334",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9265",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9265"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2514.48",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-05-05",
+        "event_id": "event_9265",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2514.48",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-05-05",
+        "event_id": "event_9265",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9293",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9293"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2549.51",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-05-06",
+        "event_id": "event_9293",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2549.51",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Supermarket basket",
+        "direction": "debit",
+        "event_date": "2024-05-06",
+        "event_id": "event_9293",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-06",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9319",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9319"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "948.8",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-05-07",
+        "event_id": "event_9319",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-07",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "948.8",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Fuel refill",
+        "direction": "debit",
+        "event_date": "2024-05-07",
+        "event_id": "event_9319",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-07",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9267",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9267"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-05-08",
+        "event_id": "event_9267",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-05-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1016.4",
+        "category": "streaming",
+        "currency": "ZAR",
+        "description": "Streaming subscription",
+        "direction": "debit",
+        "event_date": "2024-05-08",
+        "event_id": "event_9267",
+        "event_type": "subscription",
+        "flexibility": "reducible_or_stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": "508.2",
+        "settlement_date": "2024-05-08",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|streaming|ZAR|streaming subscription"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9266",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9266"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-05-10",
+        "event_id": "event_9266",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2222",
+        "category": "debt_repayment",
+        "currency": "ZAR",
+        "description": "Personal loan payment",
+        "direction": "debit",
+        "event_date": "2024-05-10",
+        "event_id": "event_9266",
+        "event_type": "debt_payment",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-10",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|debt_repayment|ZAR|personal loan payment"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9268",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9268"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_9268",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "238.7",
+        "category": "cloud_storage",
+        "currency": "ZAR",
+        "description": "Shared storage plan",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_9268",
+        "event_type": "subscription",
+        "flexibility": "stoppable",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|cloud_storage|ZAR|shared storage plan"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9269",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9269"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1742.86",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_9269",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1742.86",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Household shopping",
+        "direction": "debit",
+        "event_date": "2024-05-11",
+        "event_id": "event_9269",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-11",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|shopping|ZAR|household shopping"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9294",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9294"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2130.25",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_9294",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2130.25",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Grocery delivery",
+        "direction": "debit",
+        "event_date": "2024-05-13",
+        "event_id": "event_9294",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-13",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9320",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9320"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "661.32",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-05-14",
+        "event_id": "event_9320",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-14",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "661.32",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Metro and bus fares",
+        "direction": "debit",
+        "event_date": "2024-05-14",
+        "event_id": "event_9320",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-14",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9262",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9262"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-05-15",
+        "event_id": "event_9262",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Payroll credit",
+        "direction": "credit",
+        "event_date": "2024-05-15",
+        "event_id": "event_9262",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "credit|salary|ZAR|regular payroll"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9335",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9335"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1685.94",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-05-15",
+        "event_id": "event_9335",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1685.94",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Takeaway order",
+        "direction": "debit",
+        "event_date": "2024-05-15",
+        "event_id": "event_9335",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-15",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9263",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9263"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "19206",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Promotion arrears payment",
+        "direction": "credit",
+        "event_date": "2024-05-20",
+        "event_id": "event_9263",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "19206",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Promotion arrears payment",
+        "direction": "credit",
+        "event_date": "2024-05-20",
+        "event_id": "event_9263",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9295",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9295"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1461.82",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-05-20",
+        "event_id": "event_9295",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1461.82",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Fresh food shop",
+        "direction": "debit",
+        "event_date": "2024-05-20",
+        "event_id": "event_9295",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-20",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9321",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9321"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "637.48",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-05-21",
+        "event_id": "event_9321",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-21",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "637.48",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-05-21",
+        "event_id": "event_9321",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-21",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9296",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9296"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2059.78",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-05-27",
+        "event_id": "event_9296",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2059.78",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Household groceries",
+        "direction": "debit",
+        "event_date": "2024-05-27",
+        "event_id": "event_9296",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-27",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9322",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9322"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "856.5",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-05-28",
+        "event_id": "event_9322",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-28",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "856.5",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Rail pass",
+        "direction": "debit",
+        "event_date": "2024-05-28",
+        "event_id": "event_9322",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-28",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9336",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9336"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1255.88",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-05-29",
+        "event_id": "event_9336",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1255.88",
+        "category": "dining",
+        "currency": "ZAR",
+        "description": "Weekend food delivery",
+        "direction": "debit",
+        "event_date": "2024-05-29",
+        "event_id": "event_9336",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-05-29",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|dining|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9270",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9270"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-06-01",
+        "event_id": "event_9270",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "12716",
+        "category": "rent",
+        "currency": "ZAR",
+        "description": "Apartment rent transfer",
+        "direction": "debit",
+        "event_date": "2024-06-01",
+        "event_id": "event_9270",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-01",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|rent|ZAR|apartment rent transfer"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9297",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9297"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1460.95",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-06-03",
+        "event_id": "event_9297",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-03",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1460.95",
+        "category": "groceries",
+        "currency": "ZAR",
+        "description": "Bulk pantry shop",
+        "direction": "debit",
+        "event_date": "2024-06-03",
+        "event_id": "event_9297",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-03",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|groceries|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9323",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9323"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "1010.36",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-06-04",
+        "event_id": "event_9323",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-04",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1010.36",
+        "category": "transport",
+        "currency": "ZAR",
+        "description": "Local taxi",
+        "direction": "debit",
+        "event_date": "2024-06-04",
+        "event_id": "event_9323",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-04",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|transport|ZAR|variable category spending"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "event_id": "event_9271",
+        "reason": "historical_settlement_already_in_opening_balance",
+        "supporting_records": [
+          "event_9271"
+        ]
+      },
+      "disposition": "historical_settlement_already_in_opening_balance",
+      "effective": {
+        "amount": "2522.13",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_9271",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "2522.13",
+        "category": "utilities",
+        "currency": "ZAR",
+        "description": "Municipal utilities",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_9271",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-05",
+        "status": "settled",
+        "user_id": "user_100"
+      },
+      "recurring_series": "debit|utilities|ZAR|municipal utilities"
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "1027.4",
+        "cash_date": "2024-06-07",
+        "event_id": "event_9337",
+        "exchange_rate_date": "2024-06-07",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_9337"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "1027.4",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Pending online order charge",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_9337",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-07",
+        "status": "pending",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "1027.4",
+        "category": "shopping",
+        "currency": "ZAR",
+        "description": "Pending online order charge",
+        "direction": "debit",
+        "event_date": "2024-06-05",
+        "event_id": "event_9337",
+        "event_type": "expense",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-07",
+        "status": "pending",
+        "user_id": "user_100"
+      },
+      "recurring_series": null
+    },
+    {
+      "cancellation_calendar_for": [],
+      "cash_resolution": {
+        "amount_home": "42680",
+        "cash_date": "2024-06-15",
+        "event_id": "event_9338",
+        "exchange_rate_date": "2024-06-15",
+        "reason": "explicit_projected_cash_flow",
+        "supporting_records": [
+          "event_9338"
+        ]
+      },
+      "disposition": "explicit_projected_cash_flow",
+      "effective": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2024-06-15",
+        "event_id": "event_9338",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-15",
+        "status": "scheduled",
+        "user_id": "user_100"
+      },
+      "original": {
+        "amount": "42680",
+        "category": "salary",
+        "currency": "ZAR",
+        "description": "Next confirmed salary",
+        "direction": "credit",
+        "event_date": "2024-06-15",
+        "event_id": "event_9338",
+        "event_type": "income",
+        "flexibility": "fixed",
+        "linked_event_id": "",
+        "minimum_allowed_amount": null,
+        "settlement_date": "2024-06-15",
+        "status": "scheduled",
+        "user_id": "user_100"
+      },
+      "recurring_series": null
+    }
+  ],
+  "offers": [
+    {
+      "eligibility_rejections": [],
+      "option": {
+        "financing_fee": "1484.57",
+        "first_payment_date": "2024-06-13",
+        "number_of_payments": 3,
+        "payment_amount": "12866.19",
+        "payment_frequency_days": 31,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_281",
+        "request_id": "request_100",
+        "total_payable_amount": "38598.57"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "user does not accept method"
+      ],
+      "option": {
+        "financing_fee": "0",
+        "first_payment_date": "2024-06-06",
+        "number_of_payments": 1,
+        "payment_amount": "37114",
+        "payment_frequency_days": null,
+        "payment_method": "full_payment",
+        "payment_option_id": "payment_option_282",
+        "request_id": "request_100",
+        "total_payable_amount": "37114"
+      }
+    },
+    {
+      "eligibility_rejections": [
+        "installment duration not permitted",
+        "schedule outside request/deadline"
+      ],
+      "option": {
+        "financing_fee": "6680.45",
+        "first_payment_date": "2024-06-20",
+        "number_of_payments": 21,
+        "payment_amount": "2085.45",
+        "payment_frequency_days": 28,
+        "payment_method": "installments",
+        "payment_option_id": "payment_option_283",
+        "request_id": "request_100",
+        "total_payable_amount": "43794.45"
+      }
+    }
+  ],
+  "profile": {
+    "current_available_balance": "68363.53",
+    "expense_categories_to_protect": [
+      "rent",
+      "groceries",
+      "transport"
+    ],
+    "expense_categories_user_is_willing_to_reduce": [
+      "streaming"
+    ],
+    "expense_categories_user_is_willing_to_stop": [
+      "streaming",
+      "cloud_storage"
+    ],
+    "financial_priorities": [
+      "emergency_savings",
+      "housing"
+    ],
+    "home_currency": "ZAR",
+    "max_installment_months": 9,
+    "minimum_balance_to_keep": "32500",
+    "payment_methods_user_will_consider": [
+      "installments"
+    ],
+    "user_id": "user_100"
+  },
+  "request": {
+    "allows_partial_payment": false,
+    "desired_completion_date": "2024-08-16",
+    "request_date": "2024-06-06",
+    "request_id": "request_100",
+    "request_text": "I'm considering a ZAR 37,114 laptop. How much of the laptop price can I safely cover today?",
+    "request_type": "purchase",
+    "requested_amount": "37114",
+    "user_id": "user_100"
+  },
+  "selected_plan_replay": [
+    {
+      "balance": "67336.13",
+      "date": "2024-06-07",
+      "delta": "-1027.4",
+      "headroom": "34836.13",
+      "source": "event_9337"
+    },
+    {
+      "balance": "66319.73",
+      "date": "2024-06-08",
+      "delta": "-1016.4",
+      "headroom": "33819.73",
+      "source": "series:event_9267"
+    },
+    {
+      "balance": "64097.73",
+      "date": "2024-06-10",
+      "delta": "-2222",
+      "headroom": "31597.73",
+      "source": "series:event_9266"
+    },
+    {
+      "balance": "61789.20",
+      "date": "2024-06-10",
+      "delta": "-2308.53",
+      "headroom": "29289.20",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "61550.50",
+      "date": "2024-06-11",
+      "delta": "-238.7",
+      "headroom": "29050.50",
+      "source": "series:event_9268"
+    },
+    {
+      "balance": "59723.69",
+      "date": "2024-06-11",
+      "delta": "-1826.81",
+      "headroom": "27223.69",
+      "source": "series:event_9269"
+    },
+    {
+      "balance": "58819.29",
+      "date": "2024-06-11",
+      "delta": "-904.4",
+      "headroom": "26319.29",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "57025.30",
+      "date": "2024-06-12",
+      "delta": "-1793.99",
+      "headroom": "24525.30",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "99705.30",
+      "date": "2024-06-15",
+      "delta": "42680",
+      "headroom": "67205.30",
+      "source": "event_9338"
+    },
+    {
+      "balance": "97396.77",
+      "date": "2024-06-17",
+      "delta": "-2308.53",
+      "headroom": "64896.77",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "96492.37",
+      "date": "2024-06-18",
+      "delta": "-904.4",
+      "headroom": "63992.37",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "94183.84",
+      "date": "2024-06-24",
+      "delta": "-2308.53",
+      "headroom": "61683.84",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "93279.44",
+      "date": "2024-06-25",
+      "delta": "-904.4",
+      "headroom": "60779.44",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "91485.45",
+      "date": "2024-06-26",
+      "delta": "-1793.99",
+      "headroom": "58985.45",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "78769.45",
+      "date": "2024-07-01",
+      "delta": "-12716",
+      "headroom": "46269.45",
+      "source": "series:event_9270"
+    },
+    {
+      "balance": "76460.92",
+      "date": "2024-07-01",
+      "delta": "-2308.53",
+      "headroom": "43960.92",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "75556.52",
+      "date": "2024-07-02",
+      "delta": "-904.4",
+      "headroom": "43056.52",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "72603.27",
+      "date": "2024-07-05",
+      "delta": "-2953.25",
+      "headroom": "40103.27",
+      "source": "series:event_9271"
+    },
+    {
+      "balance": "71586.87",
+      "date": "2024-07-08",
+      "delta": "-1016.4",
+      "headroom": "39086.87",
+      "source": "series:event_9267"
+    },
+    {
+      "balance": "69278.34",
+      "date": "2024-07-08",
+      "delta": "-2308.53",
+      "headroom": "36778.34",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "68373.94",
+      "date": "2024-07-09",
+      "delta": "-904.4",
+      "headroom": "35873.94",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "66151.94",
+      "date": "2024-07-10",
+      "delta": "-2222",
+      "headroom": "33651.94",
+      "source": "series:event_9266"
+    },
+    {
+      "balance": "64357.95",
+      "date": "2024-07-10",
+      "delta": "-1793.99",
+      "headroom": "31857.95",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "64119.25",
+      "date": "2024-07-11",
+      "delta": "-238.7",
+      "headroom": "31619.25",
+      "source": "series:event_9268"
+    },
+    {
+      "balance": "62292.44",
+      "date": "2024-07-11",
+      "delta": "-1826.81",
+      "headroom": "29792.44",
+      "source": "series:event_9269"
+    },
+    {
+      "balance": "104972.44",
+      "date": "2024-07-15",
+      "delta": "42680",
+      "headroom": "72472.44",
+      "source": "series:event_9262"
+    },
+    {
+      "balance": "102663.91",
+      "date": "2024-07-15",
+      "delta": "-2308.53",
+      "headroom": "70163.91",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "101759.51",
+      "date": "2024-07-16",
+      "delta": "-904.4",
+      "headroom": "69259.51",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "99450.98",
+      "date": "2024-07-22",
+      "delta": "-2308.53",
+      "headroom": "66950.98",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "98546.58",
+      "date": "2024-07-23",
+      "delta": "-904.4",
+      "headroom": "66046.58",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "96752.59",
+      "date": "2024-07-24",
+      "delta": "-1793.99",
+      "headroom": "64252.59",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "94444.06",
+      "date": "2024-07-29",
+      "delta": "-2308.53",
+      "headroom": "61944.06",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "93539.66",
+      "date": "2024-07-30",
+      "delta": "-904.4",
+      "headroom": "61039.66",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "80823.66",
+      "date": "2024-08-01",
+      "delta": "-12716",
+      "headroom": "48323.66",
+      "source": "series:event_9270"
+    },
+    {
+      "balance": "77870.41",
+      "date": "2024-08-05",
+      "delta": "-2953.25",
+      "headroom": "45370.41",
+      "source": "series:event_9271"
+    },
+    {
+      "balance": "75561.88",
+      "date": "2024-08-05",
+      "delta": "-2308.53",
+      "headroom": "43061.88",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "74657.48",
+      "date": "2024-08-06",
+      "delta": "-904.4",
+      "headroom": "42157.48",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "72863.49",
+      "date": "2024-08-07",
+      "delta": "-1793.99",
+      "headroom": "40363.49",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "71847.09",
+      "date": "2024-08-08",
+      "delta": "-1016.4",
+      "headroom": "39347.09",
+      "source": "series:event_9267"
+    },
+    {
+      "balance": "69625.09",
+      "date": "2024-08-10",
+      "delta": "-2222",
+      "headroom": "37125.09",
+      "source": "series:event_9266"
+    },
+    {
+      "balance": "69386.39",
+      "date": "2024-08-11",
+      "delta": "-238.7",
+      "headroom": "36886.39",
+      "source": "series:event_9268"
+    },
+    {
+      "balance": "67559.58",
+      "date": "2024-08-11",
+      "delta": "-1826.81",
+      "headroom": "35059.58",
+      "source": "series:event_9269"
+    },
+    {
+      "balance": "65251.05",
+      "date": "2024-08-12",
+      "delta": "-2308.53",
+      "headroom": "32751.05",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "64346.65",
+      "date": "2024-08-13",
+      "delta": "-904.4",
+      "headroom": "31846.65",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "107026.65",
+      "date": "2024-08-15",
+      "delta": "42680",
+      "headroom": "74526.65",
+      "source": "series:event_9262"
+    },
+    {
+      "balance": "104718.12",
+      "date": "2024-08-19",
+      "delta": "-2308.53",
+      "headroom": "72218.12",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "103813.72",
+      "date": "2024-08-20",
+      "delta": "-904.4",
+      "headroom": "71313.72",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "102019.73",
+      "date": "2024-08-21",
+      "delta": "-1793.99",
+      "headroom": "69519.73",
+      "source": "series:event_9336"
+    },
+    {
+      "balance": "99711.20",
+      "date": "2024-08-26",
+      "delta": "-2308.53",
+      "headroom": "67211.20",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "98806.80",
+      "date": "2024-08-27",
+      "delta": "-904.4",
+      "headroom": "66306.80",
+      "source": "series:event_9323"
+    },
+    {
+      "balance": "86090.80",
+      "date": "2024-09-01",
+      "delta": "-12716",
+      "headroom": "53590.80",
+      "source": "series:event_9270"
+    },
+    {
+      "balance": "83782.27",
+      "date": "2024-09-02",
+      "delta": "-2308.53",
+      "headroom": "51282.27",
+      "source": "series:event_9297"
+    },
+    {
+      "balance": "82877.87",
+      "date": "2024-09-03",
+      "delta": "-904.4",
+      "headroom": "50377.87",
+      "source": "series:event_9323"
+    }
+  ]
+}
