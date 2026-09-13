@@ -65,17 +65,18 @@ def test_backtest_cannot_use_future_salary_confirmation():
 
 
 def test_reviewed_ledgers_match_engine_without_engine_reconstruction():
-    root = Path(__file__).resolve().parents[2]
-    spec = importlib.util.spec_from_file_location("diagnose_forecasts", root / "code/scripts/diagnose_forecasts.py")
+    code_root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location("diagnose_forecasts", code_root / "scripts/diagnose_forecasts.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     settings = module.Settings(_env_file=None, deterministic_mode=True, llm_enabled=False,
-                               evidence_cache_dir=root / "code/evaluation/evidence_cache")
-    dataset = module.load_dataset(root / "dataset")
+                               evidence_cache_dir=code_root / "evaluation/evidence_cache")
+    dataset_dir = settings.resolved_dataset_dir
+    dataset = module.load_dataset(dataset_dir)
     engine = module.DecisionEngine(dataset, settings)
-    cases = json.loads((root / "code/evaluation/reviewed_cases.json").read_text())
+    cases = json.loads((code_root / "evaluation/reviewed_cases.json").read_text())
     for case in cases:
-        reviewed = reconstruct_reviewed_case(root / "dataset", case)
+        reviewed = reconstruct_reviewed_case(dataset_dir, case)
         comparison = module.compare_ledger(reviewed, engine, dataset.context_requests_by_id[case["request_id"]])
         assert comparison["first_ledger_difference"] is None
         assert comparison["capacity_agrees"]

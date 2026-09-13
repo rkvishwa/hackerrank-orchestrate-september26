@@ -168,11 +168,11 @@ def test_loader_rejects_cross_user_links(tmp_path, filename):
 def test_frozen_evidence_replays_without_azure_configuration():
     from buy_or_wait.config import Settings
     from buy_or_wait.evidence.structured import FactExtractor
-    root = Path(__file__).resolve().parents[2]
-    dataset = load_dataset(root / "dataset")
+    code_root = Path(__file__).resolve().parents[1]
     settings = Settings(_env_file=None, azure_chat_deployment="", azure_vision_deployment="",
         azure_openai_endpoint="", azure_openai_api_key="", deterministic_mode=True, llm_enabled=False,
-        evidence_cache_dir=root / "code" / "evaluation" / "evidence_cache")
+        evidence_cache_dir=code_root / "evaluation" / "evidence_cache")
+    dataset = load_dataset(settings.resolved_dataset_dir)
     message = dataset.messages_by_user["user_02"][0]
     prepared = FactExtractor(dataset, settings).message(message)
     assert prepared and prepared["source_id"] == message.message_id
